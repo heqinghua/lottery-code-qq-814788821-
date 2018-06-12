@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://gameofasia.com/page/NewBet.shtml?id=50 -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<link class="component" href="./eAELXT5DOhSIAQ!sA18_.shtml" rel="stylesheet" type="text/css"><link class="component" href="./eAELXT5DOhSIAQ!sA18_(1).shtml" media="rich-extended-skinning" rel="stylesheet" type="text/css"><script src="./3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript.shtml" type="text/javascript"></script><script type="text/javascript">window.RICH_FACES_EXTENDED_SKINNING_ON=true;</script><script src="./skinning.js.shtml" type="text/javascript"></script><link rel="stylesheet" href="./bootstrap.css">
+<link rel="stylesheet" href="./bootstrap-theme.css">
+<link rel="stylesheet" href="./lottery.css">
+<title>最新投注</title>
+<script>
+	var NBInterval;
+	function loadingPg(){
+		var v = document.getElementById("NetbetForm:sid").value;
+		searchOpt(v);
+	}
+	function checkFt(){
+		var v = document.getElementById("NetbetForm:freshtime").value;
+		var t = v*1000;
+		//alert(t);
+		clearInterval(NBInterval);
+		NBInterval = window.setInterval("loadingPg();",t);
+	}
+</script>
+</head>
+<body class="new-bet-body no-margin" onload="loadingPg();">
+<form id="NetbetForm" name="NetbetForm" method="post" action="http://gameofasia.com/page/NewBet.shtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="NetbetForm" value="NetbetForm">
+<input id="NetbetForm:sid" type="hidden" name="NetbetForm:sid" value="50"><span xmlns="http://www.w3.org/1999/xhtml" id="NetbetForm:mainpg"><input id="NetbetForm:freshtime" type="hidden" name="NetbetForm:freshtime" value="600"> <div class="panel panel-default no-margin"><table class="table table-bordered new-bet-table no-margin"></table></div></span><script id="NetbetForm:j_id18" type="text/javascript">//<![CDATA[
+		searchOpt=function(id){A4J.AJAX.Submit('NetbetForm',null,{'similarityGroupingId':'NetbetForm:j_id18','containerId':'NetbetForm:j_id17','oncomplete':function(request,event,data){checkFt()},'parameters':{'NetbetForm:j_id18':'NetbetForm:j_id18','id':id} } )};
+		//]]></script><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id37" autocomplete="off">
+</form>
+
+<script xmlns="http://www.w3.org/1999/xhtml">A4J.AJAX._scriptEvaluated=true;</script></body></html>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{656B3757-5A1A-4012-B1AB-7A27AE031D8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ytg.BasicModel</RootNamespace>
+    <AssemblyName>Ytg.BasicModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\packages\valueinjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity.cs" />
+    <Compile Include="Act\Sign.cs" />
+    <Compile Include="Banner.cs" />
+    <Compile Include="ChartMessage.cs" />
+    <Compile Include="Commission.cs" />
+    <Compile Include="CompanyBank.cs" />
+    <Compile Include="CompanyBankVM.cs" />
+    <Compile Include="DataBaseBak.cs" />
+    <Compile Include="DTO\BettUserDto.cs" />
+    <Compile Include="DTO\CityDTO.cs" />
+    <Compile Include="DTO\ConTactDTO.cs" />
+    <Compile Include="DTO\FilterSysQuotaDTO.cs" />
+    <Compile Include="DTO\HeMaiDto.cs" />
+    <Compile Include="DTO\HeMaiDtoChildren.cs" />
+    <Compile Include="DTO\HtmlParamDto.cs" />
+    <Compile Include="DTO\IssueResultDTO.cs" />
+    <Compile Include="DTO\LotteryIssueDTO_Opens.cs" />
+    <Compile Include="DTO\Lottery_VwDTO.cs" />
+    <Compile Include="DTO\ManagerUserDTO.cs" />
+    <Compile Include="DTO\MentionConditionsDTO.cs" />
+    <Compile Include="DTO\MentionDTO.cs" />
+    <Compile Include="DTO\MessageDTO.cs" />
+    <Compile Include="DTO\NextPeriod.cs" />
+    <Compile Include="DTO\PlayRadioHtmlDTO.cs" />
+    <Compile Include="DTO\ProfitLossDTO.cs" />
+    <Compile Include="DTO\AmountChangeDTO.cs" />
+    <Compile Include="BusinessBasic\AccountVM.cs" />
+    <Compile Include="BusinessBasic\BettingVM.cs" />
+    <Compile Include="DataBasic\ActivitiesVM.cs" />
+    <Compile Include="DataBasic\GeneralEntity.cs" />
+    <Compile Include="DataBasic\GeneralVM.cs" />
+    <Compile Include="DataBasic\ProfitVM.cs" />
+    <Compile Include="DTO\BindSysQuotaDTO.cs" />
+    <Compile Include="DTO\ProvinceDTO.cs" />
+    <Compile Include="DTO\RadioHelper.cs" />
+    <Compile Include="DTO\RecentlyWinDTO.cs" />
+    <Compile Include="DTO\RechargeBankTypeDTO.cs" />
+    <Compile Include="DTO\Record.cs" />
+    <Compile Include="DTO\RecordParent.cs" />
+    <Compile Include="DTO\RecordTempDTO.cs" />
+    <Compile Include="DTO\Server_IssueResultDTO.cs" />
+    <Compile Include="DTO\SettingDTO.cs" />
+    <Compile Include="DTO\StatisticsReportDTO.cs" />
+    <Compile Include="DTO\SysBankTypeDTO.cs" />
+    <Compile Include="DTO\SysQuotaDetaiDTO.cs" />
+    <Compile Include="DTO\SysQuotaDTO.cs" />
+    <Compile Include="DTO\SysQuotas_View_Ref.cs" />
+    <Compile Include="DTO\SysUserDTO.cs" />
+    <Compile Include="DTO\TreeDTO.cs" />
+    <Compile Include="DTO\UnLockParamsDTO.cs" />
+    <Compile Include="DTO\UserBanksDto.cs" />
+    <Compile Include="DTO\UserMentionDTO.cs" />
+    <Compile Include="DTO\UserRoleInfo.cs" />
+    <Compile Include="DTO\UserSessionMangerDto.cs" />
+    <Compile Include="DTO\VdBankDTO.cs" />
+    <Compile Include="DTO\WithdrawRechargePersonNumberDTO.cs" />
+    <Compile Include="DTO\YongJinDTO.cs" />
+    <Compile Include="DTO\ProfitLossDTOMan.cs" />
+    <Compile Include="LargeRotary.cs" />
+    <Compile Include="LiBaoEntity.cs" />
+    <Compile Include="LockIpInfo.cs" />
+    <Compile Include="LotteryBasic\BetDetail.cs" />
+    <Compile Include="LotteryBasic\BetList.cs" />
+    <Compile Include="LotteryBasic\BuyTogether.cs" />
+    <Compile Include="LotteryBasic\CatchNum.cs" />
+    <Compile Include="LotteryBasic\CatchNumIssue.cs" />
+    <Compile Include="LotteryBasic\CatchNumsVM.cs" />
+    <Compile Include="LotteryBasic\DTO\AddPointsAttribute.cs" />
+    <Compile Include="LotteryBasic\DTO\BetDetailDTO.cs" />
+    <Compile Include="LotteryBasic\DTO\BetListDTO.cs" />
+    <Compile Include="LotteryBasic\DTO\BettingDTO.cs" />
+    <Compile Include="LotteryBasic\DTO\CannelCatchNumParamer.cs" />
+    <Compile Include="LotteryBasic\DTO\CatchDto.cs" />
+    <Compile Include="LotteryBasic\DTO\CatchNumJsonDTO.cs" />
+    <Compile Include="LotteryBasic\DTO\FilterCatchNumListParamer.cs" />
+    <Compile Include="LotteryBasic\DTO\LotteryIssueDTO.cs" />
+    <Compile Include="LotteryBasic\DTO\LotteryIssueResultDTO.cs" />
+    <Compile Include="LotteryBasic\DTO\NotCompledCatchNumListDTO.cs" />
+    <Compile Include="LotteryBasic\DTO\NotOpenBetDetailDTO.cs" />
+    <Compile Include="LotteryBasic\DTO\PlayRadoJSON.cs" />
+    <Compile Include="LotteryBasic\DTO\PlayRado.cs" />
+    <Compile Include="LotteryBasic\EnaEntity.cs" />
+    <Compile Include="LotteryBasic\GroupNameType.cs" />
+    <Compile Include="LotteryBasic\HotLottery.cs" />
+    <Compile Include="LotteryBasic\IEnaEntity.cs" />
+    <Compile Include="LotteryBasic\Lottery.cs" />
+    <Compile Include="LotteryBasic\LotteryCycle.cs" />
+    <Compile Include="LotteryBasic\LotteryCycleVM.cs" />
+    <Compile Include="LotteryBasic\LotteryIssue.cs" />
+    <Compile Include="LotteryBasic\LotteryType.cs" />
+    <Compile Include="LotteryBasic\PlayCategory.cs" />
+    <Compile Include="LotteryBasic\PlayType.cs" />
+    <Compile Include="LotteryBasic\PlayTypeNum.cs" />
+    <Compile Include="LotteryBasic\PlayTypeRadio.cs" />
+    <Compile Include="LotteryBasic\PlayTypeRadiosBonus.cs" />
+    <Compile Include="LotteryBasic\Rankings.cs" />
+    <Compile Include="ManagerUser.cs" />
+    <Compile Include="Manager\ClearDateDTO.cs" />
+    <Compile Include="Manager\Sp_DayJieSuanTable.cs" />
+    <Compile Include="Manager\Sp_JieSuanTable.cs" />
+    <Compile Include="Manager\Sp_YueJieSuanTable.cs" />
+    <Compile Include="Manager\StatDto.cs" />
+    <Compile Include="Manager\SysUserBalanceDetailRechange.cs" />
+    <Compile Include="Market.cs" />
+    <Compile Include="MentionQueu.cs" />
+    <Compile Include="MentionRecodVM.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageVM.cs" />
+    <Compile Include="News.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="ProfitLossDTOManTasks.cs" />
+    <Compile Include="RechargeRecodVM.cs" />
+    <Compile Include="RecordTemp.cs" />
+    <Compile Include="Report\BalanceDetailsStatistical.cs" />
+    <Compile Include="Report\CountData.cs" />
+    <Compile Include="Report\PrizeList.cs" />
+    <Compile Include="Report\ProfitLossList.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="RolePermission.cs" />
+    <Compile Include="SendHister.cs" />
+    <Compile Include="SettlementReportVM.cs" />
+    <Compile Include="SiteDns.cs" />
+    <Compile Include="SysAccount.cs" />
+    <Compile Include="SysAccountLog.cs" />
+    <Compile Include="SysAccountLogsMV.cs" />
+    <Compile Include="SysAccountRoles.cs" />
+    <Compile Include="SysBankPoundage.cs" />
+    <Compile Include="SysBankPoundageVM.cs" />
+    <Compile Include="SysBankTransfer.cs" />
+    <Compile Include="SysBankTransferVM.cs" />
+    <Compile Include="SysEnum.cs" />
+    <Compile Include="SysLog.cs" />
+    <Compile Include="SysLoginLogVM.cs" />
+    <Compile Include="SysMessages.cs" />
+    <Compile Include="SysNotice.cs" />
+    <Compile Include="SysOperate.cs" />
+    <Compile Include="SysOperationLog.cs" />
+    <Compile Include="SysQuota.cs" />
+    <Compile Include="SysQuotaDetail.cs" />
+    <Compile Include="SysRolePermission.cs" />
+    <Compile Include="SysBankType.cs" />
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="DelEntity.cs" />
+    <Compile Include="District.cs" />
+    <Compile Include="IDelEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Province.cs" />
+    <Compile Include="SerialNoEntity.cs" />
+    <Compile Include="SysMenu.cs" />
+    <Compile Include="SysOrganize.cs" />
+    <Compile Include="SysRole.cs" />
+    <Compile Include="SysDictionary.cs" />
+    <Compile Include="SysSetting.cs" />
+    <Compile Include="SysUser.cs" />
+    <Compile Include="SysUserBalance.cs" />
+    <Compile Include="SysUserBalanceDetail.cs" />
+    <Compile Include="SysUserBank.cs" />
+    <Compile Include="SysUserBankVM.cs" />
+    <Compile Include="SysUserLoginStatisticsVM.cs" />
+    <Compile Include="SysUserVM.cs" />
+    <Compile Include="UserSession.cs" />
+    <Compile Include="VipMentionApply.cs" />
+    <Compile Include="VipMentionApplyVM.cs" />
+    <Compile Include="YtgSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LotteryBasic\readme.txt" />
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

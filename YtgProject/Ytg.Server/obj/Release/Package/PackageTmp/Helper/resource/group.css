@@ -1,0 +1,138 @@
+#left-side {
+	width: 178px; margin-right: 8px; position: relative;
+}
+#left-side .center-left-top {
+	margin-bottom: 12px;
+}
+.gr_zx_title {
+	background: url("/images/xm/xm_images/gr_zx_top_bg.png"); width: 178px; height: 46px; color: rgb(255, 255, 255); line-height: 33px; text-indent: 15px; font-size: 16px; position: relative;
+}
+.gr_zx_title a {
+	background: url("/images/xm/xm_images/quanzi_bt_bg.png"); top: 7px; width: 61px; height: 24px; text-align: center; right: 12px; color: rgb(0, 0, 0); line-height: 24px; text-indent: 0px; display: block; position: absolute;
+}
+.gr_zx_mid {
+	background: rgb(237, 237, 237); width: 164px; padding-bottom: 12px; padding-left: 12px; border-right-color: rgb(179, 179, 179); border-left-color: rgb(179, 179, 179); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; min-height: 565px;
+}
+.gr_zx_bot {
+	background: url("/images/xm/xm_images/gr_zx_bot_bg.png"); width: 178px; height: 28px;
+}
+#left-side ul li {
+	list-style: none; margin-bottom: 5px;
+}
+#left-side ul li a {
+	background: url("/images/xm/xm_images/leftm_link_bg.png"); width: 154px; height: 28px; color: rgb(0, 0, 0); line-height: 25px; text-indent: 28px; display: block;
+}
+#left-side ul li a:hover {
+	color: rgb(148, 74, 13);
+}
+#left-side ul .side-title {
+	color: rgb(0, 0, 0); padding-top: 6px; padding-left: 12px; font-family: "Microsoft YaHei" !important; font-size: 14px;
+}
+#left-side ul .active a {
+	background: url("/images/xm/xm_images/leftm_link_cur.png"); color: rgb(147, 54, 6);
+}
+#left-side ul .active a:hover {
+	color: rgb(255, 255, 255);
+}
+#left-side ul .active a .num {
+	background: rgb(255, 255, 255); padding: 2px 5px; border-radius: 3px; color: rgb(192, 30, 15); margin-right: 10px;
+}
+#right-main #content {
+	margin: 30px 0px 0px 25px;
+}
+.team-top {
+	background: url("/images/xm/xm_images/xmtitleline_bg.png") repeat-x left bottom; height: 32px;
+}
+.team-top #team-name {
+	color: rgb(73, 73, 73); font-size: 14px; font-weight: bold;
+}
+#team-info ul {
+	width: 200px; padding-top: 20px; margin-left: 35px; float: left;
+}
+#team-info ul li {
+	list-style: none; margin-bottom: 20px;
+}
+#team-content .teamtinput {
+	height: 29px;
+}
+#team-content .teamtinput ul li {
+	background: url("/images/xm/xm_images/gl_tbt_bg1.png"); width: 78px; height: 29px; text-align: center; line-height: 29px; margin-right: 10px; float: left; display: block;
+}
+#team-content .teamtinput ul .active {
+	background: url("/images/xm/xm_images/gl_tbt_bg2.png");
+}
+#team-content #team-content-nav ul li a {
+	color: rgb(0, 0, 0);
+}
+#team-content .teamtinput ul li a.active {
+	color: rgb(156, 70, 1); font-weight: bold;
+}
+.bg-group-gray {
+	background: rgb(246, 245, 245) !important;
+}
+#team-content-top {
+	background: rgb(246, 245, 245); padding: 10px 20px 10px 0px; border-bottom-color: rgb(192, 192, 192); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+#team-content-main #lottery-detail li {
+	list-style: none; margin: 10px 0px 10px 40px;
+}
+#team-content-main #lottery-detail ul li ul li {
+	margin-top: 0px; margin-bottom: 10px; margin-left: 0px;
+}
+#team-content-main #lottery-detail li label {
+	width: 70px; text-align: right; margin-right: 10px; display: inline-block;
+}
+#lotteryInfo-tabs ul li {
+	background: url("/images/xm/xm_images/czbut_bg.png") no-repeat left -29px; list-style: none; width: 74px; height: 24px; text-align: center; line-height: 23px; margin-bottom: 3px; float: left;
+}
+#lotteryInfo-tabs {
+	margin-bottom: 16px;
+}
+#lotteryInfo-tabs ul li a {
+	width: 74px; height: 24px; color: rgb(0, 0, 0); display: block;
+}
+#lotteryInfo-tabs ul li .active {
+	background: url("/images/xm/xm_images/czbut_bg.png") no-repeat left top; margin-right: 1px;
+}
+#share-link-panle {
+	background: rgb(246, 244, 245); padding: 20px; border-bottom-color: rgb(192, 192, 192); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#share-link-panle span {
+	line-height: 30px;
+}
+#share-commend {
+	padding: 30px;
+}
+#share-commend h2 {
+	float: left; display: inline;
+}
+#share-commend ul {
+	float: left;
+}
+#share-commend ul li {
+	list-style: none; margin-bottom: 10px; display: inline;
+}
+#created-top-panle {
+	padding-top: 15px;
+}
+#created-top-panle ul li {
+	margin-bottom: 15px;
+}
+#created-top-panle ul li font {
+	width: 80px; text-align: right; display: inline-block;
+}
+#created-top-footer {
+	padding: 20px 0px 30px 20px;
+}
+#created-top-footer p {
+	margin-bottom: 20px;
+}
+.table-yhkbd {
+	margin: 65px 0px 30px; border: currentColor; border-image: none; width: 100%; border-collapse: collapse;
+}
+.table-yhkbd .tr-cont td {
+	background: rgb(255, 255, 255); padding: 0px 15px; border: 1px solid rgb(153, 153, 153); border-image: none; height: 29px; line-height: 29px; font-size: 12px;
+}
+.table-yhkbd .tr-bg td {
+	background: url("/images/xm/xm_images/czxx_th_bg.png") rgb(255, 255, 255); padding: 0px 15px; border: 1px solid rgb(153, 153, 153); border-image: none; height: 29px; line-height: 29px; font-size: 12px;
+}

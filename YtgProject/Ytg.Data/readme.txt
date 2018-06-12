@@ -1,0 +1,2 @@
+﻿ytgDbContext 为数据上下文
+YtgDbContext_Lottery 为数据上下文的分部类，主要用于定义彩票块表

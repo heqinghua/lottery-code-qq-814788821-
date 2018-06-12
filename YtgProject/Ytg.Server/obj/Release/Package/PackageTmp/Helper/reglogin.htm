@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-登陆注册</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+<UL>
+  <LI class="active" id="100001">
+  <H3>1• 如何注册？</H3>
+  <P>					用户寻找乐诚网代理进行开户注册，提供给代理账号•密码•昵称等， 乐诚网代理将会给您开设账户。				 </P></LI>
+  <LI id="100002">
+  <H3>2• 注册时用户需要注意什么？</H3>
+  <P>					用户名一旦提交，不可更改，请选择容易记忆且安全级别高的用户名，并妥善保管；					初始密码是不安全的，进入平台后，请先修改您的密码；
+  				 </P></LI>
+  <LI id="100003">
+  <H3>3• 验证码有何作用？</H3>
+  <P>
+  					设置验证码是为了提高系统的安全性，它可以有效防止针对某个特定账号的暴力破解（即用特定程序进行不断的登录尝试），使用验证码也是目前各大平台网站通行的安全措施。
+  				 </P></LI>
+  <LI id="100004">
+  <H3>4• 登录时为什么看不到验证码或总是提示验证码不正确？</H3>
+  <P>					看不到验证码或者总是提示验证码输入错误，可能的原因有：					 <BR>A：网速过慢，请多刷新几次页面；
+  					 <BR>B：输入错误，数字有全角和半角之分，请换用半角方式输入；					 <BR>C：安全级别设置过高，请将IE的安全级别设为“默认级别”；
+  					 <BR>D：网页没有自动更新，请先设置浏览器的“Internet临时文件”为“自动”更新或使用Ctrl+F5刷新网页。
+  					 <BR>E：建议您使用IE8及以上的浏览器，最好选择火狐浏览器和谷歌浏览器登录平台				 </P></LI>
+  <LI id="100005">
+  <H3>5• 登录时忘记了密码怎么办？</H3>
+  <P>A：如果忘记平台登录密码，请点击用户登录区的“忘记密码”，输入资金密码，也可登陆乐诚网平台，为保障账户安全，建议用户登录后立即修改密码；
+  					 <BR>B：如果忘记平台登陆密码和资金密码，请联系您的上级或者平台客服，提供绑定的银行卡信息进行核实，如果属实，可重新设定密码；
+  					 <BR>C：如果…如果忘记与平台所相关的所有账号信息，请参考帮助中心的“如何注册”，重新申请账号。				 </P></LI>
+  <LI id="100006">
+  <H3>6• 如何修改登录密码？</H3>
+  <P>					登录后进入“个人中心”，点击“修改密码”。					 <BR>					在“修改密码”条目下选择“修改登录密码”选项。					 <BR>
+  					用户输入旧密码，并设置新密码。					 <BR>					提交信息，修改密码成功，系统提示成功信息。				 </P></LI>
+  <LI id="100007">
+  <H3>7• 注册登录需要注意什么？</H3>
+  <P>					请认准乐诚网平台域名验证地址：<A href="http://www.boyuesite.com" target="_blank">http://www.boyuesite.com</A>				 </P></LI>
+  <LI id="100008">
+  <H3>8•登录过程中为什么会跳转到谷歌界面？</H3>
+  <P>A：进行登陆时的用户名输入错误；					 <BR>B：您的账号不存在；
+  					 <BR>C：当前域名为非系统指定域名，请联系上级或平台客服获取最新域名地址。				 </P></LI>
+  <LI id="100009">
+  <H3>9•什么情况下账户会被删除？</H3>
+  <P>1. 14天内在平台没有账变记录；					 <BR>2. 在平台余额小于或等于10元；					 <BR>3. 
+  同时满足以上2个条件的账户将被系统自动删除；					 <BR>4. 
+  如果同时满足以上两个条件的账号有下级，并且下级账号还未被删除，那此账号也会一直被保留。	 				 </P></LI>
+  <LI id="100010">
+  <H3>10•如何使用上下级聊天工具。</H3>
+  <P>
+  					乐诚网开通了上下级聊天工具，进入网站右下角有图标，点击即可展开。你可以看到自己的上级和下级每个用户，和在线与否。可以通过该工具与上下级便捷沟通。
+  				 </P></LI></UL></DIV></DIV>
+</BODY></html>

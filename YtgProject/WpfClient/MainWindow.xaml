@@ -1,0 +1,23 @@
+﻿<Window xmlns:GifImageLib="clr-namespace:GifImageLib"  x:Class="WpfClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/Resource/m.png"
+        Title="宝发娱乐">
+    <Grid>
+        <!--<Grid.Background>
+            <ImageBrush ImageSource="Resource/loginbg.jpg" Opacity="0.2"></ImageBrush>
+        </Grid.Background>-->
+        <Grid x:Name="MainGrid">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="Resource/mhplay.png"  Width="300"></Image>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        
+        <WebBrowser x:Name="borwers" Loaded="borwers_Loaded_1" Visibility="Collapsed"></WebBrowser>
+        <Grid x:Name="changeLoading" Visibility="Collapsed"> 
+            <GifImageLib:GifImage Source="/Resource/load.gif" Width="800" Height="600"/>
+        </Grid>
+    </Grid>
+</Window>

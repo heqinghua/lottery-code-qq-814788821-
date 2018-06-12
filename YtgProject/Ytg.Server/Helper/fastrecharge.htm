@@ -1,0 +1,97 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-在线充值</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+    <style type="text/css">
+        img {max-width:810px;}
+    </style>
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+
+
+    <ul>
+        <li><strong>在线充值步骤：</li>
+        <li>1 点击充值提现→在线充值</li>
+        <li>
+            <img src="/Helper/resource/images/deposit/1.png" /></li>
+        <li>2 完善充值信息中，写入充值金额，点击下一步(<span style="color:red;">若未自动打开充值页面，请点击“如果没有弹出支付窗口，请点此处”按钮 </span>)</li>
+        <li>
+            <img src="/Helper/resource/images/deposit/2.png" /></li>
+        <li>3 系统自动跳转至选择的支付银行的网上银行进行支付。</li>
+        <li>4 完成充值，同时请检查您的账户余额。 </strong></li>
+    </ul>
+
+
+
+
+
+</DIV></DIV>
+</BODY></html>

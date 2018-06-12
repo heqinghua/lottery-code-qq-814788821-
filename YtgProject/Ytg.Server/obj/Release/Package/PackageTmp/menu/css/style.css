@@ -1,0 +1,152 @@
+/* demo page styles */
+body {
+    background:#eee;
+    margin:0;
+    padding:0;
+    font-family:Segoe UI,Tahoma,Arial,Verdana,sans-serif;
+}
+.example {
+    /*background:#fff url(../images/blue.jpg);*/
+    margin:5px auto;
+    padding:15px;
+    font-size:18px
+}
+
+/* main menu styles */
+.menu {
+    /*background-color:red;*/
+    text-align:center;
+    width:100%;
+}
+.menu > span {
+    display:inline-block;
+    margin:0 auto;
+}
+#nav {
+    display:inline;
+    text-align:left;
+    position:relative;
+    list-style-type:none;
+}
+#nav > li {
+    float:left;
+    padding:0;
+    position:relative;
+}
+#nav > li > a {
+    color:#fff;
+    display:block;
+    font-size:90%;
+    padding:3px 10px;
+    position:relative;
+    text-decoration:none;
+}
+#nav > li > a:hover {
+    background-color:rgba(242, 121, 121, 0.36);
+}
+#nav > li.selected  > a {
+    background-color:rgba(242, 121, 121, 0.36);
+    z-index:2;
+}
+#nav li div {
+    position:relative;
+}
+#nav li  .subs div {
+    background-color:#FFFFFF;
+    border:1px solid #cdcdcd;
+    display:none;
+    font-size:0.75em;
+    margin:0;
+    margin-top:10px;
+    position:absolute;
+    top:-1px;
+    z-index:9999;
+    width:135px;
+    -webkit-box-shadow: 0 0 2px #cdcdcd;
+-moz-box-shadow: 0 0 2px #cdcdcd;
+box-shadow: 0 0 2px #cdcdcd;
+}
+#nav .sep {
+    left:135px;
+    border-left:1px solid #E3E3E3;
+    bottom:0;
+    height:auto;
+    margin:15px 0;
+    position:absolute;
+    top:0;
+    width:1px;
+}
+#nav li .subs ul {
+    padding-right:10px;
+    position:relative;
+    width:130px;
+    float:left;
+    list-style-type:none;
+}
+#nav li .subs div ul li {
+    margin:0;
+    padding:0;
+    /*border-bottom: 1px dashed #dcdddd;*/
+}
+#nav li ul ul {
+    padding:0 0 8px;
+}
+#nav li ul ul li {
+    margin:0;
+    padding:0;
+}
+#nav li ul ul li a {
+    color:#000;
+    display:block;
+    margin-bottom:1px;
+    padding:3px 5px;
+    text-decoration:none;
+    font-size:0.9em;
+}
+#nav li ul ul li a:hover{
+    color:#cd0228;
+}
+
+/****/
+#nav li div div.wrp2 {
+    width:380px;
+}
+
+#nav li  .lottery_meny div {
+    background-color:#FFFFFF;
+    border:1px solid #cdcdcd;
+    display:none;
+    font-size:0.75em;
+    margin:0;
+    margin-top:10px;
+    position:absolute;
+    top:-1px;
+    z-index:9999;
+    width:135px;
+    -webkit-box-shadow: 0 0 2px #cdcdcd;
+-moz-box-shadow: 0 0 2px #cdcdcd;
+box-shadow: 0 0 2px #cdcdcd;
+}
+
+.lottery_meny {
+ 
+}
+.lottery_meny ul li{
+  width:49%;
+  float: left;
+}
+.lottery_meny ul li h3 {
+    color:#4F4F4F;
+    font-weight:bold;
+    margin:0 5px 4px;
+    font-size:1.1em;
+    padding-bottom:3px;
+    padding-top:3px;
+    width:180px;
+    float:left;
+}
+.lottery_meny ul li .sa {color:#000;  }
+.posbox a{padding:0 23px 0 13px;}
+.posbox i{width:7px;height:4px;background:url(/css/up.gif) 0 -70px no-repeat;position:absolute;top:15px;right:-5px;overflow:hidden;}
+#nav > li.selected > a > i{background-position:0 -75px;}
+/*****/

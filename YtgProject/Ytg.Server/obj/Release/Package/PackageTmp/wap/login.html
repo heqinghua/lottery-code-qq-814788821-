@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>用户登录</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="/wap/statics/css/jquery-ui.min.css?ver=3.6" type="text/css">
+    <link rel="stylesheet" href="/wap/statics/css/global.css?ver=3.6" type="text/css">
+    <script src="/wap/statics/js/jquery.min.js?ver=3.6"></script>
+    <script src="/wap/statics/js/jquery-ui.min.js?ver=3.6"></script>
+    <script src="/wap/statics/js/iscro-lot.js?ver=3.6"></script>
+
+</head>
+<body class="login-bg">
+    <div class="header">
+        <div class="headerTop">
+            <div class="ui-toolbar-left">
+                <button id="reveal-left" type="button">reveal</button>
+            </div>
+            <h1 class="ui-toolbar-title">登录</h1>
+        </div>
+    </div>
+
+    <div class="login">
+        <ul>
+            <li>
+                <span class="login-peo"></span><input type="text" id="login_uid" placeholder="请输入用户账号"><span class="login-gli"></span>
+                <div class="login-cont-value" style="display: none;"></div>
+            </li>
+            <li>
+                <span class="login-pass"></span><input type="password" id="login_pwd" placeholder="请输入密码">
+                <input type="hidden" name="ref_url" value="">
+            </li>
+        </ul>
+        <div class="login-p"><!--<a class="fl" href="/wap/customer.html" >在线客服</a>--><a class="fr" href="javascript:msgAlert('请联系在线客服修改密码！');">忘记密码</a></div>
+        <button class="login-btn" id="login_btn">登录</button>
+        <button class="reg-btn" id="register" style="display:none;">立即注册</button>
+        <button class="reg-btn" id="login_demo" style="display:none;">免费试玩</button>
+    </div>
+
+    <!-- 加载中 -->
+    <div class="loading" style="display: none"></div>
+    <div class="loading-bg" style="display: none"></div>
+
+    <script>
+        function loadingShow(tips, bg) {
+            if (tips == "" || typeof (tips) == "undefined") {
+                $(".loading").css("left", "50%");
+                $(".loading").css("margin-left", "-2em");
+                $(".loading").html("加载中...");
+            } else {
+                $(".loading").html(tips);
+                $(".loading").css("left", Math.ceil(($(document).width() - $(".loading").width()) / 2));
+                $(".loading").css("margin-left", 0);
+            }
+
+            bg = (bg == "" || typeof (bg) == "undefined") ? 1 : 0;
+            if (bg == 1) {
+                $(".loading-bg").show();
+            } else {
+                $(".loading-bg").hide();
+            }
+            $(".loading").show();
+        }
+        function loadingHide() {
+            $(".loading").hide();
+            $(".loading-bg").hide();
+        }
+    </script>
+
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+
+    <div class="beet-odds-tips round" id="tip_pop" style="display: none; height:130px;">
+        <div class="beet-odds-info f100">
+            <div class="beet-money" id="tip_pop_content" style="font-size: 120%; margin-top: 15px; color:#666;">
+                号码选择有误
+            </div>
+        </div>
+        <div class="beet-odds-info text-center">
+            <button class="btn-que" style="width: 100%;" onclick="tipOk()"><span>确定</span></button>
+        </div>
+    </div>
+
+    <div id="tip_bg" class="tips-bg" style="display: none;"></div>
+
+    <script>
+        var func;
+        function tipOk() {
+            $('#tip_pop').hide();
+            $('#tip_bg').hide();
+          
+            if (typeof (func) == "function") {
+                func();
+                func = "";
+            } else {
+                if (typeof (doTipOk) == "function") {
+                    doTipOk();
+                }
+            }
+        }
+        function msgAlert(msg, funcParm) {
+            $('div#tip_pop_content').html(msg);
+            $('div#tip_pop').show();
+            $('div#tip_bg').show();
+            func = (funcParm == "" || typeof (funcParm) != "function") ? '' : funcParm;
+        }
+    </script>
+
+
+
+
+    <script>
+        //登陆验证
+        $('#login_btn').click(function (event) {
+            var uid = $('#login_uid').val();
+            var pwd = $('#login_pwd').val();
+            if (uid == '') {
+                msgAlert('请输入用户名！');
+                return;
+            }
+            if (pwd == '') {
+                msgAlert('请输入密码！');
+                return;
+            }
+            loadingShow();
+            $.ajax({
+                url: '/Page/Initial.aspx',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    'action':'login_progress',
+                    'M_LOGINCODE': uid,
+                    'M_LOGINPWD': pwd
+                },
+                timeout: 30000,
+                success: function (data) {
+                    loadingHide();
+                    var jsonData = data;
+                    if (jsonData.Code == 0) {
+                        //清空聊天cookie
+                        //登陆成功，
+                        window.location = "/wap/home.aspx";
+                    } else if (jsonData.Code == 1003) {
+                        //$("#login_uid").select();
+                        // msgAlert('账号已禁用，请联系客服处理！');
+                        window.location = "http://www.google.com";
+                    } else if (jsonData.Code == 2000) {
+                        if (jsonData.ErrMsg != "") {
+                            window.location = jsonData.ErrMsg;
+                        } else {
+                            window.location = "http://www.google.com";
+                        }
+                    } else {//
+                        //$("#login_pwd").select();
+                        msgAlert('账号或密码错误！');
+                    }
+
+                },
+                error: function () {
+                    loadingShow("登录超时，请稍后重新尝试!");
+                    setTimeout("loadingHide()", 2000);
+                }
+            });
+        });
+
+        //注册
+        $('button#register').click(function (event) {
+            location.href = '/index/register.html';
+        });
+
+        //试玩登录
+        $('button#login_demo').click(function (event) {
+            location.href = '/index/loginDemo.html';
+        });
+
+        //下拉更多最近登录用户名列表
+        $(function () {
+            var saveAccount = getCookie("WAPSAVEACCOUNT");
+            if (saveAccount) {
+                var accountArr = saveAccount.split("|");
+                for (var i = 0; i < accountArr.length; i++) {
+                    $(".login-cont-value").append("<div class='login-cont' >" + accountArr[i] + "</div>");
+                }
+            }
+        })
+        $(".login-gli").click(function () {
+            if ($('.login-cont-value').is(':visible')) {
+                $('.login-cont-value').hide();
+            } else {
+                $('.login-cont-value').show();
+            }
+            event.stopPropagation();
+        })
+        $(document).on("click", ".login-cont", function () {
+            $("#login_uid").val($(this).html());
+            $("#login_pwd").val("");
+            $('.login-cont-value').hide();
+        });
+        $(window).bind("load", function () {
+            $(document).on("click", function () {
+                if ($('.login-cont-value').is(':visible')) {
+                    $('.login-cont-value').hide();
+                }
+            })
+        })
+        function getCookie(c_name) {
+            if (document.cookie.length > 0) {
+                c_start = document.cookie.indexOf(c_name + "=")
+                if (c_start != -1) {
+                    c_start = c_start + c_name.length + 1
+                    c_end = document.cookie.indexOf(";", c_start)
+                    if (c_end == -1) c_end = document.cookie.length
+                    return unescape(document.cookie.substring(c_start, c_end))
+                }
+            }
+            return ""
+        }
+
+    </script>
+</body>
+</html>

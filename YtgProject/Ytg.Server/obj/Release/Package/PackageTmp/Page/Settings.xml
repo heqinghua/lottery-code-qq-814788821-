@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+
+  <!--json服务配置信息-->
+  <JSONServer>
+    <Folder name="">
+      <item page="Initial.aspx" class="Ytg.ServerWeb.Page.PageCode.InitialRequestManager" />
+      <item page="Users.aspx" class="Ytg.ServerWeb.Page.PageCode.Users.UsersRequestManager" />
+      <item page="Messages.aspx" class="Ytg.ServerWeb.Page.PageCode.Messages.MessageRequestManager"/>
+    </Folder>
+    <Folder name="Lott/">
+      <item page="Lottery.aspx" class="Ytg.ServerWeb.Page.PageCode.Lott.LotteryRequestManager" />
+      <item page="LotteryBasic.aspx" class="Ytg.ServerWeb.Page.PageCode.Lott.LotteryBasicRequestManager" />
+      <item page="OpenResult.aspx" class="Ytg.ServerWeb.Page.PageCode.Lott.LotteryBasicRequestManager" />
+      <item page="LotteryBetDetail.aspx" class="Ytg.ServerWeb.Page.PageCode.Lott.BetDetailRequestManager" />
+    </Folder>
+    <Folder name="Repot/">
+      <item page="AmtChange.aspx" class="Ytg.ServerWeb.Page.PageCode.Repot.AmountChangeRequestManager" />
+    </Folder>
+    <Folder name="Bank/">
+      <item page="Bank.aspx" class="Ytg.ServerWeb.Page.PageCode.Bank.BankRequestManager" />
+    </Folder>
+    <Folder name="FoodView/">
+      <item page="BasalData.aspx" class="PropertyManager.ServerCode.MobileDevice.FoodManager.FoodRequest" />
+    </Folder>
+    <Folder name="Market/">
+      <item page="Market.aspx" class="Ytg.ServerWeb.Page.PageCode.Market.MarketRequestManager" />
+    </Folder>
+  </JSONServer>
+</Settings>

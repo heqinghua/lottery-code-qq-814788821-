@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-招商银行充值</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+
+
+
+
+
+    <ul>
+        <li>
+            <h3>1、 点击“账户充值”选项，选择“中国建设银行”，输入所要充值金额，获取平台工行收款人姓名 ，收款帐号；</h3>
+        </li>
+        <li>
+            <h3>2、获取到平台最新的招商银行“收款账户名”，“收款账号”，”开户地址““账户所属银行”“附言”等信息。</h3>
+            <p class="text-red">
+                安全提示：平台会不定期更换收款银行卡，客户在充值前有义务确认本平台收款银行账户，如因客户向平台汇款时，汇入错误银行卡或者非最新收款卡而导致的损失，本公司将不承担任何责任。 
+            </p>
+        </li>
+        <li>
+            <h3>3、 登录中国招商银行网上银行官方网站 <a href="http://www.cmbchina.com/" target="_bank">http://www.cmbchina.com</a></h3>
+        </li>
+        <li>
+            <h3>4、 点击【转账汇款】，在转账汇款页面菜单栏选择“招行同城转账”或者&quot;招行异地汇款&quot;。</h3>
+            <p>
+                <img src="/Helper/resource/images/4.png" />
+            </p>
+        </li>
+        <li>
+            <h3>5、请按以下图解填入相关信息： </h3>
+            <p>
+                <img src="/Helper/resource/images/5.png" />
+            </p>
+        </li>
+        <li>
+            <h3>招行同城汇款</h3>
+            <p>
+                <img src="/Helper/resource/images/6.png" />
+            </p>
+        </li>
+        <li>
+            <h3>6、输入您的取款密码，以及效验码后，点击“确定”完成招行汇款。</h3>
+        </li>
+        <li>
+            <h3>7、 支付信息确认后，进入个人中心的充值记录中查看游戏币到账情况。</h3>
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+</DIV></DIV>
+</BODY></html>

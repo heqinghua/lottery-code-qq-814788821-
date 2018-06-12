@@ -1,0 +1,4 @@
+﻿
+var lottery_methods = {
+    303: 'SDZX3', 305: 'SDZU3', 307: 'SDZX2', 309: 'SDZU2', 311: 'SDBDW', 313: 'SDDWD', 314: 'SDDWD', 315: 'SDDWD', 317: 'SDDDS', 319: 'SDCZW', 321: 'SDRX1', 323: 'SDRX2', 325: 'SDRX3', 327: 'SDRX4', 329: 'SDRX5', 331: 'SDRX6', 333: 'SDRX7', 335: 'SDRX8'
+};

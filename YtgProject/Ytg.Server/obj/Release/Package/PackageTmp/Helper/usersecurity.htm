@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-账号安全</title>
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+    <ul>
+        <li id="100011" class="active">
+            <h3>1• 用户为保证账户资金安全应注意哪些事项？</h3>
+            <p>
+                A：用户必须注意自己电脑中是否有键盘记录或远程控制等木马程序，使用病毒实时监控程序和网络防火墙并注意升级更新操作系统厂商所提供的安全补丁；<br />
+                B：尽量不要在公共场所（如网吧）等登录本平台；<br />
+                C：尽量在不同场合使用有所区别的密码；<br />
+                D：牢记密码，如作记录则应妥善保管；<br />
+                E：密码不得告诉他人，包括自己的亲朋好友；<br />
+                F：在登录或网上支付密码输入时，应防止左右可疑的人窥视；<br />
+                G：设定密码时不要选用您的身份证、生日、电话、门牌、吉祥、重复或连续等易被他人破译的数字。建议选用既不易被他人猜到，又方便记忆的密码；<br />
+                I：发现泄密的危险时，及时更换密码；<br />
+                J：不定期更换密码。 
+            </p>
+        </li>
+        <li id="100012">
+            <h3>2•为什么登录后长时间不操作，需要重新登录平台？</h3>
+            <p>
+                用户登录后，长时间不操作电脑，系统就认为用户离开自己的电脑了。为了避免别人趁机使用您的账户投注和保护乐诚网用户账户的安全，系统有要求用户重新登录的功能设定。 
+            </p>
+        </li>
+        <li id="100013">
+            <h3>3•乐诚网平台中奖者的个人信息是否安全？</h3>
+            <p>
+                您的个人信息是保密的，本平台采用国际先进加密技术，交易安全放心，请您放心购买。 
+            </p>
+        </li>
+        <li id="100014">
+            <h3>4•什么是资金密码？</h3>
+            <p>
+                资金密码是保障您资金账户安全的一道防线，能有效的降低因账户被盗而引发的经济损失。为了用户资金安全，平台强制使用，请确保登录密码与资金密码不同。 
+            </p>
+        </li>
+        <li id="100015">
+            <h3>5•忘记资金密码怎么办？</h3>
+            <p>
+                如果您忘记了自己的资金密码，请联系乐诚网“在线客服”，通过银行卡的绑定信息，重新设定新的资金密码。 
+            </p>
+        </li>
+        
+    </ul>
+
+</DIV></DIV>
+</BODY></html>

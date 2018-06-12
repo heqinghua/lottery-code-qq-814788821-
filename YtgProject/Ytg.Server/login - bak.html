@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <title>系统登录</title>
+    <link rel="stylesheet" type="text/css" href="/Content/Css/style.css" />
+     <link rel="stylesheet" type="text/css" href="/Content/Css/feile/main.css" />
+    <script src="Content/Scripts/jquery-1.7.min.js" type="text/javascript"></script>
+    <!--[if lte IE 6]><script src="Content/Scripts/json2.js"></script><![endif]-->
+    <!--[if lte IE 7]><script src="Content/Scripts/json2.js"></script><![endif]-->
+    <!--[if IE 8]><script src="/Content/Scripts/json2.js"></script><![endif]-->
+    <link href="/Css/login_comm.css" rel="stylesheet" />
+</head>
+<body style="overflow: hidden;">
+    <div class="con" >
+        <div class="left">
+            <img src="/Content/Images/banner.png" />
+        </div>
+        <div class="right" >
+            <h1>名豪娱乐</h1>
+            <div id="J-errorBox" class="sl-error sl-error-display"><img src="/Content/Images/error.png" /><span class="sl-error-text">dds</span></div>
+            <div id="loginfst" >
+                <p>帐户</p>
+            <ul>
+                <li><input id="username" name="username" class="user" type="text" placeholder="请输入您的登录账号" /></li>
+                <li><p>验证码</p><table style="padding:0px;margin-left:-2px;">
+                        <tr>
+                            <td style="padding:0px;margin:0px;"><input id="code" name="code" type="text" placeholder="请输入验证码" class="paw code" /></td>
+                            <td style="padding:0px;margin:0px;"> <img  width="78" id="codeImg" style="cursor: pointer;height:34px;" /></td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            <p ><input type="button" class="btn" id="nextbtn" value="下 一 步" /></p>
+            <p >
+                <a href="/findpassword.html">忘记密码？</a>
+            </p>
+           </div>
+            <div id="loginlst" style="display:none;">
+            <ul>
+                <li>用户名： <b id="cmname" style="font-weight:bold;"></b></li>
+                <li >问候语： <span id="why">您还没有设置问候语，为了您的安全，请尽快设置！</span></li>
+                <li style="color:#666;">如果问候语与您预设不一致，则为仿冒！不要输入密码!</li>
+                <li><input id="lgpwd" name="lgpwd" class="paw" type="password" placeholder="请输入您的账号密码" /></li>
+            </ul>
+            <p>
+                <input type="button" class="btn" id="login_btn" value="登 陆"  />
+            </p>
+           </div>
+            <div style="clear: both;"></div>
+        </div>
+        
+         <div style="clear: both;"></div>
+    </div>
+   
+   
+  <div id="footer" class="foot_s" style="position:absolute;">
+            <div class="ft-shadow"></div>
+            <div class="fs_c clearfix">
+                <div class="col-1" id="footer-col-1">
+                    <p class="p1">运营资质&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 博彩责任</p>
+                
+                </div>
+                <div class="ft-vline"></div>
+            </div>
+        </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var isNexting = false;
+    var isLogining = false;
+    $(function () {
+        changeCode();
+        $("#footer").css("top", ($(window).height() - 140));
+       
+    })
+    window.onresize = function () {
+        $("#footer").css("top", ($(window).height() - 140));
+    }
+    function next() {
+        
+        $("#J-errorBox").hide();
+        var account = $("#username").val();
+        var code = $("#code").val();
+        if (account == "" || account.length < 6) {
+            $("#J-errorBox").show();
+            changeCode();
+            $(".sl-error-text").html("账号输入错误");
+            return;
+        }
+        if (code == "" || code.length != 4) {
+            $("#J-errorBox").show();
+            changeCode();
+            $(".sl-error-text").html("验证码输入错误");
+            return;
+        }
+        if (isNexting)
+            return;
+        isNexting = true;
+        $("#nextbtn").val("处理中...");
+        $.ajax({
+            type: 'POST',
+            url: '/Page/Initial.aspx',
+            data: "action=getuserwhy&account=" + account + "&code=" + code + "&dt=" + new Date(),
+            success: function (data) {
+                $("#J-errorBox").hide();
+                changeCode();
+                isNexting = false;
+                $("#nextbtn").val("下一步");
+                var jsonData = JSON.parse(data);
+                if (jsonData.Code == 0) {
+                    //获取成功，
+                    
+                    $("#why").html(((jsonData.ErrMsg == null || jsonData.ErrMsg == '') ? "您还没有设置问候语，为了您的安全，请尽快设置！" : jsonData.ErrMsg));
+                    $("#msg").css("margin-bottom", "0px");
+                    $("#loginfst").hide();
+                    $("#loginlst").show();
+                    $("#cmname").html(account);
+                    $("#lgpwd").focus();
+                } else if (jsonData.Code == 1004) {//
+                    $("#code").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("验证码输入错误");
+                } else if (jsonData.Code == 1003) {
+                    $("#code").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("账号已禁用，请联系客服处理");
+                } else {//不存在
+                    $("#username").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("账号不存在");
+                }
+            }
+        });
+    }
+
+    function login() {
+        $("#J-errorBox").hide();
+        var pwd = $("#lgpwd").val();
+        var account = $("#username").val();
+        if (pwd == "" || pwd.length < 6) {
+            $("#J-errorBox").show();
+            $(".sl-error-text").html("密码输入错误");
+            return;
+        }
+        if (isLogining)
+            return;
+        isLogining = true;
+        $("#login_btn").val("正在登陆...");
+        $.ajax({
+            type: 'POST',
+            url: '/Page/Initial.aspx',
+            data: "action=login&M_LOGINCODE=" + account + "&M_LOGINVIDACODE=" + code + "&M_LOGINPWD=" + pwd,
+            success: function (data) {
+                $("#J-errorBox").hide();
+                isLogining = false;
+                $("#login_btn").val("登陆");
+                var jsonData = JSON.parse(data);
+                if (jsonData.Code == 0) {
+                    //登陆成功，
+                    window.location = "/default.aspx";
+                } else if (jsonData.Code == 1003) {
+                    $("#code").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("账号已禁用，请联系客服处理");
+                } else {//
+                    $("#lgpwd").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("账号或密码错误");
+                }
+            }
+        });
+    }
+
+    function changeCode() {
+        $("#codeImg").attr("src", "/CheckImage.aspx?tp=login&dt=" + new Date());
+    }
+
+    $(document).ready(function () {
+        $("#nextbtn").click(function () {
+            next();
+        });
+        window.onkeydown = function (key) {
+            if (key.keyCode == 13) {
+                if ($("#loginfst").css("display") == "block")
+                    next();
+                else
+                    login();
+            }
+        }
+        $("#codeImg").click(function () {
+            changeCode();
+        });
+
+        $("#login_btn").click(function () {
+            login();
+        });
+    });
+</script>

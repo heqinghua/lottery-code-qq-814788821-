@@ -1,0 +1,64 @@
+﻿p { margin:0; padding:0;}
+.countdown .hs { font-size:18px;}
+#tagContent .tagContent { display:none;}
+#tagContent .selectTag { display:block;}
+.clearbxd { zoom:1; overflow:hidden;}/*for IE*/
+
+.lottery_frame .hc_open .k3_open {  padding-left:36px; overflow:hidden;}
+.lottery_frame .hc_open .k3_open ul { padding:20px 0 0 30px;}
+.lottery_frame .hc_open .k3_open ul li { width:63px; float:left; margin-right:27px; display:inline;}
+
+.k3_list { padding:15px 0 0; overflow:hidden; zoom:1;}
+.t_img .tr1 { padding:0 0 4px 32px;}
+.t_img .tr2 { padding:0 0 0 5px;}
+.t_img .tr2 img { margin:0 2px; width:45px; height:45px;}
+.b_text { text-align:center; font-size:16px; font-weight:700; line-height:30px; height:30px; color:#666;}
+.selected .b_text { color:#e5022d;}
+
+.k3_list1 { padding:0 16px 0 8px;}
+.k3_list1 .btnList { float:left; padding:0px;}
+.k3_list1 li {cursor:pointer;float:left;_display:inline;overflow:hidden;margin-right:2px; background:url(/Content/images/skin/tz_balls_bg.png) no-repeat -71px -4px;width:42px;height:44px;line-height:38px;text-align:center;font-family:"Microsoft Yahei";font-size:22px; color:#000;}
+.k3_list1 li.selected { background:url(/Content/images/skin/tz_balls_bg.png) no-repeat -135px -4px;}
+.k3_list1 li.pure {cursor:pointer;float:left;_display:inline;margin:0 4px;background:url(/Content/images/skin/frame_list-btn.png) no-repeat 0 -189px;width:25px;height:25px;line-height:25px;text-align:center;font-size:16px;color:#f4e843;font-weight:normal;}
+.k3_list1 li.pure:hover {background:url(/Content/images/skin/frame_list-btn.png) no-repeat 0 -224px;}
+.k3_list4 { padding:0 0 8px 18px;}
+.k3_list4 li { float:left; margin:0 5px;}
+.k3_list4 li a.curr { }
+.k3_list4 li a { display:block; width:106px; height:131px; padding-top:9px;}
+.k3_list4 li.selected a { 
+    /*background:url(/Content/images/skin/list_li_currbg.png) no-repeat;*/
+}
+
+.x_b { margin-top:10px;}
+.x_t .m_t_h5 { margin:20px 10px 0 0!important;}
+.x_b .name { margin:10px 10px 0 0!important;}
+.tagContent .name {float:left; width:70px;text-align: center; height:35px;line-height:30px;font-size:16px; color:#000; margin:3px 10px 0 0; background:url(/Content/images/skin/tz_balls_bg.png) no-repeat -13px -61px;  font-family:"Microsoft Yahei";}
+.k3_list5_l li { background: url(/static/images/skin/icon_bg01.png) no-repeat; width:60px; height:32px; line-height:32px; font-size:13px; color:#fff; text-align:center; margin-top:32px;}
+.k3_list5_l li.m { margin-top:8px;}
+.k3_list5 { float:left;}
+.k3_list5 li { float:left; margin:0 3px; cursor:pointer;}
+.k3_list5 li a.curr { }
+.k3_list5 li a { display:block; width:106px; height:85px; padding-top:9px;}
+.k3_list5 li.selected a { background:url(/Content/images/skin/list_li_currbg2.png) no-repeat;}
+.k3_list5_2 { float:left;}
+.k3_list5_2 li { display:inline-block; margin:0 5px;}
+.k3_list7 { padding-left:222px;}
+.k3_list7 li { display:inline-block; margin:0 5px;}
+.k3_list8 { padding-left:165px;}
+
+.lottery_frame .hc_open .k3_open ul li { background:none; width:67px; height:75px; line-height:57px; position:inherit; text-align:center; display:block; }
+span.griddle { display:inline-block; width:50px; height:50px; overflow:hidden; background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281530489.png) no-repeat; text-indent:-9999px; }
+span.griddle1 { display:inline-block; width:50px; height:50px; overflow:hidden; background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281530756.png) no-repeat; text-indent:-9999px; }
+span.griddle2 { display:inline-block; width:50px; height:50px; overflow:hidden; background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281530956.png) no-repeat; text-indent:-9999px; }
+span.griddle3 { display:inline-block; width:50px; height:50px; overflow:hidden; background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281531156.png) no-repeat; text-indent:-9999px; }
+span.griddle4 { display:inline-block; width:50px; height:50px; overflow:hidden; background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281531356.png) no-repeat; text-indent:-9999px; }
+span.griddle5 { display:inline-block; width:50px; height:50px; overflow:hidden; background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281531559.png) no-repeat; text-indent:-9999px; }
+span.griddle6 { display:inline-block; width:50px; height:50px; overflow:hidden; background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281531763.png) no-repeat; text-indent:-9999px; }
+li.selected span.griddle { background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281530588.png) no-repeat; text-indent:-9999px; }
+li.selected span.griddle1 { background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281530791.png) no-repeat; text-indent:-9999px; }
+li.selected span.griddle2 { background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281530989.png) no-repeat; text-indent:-9999px; }
+li.selected span.griddle3 { background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281531188.png) no-repeat; text-indent:-9999px; }
+li.selected span.griddle4 { background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281531389.png) no-repeat; text-indent:-9999px; }
+li.selected span.griddle5 { background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281531597.png) no-repeat; text-indent:-9999px; }
+li.selected span.griddle6 { background:url(http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281531796.png) no-repeat; text-indent:-9999px; }
+#lt_selector ul li em { display:none; }

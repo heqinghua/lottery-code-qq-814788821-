@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/lotterySite.Master" AutoEventWireup="true" CodeBehind="Users.master.cs" Inherits="Ytg.ServerWeb.Views.Users.Users" %>
+
+<asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
+    <script src="/Content/Scripts/layout.js" type="text/javascript"></script>
+    <link href="/Content/Css/style.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(function () {
+            $("#lottery_chongti").addClass("on");
+            var hg = $(window).height() - 250;
+            $("#content").css("min-height", hg);
+            $(".left_frame,.right_box").css("min-height", (hg - 52));
+            $('body').css("background", "#fff");
+        })
+    </script>
+    <asp:ContentPlaceHolder ID="usersHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="UserInfoBox wrap_footerbg" >
+        <div class="wrap_bg wrap us">
+            <!--个人信息-->
+            <div id="subContent_bet_re" >
+                <div class="mainiframe-left">
+                    <div class="left_content">
+                        <div class="sidebar_menu">
+                            <dl class="ff-tow2">
+                                <dt class="sidebar_on">个人中心</dt>
+                                <dd class="on">
+                                    <ul class="con_ul " id="mb_pay" runat="server">
+                                        <li><a href="/Views/pay/PayIndex.aspx">
+                                            <p id="autoChongzhi"><span>在线充值</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul " id="zf_pay" runat="server">
+                                        <li><a href="/Views/pay/zhifu/PayIndex.aspx">
+                                            <p id="autoChongzhi"><span>在线充值</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul " id="my_18" runat="server">
+                                        <li><a href="/Views/pay/Payment.aspx">
+                                            <p id="autoChongzhi1"><span>支付宝充值</span></p>
+                                        </a></li>
+                                    </ul>
+                                   
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/Users/Mention.aspx">
+                                            <p id="pingtaitixian"><span>平台提现</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/Users/MentionList.aspx">
+                                            <p id="tixian"><span>提现记录</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/Users/UpdatePwd.aspx">
+                                            <p id="upPwd"><span>修改密码</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/Users/MyMessage.aspx">
+                                            <p id="msg"><span>我的消息</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul " style="display:none;">
+                                        <li><a href="/Views/Users/news.aspx">
+                                            <p id="news_msg"><span>新闻公告</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/Users/BindBankCard.aspx">
+                                            <p id="bindCard"><span>我的银行卡</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/Users/userLoginLog.aspx">
+                                            <p id="loginLog"><span>登录日志</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/Users/MeUserBonus.aspx" >
+                                            <p id="userBonus_Filter"><span >奖金详情</span></p>
+                                        </a></li>
+                                    </ul>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="leftsidebotcon"></div>
+                    <script>
+                        $(".ff-one").click(function () {
+                            $(this).addClass("ff-tow").siblings().removeClass("ff-tow")
+                        });
+                        $(".ff-tow").click(function () {
+                            $(this).slideDown();
+                        });
+                    </script>
+                </div>
+                <div id="mainContent" > 
+                    <div id="contentBox" style="overflow-y:hidden;width: 100%;height: auto;margin-top: 0">
+                        <asp:ContentPlaceHolder ID="ContentUsers" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</asp:Content>

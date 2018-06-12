@@ -1,0 +1,5 @@
+E:\me\LotteryPal\trunk\Web\YtgProject\Ytg.Resources\bin\Release\Ytg.Resources.dll
+E:\me\LotteryPal\trunk\Web\YtgProject\Ytg.Resources\bin\Release\Ytg.Resources.pdb
+E:\me\LotteryPal\trunk\Web\YtgProject\Ytg.Resources\obj\Release\Ytg.Resources.csprojResolveAssemblyReference.cache
+E:\me\LotteryPal\trunk\Web\YtgProject\Ytg.Resources\obj\Release\Ytg.Resources.dll
+E:\me\LotteryPal\trunk\Web\YtgProject\Ytg.Resources\obj\Release\Ytg.Resources.pdb

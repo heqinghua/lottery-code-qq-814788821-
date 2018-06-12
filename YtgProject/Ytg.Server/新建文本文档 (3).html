@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript">
+var host = '127.0.0.1';
+var port = 8080;
+var url = 'ws://'+host+':'+port+'/';
+
+var w = new WebSocket(url);
+ 
+w.onopen = function(){
+    $('chat-box').innerHTML = '已连接到服务器......<br/>';
+}
+ 
+w.onmessage = function(e){
+    var msg = e.data;
+    var chatBox = $('chat-box');
+     
+    audioElement.play();    
+    chatBox.innerHTML = chatBox.innerHTML+msg+'<br/>';
+}
+ 
+function send(){
+    var talk = $('talk');
+    var nike = $('nike');
+     
+    w.send('<strong style="color:red">'+nike.value+':</strong>'+talk.value);
+}
+function $(id){
+    return document.getElementById(id);
+}
+</script>
+</head>
+ 
+<body>
+<div id="chat-box" style="border:1px solid #cccccc; width:400px; height:400px; overflow:scroll;"></div>
+昵称:<input type="text" id="nike"/><br/>
+内容:<input type="text" id="talk"/><input type="button" id="send" onClick="send();" value="发送"/>
+</body>
+</html>

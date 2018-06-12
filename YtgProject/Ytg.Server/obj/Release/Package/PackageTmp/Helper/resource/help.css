@@ -1,0 +1,48 @@
+
+#left-side #help-title {
+	padding: 7px 10px; font-weight: bold; margin-bottom: 12px; border-bottom-color: rgb(227, 227, 227); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#left-side ul a {
+	color: rgb(93, 93, 93);
+}
+#left-side ul a:hover {
+	color: rgb(193, 30, 15);
+}
+#left-side ul {
+	margin-left: 25px;
+}
+#left-side ul li {
+	margin: 5px 0px; list-style-image: url("/images/xm/icon-items-close.jpg");
+}
+#left-side ul li ul li {
+	margin-left: -13px; list-style-image: url("/images/xm/icon-point-right.jpg");
+}
+#open {
+	list-style-image: url("/images/xm/icon-items-open.jpg") !important;
+}
+#right-main {
+    margin:auto;
+}
+#right-main #bread {
+	padding: 7px 0px 7px 10px; border-radius: 3px; border: 1px solid rgb(227, 227, 227); border-image: none; margin-bottom: 10px;
+}
+#right-main #bread font {
+	color: rgb(92, 92, 92);
+}
+#right-main #right-main-content {
+	padding: 10px; border-radius: 3px; border: 1px solid rgb(227, 227, 227); border-image: none;
+}
+#right-main #right-main-content ul li {
+	list-style: none;
+}
+#right-main #right-main-content ul li h3 {
+	padding: 4px 0px; font-weight: 800; margin-bottom: 10px; border-bottom-color: rgb(227, 227, 227); border-bottom-width: 1px; border-bottom-style: solid; cursor: pointer;
+}
+#right-main #right-main-content ul li p {line-height: 18px; margin-bottom: 10px;
+}
+#right-main #right-main-content ul .active h3 {
+	color:red;
+}
+#right-main #right-main-content ul .active p {
+	padding:20px;
+}

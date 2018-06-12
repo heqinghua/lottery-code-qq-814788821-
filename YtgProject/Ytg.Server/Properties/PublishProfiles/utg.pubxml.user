@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\asp.net发布\utg</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AccountCenter.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="addPointsAttribute.html">
+      <publishTime>04/23/2015 09:46:00</publishTime>
+    </File>
+    <File Include="AutoRegist.html">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Bank.aspx">
+      <publishTime>06/09/2015 11:40:27</publishTime>
+    </File>
+    <File Include="BankPoundage.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="BankTransfer.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="BankType.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="BannerService.svc">
+      <publishTime>05/07/2015 12:41:46</publishTime>
+    </File>
+    <File Include="BetDetailService.svc">
+      <publishTime>04/23/2015 09:46:00</publishTime>
+    </File>
+    <File Include="Bets/RadioConfig.xml">
+      <publishTime>06/08/2015 09:30:26</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/23/2015 09:47:24</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
+      <publishTime>04/23/2015 09:48:35</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>04/23/2015 09:47:28</publishTime>
+    </File>
+    <File Include="bin/Bets/RadioConfig.xml">
+      <publishTime>06/08/2015 09:30:30</publishTime>
+    </File>
+    <File Include="bin/C5.dll">
+      <publishTime>04/23/2015 09:47:40</publishTime>
+    </File>
+    <File Include="bin/Castle.Core.dll">
+      <publishTime>04/23/2015 09:48:25</publishTime>
+    </File>
+    <File Include="bin/Castle.Facilities.EventWiring.dll">
+      <publishTime>04/23/2015 09:48:25</publishTime>
+    </File>
+    <File Include="bin/Castle.Facilities.FactorySupport.dll">
+      <publishTime>04/23/2015 09:48:25</publishTime>
+    </File>
+    <File Include="bin/Castle.Facilities.Logging.dll">
+      <publishTime>04/23/2015 09:48:25</publishTime>
+    </File>
+    <File Include="bin/Castle.Facilities.Remoting.dll">
+      <publishTime>04/23/2015 09:48:25</publishTime>
+    </File>
+    <File Include="bin/Castle.Facilities.Synchronize.dll">
+      <publishTime>04/23/2015 09:48:25</publishTime>
+    </File>
+    <File Include="bin/Castle.Facilities.WcfIntegration.dll">
+      <publishTime>04/23/2015 09:48:25</publishTime>
+    </File>
+    <File Include="bin/Castle.Windsor.dll">
+      <publishTime>04/23/2015 09:48:25</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.dll">
+      <publishTime>04/23/2015 09:47:40</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.Log4Net.dll">
+      <publishTime>04/23/2015 09:47:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/23/2015 09:46:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/23/2015 09:46:29</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>04/23/2015 09:47:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
+      <publishTime>04/23/2015 09:47:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>04/23/2015 09:48:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>04/23/2015 09:48:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>04/23/2015 09:48:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
+      <publishTime>04/23/2015 09:48:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/23/2015 09:48:01</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/23/2015 09:47:48</publishTime>
+    </File>
+    <File Include="bin/Omu.ValueInjecter.dll">
+      <publishTime>04/23/2015 09:48:36</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>04/23/2015 09:47:23</publishTime>
+    </File>
+    <File Include="bin/Quartz.dll">
+      <publishTime>04/23/2015 09:47:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/23/2015 09:48:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>04/23/2015 09:46:52</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/23/2015 09:47:20</publishTime>
+    </File>
+    <File Include="bin/Ytg.BasicModel.dll">
+      <publishTime>06/10/2015 16:20:48</publishTime>
+    </File>
+    <File Include="bin/Ytg.Comm.dll">
+      <publishTime>06/10/2015 16:20:50</publishTime>
+    </File>
+    <File Include="bin/Ytg.Core.dll">
+      <publishTime>06/10/2015 16:20:52</publishTime>
+    </File>
+    <File Include="bin/Ytg.Data.dll">
+      <publishTime>06/10/2015 16:20:53</publishTime>
+    </File>
+    <File Include="bin/Ytg.Resources.dll">
+      <publishTime>05/25/2015 18:12:32</publishTime>
+    </File>
+    <File Include="bin/Ytg.Scheduler.Comm.dll">
+      <publishTime>06/10/2015 16:20:57</publishTime>
+    </File>
+    <File Include="bin/Ytg.Scheduler.Tasks.dll">
+      <publishTime>06/10/2015 16:20:58</publishTime>
+    </File>
+    <File Include="bin/Ytg.ServerWeb.dll">
+      <publishTime>06/10/2015 16:21:00</publishTime>
+    </File>
+    <File Include="bin/Ytg.Service.dll">
+      <publishTime>06/10/2015 16:20:54</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/EntityFramework.resources.dll">
+      <publishTime>04/23/2015 09:46:26</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/EntityFramework.SqlServer.resources.dll">
+      <publishTime>04/23/2015 09:46:26</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.AspNet.FriendlyUrls.resources.dll">
+      <publishTime>04/23/2015 09:47:08</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.AspNet.Identity.Core.resources.dll">
+      <publishTime>04/23/2015 09:48:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.AspNet.Identity.EntityFramework.resources.dll">
+      <publishTime>04/23/2015 09:48:50</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.AspNet.Identity.Owin.resources.dll">
+      <publishTime>04/23/2015 09:48:02</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Optimization.resources.dll">
+      <publishTime>04/23/2015 09:48:34</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Providers.resources.dll">
+      <publishTime>04/23/2015 09:46:52</publishTime>
+    </File>
+    <File Include="CheckCodeHandler.ashx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="CheckImage.aspx">
+      <publishTime>05/18/2015 11:32:31</publishTime>
+    </File>
+    <File Include="clientaccesspolicy.xml.xml">
+      <publishTime>04/23/2015 09:46:00</publishTime>
+    </File>
+    <File Include="ClientBin/PlayConfig.xml">
+      <publishTime>03/25/2015 01:28:58</publishTime>
+    </File>
+    <File Include="ClientBin/Resources/Banner/banner1.jpg">
+      <publishTime>05/08/2015 09:35:46</publishTime>
+    </File>
+    <File Include="ClientBin/Resources/Banner/banner2.jpg">
+      <publishTime>05/08/2015 09:35:46</publishTime>
+    </File>
+    <File Include="ClientBin/Resources/Banner/banner3.jpg">
+      <publishTime>05/08/2015 09:35:46</publishTime>
+    </File>
+    <File Include="ClientBin/Resources/Banner/banner4.jpg">
+      <publishTime>05/08/2015 09:35:46</publishTime>
+    </File>
+    <File Include="ClientBin/Resources/images/opening.png">
+      <publishTime>05/11/2015 09:48:20</publishTime>
+    </File>
+    <File Include="ClientBin/Resources/logo1.png">
+      <publishTime>05/19/2015 12:41:39</publishTime>
+    </File>
+    <File Include="ClientBin/Resources/Music/msg.mp3">
+      <publishTime>05/11/2015 09:48:19</publishTime>
+    </File>
+    <File Include="ClientBin/Ytg.Chart.Client.xap">
+      <publishTime>06/10/2015 15:24:16</publishTime>
+    </File>
+    <File Include="ClientBin/Ytg.Client.Manager.xap">
+      <publishTime>06/10/2015 16:13:22</publishTime>
+    </File>
+    <File Include="ClientBin/Ytg.Client.Play.ChongqinSSC.xap">
+      <publishTime>06/10/2015 16:13:19</publishTime>
+    </File>
+    <File Include="ClientBin/Ytg.Client.Play.xap">
+      <publishTime>06/10/2015 16:13:17</publishTime>
+    </File>
+    <File Include="ClientBin/Ytg.Client.Resources.xap">
+      <publishTime>05/26/2015 11:16:27</publishTime>
+    </File>
+    <File Include="ClientBin/Ytg.Client.Run.xap">
+      <publishTime>06/10/2015 14:17:45</publishTime>
+    </File>
+    <File Include="CompanyBankService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Content.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Content/Css/manageBase.css">
+      <publishTime>04/23/2015 09:46:00</publishTime>
+    </File>
+    <File Include="Content/Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/23/2015 09:46:00</publishTime>
+    </File>
+    <File Include="Content/Scripts/json2.js">
+      <publishTime>04/23/2015 09:46:00</publishTime>
+    </File>
+    <File Include="CountDataService.svc">
+      <publishTime>04/28/2015 10:07:31</publishTime>
+    </File>
+    <File Include="Css/all.css">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Css/help.css">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Css/js/common.js">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Css/js/jquery.js">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Css/js/message.js">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>05/28/2015 16:45:34</publishTime>
+    </File>
+    <File Include="Default___.aspx">
+      <publishTime>05/08/2015 09:35:46</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Helper/bettingHelper.htm">
+      <publishTime>05/28/2015 18:53:56</publishTime>
+    </File>
+    <File Include="Helper/drawings.htm">
+      <publishTime>05/28/2015 18:54:09</publishTime>
+    </File>
+    <File Include="Helper/fastrecharge.htm">
+      <publishTime>05/28/2015 18:58:51</publishTime>
+    </File>
+    <File Include="Helper/group.htm">
+      <publishTime>05/28/2015 18:54:18</publishTime>
+    </File>
+    <File Include="Helper/gsyh.htm">
+      <publishTime>05/28/2015 19:06:08</publishTime>
+    </File>
+    <File Include="Helper/jsyh.htm">
+      <publishTime>05/28/2015 18:34:54</publishTime>
+    </File>
+    <File Include="Helper/jtyh.htm">
+      <publishTime>05/28/2015 18:38:20</publishTime>
+    </File>
+    <File Include="Helper/msyh.htm">
+      <publishTime>05/28/2015 18:41:25</publishTime>
+    </File>
+    <File Include="Helper/nyyh.htm">
+      <publishTime>05/28/2015 18:47:23</publishTime>
+    </File>
+    <File Include="Helper/recharge.htm">
+      <publishTime>05/28/2015 18:54:29</publishTime>
+    </File>
+    <File Include="Helper/reglogin.htm">
+      <publishTime>05/28/2015 18:49:43</publishTime>
+    </File>
+    <File Include="Helper/resource/ajaxfileupload.js">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/cwlobby.css">
+      <publishTime>05/28/2015 09:40:24</publishTime>
+    </File>
+    <File Include="Helper/resource/dialogUI.css">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/goble.css">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/goble.js">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/group.css">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/help.css">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/help.js">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/10.png">
+      <publishTime>05/28/2015 18:33:50</publishTime>
+    </File>
+    <File Include="Helper/resource/images/11.jpg">
+      <publishTime>05/28/2015 19:04:31</publishTime>
+    </File>
+    <File Include="Helper/resource/images/12.png">
+      <publishTime>05/28/2015 19:04:31</publishTime>
+    </File>
+    <File Include="Helper/resource/images/13.png">
+      <publishTime>05/28/2015 19:35:51</publishTime>
+    </File>
+    <File Include="Helper/resource/images/14.png">
+      <publishTime>05/28/2015 19:04:31</publishTime>
+    </File>
+    <File Include="Helper/resource/images/15.png">
+      <publishTime>05/28/2015 19:04:31</publishTime>
+    </File>
+    <File Include="Helper/resource/images/4.png">
+      <publishTime>05/28/2015 18:52:34</publishTime>
+    </File>
+    <File Include="Helper/resource/images/5.png">
+      <publishTime>05/28/2015 18:52:34</publishTime>
+    </File>
+    <File Include="Helper/resource/images/6.png">
+      <publishTime>05/28/2015 18:52:34</publishTime>
+    </File>
+    <File Include="Helper/resource/images/8.png">
+      <publishTime>05/28/2015 18:33:50</publishTime>
+    </File>
+    <File Include="Helper/resource/images/9.png">
+      <publishTime>05/28/2015 18:33:50</publishTime>
+    </File>
+    <File Include="Helper/resource/images/bett01.jpg">
+      <publishTime>05/28/2015 17:48:56</publishTime>
+    </File>
+    <File Include="Helper/resource/images/chongzhi.jpg">
+      <publishTime>05/28/2015 17:27:48</publishTime>
+    </File>
+    <File Include="Helper/resource/images/deposit/2.png">
+      <publishTime>05/28/2015 18:58:07</publishTime>
+    </File>
+    <File Include="Helper/resource/images/deposit/3.png">
+      <publishTime>05/28/2015 18:58:07</publishTime>
+    </File>
+    <File Include="Helper/resource/images/deposit/4.png">
+      <publishTime>05/28/2015 18:58:07</publishTime>
+    </File>
+    <File Include="Helper/resource/images/deposit/5.png">
+      <publishTime>05/28/2015 18:58:07</publishTime>
+    </File>
+    <File Include="Helper/resource/images/j1.png">
+      <publishTime>05/28/2015 18:37:04</publishTime>
+    </File>
+    <File Include="Helper/resource/images/j2.jpg">
+      <publishTime>05/28/2015 18:37:04</publishTime>
+    </File>
+    <File Include="Helper/resource/images/m1.png">
+      <publishTime>05/28/2015 18:40:22</publishTime>
+    </File>
+    <File Include="Helper/resource/images/m2.png">
+      <publishTime>05/28/2015 18:40:22</publishTime>
+    </File>
+    <File Include="Helper/resource/images/m3.png">
+      <publishTime>05/28/2015 18:40:22</publishTime>
+    </File>
+    <File Include="Helper/resource/images/m4.png">
+      <publishTime>05/28/2015 18:40:22</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n1.png">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n10.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n11.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n12.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n13.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n2.png">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n3.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n4.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n5.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n6.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n7.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n8.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/images/n9.jpg">
+      <publishTime>05/28/2015 18:45:21</publishTime>
+    </File>
+    <File Include="Helper/resource/jquery-1.7.min.js">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/jquery.dialogUI.js">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/jquery.dragdrop.js">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/logo.png">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/min.css">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/server.socket.js">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/socket.io.js">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/talk_pop.css">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/talk_pop.js">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/resource/tu.jpg">
+      <publishTime>05/27/2015 16:47:21</publishTime>
+    </File>
+    <File Include="Helper/usersecurity.htm">
+      <publishTime>05/28/2015 18:50:35</publishTime>
+    </File>
+    <File Include="Helper/zsyh.htm">
+      <publishTime>06/01/2015 09:51:10</publishTime>
+    </File>
+    <File Include="HotLotteryService.svc">
+      <publishTime>05/06/2015 09:48:47</publishTime>
+    </File>
+    <File Include="HtmlHelp.html">
+      <publishTime>04/23/2015 09:45:58</publishTime>
+    </File>
+    <File Include="LotteryCycleService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="LotteryIssueService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="LotteryService.svc">
+      <publishTime>06/06/2015 10:41:12</publishTime>
+    </File>
+    <File Include="LotteryTypeService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Manager.aspx">
+      <publishTime>06/01/2015 14:47:20</publishTime>
+    </File>
+    <File Include="MarketService.svc">
+      <publishTime>05/11/2015 09:48:19</publishTime>
+    </File>
+    <File Include="MentionQueusService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="MessageService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="NewsService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="NoticeService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Page/Bank/Bank.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Page/Bank/ytg_user_recharge.aspx">
+      <publishTime>06/09/2015 15:11:41</publishTime>
+    </File>
+    <File Include="Page/Initial.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Page/Lott/Lottery.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Page/Lott/LotteryBasic.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Page/Lott/LotteryBetDetail.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Page/Lott/OpenResult.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Page/Market/Market.aspx">
+      <publishTime>05/14/2015 09:46:00</publishTime>
+    </File>
+    <File Include="Page/Messages.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Page/Repot/AmtChange.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Page/Settings.xml">
+      <publishTime>05/15/2015 09:22:23</publishTime>
+    </File>
+    <File Include="Page/UploadHandler.ashx">
+      <publishTime>05/08/2015 09:35:44</publishTime>
+    </File>
+    <File Include="Page/Users.aspx">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="PlayNumTypeService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="PlayTypeRadiosBonusService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="PlayTypeRadioService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="PlayTypeService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="RoleService.svc">
+      <publishTime>04/23/2015 16:14:53</publishTime>
+    </File>
+    <File Include="Silverlight.js">
+      <publishTime>04/23/2015 09:46:00</publishTime>
+    </File>
+    <File Include="SysCatchNumService.svc">
+      <publishTime>04/23/2015 09:46:00</publishTime>
+    </File>
+    <File Include="SysLogService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="SysMenuService.svc">
+      <publishTime>04/23/2015 19:23:33</publishTime>
+    </File>
+    <File Include="SysOperationLogService.svc">
+      <publishTime>05/21/2015 09:56:05</publishTime>
+    </File>
+    <File Include="SysSettingService.svc">
+      <publishTime>04/30/2015 09:51:27</publishTime>
+    </File>
+    <File Include="SysUserBalanceDetailService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="SysUserBalanceService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="SysUserBankService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="UserService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="VipMentionApplyService.svc">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/09/2015 17:51:10</publishTime>
+    </File>
+    <File Include="windsor.xml">
+      <publishTime>04/23/2015 19:14:51</publishTime>
+    </File>
+    <File Include="xml/AddPointsAttribute.xml">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="xml/xmlData.xml">
+      <publishTime>04/23/2015 09:45:59</publishTime>
+    </File>
+    <File Include="xml/Ytg.config">
+      <publishTime>05/26/2015 15:01:31</publishTime>
+    </File>
+    <File Include="Ytg.Chart.ClientTestPage.aspx">
+      <publishTime>05/12/2015 12:40:21</publishTime>
+    </File>
+    <File Include="Ytg.Chart.ClientTestPage.html">
+      <publishTime>05/12/2015 12:40:21</publishTime>
+    </File>
+    <File Include="Ytg.Client.ManagerTestPage.aspx">
+      <publishTime>03/17/2015 01:57:23</publishTime>
+    </File>
+    <File Include="Ytg.Client.ManagerTestPage.html">
+      <publishTime>03/17/2015 01:57:22</publishTime>
+    </File>
+    <File Include="Ytg.Client.Play.ChongqinSSCTestPage.aspx">
+      <publishTime>03/17/2015 01:57:17</publishTime>
+    </File>
+    <File Include="Ytg.Client.Play.ChongqinSSCTestPage.html">
+      <publishTime>03/17/2015 01:57:17</publishTime>
+    </File>
+    <File Include="Ytg.Client.PlayTestPage.aspx">
+      <publishTime>03/17/2015 01:57:13</publishTime>
+    </File>
+    <File Include="Ytg.Client.PlayTestPage.html">
+      <publishTime>03/17/2015 01:57:11</publishTime>
+    </File>
+    <File Include="Ytg.Client.ResourcesTestPage.aspx">
+      <publishTime>05/26/2015 09:46:19</publishTime>
+    </File>
+    <File Include="Ytg.Client.ResourcesTestPage.html">
+      <publishTime>05/26/2015 09:46:17</publishTime>
+    </File>
+    <File Include="Ytg.Client.RunTestPage.html">
+      <publishTime>05/19/2015 11:24:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

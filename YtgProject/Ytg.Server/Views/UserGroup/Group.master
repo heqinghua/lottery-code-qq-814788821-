@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/lotterySite.Master" AutoEventWireup="true" CodeBehind="Group.master.cs" Inherits="Ytg.ServerWeb.Views.UserGroup.Group" %>
+<asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
+    <link href="/Content/images/skin/favicon.ico" rel="shortcut icon" type="images/x-icon" />
+    <script src="/Content/Scripts/layout.js" type="text/javascript"></script>
+    <script src="/Content/Scripts/lhgdialog/lhgdialog.js?skin=chrome"></script>
+    <link href="/Content/Css/style.css" rel="stylesheet" />
+    <style type="text/css">
+        .ltable td {font-size:12px;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#lottery_dl").addClass("on");
+            var hg = $(window).height() - 250;
+            $("#content").css("min-height", hg);
+            $(".left_frame,.right_box").css("min-height", (hg - 52));
+            $('body').css("background", "#fff");
+        })
+    </script>
+    
+    <asp:ContentPlaceHolder ID="usersHead" runat="server"></asp:ContentPlaceHolder>             
+</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div  class="UserInfoBox wrap_footerbg" >
+        <div class="wrap_bg wrap">
+            <!--个人信息-->
+            <div id="subContent_bet_re" >
+                <div class="mainiframe-left">
+                    <div class="left_content">
+                        <div class="sidebar_menu">
+                            <dl class="ff-tow2">
+                                <dt class="sidebar_on">用户管理</dt>
+                                <dd class="on">
+                                     
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/UserGroup/UsersList.aspx" >
+                                            <p id="users"><span >用户列表</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/UserGroup/EditUser.aspx" >
+                                            <p id="usersRegist"><span >新增用户</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/UserGroup/AutoRegistSetting.aspx" >
+                                            <p id="autoRegistSetting"><span>推广设定</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul " style="display:none;">
+                                        <li><a href="/Views/Report/ProfitLossList.aspx" >
+                                            <p id="zhangbian"><span >配额账变</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/UserGroup/QuotaFilter.aspx" >
+                                            <p id="peierfilter"><span >配额查询</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul ">
+                                        <li><a href="/Views/UserGroup/UserGroup.aspx" >
+                                            <p id="groupUser_p"><span >团队余额</span></p>
+                                        </a></li>
+                                    </ul>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="leftsidebotcon"></div>
+                    <script>
+                        $(".ff-one").click(function () {
+                            $(this).addClass("ff-tow").siblings().removeClass("ff-tow")
+                        });
+                        $(".ff-tow").click(function () {
+                            $(this).slideDown();
+                        });
+                    </script>
+                </div>
+                <div id="mainContent" > 
+                    <div id="contentBox" style="overflow-y:hidden;width: 100%;height: auto;margin-top: 0">
+                        <asp:ContentPlaceHolder ID="ContentUsers" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</asp:Content> 

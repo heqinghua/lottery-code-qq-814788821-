@@ -1,0 +1,933 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<items>
+  <!--五星-->
+  <!--直选复式-->
+  <item Code="0,76,152,228,304,1300,1400,1500,1600,1700,2015,2113,2211" methodid="ZX5" type="digital" show_str="X,X,X,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位各选一个号码组成一注。" methodhelp="从万位、千位、百位、十位、个位中选择一个5位数号码组成一注，所选号码与开奖号码相同，且顺序一致，即为中奖。" methodexample="投注方案：13456； 开奖号码：13456，即中五星直选。">
+    <Layout>{ title: '万位', no: '0|1|2|3|4|5|6|7|8|9', place: 0, cols: 1 }</Layout>
+    <Layout>{ title: '千位', no: '0|1|2|3|4|5|6|7|8|9', place: 1, cols: 1 }</Layout>
+    <Layout>{ title: '百位', no: '0|1|2|3|4|5|6|7|8|9', place: 2, cols: 1 }</Layout>
+    <Layout>{ title: '十位', no: '0|1|2|3|4|5|6|7|8|9', place: 3, cols: 1 }</Layout>
+    <Layout>{ title: '个位', no: '0|1|2|3|4|5|6|7|8|9', place: 4, cols: 1 }</Layout>
+  </item>
+  <!--直选单式-->
+  <item Code="1,77,153,229,305,1301,1401,1501,1601,1701,2016,2114,2212" methodid="ZX5" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="手动输入号码，至少输入1个五位数号码组成一注(一次最大可投注10000注)。" methodhelp="手动输入一个5位数号码组成一注，所选号码的万位、千位、百位、十位、个位与开奖号码相同，且顺序一致，即为中奖。(五星直选单式每次的最大投注为10000注,如果确实想投注更多的号码，请拆分成多注后进行)" methodexample="投注方案：13456； 开奖号码：13456，即中五星直选。"></item>
+  <!--五星组合-->
+  <item Code="2,78,154,230,306,1302,1402,1502,1602,1702,2017,2115,2213" methodid="ZH5" type="digital" show_str="X,X,X,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位各选一个号码组成五注。" methodhelp="从万位、千位、百位、十位、个位中至少各选一个号码组成1-5星的组合，共五注，所选号码的个位与开奖号码对应位相同，则中1个5等奖；所选号码的个位、十位与开奖号码对应位相同，则中1个5等奖以及1个4等奖，依此类推，最高可中5个奖。" methodexample="五星组合示例，如购买：4+5+6+7+8，该票共10元，由以下5注：45678(五星)、5678(四星)、678(三星)、78(二星)、8(一星)构成。开奖号码：45678，即可中五星、四星、三星、二星、一星各1注。">
+    <Layout>{ title: '万位', no: '0|1|2|3|4|5|6|7|8|9', place: 0, cols: 1 }</Layout>
+    <Layout>{ title: '千位', no: '0|1|2|3|4|5|6|7|8|9', place: 1, cols: 1 }</Layout>
+    <Layout>{ title: '百位', no: '0|1|2|3|4|5|6|7|8|9', place: 2, cols: 1 }</Layout>
+    <Layout>{ title: '十位', no: '0|1|2|3|4|5|6|7|8|9', place: 3, cols: 1 }</Layout>
+    <Layout>{ title: '个位', no: '0|1|2|3|4|5|6|7|8|9', place: 4, cols: 1 }</Layout>
+  </item>
+  <!--组选120-->
+  <item Code="3,79,155,231,307,1303,1403,1503,1603,1703,2018,2116,2214" methodid="WXZU120" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中选择5个号码组成一注。" methodhelp="从0-9中任意选择5个号码组成一注，所选号码与开奖号码的万位、千位、百位、十位、个位相同，顺序不限，即为中奖。" methodexample="投注方案：10568，开奖号码：10568（顺序不限），即可中五星组选120。">
+    <Layout>{title:'组选120', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen:5}</Layout>
+  </item>
+  <!--组选60-->
+  <item Code="4,80,156,232,308,1304,1404,1504,1604,1704,2019,2117,2215" methodid="WXZU60" type="digital" show_str="X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从“二重号”选择一个号码，“单号”中选择三个号码组成一注。" methodhelp="选择1个二重号码和3个单号号码组成一注，所选的单号号码与开奖号码相同，且所选二重号码在开奖号码中出现了2次，即为中奖。" methodexample="投注方案：二重号：8；单号：016，开奖号码：01688（顺序不限），即可中五星组选60。">
+    <Layout>{title:'二重号', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen: 1}</Layout>
+    <Layout>{title:'单　号', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1, minchosen: 3}</Layout>
+  </item>
+  <!--组选30-->
+  <item Code="5,81,157,233,309,1305,1405,1505,1605,1705,2020,2118,2216" methodid="WXZU30" type="digital" show_str="X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从“二重号”选择两个号码，“单号”中选择一个号码组成一注。" methodhelp="选择2个二重号和1个单号号码组成一注，所选的单号号码与开奖号码相同，且所选的2个二重号码分别在开奖号码中出现了2次，即为中奖。" methodexample="投注方案：二重号：68；单号：0，开奖号码：06688（顺序不限），即可中五星组选30。">
+     <Layout>{title:'二重号', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen: 2}</Layout>
+		 <Layout>{title:'单　号', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1, minchosen: 1}</Layout>
+  </item>
+  <!--组选20-->
+  <item Code="6,82,158,234,310,1306,1406,1506,1606,1706,2021,2119,2217"  methodid="WXZU20" type="digital" show_str="X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从“三重号”选择一个号码，“单号”中选择两个号码组成一注。" methodhelp=" 选择1个三重号码和2个单号号码组成一注，所选的单号号码与开奖号码相同，且所选三重号码在开奖号码中出现了3次，即为中奖。 " methodexample="投注方案：三重号：8；单号：01，开奖号码：01888（顺序不限），即可中五星组选20。">
+    <Layout>{title:'三重号', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen: 1}</Layout>
+		<Layout>{title:'单　号', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1, minchosen: 2}</Layout>
+  </item>
+  <!--组选10-->
+  <item Code="7,83,159,235,311,1307,1407,1507,1607,1707,2022,2120,2218" methodid="WXZU10" type="digital" show_str="X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从“三重号”选择一个号码，“二重号”中选择一个号码组成一注。" methodhelp="选择1个三重号码和1个二重号码，所选三重号码在开奖号码中出现3次，并且所选二重号码在开奖号码中出现了2次，即为中奖。" methodexample="投注方案：三重号：8；二重号：1，开奖号码：11888（顺序不限），即可中五星组选10。">
+    <Layout>{title:'三重号', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen: 1}</Layout>
+		<Layout>{title:'二重号', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1, minchosen: 1}</Layout>
+  </item>
+  <!--组选5-->
+  <item Code="8,84,160,236,312,1308,1408,1508,1608,1708,2023,2121,2219" methodid="WXZU5" type="digital" show_str="X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0"   methoddesc="从“四重号”选择一个号码，“单号”中选择一个号码组成一注。" methodhelp="选择1个四重号码和1个单号号码组成一注，所选的单号存在于开奖号码中，且所选四重号码在开奖号码中出现了4次，即为中奖。" methodexample="投注方案：四重号：8；单号：1，开奖号码：18888（顺序不限），即可中五星组选5。">
+    <Layout>{title:'四重号', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen: 1}</Layout>
+		<Layout>{title:'单　号', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1, minchosen: 1}</Layout>
+  </item>
+  <!--一帆风顺-->
+  <item Code="9,85,161,237,313,1309,1409,1509,1609,1709,2024,2122,2220" methodid="BDW1" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择1个以上号码。" methodhelp="从0-9中任意选择一个号码组成一注，只要开奖号码\r\n的万位、千位、百位、十位、个位包含所选号码即为中奖" methodexample="投注方案：8\r\n开奖号码：至少出现1个8，即中一帆风顺">
+    <Layout>{title:'一帆风顺', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--好事成双-->
+  <item Code="10,86,162,238,314,1310,1410,1510,1610,1710,2025,2123,2221" methodid="HSCS" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择1个以上的二重号码。" methodhelp="投注方案：8开奖号码：至少出现2个8，即中好事成双" methodexample="从0-9中任意选择1个号码组成一注，只要所选号码在开奖号码的万位、千位、百位、十位、个位中出现2次，即为中奖。">
+    <Layout>{title:'好事成双', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--三星报喜-->
+  <item Code="11,87,163,239,315,1311,1411,1511,1611,1711,2026,2124,2222" methodid="SXBX" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择1个以上的三重号码。" methodhelp="投注方案：8开奖号码：至少出现3个8，即中三星报喜。" methodexample="从0-9中任意选择1个号码组成一注，只要所选号码在开奖号码的万位、千位、百位、十位、个位中出现3次，即为中奖。">
+    <Layout>{title:'三星报喜', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--四季发财-->
+  <item Code="12,88,164,240,316,1312,1412,1512,1612,1712,2027,2125,2223" methodid="SJFC" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择1个以上的四重号码。" methodhelp="投注方案：8开奖号码：至少出现4个8，即中四季发财" methodexample="从0-9中任意选择1个号码组成一注，只要所选号码在开奖号码的万位、千位、百位、十位、个位中出现4次，即为中奖。">
+    <Layout>{title:'四季发财', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+
+  <!--************四星 start***********-->
+  <!--直选复式-->
+  <item Code="13,89,165,241,317,1313,1413,1513,1613,1713,2028,2126,2224" methodid="ZX4" type="digital" show_str="-,X,X,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" ifrandom="1" randomcos="4" randomcosvalue="1|1|1|1"  methoddesc="从千位、百位、十位、个位各选一个号码组成一注。" methodhelp="从千位、百位、十位、个位中选择一个4位数号码组成一注，所选号码与开奖号码相同，且顺序一致，即为中奖。" methodexample="投注方案：3456； 开奖号码：3456，即中四星直选。">
+    <Layout>{title:'千位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>
+    <Layout>{title:'十位', no:'0|1|2|3|4|5|6|7|8|9', place:2, cols:1}</Layout>
+    <Layout>{title:'个位', no:'0|1|2|3|4|5|6|7|8|9', place:3, cols:1}</Layout>
+  </item>
+  <!--直选单式-->
+  <item Code="14,90,166,242,318,1314,1414,1514,1614,1714,2029,2127,2225" methodid="ZX4" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0"   methoddesc="手动输入号码，至少输入1个四位数号码组成一注。" methodhelp="手动输入一个4位数号码组成一注，所选号码的千位、百位、十位、个位与开奖号码相同，且顺序一致，即为中奖。" methodexample="投注方案：3456； 开奖号码：3456，即中四星直选。">
+  </item>
+  <!--四星组合-->
+  <item Code="15,91,167,243,319,1315,1415,1515,1615,1715,2030,2128,2226" methodid="ZH4" type="digital" show_str="-,X,X,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从千位、百位、十位、个位各选一个号码组成四注。" methodhelp="从千位、百位、十位、个位中至少各选一个号码组成1-4星的组合，共四注，所选号码的个位与开奖号码对应位相同，则中1个4等奖；所选号码的个位、十位与开奖号码对应位相同，则中1个4等奖以及1个3等奖，依此类推，最高可中4个奖。" methodexample="四星组合示例，如购买：5+6+7+8，该票共8元，由以下4注：5678(四星)、678(三星)、78(二星)、8(一星)构成。开奖号码：5678，即可中四星、三星、二星、一星各1注。">
+    <Layout>{title:'千位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>
+    <Layout>{title:'十位', no:'0|1|2|3|4|5|6|7|8|9', place:2, cols:1}</Layout>
+    <Layout>{title:'个位', no:'0|1|2|3|4|5|6|7|8|9', place:3, cols:1}</Layout>
+  </item>
+  <!--组选24-->
+  <item Code="16,92,168,244,320,1316,1416,1516,1616,1716,2031,2129,2227" methodid="SXZU24" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从0-9中选择4个号码组成一注。" methodhelp="从0-9中任意选择4个号码组成一注，所选号码与开奖号码的千位、百位、十位、个位相同，且顺序不限，即为中奖。" methodexample="投注方案：0568，开奖号码的四个数字只要包含0、5、6、8，即可中四星组选24。">
+    <Layout>{title:'组选', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen:4}</Layout>
+  </item>
+  <!--组选12-->
+  <item Code="17,93,169,245,321,1317,1417,1517,1617,1717,2032,2130,2228" methodid="SXZU12" type="digital" show_str="X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从“二重号”选择一个号码，“单号”中选择两个号码组成一注。" methodhelp="选择1个二重号码和2个单号号码组成一注，所选号码与开奖号码的千位、百位、十位、个位相同，且所选二重号码在开奖号码千位、百位、十位、个位中出现了2次，即为中奖。" methodexample="投注方案：二重号：8，单号：0、6，只要开奖的四个数字从小到大排列为 0、6、8、8，即可中四星组选12。">
+    <Layout>{title:'二重号', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen:1}</Layout>
+    <Layout>{title:'单　号', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1, minchosen:2}</Layout>
+  </item>
+  <!--组选6-->
+  <item Code="18,94,170,246,322,1318,1418,1518,1618,1718,2033,2131,2229" methodid="SXZU6" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从“二重号”中选择两个号码组成一注。" methodhelp="选择2个二重号码组成一注，所选的2个二重号码在开奖号码千位、百位、十位、个位分别出现了2次，即为中奖。" methodexample="投注方案：二重号：2、8，只要开奖的四个数字从小到大排列为2、2、8、8，即可中四星组选6。">
+    <Layout>{title:'二重号', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen:2}</Layout>
+  </item>
+  <!--组选4-->
+  <item Code="19,95,171,247,323,1319,1419,1519,1619,1719,2034,2132,2230" methodid="SXZU4" type="digital" show_str="X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从“三重号”中选择一个号码，“单号”中选择一个号码组成一注。" methodhelp="选择1个三重号码和1个单号号码组成一注，所选号码与开奖号码的千位、百位、十位、个位相同，且所选三重号码在开奖号码千位、百位、十位、个位中出现了3次，即为中奖。" methodexample="投注方案：三重号：8，单号：2，只要开奖的四个数字从小到大排列为2、8、8、8，即可中四星组选4。">
+    <Layout>{title:'三重号', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1, minchosen:1}</Layout>
+    <Layout>{title:'单　号', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1, minchosen:1}</Layout>
+  </item>
+  <!--************四星 end***********-->
+
+  <!--************后三 start***********-->
+  <!--直选复式-->
+  <item Code="20,96,172,248,324,500,600,1320,1420,1520,1620,1720,2035,2133,2231" methodid="ZX3" type="digital" show_str="-,-,X,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" ifrandom="1" randomcos="3" randomcosvalue="1|1|1" methoddesc="从百位、十位、个位各选一个号码组成一注。" methodhelp="从百位、十位、个位中选择一个3位数号码组成一注，所选号码与开奖号码后3位相同，且顺序一致，即为中奖。" methodexample="投注方案：345； 开奖号码：345，即中后三直选。">
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'十位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>
+    <Layout>{title:'个位', no:'0|1|2|3|4|5|6|7|8|9', place:2, cols:1}</Layout>
+  </item>
+  <!--直选单式-->
+  <item Code="21,97,173,249,325,501,601,1321,1421,1521,1621,1721,2036,2134,2232" methodid="ZX3" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="手动输入号码，至少输入1个三位数号码组成一注。" methodhelp="手动输入一个3位数号码组成一注，所选号码的百位、十位、个位与开奖号码相同，且顺序一致，即为中奖。" methodexample="投注方案：345； 开奖号码：345，即中后三直选。">
+  </item>
+  <!--后三组合-->
+  <item Code="22,98,174,250,326,1322,1422,1522,1622,1722,2037,2135,2233" methodid="ZH3" type="digital" show_str="-,-,X,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从百位、十位、个位各选一个号码组成三注。" methodhelp="从百位、十位、个位中至少各选择一个号码组成1-3星的组合共三注，当个位号码与开奖号码对应位相同，则中1个3等奖；如果个位与十位号码与开奖号码对应位相同，则中1个3等奖以及1个2等奖，依此类推，最高可中3个奖。" methodexample="后三组合示例，如购买：6+7+8，该票共6元，由以下3注：678(三星)、78(二星)、8(一星)构成。开奖号码：678，即可中三星、二星、一星各1注。">
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'十位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>
+    <Layout>{title:'个位', no:'0|1|2|3|4|5|6|7|8|9', place:2, cols:1}</Layout>
+  </item>
+  <!--直选和值-->
+  <item Code="23,99,175,251,327,502,602,1323,1423,1523,1623,1723,2038,2136,2234" methodid="ZXHZ" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从0-27中任意选择1个或1个以上号码。" methodhelp="所选数值等于开奖号码的百位、十位、个位三个数字相加之和，即为中奖。" methodexample="投注方案：和值1；开奖号码后三位：001,010,100,即中后三直选。">
+    <Layout>{title:'直选和值', no:'0|1|2|3|4|5|6|7|8|9|10|11|12|13', place:0, cols:1}</Layout>
+    <Layout>{title:'', no:'14|15|16|17|18|19|20|21|22|23|24|25|26|27', place:0, cols:1}</Layout>
+  </item>
+  <!--直选跨度-->
+  <item Code="24,100,176,252,328,1324,1424,1524,1624,1724,2039,2137,2235" methodid="ZXKD" type="digital" show_str="X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从0-9中选择1个以上号码。" methodhelp="所选数值等于开奖号码的后3位最大与最小数字相减之差，即为中奖。" methodexample="投注方案：跨度8；开奖号码后三位：(1)开出的三个数字包括0,8,x，其中x≠9，即可中后三直选;(2)开出的三个数字包括1,9,x，其中x≠0，即可中后三直选。">
+    <Layout>{title:'跨度', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组三复式-->
+  <item Code="25,101,177,253,329,503,603,1325,1425,1525,1625,1725,2040,2138,2236" methodid="ZUS" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从0-9中任意选择2个或2个以上号码。" methodhelp="从0-9中选择2个数字组成两注，所选号码与开奖号码的百位、十位、个位相同，且顺序不限，即为中奖。" methodexample="投注方案：5,8,8；开奖号码后三位：1个5，2个8 (顺序不限)，即中后三组三。">
+    <Layout>{title:'组三', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组三单式-->
+  <item Code="26,102,178,254,330,504,604,1326,1426,1526,1626,1726,2041,2139,2237" methodid="ZUS" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="手动输入号码，至少输入1个三位数号码（三个数字中必须有二个数字相同）。" methodhelp="投注方案：001开奖号码：后三位010（顺序不限）即中后三组选三。" methodexample="手动输入一个3位数号码组成一注，三个数字中必须有两个数字相同，输入号码与开奖号码的百位、十位、个位相同，顺序不限，即为中奖。">
+    
+  </item>
+  <!--组六复式-->
+  <item Code="27,103,179,255,331,505,605,1327,1427,1527,1627,1727,2042,2140,2238" methodid="ZUL" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从0-9中任意选择3个或3个以上号码。" methodhelp="从0-9中任意选择3个号码组成一注，所选号码与开奖号码的百位、十位、个位相同，顺序不限，即为中奖。" methodexample="投注方案：2,5,8；开奖号码后三位：1个2、1个5、1个8 (顺序不限)，即中后三组六。">
+    <Layout>{title:'组六', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组六单式-->
+  <item Code="28,104,180,256,332,506,606,1328,1428,1528,1628,1728,2043,2141,2239" methodid="ZUL" type="input" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="手动输入号码，至少输入1个三位数号码（三个数字完全不相同）。" methodhelp="投注方案：123开奖号码：后三位321(顺序不限)，即中后三组选六。" methodexample="手动输入一个3位数号码组成一注，所选号码与开奖号码与开奖号码的百位、十位、个位相同，顺序不限，即为中奖。">
+  </item>
+  <!--混合组选-->
+  <item Code="29,105,181,257,333,507,607,1329,1429,1529,1629,1729,2044,5142,2240" methodid="HHZX" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="手动输入号码，至少输入1个三位数号码。" methodhelp="手动输入一个3位数号码组成一注(不含豹子号)，开奖号码的百位、十位、个位符合后三组三或组六均为中奖。" methodexample="投注方案：分別投注(0,0,1),以及(1,2,3)，开奖号码后三位包括：(1)0,0,1，顺序不限，即中得后三组三；或者(2)1,2,3，顺序不限，即中得后三组六。">
+    
+  </item>
+  <!--组选和值-->
+  <item Code="30,106,182,258,334,508,608,1330,1430,1530,1630,1730,2045,2143,2241" methodid="ZUHZ" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从0-27中任意选择1个或1个以上号码。" methodhelp="投注方案：和值1开奖号码：后三位001，010，100，即可中后三直选。" methodexample="所选数值等于开奖号码的百位、十位、个位三个数字相加之和，即为中奖。">
+    <Layout>{title:'组选和值', no:'1|2|3|4|5|6|7|8|9|10|11|12|13', place:0, cols:1}</Layout>
+    <Layout>{title:'', no:'14|15|16|17|18|19|20|21|22|23|24|25|26', place:0, cols:1}</Layout>
+  </item>
+  <!--组选包胆-->
+  <item Code="31,107,183,259,335,1331,1431,1531,1631,1731,2046,2144,2242" methodid="ZUXUANBAODAN" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从0-9中选择1个号码。" methodhelp="投注方案：包胆3开奖号码：后三位3xx或者33x，即中后三组选三或者后三位3xy，即中后三组选六" methodexample="从0-9中任意选择1个包胆号码，开奖号码的百位、\n\t十位、个位中任意1位与所选包胆号码相同(不含豹子号)，\n\t即为中奖。">
+    <Layout>{title:'包胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--和值尾数-->
+  <item Code="32,108,184,260,336,1332,1432,1532,1632,1732,2047,2145,2243" methodid="HEZHIWEISHU" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中选择1个号码。" methodhelp="所选数值等于开奖号码的百位、十位、个位三个数字相加之和的尾数，即为中奖。" methodexample="投注方案：和值尾数8，开奖号码：后三位和值尾数为8，即中得和值尾数。">
+      <Layout>{title:'和值尾数', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--特殊-->
+  <item Code="33,109,185,261,337,1333,1433,1533,1633,1733,2048,2142,2244" methodid="BJHZDS" type="dxds" show_str="X" code_sp="" noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="选择一个号码形态。" methodhelp="所选 的号码特殊属性和开奖号码后3位的属性一致，即为中奖。其中：1.顺子号的个、十、百位不分顺序；2.对子号指的是开奖号码的后三位当中，任意2位数字相同的三位数号码。" methodexample="投注方案：豹子顺子对子开奖号码：后三位 888，即中豹子；后三位 678，即中顺子；后三位 558，即中对子">
+    <Layout>{title:'', no:'<div class="codespace"> </div>豹子|<div class="codespace"> </div>顺子|<div class="codespace"> </div>对子', place:0, cols:1}</Layout>
+  </item>
+
+  <!--************后三 end***********-->
+
+  <!--************前三 start***********-->
+  <!--直选复式-->
+  <item Code="34,110,186,262,338,700,1334,1434,1534,1634,1734,2049,2147,2245" methodid="ZX3" type="digital" show_str="X,X,X,-,-" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" ifrandom="1" randomcos="3" randomcosvalue="1|1|1"  methoddesc="从万位、千位、百位各选一个号码组成一注。" methodhelp="从万位、千位、百位中选择一个3位数号码组成一注，所选号码与开奖号码的前3位相同，且顺序一致，即为中奖。" methodexample="投注方案：345； 开奖号码：345，即中前三直选。">
+    <Layout>{title:'万位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'千位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:2, cols:1}</Layout>
+  </item>
+  <!--直选单式-->
+  <item Code="35,111,187,263,339,701,1335,1435,1535,1635,1735,2050,2148,2246" methodid="ZX3" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="手动输入号码，至少输入1个三位数号码组成一注。" methodhelp="手动输入一个3位数号码组成一注，所选号码的万位、千位、百位与开奖号码相同，且顺序一致，即为中奖。" methodexample="投注方案：345； 开奖号码：345，即中前三直选。">
+  </item>
+  <!--前三组合-->
+  <item Code="36,112,188,264,340,1336,1436,1536,1636,1736,2051,2149,2247" methodid="ZH3" type="digital" show_str="X,X,X,-,-" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位各选一个号码组成三注。" methodhelp=" 从万位、千位、百位中至少各选择一个号码组成1-3星的组合共三注，当百位号码与开奖号码对应位相同，则中1个3等奖；如果百位与千位号码与开奖号码对应位相同，则中1个3等奖以及1个2等奖，依此类推，最高可中3个奖。 " methodexample="前三组合示例，如购买：6+7+8，该票共6元，由以下3注：678(三星)、78(二星)、8(一星)构成。开奖号码：678，即可中三星、二星、一星各1注。">
+    <Layout>{title:'万位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'千位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:2, cols:1}</Layout>
+  </item>
+  <!--直选和值-->
+  <item Code="37,113,189,265,341,702,1337,1437,1537,1637,1737,2052,2150,2248" methodid="ZXHZ" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从0-27中任意选择1个或1个以上号码。" methodhelp="所选数值等于开奖号码的万位、千位、百位三个数字相加之和的尾数，即为中奖。" methodexample="投注方案：和值尾数8，开奖号码：前三位和值尾数为8，即中得和值尾数。">
+    <Layout>{title:'直选和值', no:'0|1|2|3|4|5|6|7|8|9|10|11|12|13', place:0, cols:1}</Layout>
+    <Layout>{title:'', no:'14|15|16|17|18|19|20|21|22|23|24|25|26|27', place:0, cols:1}</Layout>
+  </item>
+  <!--直选跨度-->
+  <item Code="38,114,190,266,342,1338,1438,1538,1638,1738,2053,2151,2249" methodid="ZXKD" type="digital" show_str="X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中选择1个以上号码。" methodhelp="投注方案：跨度8开奖号码：前三位0,8,X，其中X不等于9；或者前三位1,9,X，其中X不等于0，即可中前三直选。" methodexample="所选数值等于开奖号码的前3位最大与最小数字相减之差，即为中奖。">
+    <Layout>{title:'跨度', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组三复式-->
+  <item Code="39,115,191,267,343,703,1339,1439,1539,1639,1739,2054,2152,2250" methodid="ZUS" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择2个或2个以上号码。" methodhelp="从0-9中选择2个数字组成两注，所选号码与开奖号码的万位、千位、百位相同，且顺序不限，即为中奖。" methodexample="投注方案：5,8,8；开奖号码前三位：1个5，2个8 (顺序不限)，即中前三组三。">
+    <Layout>{title:'组三', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组三单式-->
+  <item Code="40,116,192,268,344,704,1340,1440,1540,1640,1740,2055,2153,2251" methodid="ZUS" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="false" maxcodecount="0"  methoddesc="手动输入号码，至少输入1个三位数号码（三个数字中必须有二个数字相同）。" methodhelp="投注方案：001开奖号码：前三位010（顺序不限）即中前三组选三。" methodexample="手动输入一个3位数号码组成一注，三个数字中必须有两个数字相同，输入号码与开奖号码的万位、千位、百位相同，顺序不限，即为中奖。"></item>
+  <!--组六复式-->
+  <item Code="41,117,193,269,345,705,1341,1441,1541,1641,1741,2056,2154,2252" methodid="ZUL" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择3个或3个以上号码。" methodhelp="从0-9中任意选择3个号码组成一注，所选号码与开奖号码的万位、千位、百位相同，顺序不限，即为中奖。" methodexample="投注方案：2,5,8；开奖号码前三位：1个2、1个5、1个8 (顺序不限)，即中前三组六。">
+    <Layout>{title:'组六', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组六单式-->
+  <item Code="42,118,194,270,346,706,1342,1442,1542,1642,1742,2057,2155,2253" methodid="ZUL" type="input" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="手动输入号码，至少输入1个三位数号码（三个数字完全不相同）。" methodhelp="投注方案：123开奖号码：前三位321(顺序不限)，即中前三组选六。" methodexample="手动输入一个3位数号码组成一注，所选号码与开奖号码与开奖号码的万位、千位、百位相同，顺序不限，即为中奖。"></item>
+  <!--混合组选-->
+  <item Code="43,119,195,271,347,707,1343,1443,1543,1643,1743,2058,2156,2254"  methodid="HHZX" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="手动输入号码，至少输入1个三位数号码。" methodhelp="投注方案：001和123开奖号码：前三位010(顺序不限)，即中前三组选三或者前三位312（顺序不限）即中前三组选六" methodexample="手动输入一个3位数号码组成一注(不含豹子号)，开奖号码的万位、千位、百位符合前三组选三或前三组选六即中奖。"></item>
+  <!--组选和值-->
+  <item Code="44,120,196,272,348,708,1344,1444,1544,1644,1744,2059,2157,2255" methodid="ZUHZ" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0"  methoddesc="从1-26中选择1个号码。" methodhelp="所选数值等于开奖号码万位、千位、百位三个数字相加之和(不含豹子号)，即为中奖。" methodexample="投注方案：和值3；开奖号码前三位：(1)开出003号码，顺序不限，即中前三组三；(2)开出012号码，顺序不限，即中前三组六。">
+    <Layout>{title:'组选和值', no:'1|2|3|4|5|6|7|8|9|10|11|12|13', place:0, cols:1}</Layout>
+    <Layout>{title:'', no:'14|15|16|17|18|19|20|21|22|23|24|25|26', place:0, cols:1}</Layout>
+  </item>
+  <!--组选包胆-->
+  <item Code="45,121,197,273,349,1345,1445,1545,1645,1745,2060,2158,7255" methodid="ZUXUANBAODAN" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从0-9中选择1个号码。" methodhelp="投注方案：包胆3开奖号码：前三位3xx或者33x，即中前三组选三或者前三位3xy，即中前三组选六" methodexample="从0-9中任意选择1个包胆号码，开奖号码的万位、\n\t千位、百位中任意1位只要和所选包胆号码相同，\n\t即为中奖。">
+    <Layout>{title:'包胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--和值尾数-->
+  <item Code="46,122,198,274,350,1346,1446,1546,1646,1746,2061,2159,2256" methodid="HEZHIWEISHU" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中选择1个号码。" methodhelp="投注方案：和值尾数 8开奖号码：前三位 936，和值位数为8，即中和值尾数。" methodexample="所选数值等于开奖号码的万位、千位、百位三个数字相加之和的尾数，即为中奖。">
+    <Layout>{title:'和值尾数', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--特殊号-->
+  <item Code="47,123,199,275,351,1347,1447,1547,1647,1747,2062,2160,2257" methodid="BJHZDS" type="dxds" show_str="X" code_sp="" noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="选择一个号码形态。" methodhelp="投注方案：豹子顺子对子开奖号码：前三位 888，即中豹子；前三位 678，即中顺子；前三位 558，即中对子" methodexample="所选 的号码特殊属性和开奖号码前3位的属性一致，即为中奖。其中：1.顺子号的万、千、百位不分顺序；2.对子号指的是开奖号码的前三位当中，任意2位数字相同的三位数号码。">
+    <Layout>
+      {title:'特殊号', no:'<div class="codespace"> </div>豹子|<div class="codespace"> </div>顺子|<div class="codespace"> </div>对子', place:0, cols:1}
+    </Layout>
+  </item>
+  <!--************前三 end***********-->
+
+  <!--************后二 start***********-->
+  <!--直选复式-->
+  <item Code="48,124,200,276,352,511,611,711,1348,1448,1548,1648,1748,2063,2161,2258" methodid="ZX2" type="digital" show_str="-,-,-,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" ifrandom="1" randomcos="2" randomcosvalue="1|1" methoddesc="从十位、个位各选一个号码组成一注。" methodhelp="投注方案：58开奖号码：58即中后二直选" methodexample="从十位、个位选择一个2位数号码组成一注，所选号码与开奖号码后2位相同且顺序一致即为中奖">
+    <Layout>{title:'十位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'个位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>>
+  </item>
+  <!--直选单式-->
+  <item Code="49,125,201,277,353,512,612,712,1349,1449,1549,1649,1749,2064,2162,2259" methodid="ZX2" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="手动输入号码，至少输入1个二位数号码组成一注。" methodhelp="投注方案：58开奖号码：58即中后二直选" methodexample="手动输入一个2位数号码组成一注，所选号码的十位、个位与开奖号码相同，且顺序一致，即为中奖。">
+  </item>
+  <!--直选和值-->
+  <item Code="50,126,202,278,354,1350,1450,1550,1650,1750,2065,2163,2260" methodid="ZXHZ2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从0-18中任意选择1个或1个以上号码。" methodhelp="投注方案：和值1开奖号码：后二位01，10，即可中后二直选。" methodexample="所选数值等于开奖号码的十位、个位二个数字相加之和，即为中奖。">
+    <Layout>{title:'', no:'0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18', place:0, cols:1}</Layout>
+  </item>
+  <!--直选跨度-->
+  <item Code="51,127,203,279,355,1351,1451,1551,1651,1751,2066,2164,2261" methodid="ZXKD2" type="digital" show_str="X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中选择1个以上号码。" methodhelp="投注方案：跨度9开奖号码：后二位90或09，即可中后二直选。" methodexample="所选数值等于开奖号码的后2位最大与最小数字相减之差，即为中奖。">
+    <Layout>{title:'跨度', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组选复式-->
+  <item Code="52,128,204,280,356,515,615,715,1352,1452,1552,1652,1752,2067,2165,2262" methodid="ZU2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择2个或2个以上号码。" methodhelp="从0-9中选2个号码组成一注，所选号码与开奖号码的十位、个位相同，顺序不限（不含对子号），即中奖。" methodexample="投注方案：5,8；开奖号码前二位：85 或58(顺序不限，不含对子号)，即中前二组选。">
+    <Layout>{title:'组选', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组选单式-->
+  <item Code="53,129,205,281,357,516,616,716,1353,1453,1553,1653,1753,2068,2166,2263" methodid="ZU2" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="手动输入号码，至少输入1个两位数号码。" methodhelp="手动输入一个2位数号码组成一注，所选号码的十位、个位与开奖号码相同，顺序不限（不含对子号），即为中奖。" methodexample="投注方案：5,8；开奖号码前二位：85 或58(顺序不限，不含对子号)，即中前二组选。">
+  </item>
+  <!--组选和值-->
+  <item Code="54,130,206,282,358,1354,1454,1554,1654,1754,2069,2167,2264"  methodid="ZUHZ2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从1-17中任意选择1个或者1个以上号码。" methodhelp="投注方案：和值1开奖号码：后二位10或者01（顺序不限，不含对子），即中后二组选。" methodexample="所选数值等于开奖号码十、个位二个数字相加之和（不含对子号）即为中奖">
+    <Layout>{title:'', no:'1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17', place:0, cols:1}</Layout>
+  </item>
+  <!--组选包胆-->
+  <item Code="55,131,207,283,359,1355,1455,1555,1655,1755,2070,2168,2265" methodid="ZUXUANBAODAN2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从0-9中选择1个包胆号码。" methodhelp="投注方案：包胆3开奖号码：后二位3x且x不等于3，即中后二组选。" methodexample="从0-9中任意选择一个包胆号码，开奖号码的十位，个位中任意1位包含所选的包胆号码相同（不含对子），即为中奖。">
+    <Layout>{title:'包胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+
+  <!--************后二 end***********-->
+
+  <!--************前二 start***********-->
+  <!--直选复式-->
+  <item Code="56,132,208,284,360,509,609,709,1356,1456,1556,1656,1756,2071,2169,2266" methodid="ZX2" type="digital" show_str="X,X,-,-,-" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" ifrandom="1" randomcos="2" randomcosvalue="1|1" methoddesc="从万位、千位各选一个号码组成一注。" methodhelp="投注方案：58开奖号码：58即中前二直选" methodexample="从万位、千位选择一个2位数号码组成一注，所选号码与开奖号码前2位相同且顺序一致即为中奖">
+    <Layout>{title:'万位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'千位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>>
+  </item>
+  <!--直选单式-->
+  <item Code="57,133,209,285,361,510,610,710,1357,1457,1557,1657,1757,2072,2170,2267" methodid="ZX2" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="手动输入号码，至少输入1个二位数号码组成一注。" methodhelp="投注方案：58开奖号码：58即中前二直选" methodexample="手动输入一个2位数号码组成一注，所选号码的万位、千位与开奖号码相同，且顺序一致，即为中奖。 "></item>
+  <!--直选和值-->
+  <item Code="58,134,210,286,362,1358,1458,1558,1658,1758,2073,2171,2268" methodid="ZXHZ2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从0-18中任意选择1个或1个以上号码。" methodhelp="投注方案：和值1开奖号码：前二位01，10，即可中前二直选。" methodexample="所选数值等于开奖号码的万位、千位二个数字相加之和，即为中奖。">
+    <Layout>{title:'', no:'0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18', place:0, cols:1}</Layout>
+  </item>
+  <!--直选跨度-->
+  <item Code="59,135,211,287,363,1359,1459,1559,1659,1759,2074,2172,2269" methodid="ZXKD2" type="digital" show_str="X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中选择1个以上号码。" methodhelp="投注方案：跨度9开奖号码：前二位90或09，即可中前二直选。" methodexample="所选数值等于开奖号码的前2位最大与最小数字相减之差，即为中奖。">
+    <Layout>{title:'跨度', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组选复式-->
+  <item Code="60,136,212,288,364,513,613,713,1360,1460,1560,1660,1760,2075,2173,2270" methodid="ZU2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择2个或2个以上号码。" methodhelp="投注方案：和值58开奖号码：前二位58或85（顺序不限，不含对子号），即中前二组选。" methodexample="从0-9中选择2个号码组成一注，所选号码与开奖号码的万位、千位相同，顺序不限，即中奖。">
+    <Layout>{title:'组选', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--组选单式-->
+  <item Code="61,137,213,289,365,514,614,714,1361,1461,1561,1661,1761,2076,2174,2271" methodid="ZU2" type="input" show_str="X" code_sp=" " noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="手动输入号码，至少输入1个二位数号码组成一注。" methodhelp="投注方案：58开奖号码：前二位 85 或者 58（顺序不限，不含对子号），即中前二组选。" methodexample="手动输入一个2位数号码组成一注，输入号码的万位、千\n\t位与开奖号码相同，顺序不限，即为中\n\t奖。">
+    
+  </item>
+  <!--组选和值-->
+  <item Code="62,138,214,290,366,1362,1462,1562,1662,1762,2077,2175,2272" methodid="ZUHZ2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从1-17中任意选择1个或者1个以上号码。" methodhelp="投注方案：和值1开奖号码：前二位10或者01（顺序不限，不含对子），即中前二组选。" methodexample="所选数值等于开奖号码万、千位二个数字相加之和（不含对子号）即为中奖">
+    <Layout>{title:'', no:'1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17', place:0, cols:1}</Layout>
+  </item>
+  <!--组选包胆-->
+  <item Code="63,139,215,291,367,1363,1463,1563,1663,1763,2078,2176,2273" methodid="ZUXUANBAODAN2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从0-9中选择1个包胆号码。" methodhelp="投注方案：包胆3开奖号码：前二位3x且x不等于3，即中前二组选。" methodexample="从0-9中任意选择一个包胆号码，开奖号码的万位，前位中任意1位包含所选的包胆号码相同（不含对子），即为中奖。">
+    <Layout>{title:'包胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--************前二 end***********-->
+
+  <!--************定位包胆 start***********-->
+
+  <!--定位包胆-->
+  <item Code="1000,1001,1002,1003,1004,1005,1397,1497,1597,1697,1797,2014,2112,2210" methodid="DWD" type="digital" show_str="X,X,X,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="在万位、千位、百位、十位、个位任意位置上任意选择1个或1个以上号码。" methodhelp="投注方案：万位 1\t\n开奖号码：万位 1，即中定位包胆万位。" methodexample="从万位、千位、百位、十位、个位至少选择一个及以上号码，\t\n所选号码与相同位置上的开奖号码一致即为中奖。">
+    <Layout>{title:'万位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'千位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:2, cols:1}</Layout>
+    <Layout>{title:'十位', no:'0|1|2|3|4|5|6|7|8|9', place:3, cols:1}</Layout>
+    <Layout>{title:'个位', no:'0|1|2|3|4|5|6|7|8|9', place:4, cols:1}</Layout>
+  </item>
+  <!--************定位包胆 end***********-->
+
+  <!--************不定位 start***********-->
+  <!--后三一码-->
+  <item Code="64,140,216,292,368,517,617,1364,1464,1564,1664,1764,2079,2177,2274" methodid="BDW1" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0"  methoddesc="从0-9中任意选择1个以上号码。" methodhelp="投注方案：1开奖号码：后三位至少出现一个1，即中后三一码不定位。" methodexample="从0-9选择一个号码，每注由一个号码组成，只要开奖号码的百位、十位、个位中包含所选号码，即为中奖。">
+    <Layout>{title:'不定胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--前三一码-->
+  <item Code="65,141,217,293,369,717,1365,1465,1565,1665,1765,2080,2178,2275" methodid="BDW1" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择1个以上号码。" methodhelp="投注方案：1开奖号码：前三位至少出现一个1，即中前三一码不定位。" methodexample="从0-9选择一个号码，每注由一个号码组成，只要开奖号码的万位、千位、百位中包含所选号码，即为中奖。">
+    <Layout>{title:'不定胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--后三二码-->
+  <item Code="66,142,218,294,370,518,618,1366,1466,1566,1666,1766,2081,2179,2276" methodid="BDW2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择2个以上号码。" methodhelp="投注方案：12开奖号码：后三位至少出现1和2各一个，即中后三二码不定位。" methodexample="从0-9选择2个号码，每注由2个不同号码组成，只要开奖号码的百位、十位、个位中包含所选的2个号码，即为中奖。">
+    <Layout>{title:'不定胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--前三二码-->
+  <item Code="67,143,219,295,371,718,1367,1467,1567,1667,1767,2082,2180,2277" methodid="BDW2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择2个以上号码。" methodhelp="投注方案：12开奖号码：前三位至少出现1和2各一个，即中前三二码不定位。" methodexample="从0-9选择2个号码，每注由2个不同号码组成，只要开奖号码的万位、前位、百位中包含所选的2个号码，即为中奖。">
+    <Layout>{title:'不定胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--四星一码-->
+  <item Code="68,144,220,296,372,1368,1468,1568,1668,1768,2083,2181,2278"  methodid="BDW1" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择1个以上号码。" methodhelp="投注方案：1开奖号码：后四位至少出现一个1，即中四星一码不定位。" methodexample="从0-9选择一个号码，每注由一个号码组成，只要开奖号码的千位、百位、十位、个位中包含所选号码，即为中奖。" >
+    <Layout>{title:'不定胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--四星二码-->
+  <item Code="69,145,221,297,373,1369,1469,1569,1669,1769,2084,2182,2279" methodid="BDW2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择2个以上号码。" methodhelp="投注方案：12开奖号码：后四位至少出现1和2各一个，即中四星二码不定位。" methodexample="从0-9选择2个号码，每注由2个不同号码组成，只要开奖号码的千位、百位、十位、个位中包含所选的2个号码，即为中奖。">
+    <Layout>{title:'不定胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--五星二码-->
+  <item Code="70,146,222,298,374,1370,1470,1570,1670,1770,2085,2183,2280" methodid="BDW2" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择2个以上号码。" methodhelp="投注方案：12开奖号码：至少出现1和2各一个，即中五星二码不定位。" methodexample="从0-9选择2个号码，每注由2个不同号码组成，只要开奖号码的万位、千位、百位、十位、个位中包含所选的2个号码，即为中奖。">
+    <Layout>{title:'不定胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--五星三码-->
+  <item Code="71,147,223,299,375,1371,1471,1571,1671,1771,2086,2184,2281" methodid="BDW3" type="digital" show_str="X" code_sp="," noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从0-9中任意选择3个以上号码。" methodhelp="投注方案：123开奖号码：至少出现1、2、3各一个，即中五星三码不定位。" methodexample="从0-9选择3个号码，每注由3个不同号码组成，只要开奖号码的万位、千位、百位、十位、个位中包含所选的3个号码，即为中奖。">
+    <Layout>{title:'不定胆', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--************不定位 end***********-->
+
+  <!--************大小单双 start***********-->
+  <!--前二大小单双-->
+  <item Code="72,148,224,300,376,519,619,719,1372,1472,1572,1672,1772,2087,2185,2282" methodid="DXDS" type="dxds" show_str="X,X" code_sp="" noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从万位、千位中的“大、小、单、双”中至少各选一个组成一注。" methodhelp="投注方案：小双\t\n开奖号码：万位与千位“小双”，即中前二大小单双。" methodexample="对万位、千位的“大（56789）小（01234）、单\t\n（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的\t\n位置、形态相同，及为中奖。">
+    <Layout>{title:'万位', no:'大|小|单|双', place:0, cols:1}</Layout>
+    <Layout>{title:'千位', no:'大|小|单|双', place:1, cols:1}</Layout>
+  </item>
+  <!--后二大小单双-->
+  <item Code="73,149,225,301,377,520,620,720,1373,1473,1573,1673,1773,2088,2186,2283" methodid="DXDS" type="dxds" show_str="X,X" code_sp="" noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从十位、个位中的“大、小、单、双”中至少各选一个组成一注。" methodhelp="投注方案：小双\t\n开奖号码：十位与个位“小双”，即中后二大小单双。" methodexample="对十位、个位的“大（56789）小（01234）、单\t\n（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的\t\n位置、形态相同，及为中奖。">
+    <Layout>{title:'十位', no:'大|小|单|双', place:0, cols:1}</Layout>
+    <Layout>{title:'个位', no:'大|小|单|双', place:1, cols:1}</Layout>
+  </item>
+  <!--前三大小单双-->
+  <item Code="74,150,226,302,378,1374,1474,1574,1674,1774,2089,2187,2284" methodid="DXDS" type="dxds" show_str="X,X,X,-,-" code_sp="" noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从万位、千位、百位中的“大、小、单、双”中至少各选一个组成一注。" methodhelp="投注方案：小双小\t\n开奖号码：万位、千位、百位“小双小”，即中前三大小单双。" methodexample="对万位、千位、百位的“大（56789）小（01234）、单\t\n（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的\t\n位置、形态相同，及为中奖。">
+    <Layout>{title:'万位', no:'大|小|单|双', place:0, cols:1}</Layout>
+    <Layout>{title:'千位', no:'大|小|单|双', place:1, cols:1}</Layout>
+    <Layout>{title:'百位', no:'大|小|单|双', place:2, cols:1}</Layout>
+  </item>
+  <!--后三大小单双-->
+  <item Code="75,151,227,303,379,1375,1475,1575,1675,1775,2090,2188,2285" methodid="DXDS" type="dxds" show_str="-,-,X,X,X" code_sp="" noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从百、十位、个位中的“大、小、单、双”中至少各选一个组成一注。" methodhelp="投注方案：小双小\t\n开奖号码：百位、十位、个位“小双小”，即中后三大小单双。" methodexample="对百位、十位、个位的“大（56789）小（01234）、单\t\n（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的\t\n位置、形态相同，及为中奖。">
+    <Layout>{title:'百位', no:'大|小|单|双', place:0, cols:1}</Layout>
+    <Layout>{title:'十位', no:'大|小|单|双', place:1, cols:1}</Layout>
+    <Layout>{title:'个位', no:'大|小|单|双', place:2, cols:1}</Layout>
+  </item>
+  <!--************大小单双 end***********-->
+  <!--************任选 start***********-->
+  <!--任选二 直选复试-->
+  <item Code="1100,1130,1160,1190,1211,1376,1476,1576,1676,1776,2091,2189,2286" methodid="RXZXSSC2" type="digital" show_str="X,X,X,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少两位上各选1个号码组成一注。" methodhelp="投注方案：万位1，十位2； 开奖号码：1**2*，即中任二直选。" methodexample="从万位、千位、百位、十位、个位中任意选择两个位 在这两个位上至少各选1个号码组成一注，所选2个位置上的 开奖号码与所选号码完全相同，且顺序一致，即为中奖。" >
+    <Layout>{title:'万位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'千位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:2, cols:1}</Layout>
+    <Layout>{title:'十位', no:'0|1|2|3|4|5|6|7|8|9', place:3, cols:1}</Layout>
+    <Layout>{title:'个位', no:'0|1|2|3|4|5|6|7|8|9', place:4, cols:1}</Layout>
+  </item>
+  <!--任选二 直选单试-->
+  <item Code="1101,1131,1161,1191,1212,1377,1477,1577,1677,1777,2092,2190,2287"   methodid="RXZXSSC2DS" type="input" show_str="X" code_sp="," selPosition="true" defaultposition="00011" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择两个位置,至少手动输入一个两位数的号码构成一注。" methodhelp="投注方案：勾选位置千位、个位，输入号码12 开奖号码：*1**2，即中任二直选。" methodexample="从万位、千位、百位、十位、个位中任意勾选两个位置 手动输入一个两位数号码组成一注，所选2个位置和输入的 号码都与开奖号码相同，且顺序一致，即为中奖。">
+    
+  </item>
+  <!--任选二 直选和值-->
+  <item Code="1102,1132,1162,1192,1213,1378,1478,1578,1678,1778,2093,2191,2288" methodid="RXZXSSC2HZ" type="digital" show_str="X" code_sp="," selPosition="true" defaultposition="00011" isButton="false" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择两个位置,至少选择一个和值号码构成一注。" methodhelp="投注方案：勾选位置千位、个位，选择和值15 开奖号码：*8**7，即中任二直选和值。" methodexample="从万位、千位、百位、十位、个位中任意勾选两个位置 然后选择一个和值，所选2个位置的开奖号码相加之和 与所选和值一致，且顺序一致，即为中奖。" >
+    <Layout>{title:'和值',no :'0|1|2|3|4|5|6|7|8|9',place :0,cols :1}</Layout>
+    <Layout>{title :'',no :'10|11|12|13|14|15|16|17|18',place :0,cols :1}</Layout>
+  </item>
+  <!--任选二 组选复式-->
+  <item Code="1103,1133,1163,1193,1214,1379,1479,1579,1679,1779,2094,2192,2289" methodid="RXZUSSC2" type="digital" show_str="X" code_sp="," selPosition="true" defaultposition="00011" isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择两个位置,号码区至少选择两个号码构成一注。" methodhelp="投注方案：勾选位置万位、个位，选择号码79 开奖号码：9***7 或 7***9，均中任二组选。" methodexample="从万位、千位、百位、十位、个位中任意勾选两个位置 然后从0-9中选择两个号码组成一注，所选2个位置的 开奖号码与所选号码一致，顺序不限，即为中奖。" >
+    <Layout>{title:'组选', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!--任选二 组选单式-->
+  <item Code="1104,1134,1164,1194,1215,1380,1480,1580,1680,1780,2095,2193,2290" methodid="RXZUSSC2DS" type="input" show_str="X" code_sp="," selPosition="true" defaultposition="00011" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择两个位置,至少手动输入一个两位数的号码构成一注。" methodhelp="投注方案：勾选位置万位、个位，输入号码79 开奖号码：9***7 或 7***9，均中任二组选。" methodexample="从万位、千位、百位、十位、个位中任意勾选两个位置 然后输入两个号码组成一注，所选2个位置的开奖号码与 输入号码一致，顺序不限，即为中奖。" >
+  </item>
+  <!--任选二 组选和值-->
+  <item Code="1105,1135,1165,1195,1216,1381,1481,1581,1681,1781,2096,2194,2291" methodid="RXZUSSC2HZ" type="digital" show_str="X" code_sp="," noBigIndex="5" selPosition="true" defaultposition="00011" isButton="false" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择两个位置,至少选择一个和值号码构成一注。" methodhelp="投注方案：勾选位置千位、个位，选择和值6 开奖号码：*4**2 或 *2**4，均中任二组选和值。" methodexample="从万位、千位、百位、十位、个位中任意勾选两个位置 然后选择一个和值，所选2个位置的开奖号码相加之和与 所选和值一致顺序不限，即为中奖。">
+    <Layout>{title:'', no:'1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17', place:0, cols:1}</Layout>
+  </item>
+  <!--任选三 直选复试-->
+  <item Code="1106,1136,1166,1196,1217,1382,1482,1582,1682,1782,2097,2195,2292" methodid="RXZXSSC3" type="digital" show_str="X,X,X,X,X" code_sp=""  isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少三位上各选1个号码组成一注。" methodhelp="投注方案：勾选位置万位、千位、个位，输入号码152 开奖号码：15**2，即中任三直选。" methodexample="从万位、千位、百位、十位、个位中任意勾选三个位置 手动输入一个三位数号码组成一注，所选三个位置上的开奖号码与输入号码完全相同 且顺序一致，即为中奖。">
+    <Layout>{ "title": "万位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 0, "cols": 1}</Layout>
+    <Layout>{ "title": "千位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 1, "cols": 1}</Layout>
+    <Layout>{ "title": "百位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 2, "cols": 1}</Layout>
+    <Layout>{ "title": "十位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 3, "cols": 1}</Layout>
+    <Layout>{ "title": "个位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 4, "cols": 1}</Layout>
+  </item>
+  <!--任选三 直选单试-->
+  <item Code="1107,1137,1167,1197,1218,1383,1483,1583,1683,1783,2098,2196,2293" methodid="RXZXSSC3DS" type="input" show_str="X" code_sp=" "  isButton="false" selPosition="true" defaultposition="00111" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择三个位置,至少手动输入一个三位数的号码构成一注。" methodhelp="投注方案：万位1、千位5、十位2 开奖号码：15*2*，即中任三直选。" methodexample="从万位、千位、百位、十位、个位中任意选择三个位 在这三个位上至少各选1个号码组成一注，所选3个位置上的开奖号码与 所选号码完全相同，且顺序一致，即为中奖。">
+  </item>
+  <!--任选三 直选和值-->
+  <item Code="1108,1138,1168,1198,1219,1384,1484,1584,1684,1784,2099,2197,2294" methodid="RXZXSSC3HZ" type="digital" show_str="X" code_sp="," selPosition="true" defaultposition="00111" isButton="false" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择三个位置,至少选择一个和值号码构成一注。" methodhelp="投注方案：勾选位置万位、千位、个位，选择和值8 开奖号码：22**4，即中任三直选和值。" methodexample="从万位、千位、百位、十位、个位中任意勾选三个位置 然后选择一个和值，所选3个位置的开奖号码相加之和与所选和值一致 且顺序一致，即为中奖。">
+    <Layout>{"title": "和值", "no": "0|1|2|3|4|5|6|7|8|9|10|11|12|13", "place": 0, "cols": 1 }</Layout>
+    <Layout>{ "title": "", "no": "14|15|16|17|18|19|20|21|22|23|24|25|26|27", "place": 0, "cols": 1 }</Layout>
+  </item>
+  <!--任选三 组三复试..-->
+  <item Code="1109,1139,1169,1199,1220,1385,1485,1585,1685,1785,2100,2198,2295" methodid="RXZUSANSSC3" type="digital" show_str="X" code_sp="" noBigIndex="5" selPosition="true" defaultposition="00111" isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择三个位置,号码区至少选择两个号码构成一注。" methodhelp="投注方案：勾选位置万位、千位、个位，选择号码18 开奖号码：11**8 或 18**1，均中任三组三。" methodexample="从万位、千位、百位、十位、个位中任意勾选三个位置 然后从0-9中选择两个号码组成一注，所选3个位置的开奖号码与所选号码一致 顺序不限，即为中奖。">
+    <Layout>{ "title": "组三", "no": "0|1|2|3|4|5|6|7|8|9", "place": 0, "cols": 1 }</Layout>
+  </item>
+  <!--任选三 组三单式-->
+  <item Code="1110,1140,1170,1200,1221,1386,1486,1586,1686,1786,2101,2199,2296" methodid="RXZUSANSSC3" type="input" show_str="X" code_sp="," selPosition="true" defaultposition="00111" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择三个位置,手动至少输入两个号码构成一注。" methodhelp="投注方案：勾选位置万位、千位、个位，输入号码779 开奖号码：97**7 或 79**7，均中任三组三。" methodexample="从万位、千位、百位、十位、个位中任意勾选三个位置 然后输入两个号相同号码和一个不同号码组成一注，所选3个位置的开奖号码 与输入号码一致，顺序不限，即为中奖。" >
+  </item>
+  <!--任选三 组六复式-->
+  <item Code="1111,1141,1171,1201,1222,1387,1487,1587,1687,1787,2102,2200,2297" methodid="RXZUSIXSSC3" type="digital" show_str="X" code_sp="" noBigIndex="5" selPosition="true" defaultposition="00111" isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择三个位置,号码区至少选择三个号码构成一注。" methodhelp="投注方案：勾选位置万位、百位、个位，选择号码159 开奖号码：1*5*9 或 9*1*5，均中任三组六。" methodexample="从万位、千位、百位、十位、个位中任意勾选三个位置 然后从0-9中选择三个号码组成一注，所选3个位置的开奖号码 与所选号码一致，顺序不限，即为中奖。" >
+    <Layout>{ "title": "组六", "no": "0|1|2|3|4|5|6|7|8|9", "place": 0, "cols": 1 }</Layout>
+  </item>
+  <!--任选三 组六单式-->
+  <item Code="1112,1142,1172,1202,1223,1388,1488,1588,1688,1788,2103,2201,2298" methodid="RXZUSANSSC6" type="input" show_str="X" code_sp="," selPosition="true" defaultposition="00111" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择三个位置,手动至少输入三个号码构成一注。" methodhelp="投注方案：勾选位置万位、百位、个位，选择号码159 开奖号码：1*5*9 或 9*1*5，即中任三组六。" methodexample="从万位、千位、百位、十位、个位中任意勾选三个位置 然后输入三个各不相同的3个号码组成一注，所选3个位置的开奖号码 与输入号码一致，顺序不限，即为中奖。" >
+  </item>
+  <!--任选三 混合组选-->
+  <item Code="1113,1143,1173,1203,1224,1389,1489,1589,1689,1789,2104,2202,2299" methodid="RXZUSSC3HH" type="input" show_str="X" code_sp=" " noBigIndex="5" selPosition="true" defaultposition="00111" isButton="false" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择三个位置,手动至少输入三个号码构成一注(不包含豹子号)。" methodhelp="投注方案：勾选位置千位、百位、个位，分別投注(0,0,1) 以及(1,2,3)，开奖号码：*00*1，顺序不限，即中任三组三 或者(2)*21*3，顺序不限，即中任三组六。" methodexample="从万位、千位、百位、十位、个位中任意勾选三个位置 然后输入三个号码组成一注，所选3个位置的开奖号码与 输入号码一致，顺序不限，即为中奖。" >
+    
+  </item>
+  <!--任选三 组选和值-->
+  <item Code="1114,1144,1174,1204,1225,1390,1490,1590,1690,1790,2105,2203,2300" methodid="RXZUSSC3HZ" type="digital" show_str="X" code_sp="," noBigIndex="5" selPosition="true" defaultposition="00111" isButton="false" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择三个位置,至少选择一个和值号码构成一注。" methodhelp="投注方案：勾选位置万位、千位、个位；选择和值8 开奖号码：13**4 顺序不限，即中任三直选。" methodexample="从万位、千位、百位、十位、个位中任意勾选三个位置 然后选择一个和值，所选3个位置的开奖号码相加之和与所选 和值一致，顺序不限，即为中奖。" >
+    <Layout>{ "title": "和值", "no": "1|2|3|4|5|6|7|8|9|10|11|12|13", "place": 0, "cols": 1 }</Layout>
+    <Layout>{ "title": "", "no": "14|15|16|17|18|19|20|21|22|23|24|25|26", "place": 0, "cols": 1 }</Layout>
+  </item>
+
+
+  <!--任选四 直选复式-->
+  <item Code="1115,1145,1175,1205,1226,1391,1491,1591,1691,1791,2106,2204,2301" methodid="RXZXSSC4" type="digital" show_str="X,X,X,X,X" code_sp="" noBigIndex="5"  isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少四位上各选1个号码组成一注。" methodhelp="投注方案：万位1、千位5、百位0、十位2 开奖号码：1502*，即中任四直选。" methodexample="从万位、千位、百位、十位、个位中任意选择四个位置,在这四个位 上至少各选1个号码组成一注，所选4个位置上的开奖号码 与所选号码完全相同，且顺序一致，即为中奖。">
+    <Layout>{ "title": "万位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 0, "cols": 1}</Layout>
+		<Layout>{ "title": "千位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 1, "cols": 1}</Layout>
+		<Layout>{ "title": "百位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 2, "cols": 1}</Layout>
+		<Layout>{ "title": "十位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 3, "cols": 1}</Layout>
+		<Layout>{ "title": "个位", "no": "0|1|2|3|4|5|6|7|8|9", "place": 4, "cols": 1}</Layout>
+  </item>
+  <!--任选四 直选单式-->
+  <item Code="1116,1146,1176,1206,1227,1392,1492,1592,1692,1792,2107,2205,2302" methodid="RXZXSSC4DS" type="input" show_str="X" code_sp="" selPosition="true" defaultposition="01111" maxcodecount="0"  methoddesc="从万位、千位、百位、十位、个位中至少选择四个位置,至少手动输入一个四位数的号码构成一注。" methodhelp="投注方案：勾选位置万位、千位、十位、个位，输入号码1524 开奖号码：15*24，即中任四直选。" methodexample="从万位、千位、百位、十位、个位中任意勾选四个位置，手动输入 一个四位数号码组成一注，所选4个位置上的开奖号码与输入号码完全相同 且顺序一致，即为中奖。">
+  </item>
+  <!--任选四 组选24-->
+  <item Code="1117,1147,1177,1207,1228,1393,1493,1593,1693,1793,2108,2206,2303" methodid="RXZU24SSC4" type="digital" show_str="X" code_sp="," selPosition="true" defaultposition="01111"  isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择四个位置,号码区至少选择四个号码构成一注。" methodhelp="投注方案：勾选位置万位、千位、十位、个位，选择号码1234 开奖号码：12*34 或 13*24，均中任四组选24。" methodexample="从万位、千位、百位、十位、个位中任意勾选四个位置，然后从0-9中 选择四个号码组成一注，所选4个位置的开奖号码与所选号码一致 顺序不限，即为中奖。">
+    <Layout>{"title": "组选24","no": "0|1|2|3|4|5|6|7|8|9","place": 0,"cols": 1,"minchosen": 4}</Layout>
+  </item>
+  <!--任选四 组选12-->
+  <item Code="1118,1148,1178,1208,1229,1394,1494,1594,1694,1794,2109,2207,2304" methodid="RXZU12SSC4" type="digital" show_str="X,X" code_sp="" selPosition="true" defaultposition="01111"  isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择四个位置,从“二重号”选择一个号码，“单号”中选择两个号码组成一注。" methodhelp="投注方案：勾选位置万位、千位、十位、个位 选择二重号：8，单号：0、6； 开奖号码：88*06 或 08*68 均中任四组选12。" methodexample="从万位、千位、百位、十位、个位中任意勾选四个位置，然后选择1个二重号码 和2个单号号码组成一注，所选4个位置的开奖号码中包含与所选号码，且所选 二重号码在所选4个位置的开奖号码中出现了2次，即为中奖。" >
+    <Layout>{"title": "二重号","no": "0|1|2|3|4|5|6|7|8|9","place": 0,"cols": 1,"minchosen": 1}</Layout>
+    <Layout>{"title": "单　号","no": "0|1|2|3|4|5|6|7|8|9","place": 1,"cols": 1,"minchosen": 2}</Layout>
+  </item>
+  <!--任选四 组选6-->
+  <item Code="1119,1149,1179,1209,1230,1395,1495,1595,1695,1795,2110,2208,2305" methodid="RXZU6SSC4" type="digital" show_str="X" code_sp="," selPosition="true" defaultposition="01111"  isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择四个位置,从“二重号”中选择两个号码组成一注。" methodhelp="投注方案：勾选位置万位、千位、十位、个位，选择二重号：6、8； 开奖号码：66*88 或 68*68，均中任四组选6。" methodexample="从万位、千位、百位、十位、个位中任意勾选四个位置，然后从0-9中 选择2个二重号组成一注，所选4个位置的开奖号码与所选号码一致，并且所选的2个 二重号码在所选4个位置的开奖号码中分别出现了2次，顺序不限，即为中奖。" >
+    <Layout>{"title": "二重号","no": "0|1|2|3|4|5|6|7|8|9","place": 0,"cols": 1,"minchosen": 2}</Layout>
+  </item>
+  <!--任选四 组选4-->
+  <item Code="1120,1150,1180,1210,1231,1396,1496,1596,1696,1796,2111,2209,2306" methodid="RXZU4SSC4" type="digital" show_str="X,X" code_sp="" selPosition="true" defaultposition="01111"  isButton="true" maxcodecount="0" methoddesc="从万位、千位、百位、十位、个位中至少选择四个位置,从“三重号”中选择一个号码，“单号”中选择一个号码组成一注。" methodhelp="投注方案：勾选位置万位、千位、十位、个位，选择三重号：8， 单号：0； 开奖号码：88*80 或 80*88，均中任四组选4。" methodexample="从万位、千位、百位、十位、个位中任意勾选四个位置，然后从0-9 中选择1个三重号和1个单号组成一注，所选4个位置的开奖号码与所选号码一致，并且 所选三重号码在所选4个位置的开奖号码中出现了3次，顺序不限，即为中奖。" >
+    <Layout>{	"title": "三重号",	"no": "0|1|2|3|4|5|6|7|8|9",	"place": 0,	"cols": 1,	"minchosen": 1}</Layout>
+    <Layout>{	"title": "单　号",	"no": "0|1|2|3|4|5|6|7|8|9",	"place": 1,	"cols": 1,	"minchosen": 1}</Layout>
+  </item>
+  <!--************任选 end***********-->
+ 
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================时时彩=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================十一选五=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--*****-->
+  <!--前三-->
+  <!--******-->
+  <!--十一选五/三码/前三直选复试-->
+  <item Code="400,1800,1837,1874,1911" methodid="SDZX3" type="digital" show_str="X,X,X,-,-" code_sp=" "  isButton="true" maxcodecount="0" methoddesc="从第一位、第二位、第三位中至少各选择1个号码。" methodhelp="投注方案：01 02 03 开奖号码：01 02 03 * *，即中前三直选。" methodexample="01-11共11个号码中选择3个不重复的号码组成一注，所选号码 与当期顺序摇出的5个号码中的前3个号码相同，且顺序一致，即为中奖。" >
+    <Layout>{title:'第一位', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+    <Layout>{title:'第二位', no:'01|02|03|04|05|06|07|08|09|10|11', place:1, cols:1}</Layout>
+    <Layout>{title:'第三位', no:'01|02|03|04|05|06|07|08|09|10|11', place:2, cols:1}</Layout>
+  </item>
+  <!--广东十一选五/三码/前三直选单式-->
+  <item Code="401,1801,1838,1875,1912" methodid="SDZX3" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="手动输入号码，至少输入1个三位数号码组成一注。" methodhelp="投注方案：01 02 03 开奖号码：01 02 03 * *即中前三直选" methodexample="手动输入3个号码组成一注，所输入的号码与当期顺序。 摇出的5个号码中的前3个号码相同，且顺序一致，即为中奖。">
+  </item>
+  <!--广东十一选五/三码/前三组选复式-->
+  <item Code="402,1802,1839,1876,1913" methodid="SDZU3" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0"  methoddesc="从01-11中任意选择3个或3个以上号码。" methodhelp="投注方案：01 02 03 开奖号码：01 02 03 * *（前三顺序不限），即为中奖" methodexample="从01-11共11个号码中选择3个号码组成一注。所选号码与当期 顺序摇出的5个号码中的前3个号码相同，顺序不限，即为中奖。">
+    <Layout>{title:'前三组选', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--广东十一选五/三码/前三组选单式-->
+  <item Code="403,1803,1840,1877,1914" methodid="SDZU3" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="手动输入号码，至少输入1个三位数号码组成一注。" methodhelp="投注方案：01 02 03 开奖号码：01 02 03 * *（前三顺序不变），即中奖" methodexample="手动输入3个号码组成一注，所输入的号码与当期顺序。 摇出的5个号码中的前3个号码相同，顺序不限，即为中奖。" >
+  </item>
+  <!--广东十一选五/三码/前三组选胆拖-->
+  <item Code="404,1804,1841,1878,1915" methodid="LTZU3" type="input" methoddesc="从01-11中，选取3个及以上的号码进行投注，每注需至少包括1个胆码及2个拖码。" methodhelp="投注方案：胆码 02，拖码 01 06 开奖号码：02 01 06 * *（前三顺序不变），即中前三组选拖胆" methodexample="至少包括1个胆码及2个拖码。 所选单注号码与当期顺序摇出的5个号码中的前3个号码相同，顺序不限，即为中奖。" >
+  </item>
+  <!--*****-->
+  <!--前二-->
+  <!--******-->
+  <!--广东十一选五/二码/前二直选复式-->
+  <item Code="405,1805,1842,1879,1916" methodid="SDZX2" type="digital" show_str="X,X,-,-,-" code_sp=" "  isButton="true" maxcodecount="0" methoddesc="从第一位、第二位中至少各选择1个号码。" methodhelp="投注方案：01 02 开奖号码：01 02 * * *，即中前二直选。" methodexample="从01-11共11个号码中选择2个不重复的号码组成一注。 所选号码与当期顺序摇出的5个号码中的前2个号码相同，且顺序一致，即为中奖。" >
+    <Layout>{title:'第一位', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+    <Layout>{title:'第二位', no:'01|02|03|04|05|06|07|08|09|10|11', place:1, cols:1}</Layout>
+  </item>
+  <!--广东十一选五/二码/前二直选单式-->
+  <item Code="406,1806,1843,1880,1917" methodid="SDZX2" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="手动输入号码，至少输入1个二位数号码组成一注。" methodhelp="投注方案：01 02 开奖号码：01 02 * * *，即中前二直选" methodexample="手动输入2个号码组成一注，所输入的号码与当期顺序。 摇出的5个号码中的前2个号码相同，且顺序一致，即为中奖。" >
+  </item>
+  <!--广东十一选五/二码/前二组选复式-->
+  <item Code="407,1807,1844,1881,1918" methodid="SDZU2" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0" methoddesc="从01-11中任意选择2个或2个以上号码。" methodhelp="投注方案：01 02 开奖号码：02 01 * * *，(前二顺序不限)，即中前二组选。" methodexample="从01-11共11个号码中选择2个所选号码与当 期顺序摇出的5个号码中的前2个号码相同，顺序不限， 即为中奖。">
+    <Layout>{title:'前二组选', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--广东十一选五/二码/前二组选单式-->
+  <item Code="408,1808,1845,1882,1919" methodid="SDZU2" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="手动输入号码，至少输入1个二位数号码组成一注。" methodhelp="投注方案：01 02 开奖号码：02 01 * * *（前二顺序不变），即中奖" methodexample="手动输入2个号码组成一注，所输入的号码与当期顺序。 摇出的5个号码中的前2个号码相同，顺序不限，即为中奖。" >
+    
+  </item>
+  <!--广东十一选五/二码/前二组选胆码-->
+  <item Code="409,1809,1846,1883,1920" methoddesc="从01-11中，选取2个及以上的号码进行投注，每注需至少包括1个胆码及1个拖码。" methodhelp="投注方案：胆码 01，拖码 06 开奖号码：06 01 * * *（前二顺序不变），即中前二组选拖胆" methodexample="至少包括1个胆码及1个拖码。 所选单注号码与当期顺序摇出的5个号码中的前2个号码相同，顺序不限，即为中奖。" />
+  <!--不定位-->
+  <item Code="1008,1798,1835,1872,1909" methodid="SDBDW" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0" methoddesc="从01-11中任意选择1个或1个以上号码。" methodhelp="投注方案：01 开奖号码：01 * * * *，* 01 * * *，01 * 01 * *，即中前三位" methodexample="从01-11中，选择1号码进行投注。每注由1个号码组成，只要当期顺序摇出 的第一位、第二位、第三位开奖号码中包含所选号码，即为中奖。">
+    <Layout>{title:'前三位', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--定位胆-->
+  <item Code="1009,1799,1836,1873,1910" methodid="SDDWD" type="digital" show_str="X,X,X,-,-" code_sp=" "  isButton="true" maxcodecount="0" methoddesc="投注方案：第一位 01 开奖号码：01 * * * *即中定位胆" methodhelp="投注方案：第一位 01 开奖号码：01 * * * *即中定位胆" methodexample="从第一位，第二位，第三位任意1个位置或多个位置上 选择1个号码，所选号码与相同位置上的开奖号码一 致，即为中奖">
+    <Layout>{title:'第一位', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+    <Layout>{title:'第二位', no:'01|02|03|04|05|06|07|08|09|10|11', place:1, cols:1}</Layout>
+    <Layout>{title:'第三位', no:'01|02|03|04|05|06|07|08|09|10|11', place:2, cols:1}</Layout>
+  </item>
+  <!--趣味型:定单双 -->
+  <!--趣味型:定单双-->
+  <item Code="410,1810,1847,1884,1921" methodid="SDDDS" type="dds" show_str="X" code_sp="|"  isButton="false" maxcodecount="0" methoddesc="从不同的单双组合中任意选择1个或1个以上的组合。" methodhelp="投注方案：5单0双 开奖号码：01 03 05 07 09五个单数，即中趣味_定单双。" methodexample="从6种单双个数组合中选择1种组合， 当期开奖号码的单双个数与所选单双组合一致，即为中奖。">
+    <Layout>{title:'定单双', no:'5单0双|4单1双|3单2双|2单3双|1单4双|0单5双', place:0, cols:0}</Layout>
+  </item>
+  <!--趣味型:猜中位-->
+  <item Code="411,1811,1848,1885,1922" methodid="SDCZW" type="digital" show_str="X" code_sp=","  isButton="false" maxcodecount="0" methoddesc="从3-9中任意选择1个或1个以上数字。" methodhelp="投注方案：08 开奖号码：按号码大小顺序排列后04 05 08 09 11，中间数08，即中趣味_猜中位。" methodexample="从3-9中选择1个号码进行购买， 所选号码与5个开奖号码按照大小顺序排列后的第3个号码相同，即为中奖">
+    <Layout>{title:'猜中位', no:'3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+  </item>
+  <!---->
+  <!--任选复式-->
+  <!---->
+  <!--任选一中一-->
+  <item Code="412,1812,1849,1886,1923" methodid="SDRX1" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0" methoddesc="从01-11中任意选择1个或1个以上号码。" methodhelp="投注方案：05 开奖号码：08 04 11 05 03，即任选一中一。" methodexample="01-11共11个号码中选择1个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+    <Layout>{title:'选一中1', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--任选二中二-->
+  <item Code="413,1813,1850,1887,1924" methodid="SDRX2" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0" methoddesc="从01-11中任意选择2个或2个以上号码。" methodhelp="投注方案：05 04 开奖号码：08 04 11 05 03，即任选二中二。" methodexample="01-11共11个号码中选择2个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+    <Layout>{title:'选二中2', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--任选三中三-->
+  <item Code="414,1814,1851,1888,1925" methodid="SDRX3" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0" methoddesc="从01-11中任意选择3个或3个以上号码。" methodhelp="投注方案：05 04 11 开奖号码：08 04 11 05 03，即任选三中三。" methodexample="01-11共11个号码中选择3个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+    <Layout>{title:'选三中3', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--任选四中四-->
+  <item Code="415,1815,1852,1889,1926" methodid="SDRX4" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0" methoddesc="从01-11中任意选择4个或4个以上号码。" methodhelp="投注方案：05 04 08 03 开奖号码：08 04 11 05 03，即任选四中四。" methodexample="01-11共11个号码中选择4个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+    <Layout>{title:'选四中4', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--任选五中五-->
+  <item Code="416,1816,1853,1890,1927"  methodid="SDRX5" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0"  methoddesc="从01-11中任意选择5个或5个以上号码。" methodhelp="投注方案：05 04 11 03 08 开奖号码：08 04 11 05 03，即任选五中五。" methodexample="01-11共11个号码中选择5个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+    <Layout>{title:'选五中5', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--任选六中五-->
+  <item Code="417,1817,1854,1891,1928" methodid="SDRX6" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0" methoddesc="从01-11中任意选择6个或6个以上号码。" methodhelp="投注方案：05 10 04 11 03 08 开奖号码：08 04 11 05 03，即任选六中五。" methodexample="01-11共11个号码中选择6个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+    <Layout>{title:'选六中5', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--任选七中五-->
+  <item Code="418,1818,1855,1892,1929" methodid="SDRX7" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0" methoddesc="从01-11中任意选择7个或7个以上号码。" methodhelp="投注方案：05 10 04 11 03 08 09 开奖号码：08 04 11 05 03，即任选七中五。" methodexample="01-11共11个号码中选择7个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+    <Layout>{title:'选七中5', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!--任选八中五-->
+  <item Code="419,1819,1856,1893,1930" methodid="SDRX8" type="digital" show_str="X" code_sp=","  isButton="true" maxcodecount="0" methoddesc="从01-11中任意选择8个或8个以上号码。" methodhelp="投注方案：05 10 04 11 03 08 09 11 开奖号码：08 04 11 05 03，即任选八中五。" methodexample="01-11共11个号码中选择8个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+    <Layout>{title:'选八中5', no:'01|02|03|04|05|06|07|08|09|10|11', place:0, cols:1}</Layout>
+  </item>
+  <!---->
+  <!--任选单式-->
+  <!---->
+  <item Code="420,1820,1857,1894,1931" methodid="SDRX1" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="从01-11中任意选择1个或1个以上号码。" methodhelp="投注方案：05 开奖号码：08 04 11 05 03，即任选一中一。" methodexample="01-11共11个号码中选择1个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+  </item>
+  <!--任选二中二-->
+  <item Code="421,1821,1858,1895,1932" methodid="SDRX2" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="从01-11中任意选择2个或2个以上号码。" methodhelp="投注方案：05 04 开奖号码：08 04 11 05 03，即任选二中二。" methodexample="01-11共11个号码中选择2个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+  </item>
+  <!--任选三中三-->
+  <item Code="422,1822,1859,1896,1933" methodid="SDRX3" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="从01-11中任意选择3个或3个以上号码。" methodhelp="投注方案：05 04 11 开奖号码：08 04 11 05 03，即任选三中三。" methodexample="01-11共11个号码中选择3个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+  </item>
+  <!--任选四中四-->
+  <item Code="423,1823,1860,1897,1934" methodid="SDRX4" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="从01-11中任意选择4个或4个以上号码。" methodhelp="投注方案：05 04 08 03 开奖号码：08 04 11 05 03，即任选四中四。" methodexample="01-11共11个号码中选择4个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+  </item>
+  <!--任选五中五-->
+  <item Code="424,1824,1861,1898,1935" methodid="SDRX5" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="从01-11中任意选择5个或5个以上号码。" methodhelp="投注方案：05 04 11 03 08 开奖号码：08 04 11 05 03，即任选五中五。" methodexample="01-11共11个号码中选择5个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+  </item>
+  <!--任选六中五-->
+  <item Code="425,1825,1862,1899,1936" methodid="SDRX6" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="从01-11中任意选择6个或6个以上号码。" methodhelp="投注方案：05 10 04 11 03 08 开奖号码：08 04 11 05 03，即任选六中五。" methodexample="01-11共11个号码中选择6个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+  </item>
+  <!--任选七中五-->
+  <item Code="426,1826,1863,1900,1937" methodid="SDRX7" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="从01-11中任意选择7个或7个以上号码。" methodhelp="投注方案：05 10 04 11 03 08 09 开奖号码：08 04 11 05 03，即任选七中五。" methodexample="01-11共11个号码中选择7个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+  </item>
+  <!--任选八中五-->
+  <item Code="427,1827,1864,1901,1938" methodid="SDRX8" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="从01-11中任意选择8个或8个以上号码。" methodhelp="投注方案：05 10 04 11 03 08 09 11 开奖号码：08 04 11 05 03，即任选八中五。" methodexample="01-11共11个号码中选择8个号码进行，所选号码 与当期顺序摇出的5个号码中包含所选号码，即为中奖。">
+  </item>
+
+  <!---->
+  <!--任选胆拖-->
+  <!--任选二中二-->
+  <item Code="428,1828,1865,1902,1939" methoddesc="从01-11中，选取2个及以上的号码进行投注，每注需至少包括1个胆码及1个拖码。" methodhelp="投注方案：胆码 08，拖码 06 开奖号码：06 08 11 09 02，即中任选二中二。" methodexample="分别从胆码和拖码的01-11中，至少选择1个胆码和1个拖码组成一注， 只要当期顺序摇出的5个开奖号码中同时包含所选的1个胆码和1个拖码， 所选胆码必须全中，即为中奖。" />
+  <!--任选三中三-->
+  <item Code="429,1829,1866,1903,1940" methoddesc="从01-11中，选取3个及以上的号码进行投注，每注需至少包括1个胆码及2个拖码。" methodhelp="投注方案：胆码 08，拖码 06 11 开奖号码：06 08 11 09 02，即中任选三中三" methodexample="分别从胆码和拖码的01-11中，至少选择1个胆码和2个拖码组成一注， 只要当期顺序摇出的5个开奖号码中同时包含所选的1个胆码和2个拖码， 所选胆码必须全中，即为中奖。" />
+  <!--任选四中四-->
+  <item Code="430,1830,1867,1904,1941" methoddesc="从01-11中，选取4个及以上的号码进行投注，每注需至少包括1个胆码及3个拖码。" methodhelp="投注方案：胆码 08，拖码 06 09 11  开奖号码：06 08 11 09 02，即中任选四中四。" methodexample="分别从胆码和拖码的01-11中，至少选择1个胆码和3个拖码组成一注， 只要当期顺序摇出的5个开奖号码中同时包含所选的1个胆码和3个拖码， 所选胆码必须全中，即为中奖。" />
+  <!--任选五中五-->
+  <item Code="431,1831,1868,1905,1942" methoddesc="从01-11中，选取5个及以上的号码进行投注，每注需至少包括1个胆码及4个拖码。" methodhelp="投注方案：胆码 08，拖码 02 06 09 11  开奖号码：06 08 11 09 02，即中任选五中五" methodexample="分别从胆码和拖码的01-11中，至少选择1个胆码和4个拖码组成一注 只要当期顺序摇出的5个开奖号码中同时包含所选的1个胆码和4个拖码 所选胆码必须全中，即为中奖。" />
+  <!--任选六中五-->
+  <item Code="432,1832,1869,1906,1943" methoddesc="从01-11中，选取6个及以上的号码进行投注，每注需至少包括1个胆码及5个拖码。" methodhelp="投注方案：胆码 08，拖码 02 05 06 09 11 开奖号码：06 08 11 09 02，即中任选六中五。" methodexample="分别从胆码和拖码的01-11中，至少选择1个胆码和5个拖码组成一注 只要当期顺序摇出的5个开奖号码同时存在于胆码和拖码的 任意组合中，即为中奖。" />
+  <!--任选七中五-->
+  <item Code="433,1833,1870,1907,1944" methoddesc="从01-11中，选取7个及以上的号码进行投注，每注需至少包括1个胆码及6个拖码。" methodhelp="投注方案：胆码 08，拖码 01 02 05 06 09 11 开奖号码：06 08 11 09 02，即中任选七中五。" methodexample="分别从胆码和拖码的01-11中，至少选择1个胆码和6个拖码组成一注 只要当期顺序摇出的5个开奖号码同时存在于胆码和拖码 的任意组合中，即为中奖。" />
+  <!--任选八中五-->
+  <item Code="434,1834,1871,1908,1945" methoddesc="从01-11中，选取8个及以上的号码进行投注，每注需至少包括1个胆码及7个拖码。" methodhelp="投注方案：胆码 08，拖码 01 02 03 05 06 09 11  开奖号码：06 08 11 09 02，即中任选八中五。" methodexample="分别从胆码和拖码的01-11中，至少选择1个胆码和7个拖码组成一注 只要当期顺序摇出的5个开奖号码同时存在于胆码和拖码的任意组合中 即为中奖。" />
+
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================十一选五=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================3d,时时乐=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--定位胆-->
+  <item Code="1006,1007" methodid="DWD" type="digital" show_str="X,X,X" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0"   methoddesc="在百位、十位、个位任意位置上任意选择1个或1个以上号码。" methodhelp="投注方案：百位 1 开奖号码：百位 1，即中定位包胆百位。" methodexample="从百位、十位、个位至少选择一个及以上号码， 所选号码与相同位置上的开奖号码一致即为中奖。" >
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'十位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>
+    <Layout>{title:'个位', no:'0|1|2|3|4|5|6|7|8|9', place:2, cols:1}</Layout>
+  </item>
+  <!--（前二）直选复式-->
+
+  <item Code="509,609" methodid="ZX2" type="digital" show_str="X,X,-,-,-" code_sp="" noBigIndex="5" isButton="true" maxcodecount="0" ifrandom="1" randomcos="2" randomcosvalue="1|1" methoddesc="从万位、千位各选一个号码组成一注。" methodhelp="投注方案：58开奖号码：58即中前二直选" methodexample="从万位、千位选择一个2位数号码组成一注，所选号码与开奖号码前2位相同且顺序一致即为中奖">
+    <Layout>{title:'百位', no:'0|1|2|3|4|5|6|7|8|9', place:0, cols:1}</Layout>
+    <Layout>{title:'十位', no:'0|1|2|3|4|5|6|7|8|9', place:1, cols:1}</Layout>>
+  </item>
+  <!--前二大小单双-->
+  <item Code="519,619" methodid="DXDS" type="dxds" show_str="X,X" code_sp="" noBigIndex="5" isButton="false" maxcodecount="0" methoddesc="从万位、千位中的“大、小、单、双”中至少各选一个组成一注。" methodhelp="投注方案：小双\t\n开奖号码：万位与千位“小双”，即中前二大小单双。" methodexample="对万位、千位的“大（56789）小（01234）、单\t\n（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的\t\n位置、形态相同，及为中奖。">
+    <Layout>{title:'万位', no:'大|小|单|双', place:0, cols:1}</Layout>
+    <Layout>{title:'千位', no:'大|小|单|双', place:1, cols:1}</Layout>
+  </item>
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================3d,时时乐=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================北京快乐8=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--任选一一-->
+  <item Code="820" methoddesc="从01-80中任选1个以上号码。" methodhelp="从01-80中任选1个以上号码，开奖号码中至少有一个 号码与选择号码相同即中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 投注：01" />
+  <!--任选二一-->
+  <item Code="821" methoddesc="从01-80中任选2至8个号码。" methodhelp="从01-80中任选2个以上号码，开奖号码中至少有两个 号码与选择号码相同即中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 投注：01 02" />
+  <!--任选三一-->
+  <item Code="822" methoddesc="从01-80中任选3至8个号码。" methodhelp="从01-80中任选3个以上号码，开奖号码中至少有两个 号码与选择号码相同即中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 投注：01 02 03" />
+  <!--任选四一-->
+  <item Code="823" methoddesc="从01-80中任选4至8个号码。" methodhelp="从01-80中任选4个以上号码，开奖号码中至少有 两个号码与选择号码相同即中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 投注：01 02 03 04" />
+  <!--任选五一-->
+  <item Code="824" methoddesc="从01-80中任选5至8个号码。" methodhelp="从01-80中任选5个以上号码，开奖号码中至少有三个 号码与选择号码相同即中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 投注：01 02 03 04 05" />
+  <!--任选六一-->
+  <item Code="825" methoddesc="从01-80中任选6至8个号码。" methodhelp="从01-80中任选6个以上号码，开奖号码中至少有三个 号码与选择号码相同即中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 投注：01 02 03 04 05 06" />
+  <!--任选七一-->
+  <item Code="826" methoddesc="从01-80中任选7或8个号码。" methodhelp="从01-80中任选7个以上号码，开奖号码中至少有四个号码 与选择号码相同或者所有号码都不相同即为中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 投注：01 02 03 04 05 06 07" />
+  <!--上下盘-->
+  <item Code="850" methoddesc="选择20个开奖号码中包含“上盘(01-40)”与“下盘(41-80)”号码个数多少关系。" methodhelp="选择20个开奖号码中包含“上盘（01-40）”与“下盘 （41-80）”号码个数多少关系，如果开奖号码属性 与选择属性相同即中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 (“上盘=“””号码个数10，“下盘=“””号码个数10.上=下） 投注：中盘" />
+  <!--奇偶盘-->
+  <item Code="851" methoddesc="选择20个开奖号码中包含“奇·偶”号码个数多少关系。" methodhelp="选择20个开奖号码中包含“奇 偶”号码个数多少关系， 如果开奖号码属性与选择属性相同即中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 (“奇数=“””号码个数10，“偶数=“””号码个数10.奇=偶） 投注：和" />
+  <!--和值大小单双-->
+  <item Code="852" methoddesc="选择20个开奖号码总和值的“大小单双”属性组合(和值“小于等于810为小，>810为大)。" methodhelp="选择20个开奖号码中包含“大小单双”属性组合， 如果开奖号码属性组合与选择属性组合相同即中奖" methodexample="开奖：01 02 03 04 05 06 07 08 21 22 71 72 73 74 75 76 77 78 79 80 (20个开奖号码总和值：834.属性为“大.双”） 投注：大.双" />
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================北京快乐8=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================六合彩=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--特码 01-49 一一-->
+  <!--特码 01一一-->
+  <item Code="1951" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 02一一-->
+  <item Code="1952" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 03一一-->
+  <item Code="1953" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 04一一-->
+  <item Code="1954" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 05一一-->
+  <item Code="1955" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 06一一-->
+  <item Code="1956" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 07一一-->
+  <item Code="1957" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 08一一-->
+  <item Code="1958" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 09一一-->
+  <item Code="1959" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 10一一-->
+  <item Code="1960" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 11一一-->
+  <item Code="1961" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 12一一-->
+  <item Code="1962" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 13一一-->
+  <item Code="1963" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 14一一-->
+  <item Code="1964" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 15一一-->
+  <item Code="1965" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 16一一-->
+  <item Code="1966" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 17一一-->
+  <item Code="1967" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 18一一-->
+  <item Code="1968" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 19一一-->
+  <item Code="1969" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 20一一-->
+  <item Code="1970" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 21一一-->
+  <item Code="1971" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 22一一-->
+  <item Code="1972" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 23一一-->
+  <item Code="1973" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 24一一-->
+  <item Code="1974" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 25一一-->
+  <item Code="1975" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 26一一-->
+  <item Code="1976" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 27一一-->
+  <item Code="1977" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 28一一-->
+  <item Code="1978" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 29一一-->
+  <item Code="1979" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 30一一-->
+  <item Code="1980" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 31一一-->
+  <item Code="1981" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 32一一-->
+  <item Code="1982" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 33一一-->
+  <item Code="1983" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 34一一-->
+  <item Code="1984" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 35一一-->
+  <item Code="1985" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 36一一-->
+  <item Code="1986" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 37一一-->
+  <item Code="1987" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 38一一-->
+  <item Code="1988" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 39一一-->
+  <item Code="1989" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 40一一-->
+  <item Code="1990" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 41一一-->
+  <item Code="1991" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 42一一-->
+  <item Code="1992" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 43一一-->
+  <item Code="1993" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 44一一-->
+  <item Code="1994" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 45一一-->
+  <item Code="1995" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 46一一-->
+  <item Code="1996" methodid="red" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 47一一-->
+  <item Code="1997" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 48一一-->
+  <item Code="1998" methodid="blue" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  <!--特码 49一一-->
+  <item Code="1999" methodid="green" type="digital" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="" methodhelp=""/>
+  
+  <!--特码 01-49 一一-->
+
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================六合彩8=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================安徽快3=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--二同号单选一一-->
+  <item Code="2000" methodid="ETHDX" type="digital" name="标准选号" show_str="X,X" code_sp=" "  isButton="false" maxcodecount="0" methoddesc="选择1个对子（11,22,33,44,55,66）和1个不同号码(1,2,3,4,5,6)投注。" methodhelp="选择1个对子（11,22,33,44,55,66）和1个不同号码(1,2,3,4,5,6)投注，选号与开奖号码一致即中奖。" methodexample="投注方案：112；开奖号码112,121,211，即中奖。">
+    <Layout>{title:'二同号', no:'11|22|33|44|55|66', place:0, cols:1,minchosen: 1}</Layout>
+    <Layout>{title:'不同号', no:'1|2|3|4|5|6', place:1, cols:1, minchosen: 1}</Layout>
+    <pattern>
+      <item Code="2008" methodid="ETHDX" type="input" methoddesc="手动输入号码，至少输入1个三位数号码组成一注" methodhelp="投注方案：112；开奖号码112,121,211，即中奖。" methodexample="手动输入号码，至少输入1个三位数号码组成一注" show_str="X" code_sp=" " name="手动输入" desc="手动输入">
+      </item>
+    </pattern>
+  </item>
+
+  <!--二同号复选-->
+  <item Code="2001" methodid="ETHFX" type="digital" name="标准选号" show_str="X" code_sp=","  isButton="false" maxcodecount="0" methoddesc="选择对子(11*,22*,33*,44*,55*,66*)进行投注" methodhelp="选择对子(11*,22*,33*,44*,55*,66*)投注，开奖号码中包含选择的对子即中奖" methodexample="投注方案：112；开奖号码为：112,211,121,即中奖">
+    <Layout>{title:'号码', no:'11*|22*|33*|44*|55*|66*', place:0, cols:1}</Layout>
+  </item>
+
+  <!--二不同号-->
+  <item Code="2002" methodid="EBTH" name="标准选号" type="digital" show_str="X" code_sp=","  isButton="false" maxcodecount="0" methoddesc="从1-6中任意选择2个或2个以上号码。" methodhelp="从1-6中任意选择2个号码组成一注，顺序不限。" methodexample="投注方案：2,5；开奖号码中出现：1个2、1个5 (顺序不限)，即中二不同号一等奖。">
+    <Layout>{title:'号码', no:'1|2|3|4|5|6', place:0, cols:1}</Layout>
+    <pattern>
+      <item Code="2009" methodid="EBTH" type="input" methoddesc="手动输入号码，至少输入1-6中两个不同的数字组成一注号码。" methodhelp="开奖号码中至少包含所输入的两个数字即为中奖" methodexample="投注方案：58；开奖号码：568，即中二不同号一等奖。" show_str="X" code_sp=" " name="手动输入" desc="手动输入">
+      </item>
+      <item Code="2010" methodid="EBTHDT" isButton="false" methoddesc="从1-6中任意选择1个胆码以及1个以上的号码作为拖码。" methodhelp="从1-6中选择一个胆码和一个拖码组成一注，如果开奖号码中包含所选号码即为中奖" methodexample="" show_str="X,X" code_sp="" name="胆拖选号" desc="胆拖选号">
+        <Layout>{title:'胆码', no:'1|2|3|4|5|6', place:0, cols:1, minchosen: 1}</Layout>
+        <Layout>{title:'拖码', no:'1|2|3|4|5|6', place:1, cols:1, minchosen: 1}</Layout>
+      </item>
+    </pattern>
+  </item>
+
+  <!--三连号通选-->
+  <item Code="2003" methodid="SBTHTX" name="标准选号" type="digital" show_str="X" code_sp=","  isButton="false" maxcodecount="0" methoddesc="对所有三个相连的号码进行投注。" methodhelp="开奖号码为三连号（123,234,345,456）即为中奖" methodexample="投注方案：三连号通选，开奖号码123或234或345或456 即为中奖">
+    <Layout>{title:'号码', no:'通选', place:0, cols:1}</Layout>
+  </item>
+
+  <!--三不同号-->
+  <item Code="2004" name="标准选号" methodid="SBTH" type="digital" desc="标准选号" show_str="X" code_sp=","  isButton="false" maxcodecount="0" methoddesc="选择任意三个或以上的号码进行投注。" methodhelp="从1-6中任意选择3个号码组成一注，顺序不限，即为中奖。" methodexample="投注方案：2,5,6；开奖号码中出现：1个2、1个5、1个6 (顺序不限)，即中三不同号一等奖。">
+    <Layout>{title:'号码', no:'1|2|3|4|5|6', place:0, cols:1}</Layout>
+    <pattern>
+      <item Code="2011" methodid="SBTH"  type="input" methoddesc="对三个各不相同的号码进行投注。" methodhelp="从1-6中任意选择3个号码组成一注，顺序不限，即为中奖。" methodexample="投注方案：2,5,6；开奖号码中出现：1个2、1个5、1个8 (顺序不限)，即中三不同号一等奖。" show_str="X" code_sp=" " name="手动输入" desc="手动输入">
+      </item>
+      <item Code="2012" methodid="SBTHDT" methoddesc="从1-6中任意选择1~2个胆码以及1个以上的号码作为拖码" methodhelp="从1-6中任意选择1~2个胆码以及1个以上的号码作为拖码，所选号码与开奖号码相同，即为中奖。" methodexample="" show_str="X,X" code_sp="" name="胆拖选号" desc="胆拖选号">
+        <Layout>{title:'胆码', no:'1|2|3|4|5|6', place:0, cols:1, minchosen: 1}</Layout>
+        <Layout>{title:'拖码', no:'1|2|3|4|5|6', place:1, cols:1, minchosen: 1}</Layout>
+      </item>
+      <item Code="2013" type="digital" methodid="SBTHHZ" isButton="false" methoddesc="从6-15中任意选择1个或1个以上号码" methodhelp="所选数值等于开奖号码相加之和，即为中奖。" methodexample="投注方案：和值1；开奖号码前三位：001,010,100,即中前三直选一等奖" show_str="X" code_sp="," name="和值选号" desc="和值选号">
+        <Layout>{title:'和值', no:'6|7|8|9|10|11|12|13|14|15', place:0, cols:1}</Layout>
+      </item>
+    </pattern>
+  </item>
+
+  <!--三同号单选-->
+  <item Code="2005" name="标准选号" methodid="STHDX" type="digital" show_str="X" code_sp=","  isButton="false" maxcodecount="0" methoddesc="选择任意一组以上三位相同的号码" methodhelp="从111,222,333,444,555,666中选择任意一组或一组以上号码，若和开奖号相同即为中奖。" methodexample="投注方案：222；开奖号码中出现：3个2 (顺序不限)，即中三同号一等奖。">
+    <Layout>{title:'号码', no:'111|222|333|444|555|666', place:0, cols:1}</Layout>
+  </item>
+
+  <!--三同号通选-->
+  <item Code="2006" name="标准选号" methodid="STHTX" type="digital" show_str="X" code_sp=","  isButton="false" maxcodecount="0" methoddesc="对所有三同号（111,222,333,444,555,666）进行投注" methodhelp="投注后，开奖号码为任意数字的三重号，即为中奖" methodexample="投注方案：通选；开奖号码中出现：3个2或3个其他数字，即中三同号一等奖。">
+    <Layout>{title:'号码', no:'通选', place:0, cols:1}</Layout>
+  </item>
+  
+  <!--和值-->
+  <item Code="2007" name="标准选号" methodid="KSHZ" type="digital" show_str="X" code_sp=","  isButton="false" maxcodecount="0" methoddesc="从3-18中任意选择1个或1个以上号码" methodhelp="所选数值等于开奖号码相加之和，即为中奖。" methodexample="投注方案：和值4；开奖号码前三位：112,即中江苏快三和值一等奖">
+    <Layout>{title:'和值', no:'3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18', place:0, cols:1}</Layout>
+  </item>
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================安徽快3=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+
+
+
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================PK10=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+
+  <!--定位胆-->
+  <item Code="7260" methodid="SDDWD" type="digital" show_str="X,X,X,-,-" code_sp=" "  isButton="true" maxcodecount="0" methoddesc="从冠、亚、季、四、五、六、七、八、九、十任意位置上任意选择1个或1个以上号码。" methodhelp="从第1名第10名任意位置上，任意选择1个或者1个以上的号码，进行投注，所选车号的排名和开奖结果一致，即为中奖，反之不中奖。" methodexample="投注方案：冠 选择01 开奖号码的第一个号码为01，即为中奖。">
+    <Layout>{title:'冠军', no:'01|02|03|04|05|06|07|08|09|10', place:0, cols:1}</Layout>
+    <Layout>{title:'亚军', no:'01|02|03|04|05|06|07|08|09|10', place:1, cols:1}</Layout>
+    <Layout>{title:'季军', no:'01|02|03|04|05|06|07|08|09|10', place:2, cols:1}</Layout>
+    <Layout>{title:'第四名', no:'01|02|03|04|05|06|07|08|09|10', place:3, cols:1}</Layout>
+    <Layout>{title:'第五名', no:'01|02|03|04|05|06|07|08|09|10', place:4, cols:1}</Layout>
+    <Layout>{title:'第六名', no:'01|02|03|04|05|06|07|08|09|10', place:5, cols:1}</Layout>
+    <Layout>{title:'第七名', no:'01|02|03|04|05|06|07|08|09|10', place:6, cols:1}</Layout>
+    <Layout>{title:'第八名', no:'01|02|03|04|05|06|07|08|09|10', place:7, cols:1}</Layout>
+    <Layout>{title:'第九名', no:'01|02|03|04|05|06|07|08|09|10', place:8, cols:1}</Layout>
+    <Layout>{title:'第十名', no:'01|02|03|04|05|06|07|08|09|10', place:9, cols:1}</Layout>
+  </item>
+<!--前四复试-->
+  <item Code="7261" methodid="SDZX4" type="digital" show_str="X,X,X,X,-" code_sp=" "  isButton="true" maxcodecount="0" methoddesc="从各名次中各选择1个不重复的号码组成一注。" methodhelp="从第1名、第2名、第3名、第4名中至少各选1个号码组成一注，所选车号的排名和开奖结果一致，即为中奖，反之不中奖。" methodexample="投注方案：1234 开奖号码：1234*，即中精准前四。" >
+    <Layout>{title:'冠军', no:'01|02|03|04|05|06|07|08|09|10', place:0, cols:1}</Layout>
+    <Layout>{title:'亚军', no:'01|02|03|04|05|06|07|08|09|10', place:1, cols:1}</Layout>
+    <Layout>{title:'季军', no:'01|02|03|04|05|06|07|08|09|10', place:2, cols:1}</Layout>
+    <Layout>{title:'第四名', no:'01|02|03|04|05|06|07|08|09|10', place:3, cols:1}</Layout>
+  </item>
+  <!--前四单试-->
+  <item Code="7262" methodid="SDZX4" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="手动输入号码，输入4个号码组成一注。" methodhelp="从第1名、第2名、第3名、第4名中至少各选1个号码组成一注，所选车号的排名和开奖结果一致，即为中奖，反之不中奖。" methodexample="投注方案：1234 开奖号码：1234*，即中精准前四。"></item>
+
+  <!--前三复试-->
+  <item Code="7263" methodid="SDZX3" type="digital" show_str="X,X,X,-,-" code_sp=" "  isButton="true" maxcodecount="0" methoddesc="从各名次中各选择1个不重复的号码组成一注。" methodhelp="投注方案：01 02 03 开奖号码：01 02 03 * *，即中前三直选。" methodexample="01-10共10个号码中选择3个不重复的号码组成一注，所选号码 与当期顺序开出的车号中的前3个号码相同，且顺序一致，即为中奖。" >
+    <Layout>{title:'冠军', no:'01|02|03|04|05|06|07|08|09|10', place:0, cols:1}</Layout>
+    <Layout>{title:'亚军', no:'01|02|03|04|05|06|07|08|09|10', place:1, cols:1}</Layout>
+    <Layout>{title:'季军', no:'01|02|03|04|05|06|07|08|09|10', place:2, cols:1}</Layout>
+  </item>
+  <!--前三单式-->
+  <item Code="7264" methodid="SDZX3" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="手动输入号码，至少输入1个三位数号码组成一注。" methodhelp="投注方案：01 02 03 开奖号码：01 02 03 * *即中前三直选" methodexample="手动输入3个号码组成一注，所输入的号码与当期顺序。 与当期顺序开出的车号中的前3个号码相同，且顺序一致，即为中奖。">
+  </item>
+
+  <!--前二直选复式-->
+  <item Code="7265" methodid="SDZX2" type="digital" show_str="X,X,-,-,-" code_sp=" "  isButton="true" maxcodecount="0" methoddesc="从冠军、亚军中至少各选择1个号码。" methodhelp="投注方案：1 2 开奖号码：1 2 * * *，即中前二直选。" methodexample="从01-10共10个号码中选择2个不重复的号码组成一注。 所选号码与当期顺序开出的车号中的前2个号码相同，且顺序一致，即为中奖。" >
+    <Layout>{title:'冠军', no:'01|02|03|04|05|06|07|08|09|10', place:0, cols:1}</Layout>
+    <Layout>{title:'亚军', no:'01|02|03|04|05|06|07|08|09|10', place:1, cols:1}</Layout>
+  </item>
+  <!--前二直选单式-->
+  <item Code="7266" methodid="SDZX2" type="input" show_str="X" code_sp=";"  isButton="false" maxcodecount="0" methoddesc="手动输入号码，至少输入1个二位数号码组成一注。" methodhelp="投注方案：1 2 开奖号码：1 2 * * *，即中前二直选" methodexample="手动输入2个号码组成一注，所输入的号码与当期顺序。 当期顺序开出的车号中的前2个号码相同，且顺序一致，即为中奖。" >
+  </item>
+    <!--前一-->
+  <item Code="7267" methodid="SDDWD" type="digital" show_str="X,-,-,-,-" code_sp=" "  isButton="true" maxcodecount="0" methoddesc="投注方案：冠军 01 开奖号码：01 * * * *即中前一" methodhelp="投注方案：冠军 01 开奖号码：01 * * * *即中前一" methodexample="从冠、亚、季、四、五、六、七、八、九、十任意位置上任意选择1个或1个以上号码。">
+    <Layout>{title:'冠军', no:'01|02|03|04|05|06|07|08|09|10', place:0, cols:1}</Layout>
+  </item>
+    <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--=====================================================================PK10=================================================================================================-->
+  <!--================================================================================================================================================================================-->
+  <!--================================================================================================================================================================================-->
+</items>

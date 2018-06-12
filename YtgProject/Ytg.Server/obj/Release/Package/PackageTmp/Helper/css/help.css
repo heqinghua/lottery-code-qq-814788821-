@@ -1,0 +1,181 @@
+﻿@charset "UTF-8";
+.help-main {margin:0px 0 10px 0;overflow:hidden;}
+.help-menu {float:left;width:269px;padding-bottom:9999px;margin-bottom:-9999px; 
+    z-index: 6;
+    float: left;
+    min-height: 984px;
+    box-shadow: 5px 0 10px 0 rgba(0,0,0,.1);
+    background: #fff;}
+.help-menu .title {
+    height:35px;background:#FAFAFA url(help-title.png) no-repeat;
+    border-bottom:1px solid #E3E3E3;
+    /*text-indent:-10000px;*/
+    text-align:center;
+    font-size:18px;
+    padding-top:10px;
+    font-weight:bold;
+}
+
+.help-menu-inner {padding:5px 20px 20px 20px;background-color:#FAFAFA;padding-bottom:9999px;margin-bottom:-9999px;}
+.help-menu dl {border-bottom:1px dotted #E3E3E3;padding:10px 0;overflow:hidden;}
+.help-menu dl:last-child {border:0;}
+.help-menu dt {font-size:14px;font-weight:bold;}
+.help-menu dd {display:inline-block;padding:8px 17px 5px 0;margin:0 0 0 -10px;color:#cc0228}
+.help-menu dd a:hover {color:#F60;}
+.help-online {display:block;background:url(online.png) no-repeat center center;height:80px;margin:10px 0 0 0; text-indent:-10000px;}
+
+.help-search {padding:10px;border-bottom:1px solid #E3E3E3;background:#FFF;float:left;width:688px;height:40px;}
+.help-search a {display:inline-block;padding:10px 0 0 20px;}
+.help-search-button {position:absolute;margin:4px 0 0 -34px;height:34px;background:url(search-button.png) no-repeat 0 center;border:none;width:34px; cursor:pointer;}
+
+.help-list {float:left;width:500px;border-right:1px solid #E3E3E3;padding-bottom:999px;margin-bottom:-999px;}
+.help-list .title,.help-side .title,.help-list-title {padding:15px 0;border-bottom:1px dotted #E3E3E3;font-size:14px;font-weight:bold;color:black;}
+.help-quick {border-bottom:1px solid #E3E3E3;padding:20px;text-align:center;}
+.help-quick li {display:inline-block;width:80px;padding:0 16px;}
+.help-quick li a {background:url(ico-passowrd.png) no-repeat center 0;padding:80px 0 0 0;display:block;}
+.help-quick .help-quick-password-safe a {background-image:url(ico-passowrd-safe.png)}
+.help-quick .help-quick-question a {background-image:url(ico-question.png)}
+.help-quick .help-quick-email a {background-image:url(ico-email.png)}
+
+.help-article-list {padding:10px 20px;}
+.help-article-list li {height:38px;line-height:38px;overflow:hidden;}
+.help-article-list li a {color:#555;padding:0 0 0 5px;}
+.help-article-list li a:hover {color:#F60;}
+
+.help-side {float:right;width:207px;}
+.help-menu .help-side{width:100%;float:none;}
+.help-menu .help-side .title{height:auto;background:none;text-indent:0;}
+
+.game-list {padding:20px 35px;}
+.game-list li {padding:15px 0;}
+.game-list a {display:block;text-align:center;}
+.game-list a span {display:block;color:#555; text-decoration:none;}
+.game-list a:hover { text-decoration:none;}
+.game-list a:hover span {color:#F60;}
+.game-list a .game-name {font-size:14px;font-weight:bold;}
+.game-list img{margin-bottom:10px;}
+
+
+/**
+搜索结果页
+**/
+.help-main-half {background-position:-230px 0;}
+.help-search-highlight {color:#F00;}
+.help-search-content {padding:20px;float:left;width:668px}
+.help-search-info {padding:0 0 10px 0}
+.help-search-list li {border-bottom:1px dotted #E3E3E3;padding:15px;}
+.help-search-list {}
+.help-search-list li .article-title {font-weight:bold;line-height:200%;}
+.help-search-list li .article-title a {color:#555;font-size:14px;}
+
+
+/**
+列表页
+**/
+.help-list-container,.help-article-container {float:left;padding:0 40px}
+.help-list-container .help-list-title {margin-left:0;margin-right:0;}
+.help-list-normal {padding:10px 0 10px 0;}
+.help-list-normal li {padding:0 0 15px 0;border-bottom:1px dotted #E3E3E3;margin:15px 0 0 0}
+.help-list-normal li:hover {background:#FFFFE1;}
+.help-list-name {height:24px;line-height:24px;font-size:14px;font-weight:bold;}
+.help-list-name a {color:#555;}
+.help-list-num {
+    /*display:inline-block;*/
+     padding:0 5px;background:#cc0228;margin-right:10px;font-size:10px;color:#FFF;font-weight:normal;height:14px;line-height:14px;overflow:hidden;
+    border:1px solid #cc0228;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+}
+.help-list-text {padding:0 0 0 30px;}
+.help-list-hot {display:inline-block;width:21px;height:9px;overflow:hidden;background:url(help-list-hot.gif) no-repeat;position:absolute;}
+
+/**
+文章详情页
+**/
+.help-article-container img {width:100%;}
+.help-article-title {text-align:center;padding:40px 0 20px 0;font-size:14px;font-weight:bold;border-bottom:1px dotted #E3E3E3;margin:0 0 20px 0}
+.help-article-text {font-size:14px;}
+.help-backtop {height: 24px;position: absolute;bottom: 10px;right: 10px;padding: 0 10px;line-height: 24px;background-color: #CACACA;color: #FFF;border-radius: 3px;}
+.help-backtop i {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 4px;
+overflow: hidden;
+line-height: 0;
+font-size: 0;
+vertical-align: middle;
+border-bottom: 6px solid #FFFFFF;
+border-top: 0 none;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+_color: #FF3FFF;
+_filter: chroma(color=#FF3FFF);
+}
+
+/**
+彩种列表
+**/
+.help-sort-title {margin:0 20px;padding:15px 0;border-bottom:1px dotted #E3E3E3;font-size:14px;font-weight:bold;color:#029180;}
+.help-sort-list {padding:20px 0}
+.help-sort-list li {float:left;width:166px;height:162px;overflow:hidden;}
+.help-sort-list a {display:block;text-align:center;}
+.help-sort-list a span {display:block;color:#555; text-decoration:none;}
+.help-sort-list a:hover { text-decoration:none;}
+.help-sort-list a:hover span {color:#F60;}
+.help-sort-list a .game-name {font-size:14px;font-weight:bold;}
+
+
+/** 
+彩种介绍
+**/
+.help-lottery-info {border-bottom:1px dotted #E3E3E3;padding:20px 0;word-wrap: break-word;}
+.help-lotter-info-left {float:left;text-align:center;font-size:14px;font-weight:bold}
+.help-lotter-info-left img {display:block;}
+.help-lotter-info-right {float:left;padding:0 0 0 20px;width:520px;font-size:14px;line-height:200%;text-indent:2em;}
+
+.help-lottery-control {border-bottom:1px dotted #E3E3E3;padding:20px 0;}
+.help-lottery-control ul {float:left;}
+.help-lottery-control li {width:70px;height:54px;background:url(circle-bg.png) no-repeat;text-align:center;padding:16px 0 0 0;float:left;margin:0 10px 0 0;display:inline;}
+.help-lottery-control li a {color:#FFF;display:block;}
+.help-lottery-control .btn-important {float:right;margin-top:20px}
+
+.help-lotter-text {border-bottom:1px dotted #E3E3E3;padding:20px 0 10px 0;}
+.help-lotter-text-title {float:left;clear:both;border:1px solid #E3E3E3;padding:5px 15px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+}
+.help-lotter-content {clear:both;font-size:14px;padding:10px 0;}
+
+
+/**
+信息反馈
+**/
+.help-feedback {margin:30px 0 10px 0;padding:10px 0;font-size:14px;line-height:250%;border-top:1px dotted #E3E3E3;}
+.help-feedback label { cursor:pointer;display:inline-block;margin:0 0 0 20px;}
+.help-feedback-subcont {padding:10px 0 0 0;}
+.help-feedback-panel {border:1px solid #EEE;background:#FFFFE1;padding:10px;margin:10px 0 0 0;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+.help-feedback-tip {position:absolute;margin:-20px 0 0 415px;font-size:12px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+  <components>
+    <!--Services start-->
+    <component id="Ytg.Service.SysUserService" 
+               service="Ytg.Core.Service.ISysUserService,Ytg.Core" type="Ytg.Service.SysUserService,Ytg.Service"></component>
+    <!--Services end-->
+    <component id="Ytg.Service.Lott.LotteryTypeService"
+               service="Ytg.Core.Service.Lott.ILotteryTypeService,Ytg.Core" type="Ytg.Service.Lott.LotteryTypeService,Ytg.Service"></component>
+    
+    <component id="Ytg.Service.Lott.LotteryIssueService" 
+               service="Ytg.Core.Service.Lott.ILotteryIssueService,Ytg.Core" type="Ytg.Service.Lott.LotteryIssueService,Ytg.Service"></component>
+     
+    <component id="Ytg.Service.Lott.PlayTypeService" 
+               service="Ytg.Core.Service.Lott.IPlayTypeService,Ytg.Core" type="Ytg.Service.Lott.PlayTypeService,Ytg.Service"></component>
+
+    <component id="Ytg.Service.Lott.PlayTypeRadiosBonusService"
+               service="Ytg.Core.Service.Lott.IPlayTypeRadiosBonusService,Ytg.Core" type="Ytg.Service.Lott.PlayTypeRadiosBonusService,Ytg.Service"></component>
+    
+    <component id="Ytg.Service.Lott.PlayTypeRadioService" 
+               service="Ytg.Core.Service.Lott.IPlayTypeRadioService,Ytg.Core" type="Ytg.Service.Lott.PlayTypeRadioService,Ytg.Service"></component>
+
+    <component id="Ytg.Service.SysBankTransferService" 
+               service="Ytg.Core.Service.ISysBankTransferService,Ytg.Core" type="Ytg.Service.SysBankTransferService,Ytg.Service"></component>
+  
+    <component id="Ytg.Service.SysBankPoundageService" 
+               service="Ytg.Core.Service.ISysBankPoundageService,Ytg.Core" type="Ytg.Service.SysBankPoundageService,Ytg.Service"></component>
+    
+    <component id="Ytg.Service.SysBankTypeService"
+               service="Ytg.Core.Service.ISysBankType,Ytg.Core" type="Ytg.Service.SysBankTypeService,Ytg.Service"></component>
+
+    <component id="Ytg.Service.SysNoticeService"
+               service="Ytg.Core.Service.ISysNoticeService,Ytg.Core" type="Ytg.Service.SysNoticeService,Ytg.Service"></component>
+
+    <component id="Ytg.Service.SysRoleService"
+               service="Ytg.Core.Service.ISysRoleService,Ytg.Core" type="Ytg.Service.SysRoleService,Ytg.Service"></component>
+
+    <component id="Ytg.Service.SysMenuService"
+               service="Ytg.Core.Service.ISysMenuService,Ytg.Core" type="Ytg.Service.SysMenuService,Ytg.Service"></component>
+  </components>
+</configuration>
+

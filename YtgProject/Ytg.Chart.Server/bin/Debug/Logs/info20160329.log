@@ -1,0 +1,21 @@
+2016-03-29 07:24:03,543 [1] INFO  WebSocketServer-49205706 - The server instance WebSocketServer-49205706 has been started!
+2016-03-29 07:24:03,544 [1] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 启动聊天服务成功！127.0.0.1:4534
+2016-03-29 07:24:57,437 [9] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:25:06,230 [5] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:25:27,262 [7] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:26:39,849 [8] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:27:11,009 [5] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:27:40,120 [5] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:27:47,103 [9] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:27:52,962 [9] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:36:04,882 [5] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:36:22,177 [9] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:36:28,670 [8] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:36:32,895 [7] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:-1下线！
+2016-03-29 07:37:08,687 [8] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:5423下线！
+2016-03-29 07:38:19,603 [9] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:349下线！
+2016-03-29 07:38:23,508 [7] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:-1下线！
+2016-03-29 07:39:34,899 [9] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:349下线！
+2016-03-29 07:39:40,429 [9] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:-1下线！
+2016-03-29 07:39:44,309 [9] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:-1下线！
+2016-03-29 07:40:38,917 [9] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 用户id:349下线！

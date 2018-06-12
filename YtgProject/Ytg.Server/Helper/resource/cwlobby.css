@@ -1,0 +1,14 @@
+body {
+     font-family: Tahoma,"Microsoft YaHei","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+     font-size:12px;
+     color:#363636;
+}
+* {
+	margin: 0px; padding: 0px; font-size: 12px;
+}
+a {
+	color: rgb(1, 112, 191); text-decoration: none; cursor: pointer;
+}
+a:hover {
+	color: rgb(193, 30, 15);
+}

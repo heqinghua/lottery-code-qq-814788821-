@@ -1,0 +1,33 @@
+
+@media (max-width: 992px) {
+
+    .n_bottom_box,.ng_d_i_right{
+        display: none;
+    }
+
+    .downLoadBar
+    {
+        display: block;
+    }
+
+    .downloadbarpace
+    {
+        width: 100%;
+        height: 50px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    
+}
+
+@media (max-width:320px) {
+
+
+}
+
+
+
+

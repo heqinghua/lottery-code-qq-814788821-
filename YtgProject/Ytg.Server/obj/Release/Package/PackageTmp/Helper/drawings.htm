@@ -1,0 +1,171 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-提款帮助</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+
+    <ul>
+        <li id="100024" class="active">
+            <h3>1• 如何提款？</h3>
+            <p>
+                <img src="/Helper/resource/images/chongzhi.png" width="100%" />
+            </p>
+        </li>
+        <li id="100025">
+            <h3>2•平台对于提款有何规定？</h3>
+            <p>
+                A：对于新开的用户需要自开户 <span class="text-red">6</span> 小时后方可发起提款； 
+                <br />
+                B：新增银行卡（含新增，修改）<span class="text-red">6</span> 个小时后方可发起提款； 
+                <br />
+                C：存款后总投注额小于总存款额 <span class="text-red">5%</span> 的提款将不予受理，如有特殊情况，请咨询在线客服申请处理。 
+            </p>
+        </li>
+        <li id="100026">
+            <h3>3• 提款什么时候可以到账？</h3>
+            <p>
+                自您发起提款后的5分钟内处理完毕，如因遇到网银系统问题或者其他不可抗力因素影响，到帐时间将会延迟。 
+            </p>
+        </li>
+        <li id="100027">
+            <h3>4• 为什么我的提款没有成功或者没有及时到账？</h3>
+            <p>
+                提款不成功分两种情况： 
+                <br />
+                ① 提款申请未成功： 
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;A、提款金额大于账户实有金额； 
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;B、提款时填写的银行卡姓名与用户注册时提交的用户真实姓名不一致； 
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;D、银行卡信息不符合平台规定格式。 
+                <br />
+                ② 提款申请成功，但提款失败 
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;A、银行卡卡号填写错误，与用户姓名不符。银行退单； 
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;B、提供的银行卡银行不接受公司对个人用户进行转账。 
+                <br />
+                一旦发生上述现象，可与乐诚网平台的在线客服联系。 
+            </p>
+        </li>
+        <li id="100028">
+            <h3>5• 平台提现金额与服务时间的规定</h3>
+            <p>
+                1. 每天限提5次， 单次提款金额最低100元， 最高50,000元。<br />
+                2. 提现时间为10:00am-次日02:00。
+               <!-- <table class="table">
+                    <thead>
+                        <tr>
+                            <td>所属银行 </td>
+                            <td>提现时间 </td>
+                            <td>提现限额 </td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>工商银行 </td>
+                        <td>09:00am-次日02:00 </td>
+                        <td>最低100元， 最高45,000元 </td>
+                    </tr>
+                    <tr>
+                        <td>农业银行 </td>
+                        <td>09:00am-次日02:00 </td>
+                        <td>最低500元， 最高45,000元 </td>
+                    </tr>
+                    <tr>
+                        <td>建设银行 </td>
+                        <td>09:00am-次日02:00 </td>
+                        <td>最低500元， 最高45,000元 </td>
+                    </tr>
+                    <tr>
+                        <td>招商银行 </td>
+                        <td>09:00am-次日02:00 </td>
+                        <td>最低500元， 最高45,000元 </td>
+                    </tr>
+                </table>-->
+            </p>
+            <p>
+            </p>
+        </li>
+        <li id="100029">
+            <h3>6•如何查询提款记录？</h3>
+            <p>
+                A：充值提现->提现记录 查询提款记录。
+            </p>
+        </li>
+    </ul>
+
+
+
+
+</DIV></DIV>
+</BODY></html>

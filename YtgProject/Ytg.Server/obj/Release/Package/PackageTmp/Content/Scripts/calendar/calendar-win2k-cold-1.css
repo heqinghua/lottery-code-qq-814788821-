@@ -1,0 +1,129 @@
+.calendar {
+	background: rgb(200, 208, 212); border-width: 2px; border-style: solid; border-color: rgb(255, 255, 255) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: tahoma,verdana,sans-serif; font-size: 11px; display: none; position: relative; cursor: default;
+}
+.calendar table {
+	background: rgb(200, 208, 212); border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255) rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: tahoma,verdana,sans-serif; font-size: 11px; cursor: default;
+}
+.calendar .button {
+	border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); padding: 1px; text-align: center;
+}
+.calendar .nav {
+	background: url("menuarrow.gif") no-repeat 100% 100%;
+}
+.calendar thead .title {
+	background: rgb(120, 128, 132); padding: 1px; border: 1px solid rgb(0, 0, 0); border-image: none; text-align: center; color: rgb(255, 255, 255); font-weight: bold;
+}
+.calendar thead .headrow {
+	
+}
+.calendar thead .daynames {
+	
+}
+.calendar thead .name {
+	background: rgb(232, 240, 244); padding: 2px; text-align: center; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.calendar thead .weekend {
+	color: rgb(255, 0, 0);
+}
+.calendar thead .hilite {
+	border-width: 2px; border-style: solid; border-color: rgb(255, 255, 255) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); padding: 0px; background-color: rgb(216, 224, 228);
+}
+.calendar thead .active {
+	border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255) rgb(0, 0, 0); padding: 2px 0px 0px 2px; background-color: rgb(184, 192, 196);
+}
+.calendar tbody .day {
+	padding: 2px 4px 2px 2px; width: 2em; text-align: right;
+}
+.calendar tbody .othermonth.day {
+	color: rgb(170, 170, 170); font-size: 80%;
+}
+.calendar tbody .oweekend.othermonth.day {
+	color: rgb(255, 170, 170);
+}
+.calendar table .wn {
+	background: rgb(232, 244, 240); padding: 2px 3px 2px 2px; border-right-color: rgb(0, 0, 0); border-right-width: 1px; border-right-style: solid;
+}
+.calendar tbody .rowhilite td {
+	background: rgb(216, 228, 224);
+}
+.calendar tbody .rowhilite td.wn {
+	background: rgb(200, 212, 208);
+}
+.calendar tbody td.hilite {
+	border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); padding: 1px 3px 1px 1px; border-image: none;
+}
+.calendar tbody td.active {
+	border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255) rgb(0, 0, 0); padding: 2px 2px 0px; border-image: none;
+}
+.calendar tbody td.selected {
+	background: rgb(216, 224, 228); border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255) rgb(0, 0, 0); padding: 2px 2px 0px; border-image: none; font-weight: bold;
+}
+.calendar tbody td.weekend {
+	color: rgb(255, 0, 0);
+}
+.calendar tbody td.today {
+	color: rgb(0, 0, 255); font-weight: bold;
+}
+.calendar tbody .disabled {
+	color: rgb(153, 153, 153);
+}
+.calendar tbody .emptycell {
+	visibility: hidden;
+}
+.calendar tbody .emptyrow {
+	display: none;
+}
+.calendar tfoot .footrow {
+	
+}
+.calendar tfoot .ttip {
+	background: rgb(120, 128, 132); padding: 1px; border: 1px solid rgb(0, 0, 0); border-image: none; text-align: center; color: rgb(255, 255, 255);
+}
+.calendar tfoot .hilite {
+	background: rgb(216, 224, 228); border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); padding: 1px;
+}
+.calendar tfoot .active {
+	border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255) rgb(0, 0, 0); padding: 2px 0px 0px 2px;
+}
+.calendar .combo {
+	background: rgb(216, 224, 228); border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); padding: 1px; left: 0px; top: 0px; width: 4em; font-size: 90%; display: none; position: absolute; z-index: 100; cursor: default;
+}
+.calendar .combo .label {
+	padding: 1px; text-align: center;
+}
+.calendar .combo .label-IEfix {
+	padding: 1px; text-align: center;
+}
+.calendar .combo .label-IEfix {
+	width: 4em;
+}
+.calendar .combo .active {
+	background: rgb(200, 208, 212); border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255) rgb(0, 0, 0); padding: 0px;
+}
+.calendar .combo .hilite {
+	background: rgb(0, 68, 136); color: rgb(170, 238, 255);
+}
+.calendar td.time {
+	padding: 1px 0px; text-align: center; border-top-color: rgb(0, 0, 0); border-top-width: 1px; border-top-style: solid; background-color: rgb(232, 240, 244);
+}
+.calendar td.time .hour {
+	padding: 0px 3px 0px 4px; border: 1px solid rgb(136, 136, 153); border-image: none; font-weight: bold; background-color: rgb(255, 255, 255);
+}
+.calendar td.time .minute {
+	padding: 0px 3px 0px 4px; border: 1px solid rgb(136, 136, 153); border-image: none; font-weight: bold; background-color: rgb(255, 255, 255);
+}
+.calendar td.time .ampm {
+	padding: 0px 3px 0px 4px; border: 1px solid rgb(136, 136, 153); border-image: none; font-weight: bold; background-color: rgb(255, 255, 255);
+}
+.calendar td.time .ampm {
+	text-align: center;
+}
+.calendar td.time .colon {
+	padding: 0px 2px 0px 3px; font-weight: bold;
+}
+.calendar td.time span.hilite {
+	border-color: rgb(0, 0, 0); color: rgb(255, 255, 255); background-color: rgb(102, 102, 119);
+}
+.calendar td.time span.active {
+	border-color: rgb(255, 0, 0); color: rgb(0, 255, 0); background-color: rgb(0, 0, 0);
+}

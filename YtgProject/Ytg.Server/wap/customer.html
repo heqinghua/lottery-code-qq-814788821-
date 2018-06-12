@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>在线客服</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="/wap/statics/css/jquery-ui.min.css?ver=3.6" type="text/css">
+    <link rel="stylesheet" href="/wap/statics/css/global.css?ver=3.6" type="text/css">
+    <script src="/wap/statics/js/jquery.min.js?ver=4.3"></script>
+    <script src="statics/js/lazyload-min.js" type="text/javascript"></script>
+
+    <!--<script src="/wap/statics/js/jquery-ui.min.js?ver=3.6"></script>
+    <script src="/wap/statics/js/iscro-lot.js?ver=3.6"></script>-->
+
+</head>
+<body class="login-bg">
+    <div class="header">
+        <div class="headerTop">
+            <div class="ui-toolbar-left">
+                <button id="reveal-left" type="button">reveal</button>
+            </div>
+            <h1 class="ui-toolbar-title">在线客服</h1>
+        </div>
+    </div>
+
+    <div id="frameCon">
+        
+    </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    function loadComplete() {
+        
+        //  $("#showCustomerServer").css({ "height": $(window).height()-50, "width": $(window).width() });
+        $("#frameCon").html("<iframe name=\"showCustom_erServer\" id=\"showCustom_erServer\" src=\"https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=650939&configID=59932&jid=1894921654&s=1\" frameborder=\"0\" style=\"border: 0px currentColor; border-image: none; width:" + $(window).width() + "px;height:" + $(window).height() + "px;\" />")
+    }
+
+    function loadscript() {
+       
+        LazyLoad.loadOnce([
+         '/wap/statics/js/jquery-ui.min.js?ver=3.6',
+         '/wap/statics/js/iscro-lot.js?ver=3.6'
+        ], loadComplete);
+    }
+    setTimeout(loadscript, 10);
+
+</script>

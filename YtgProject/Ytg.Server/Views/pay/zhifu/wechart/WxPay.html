@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style rel="stylesheet" type="text/css">
+#changecolor{color:red;}
+</style>
+</head>
+<body>
+<form method="post" action="WxPay.aspx" target="_blank">
+	接口版本（Interface Version）：<input type="text" name="interface_version" value="V3.0"/><span id="changecolor">*</span><br/>
+	服务类型（Service Type）：<input type="text" name="service_type" value="wxpay"/><span id="changecolor">*</span><br/>
+    签名方式（Sign Type）：<input type="text" name="sign_type" value="RSA"/><span id="changecolor">*</span><br/>
+	商 家 号（Merchant ID）：<input type="text" name="merchant_code" value="1111110166"/><span id="changecolor">*</span><br/>
+	商户网站唯一订单号（Order No.）：<input type="text" name="order_no" value="123456cc"/><span id="changecolor">*</span><br/>
+	商户订单时间（Order Time）：<input type="text" name="order_time" value="2016-01-19 14:51:51"/><span id="changecolor">*</span><br/>
+	订单金额（Order Amount）：<input type="text" name="order_amount" value="0.11"/><span id="changecolor">*</span><br/>
+	商品名称（Product Name）：<input type="text" name="product_name" value="图书"/><span id="changecolor">*</span><br/>
+    异步通知地址（Notify URL）：<input type="text" name="notify_url" value="www.dinpay.com"/><span id="changecolor">*</span><br/>
+	商品编号（Product Code）：<input type="text" name="product_code" value="A1"/><br/>
+    商品数量（Product Num）：<input type="text" name="product_num" value="12"/><br/>
+    商品描述（Product Desc）：<input type="text" name="product_desc" value="test"/><br/>
+    公用回传参数（Extra Return Param）：<input type="text" name="extra_return_param" value="pay"/><br/>
+    公用业务扩展参数（Extend Param）：<input type="text" name="extend_param" value=""/><br/>
+    
+	<br/><input type="submit" name="submit" value="智付在线支付"/>
+</form>
+</body>
+</html>

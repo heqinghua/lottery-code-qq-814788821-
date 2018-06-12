@@ -1,0 +1,273 @@
+
+======================
+OccDate:2018-05-24 01:05:12
+Content:application started!
+======================
+======================
+OccDate:2018-05-24 01:06:56
+Content:{'type':'digital','methodid':20,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[后三_直选] -,-,01234,56789,01234'}
+======================
+======================
+OccDate:2018-05-24 01:06:56
+Content:IssueCode:20180524014 BetCode:bC3900BFFEA11CFBE TotalAmt:250 LotteryCode:cqssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:10:54
+Content:{'type':'digital','methodid':22,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':375,'omodel':1,'times':1,'money':750,'mode':1,'desc':'[后三_后三组合] -,-,01234,56789,01234'}
+======================
+======================
+OccDate:2018-05-24 01:10:54
+Content:IssueCode:20180524015 BetCode:b201FFCF3D1774B93 TotalAmt:750 LotteryCode:cqssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:12:20
+Content:{'type':'digital','methodid':25,'codes':'0&1&2&3&4&5&6&7&8&9','nums':90,'omodel':1,'times':1,'money':180,'mode':1,'desc':'[后三_组三] 0,1,2,3,4,5,6,7,8,9'}
+======================
+======================
+OccDate:2018-05-24 01:12:20
+Content:IssueCode:20180524015 BetCode:bD76C3137DF4589C1 TotalAmt:180 LotteryCode:cqssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:12:54
+Content:{'type':'digital','methodid':27,'codes':'5&6&7&8&9','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[后三_组六] 5,6,7,8,9'}
+======================
+======================
+OccDate:2018-05-24 01:12:54
+Content:IssueCode:20180524015 BetCode:b51707308D7A4A3AE TotalAmt:20 LotteryCode:cqssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:13:31
+Content:{'type':'digital','methodid':34,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[前三_直选] 01234,56789,01234,-,-'}
+======================
+======================
+OccDate:2018-05-24 01:13:31
+Content:IssueCode:20180524015 BetCode:bCD7ABBFF1E36D2B3 TotalAmt:250 LotteryCode:cqssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:14:09
+Content:{'type':'digital','methodid':39,'codes':'5&6&7&8&9','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[前三_组三] 5,6,7,8,9'}
+======================
+======================
+OccDate:2018-05-24 01:14:10
+Content:IssueCode:20180524015 BetCode:bE4D386757F91F345 TotalAmt:40 LotteryCode:cqssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:14:38
+Content:{'type':'digital','methodid':41,'codes':'5&6&7&8&9','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[前三_组六] 5,6,7,8,9'}
+======================
+======================
+OccDate:2018-05-24 01:14:38
+Content:IssueCode:20180524015 BetCode:b1807013E69F26C19 TotalAmt:20 LotteryCode:cqssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:15:10
+Content:{'type':'digital','methodid':48,'codes':'5&6&7&8&9|5&6&7&8&9','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[后二_直选] -,-,-,56789,56789'}
+======================
+======================
+OccDate:2018-05-24 01:15:10
+Content:IssueCode:20180524016 BetCode:bF38B0A7D02E445EB TotalAmt:50 LotteryCode:cqssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:15:47
+Content:{'type':'digital','methodid':56,'codes':'5&6&7&8&9|0&1&2&3&4','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[前二_直选] 56789,01234,-,-,-'}
+======================
+======================
+OccDate:2018-05-24 01:15:48
+Content:IssueCode:20180524016 BetCode:b463F3C2FB2ADC4A4 TotalAmt:50 LotteryCode:cqssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:18:22
+Content:{'type':'digital','methodid':255,'codes':'0&1&2&3&4','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[后三_组六] 0,1,2,3,4'},{'type':'digital','methodid':253,'codes':'0&1&2&3&4','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[后三_组三] 0,1,2,3,4'},{'type':'digital','methodid':250,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':375,'omodel':1,'times':1,'money':750,'mode':1,'desc':'[后三_后三组合] -,-,01234,56789,01234'},{'type':'digital','methodid':248,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[后三_直选] -,-,01234,56789,01234'}
+======================
+======================
+OccDate:2018-05-24 01:18:22
+Content:IssueCode:20180523093 BetCode:bDF45BBCF6172CFEA TotalAmt:20 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:18:22
+Content:IssueCode:20180523093 BetCode:bCB9DCA958F4B090A TotalAmt:40 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:18:22
+Content:IssueCode:20180523093 BetCode:b6D66BA18CE96AE6C TotalAmt:750 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:18:22
+Content:IssueCode:20180523093 BetCode:b82B04D4D3186C78A TotalAmt:250 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:20:11
+Content:{'type':'digital','methodid':284,'codes':'0&1&2&3&4|5&6&7&8&9','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[前二_直选] 01234,56789,-,-,-'},{'type':'digital','methodid':276,'codes':'0&1&2&3&4|5&6&7&8&9','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[后二_直选] -,-,-,01234,56789'},{'type':'digital','methodid':269,'codes':'0&1&2&3&4','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[前三_组六] 0,1,2,3,4'},{'type':'digital','methodid':267,'codes':'0&1&2&3&4','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[前三_组三] 0,1,2,3,4'},{'type':'digital','methodid':264,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':375,'omodel':1,'times':1,'money':750,'mode':1,'desc':'[前三_前三组合] 01234,56789,01234,-,-'},{'type':'digital','methodid':262,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[前三_直选] 01234,56789,01234,-,-'}
+======================
+======================
+OccDate:2018-05-24 01:20:11
+Content:IssueCode:20180523093 BetCode:b4AF50397B15599ED TotalAmt:50 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:20:11
+Content:IssueCode:20180523093 BetCode:b685A5B108F3737B5 TotalAmt:50 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:20:11
+Content:IssueCode:20180523093 BetCode:b60C2C744C5EB6F99 TotalAmt:20 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:20:11
+Content:IssueCode:20180523093 BetCode:bAB917F286793D7BE TotalAmt:40 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:20:11
+Content:IssueCode:20180523093 BetCode:bD9294169E66A19E7 TotalAmt:750 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:20:11
+Content:IssueCode:20180523093 BetCode:b2165A79671797594 TotalAmt:250 LotteryCode:xjssc WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:{'type':'digital','methodid':2266,'codes':'0&1&2&3&4|0&1&2&3&4','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[前二_直选] 01234,01234,-,-,-'},{'type':'digital','methodid':2258,'codes':'0&1&2&3&4|0&1&2&3&4','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[后二_直选] -,-,-,01234,01234'},{'type':'digital','methodid':2252,'codes':'1&3&5&7&9','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[前三_组六] 1,3,5,7,9'},{'type':'digital','methodid':2250,'codes':'1&3&5&7&9','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[前三_组三] 1,3,5,7,9'},{'type':'digital','methodid':2247,'codes':'1&3&5&7&9|0&1&2&3&4|1&3&5&7&9','nums':375,'omodel':1,'times':1,'money':750,'mode':1,'desc':'[前三_前三组合] 13579,01234,13579,-,-'},{'type':'digital','methodid':2245,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[前三_直选] 01234,56789,01234,-,-'},{'type':'digital','methodid':2238,'codes':'1&3&5&7&9','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[后三_组六] 1,3,5,7,9'},{'type':'digital','methodid':2236,'codes':'1&3&5&7&9','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[后三_组三] 1,3,5,7,9'},{'type':'digital','methodid':2233,'codes':'1&3&5&7&9|0&1&2&3&4|1&3&5&7&9','nums':375,'omodel':1,'times':1,'money':750,'mode':1,'desc':'[后三_后三组合] -,-,13579,01234,13579'},{'type':'digital','methodid':2231,'codes':'1&3&5&7&9|0&1&2&3&4|1&3&5&7&9','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[后三_直选] -,-,13579,01234,13579'}
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:bF628623B2086C0B5 TotalAmt:50 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:b17EE898E5C805805 TotalAmt:50 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:b4FFD01D153645E1C TotalAmt:20 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:b998246C8C0B1F587 TotalAmt:40 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:bDFFCADAD52EEEAD3 TotalAmt:750 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:bEC5D9902D67BAD05 TotalAmt:250 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:b54042624DC24A044 TotalAmt:20 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:b212A4BC698341AA2 TotalAmt:40 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:b455096ED679B7C22 TotalAmt:750 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:23:01
+Content:IssueCode:107029030 BetCode:b5FDE7C3F06EFFABF TotalAmt:250 LotteryCode:twbingo WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:{'type':'digital','methodid':2071,'codes':'0&1&2&3&4|0&1&2&3&4','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[前二_直选] 01234,01234,-,-,-'},{'type':'digital','methodid':2063,'codes':'0&1&2&3&4|0&1&2&3&4','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[后二_直选] -,-,-,01234,01234'},{'type':'digital','methodid':2056,'codes':'0&1&2&3&4','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[前三_组六] 0,1,2,3,4'},{'type':'digital','methodid':2054,'codes':'0&1&2&3&4','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[前三_组三] 0,1,2,3,4'},{'type':'digital','methodid':2051,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':375,'omodel':1,'times':1,'money':750,'mode':1,'desc':'[前三_前三组合] 01234,56789,01234,-,-'},{'type':'digital','methodid':2049,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[前三_直选] 01234,56789,01234,-,-'},{'type':'digital','methodid':2042,'codes':'0&1&2&3&4','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[后三_组六] 0,1,2,3,4'},{'type':'digital','methodid':2040,'codes':'0&1&2&3&4','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[后三_组三] 0,1,2,3,4'},{'type':'digital','methodid':2037,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':375,'omodel':1,'times':1,'money':750,'mode':1,'desc':'[后三_后三组合] -,-,01234,56789,01234'},{'type':'digital','methodid':2035,'codes':'1&3&5&7&9|0&1&2&3&4|1&3&5&7&9','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[后三_直选] -,-,13579,01234,13579'}
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:bC3A433F84067E4C2 TotalAmt:50 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:b324E1A0FE7F0BEDD TotalAmt:50 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:bCDC333C2FF1ACD60 TotalAmt:20 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:bAD1A7C0B9BC13334 TotalAmt:40 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:b5D5F7220C99DE18C TotalAmt:750 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:bF9DB305D644E969B TotalAmt:250 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:bA3FA1D2B7091E11C TotalAmt:20 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:bCB84CE90A6890582 TotalAmt:40 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:b3FAD9578B129A759 TotalAmt:750 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:26:48
+Content:IssueCode:20180524018 BetCode:bEA65430CA6E23948 TotalAmt:250 LotteryCode:INFFC5 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:28:20
+Content:{'type':'digital','methodid':405,'codes':'01&02&03&04&05|01&02&03&04&05','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[二码_前二直选复式] 01 02 03 04 05,01 02 03 04 05,-,-,-'},{'type':'digital','methodid':400,'codes':'01&02&03&04&05|06&07&08&09&10&11|01&02&03&04&05','nums':120,'omodel':1,'times':1,'money':240,'mode':1,'desc':'[三码_前三直选复式] 01 02 03 04 05,06 07 08 09 10 11,01 0'}
+======================
+======================
+OccDate:2018-05-24 01:29:47
+Content:{'type':'digital','methodid':511,'codes':'1&3&5&7&9|0&1&2&3&4','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[二星_（后二）直选复式] -,-,-,13579,01234'},{'type':'digital','methodid':509,'codes':'1&3&5&7&9|0&1&2&3&4','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[二星_（前二）直选复式] 13579,01234,-,-,-'},{'type':'digital','methodid':505,'codes':'1&3&5&7&9','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[三星_组六] 1,3,5,7,9'},{'type':'digital','methodid':503,'codes':'0&1&2&3&4','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[三星_组三] 0,1,2,3,4'},{'type':'digital','methodid':500,'codes':'5&6&7&8&9|0&1&2&3&4|5&6&7&8&9','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[三星_直选] -,-,56789,01234,56789'}
+======================
+======================
+OccDate:2018-05-24 01:32:31
+Content:{'type':'digital','methodid':711,'codes':'0&1&2&3&4|5&6&7&8&9','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[二星_（后二）排五直选复式] -,-,-,01234,56789'},{'type':'digital','methodid':709,'codes':'0&1&2&3&4|5&6&7&8&9','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[二星_（前二）排五直选复式] 01234,56789,-,-,-'},{'type':'digital','methodid':705,'codes':'0&1&2&3&4','nums':10,'omodel':1,'times':1,'money':20,'mode':1,'desc':'[三星_排三组六复式] 0,1,2,3,4'},{'type':'digital','methodid':703,'codes':'0&1&2&3&4','nums':20,'omodel':1,'times':1,'money':40,'mode':1,'desc':'[三星_排三组三复式] 0,1,2,3,4'},{'type':'digital','methodid':700,'codes':'0&1&2&3&4|5&6&7&8&9|0&1&2&3&4','nums':125,'omodel':1,'times':1,'money':250,'mode':1,'desc':'[三星_排三直选复式] 01234,56789,01234,-,-'}
+======================
+======================
+OccDate:2018-05-24 01:33:43
+Content:{'type':'digital','methodid':1805,'codes':'01&02&03&04&05|06&07&08&09&10&11','nums':30,'omodel':1,'times':1,'money':60,'mode':1,'desc':'[二码_前二直选复式] 01 02 03 04 05,06 07 08 09 10 11,-,-,'},{'type':'digital','methodid':1800,'codes':'01&02&03&04&05|06&07&08&09&10&11|01&02&03&04&05','nums':120,'omodel':1,'times':1,'money':240,'mode':1,'desc':'[三码_前三直选复式] 01 02 03 04 05,06 07 08 09 10 11,01 0'}
+======================
+======================
+OccDate:2018-05-24 01:37:13
+Content:{'type':'digital','methodid':7261,'codes':'01&03&05&07&09|01&02&03&04&05|01&03&05&07&09|01&02&03&04&05','nums':220,'omodel':1,'times':1,'money':440,'mode':1,'desc':'[前四_直选] 01 03 05 07 09,01 02 03 04 05,01 03 0'},{'type':'digital','methodid':7263,'codes':'01&02&03&04&05|06&07&08&09&10|01&02&03&04&05','nums':100,'omodel':1,'times':1,'money':200,'mode':1,'desc':'[前三_直选] 01 02 03 04 05,06 07 08 09 10,01 02 0'},{'type':'digital','methodid':7265,'codes':'01&02&03&04&05|06&07&08&09&10','nums':25,'omodel':1,'times':1,'money':50,'mode':1,'desc':'[前二_直选] 01 02 03 04 05,06 07 08 09 10,-,-,-'},{'type':'digital','methodid':7267,'codes':'06&07&08&09&10','nums':5,'omodel':1,'times':1,'money':10,'mode':1,'desc':'[前一_直选] 06 07 08 09 10,-,-,-,-'}
+======================
+======================
+OccDate:2018-05-24 01:37:13
+Content:IssueCode:683568 BetCode:b7096401A87CA0AB6 TotalAmt:440 LotteryCode:bjpk10 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:37:13
+Content:IssueCode:683568 BetCode:b9A7C1C34FB47BD53 TotalAmt:200 LotteryCode:bjpk10 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:37:13
+Content:IssueCode:683568 BetCode:bDF4FD586AEA64E0F TotalAmt:50 LotteryCode:bjpk10 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 01:37:13
+Content:IssueCode:683568 BetCode:bA150B5EE3729CE20 TotalAmt:10 LotteryCode:bjpk10 WinMoney:0 IsMatch:False OpenResult: Stauts:NotOpen ----0
+======================
+======================
+OccDate:2018-05-24 17:23:18
+Content:application started!
+======================
+======================
+OccDate:2018-05-24 17:49:52
+Content:application started!
+======================
+======================
+OccDate:2018-05-24 17:50:33
+Content:application started!
+======================
+======================
+OccDate:2018-05-24 18:18:48
+Content:application started!
+======================
+======================
+OccDate:2018-05-24 18:22:46
+Content:{"type":"digital","methodid":22,"codes":"3&3&4&4&4|3&3&4&4&4|3&3&4&4&4","nums":375,"omodel":1,"times":1,"money":750.0,"mode":1,"poschoose":null}
+======================
+======================
+OccDate:2018-05-24 18:23:40
+Content:{"type":"digital","methodid":20,"codes":"1&0&2&3&2|1&0&2&3&2|1&0&2&3&2","nums":125,"omodel":1,"times":1,"money":250.0,"mode":1,"poschoose":null}
+======================

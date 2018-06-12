@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+
+.head { position:relative; height:500px;}
+.logo { position:absolute; top:30px; left:42px; width:192px; height:64px;}
+.kefu { position:absolute; top:20px; right:20px; width:90px; height:23px; background:url(../images/icon.png) no-repeat 0 0;}
+
+.main { width:740px; margin:0 auto;}
+.login_form { margin:40px 0 0;}
+.login_form li { float:left; position:relative;}
+
+.login_info { padding:38px 4px 24px; color:#374155; border-bottom:#eeeff1 solid 1px;}
+.login_info span { margin-right:22px;}
+.login_info em { color:#c8cacf;}
+.login-loading{text-align:center;}
+.login-loading .thumb{
+	height: 60px;
+	margin: 60px 0 0 0;
+	background: url(../images/loading.gif) no-repeat center center;
+}
+.form2 .text { width:260px;}
+
+.state { margin:38px 0 0; padding:20px; text-align:center; line-height:1.8em; color:#374155; border:#bdc3cd dashed 1px;}
+.state a { color:#e4902e; text-decoration:underline;}
+
+.reg_form { margin:40px 0 0;}
+.reg_form li { margin-bottom:15px; position:relative;}
+.reg_form label { display:inline-block; width:150px; text-align:right; padding-right:30px;}
+.reg_form .text { width:300px;}
+.reg_form .btn {  margin:15px 0 0 260px;}
+.reg_form .yzm { left:290px; left:340px\0; *left:340px;}
+
+.page_login .text { width:270px; height:20px; line-height:20px; padding:11px 5px; color:#fff; background:#263958; border:none; border-radius:2px;}
+.page_login .btn,
+.page_login .btn2 { width:130px; height:42px; cursor:pointer; color:#fff; background:#ff7348; border:none; border-radius:2px;}
+.page_login .btn2 { background:#c8cacf;}
+.page_login .yzm { position:absolute; right:0; top:0; width:120px; height:42px; line-height:42px; text-align:center; color:#fff;}
+.page_login .tip {position:relative; display:inline-block; padding:0 10px; height:42px; line-height:42px; margin-left:10px; color:#fff; background:#f25050; border-radius:2px;display:none;}
+.page_login .tip i { position:absolute; left:-4px; top:18px; width:4px; height:7px; line-height:0; background:url(../images/icon.png) no-repeat -95px 0;}
+
+.page_login .f_footer { margin:45px 0 0; padding:28px 0; line-height:24px; font-size:14px; color:#cccdcf; border-top:#e4e5e7 solid 1px;}
+
+
+
+/*维护*/
+.ma_body,
+.ma_body img { width:100%; height:100%;}
+.ma_body { text-align:center;}
+.ma_body img { position:relative; z-index:1;}
+.ma_body .icon { display:block; margin:0 auto; width:158px; height:156px; background:url(../images/icon.png) no-repeat 0 -143px;}
+.ma_body .icon2 { display:block; margin:0 auto; width:104px; height:103px; background:url(../images/icon.png) no-repeat -179px -143px;}
+.ma_body .i_logo { display:block; margin:35px auto 0; width:141px; height:30px; background:url(../images/logo2.png) no-repeat;}
+.ma_body .ma { width:470px; position:absolute; left:50%; top:50%; z-index:2; margin:-150px 0 0 -235px;}
+.ma_body .con { margin-top:18px; font-size:12px; color:#fff;}
+.ma_body .con2 { margin-top:18px; font-size:12px; color:#13223b;}
+.ma_body .con2  a { text-decoration:underline; color:#db7d03;}
+
+/*vip*/
+.body_vip { background:#1d2650;}
+.vip_hd { position:relative; height:534px; background:url(../images/vip_hd.jpg) no-repeat center center;}
+.vip_hd span { position:absolute; left:50%; bottom:50px; margin-left:-457px; display:block; width:914px; color:#939ecc; line-height:1.8; text-align:center;}
+
+.vip_content { width:1122px; margin:0 auto; padding:54px 0;}
+.vip_content .tips li { float:left; width:225px; height:88px; line-height:80px; font-size:20px; font-weight:bold; color:#939fd3; text-align:center; margin-left:-5px;
+background:url(../images/icon.png) no-repeat -225px -517px;}
+.vip_content .tips li.on { color:#161c38; margin-left:0; background-position:0 -517px;}
+.vip_content .sc h2 { margin:80px 0 30px; font-size:30px; color:#deca75;}
+.vip_content .sc h2 strong { font-family:Arial; font-size:68px; font-weight:bold;}
+.vip_content .sc p { line-height:1.2em; color:#7a85bc; margin-top:15px;}
+.vip_content .sc p em { color:#deca75;}
+.vip_content .datas { margin:25px 0; color:#7a85bc; border-top:#3f4871 solid 1px;border-left:#3f4871 solid 1px;border-right:#3f4871 solid 1px;}
+.vip_content .datas tr th,
+.vip_content .datas tr td { border-color:#3f4871; background:#151c3a;}
+.vip_content .datas tr th { height:34px; line-height:34px;}
+.vip_content .sc p.mt { margin-top:30px;}

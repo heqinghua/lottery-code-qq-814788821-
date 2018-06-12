@@ -1,0 +1,31 @@
+﻿var bannerStr = '';
+bannerStr = bannerStr + '<link rel="stylesheet" href="Content/Banner/banner.min.css" />';
+bannerStr = bannerStr + '<script type="text/javascript" src="Content/Banner/login-all.min.js"></script>';
+bannerStr = bannerStr + '<div id="focus" class="cycle-slideshow" data-cycle-slides="&gt; .item" data-cycle-pager="&gt; .cycle-pager-wrap .cycle-pager" data-cycle-fx="scrollHorz" data-cycle-timeout="4000" data-cycle-loader="wait" data-cycle-speed="800" data-pause-on-hover="true" style="width: 500px; overflow: hidden;">';
+
+//bannerStr = bannerStr + '<div class="item cycle-slide cycle-sentinel" style="visibility: hidden; position: static; top: 0px; left: 0px; z-index: 99; opacity: 1; display: block;">';
+//bannerStr = bannerStr + '<a target="_blank" href="javascript:void(0);" >';
+//bannerStr = bannerStr + '<img src="http://cfapu.img48.wal8.com/img48/545266_20160510012323/146282019504.jpg" title="充值大礼包" alt="充值大礼包"  />';
+//bannerStr = bannerStr + '</a>';
+//bannerStr = bannerStr + '</div>';
+
+bannerStr = bannerStr + '<div class="item cycle-slide cycle-sentinel" style="visibility: hidden; position: static; top: 0px; left: 0px; z-index: 99; opacity: 1; display: block;">';
+bannerStr = bannerStr + '<a target="_blank" href="javascript:void(0);" >';
+bannerStr = bannerStr + '<img src="/content/Banner/images/1.jpg" title="签到有礼" alt="签到有礼"  />';
+bannerStr = bannerStr + '</a>';
+bannerStr = bannerStr + '</div>';
+bannerStr = bannerStr + '<div class="cycle-pager-wrap">';
+bannerStr = bannerStr + '<div class="cycle-pager"><span class="">•</span><span class="cycle-pager-active">•</span><span class="">•</span></div>';
+bannerStr = bannerStr + '</div>';
+bannerStr = bannerStr + '<div class="item cycle-slide cycle-slide-active" style="visibility: visible; position: absolute; top: 0px; left: 0px; z-index: 99; opacity: 1; display: block;">';
+bannerStr = bannerStr + '<a target="_blank" href="javascript:void(0);">';
+bannerStr = bannerStr + '<img src="/content/Banner/images/2.jpg" title="投注送礼包！" alt="PT投注送礼包！" />';
+bannerStr = bannerStr + '</a>';
+bannerStr = bannerStr + '</div>';
+bannerStr = bannerStr + '<div class="item cycle-slide" style="visibility: hidden; position: absolute; top: 0px; left: 0px; z-index: 97; opacity: 1; display: block;">';
+bannerStr = bannerStr + '<a target="_blank" href="javascript:void(0);">';
+bannerStr = bannerStr + '<img src="/content/Banner/images/3.jpg" title="佣金返利，代理新福利！" alt="佣金返利，代理新福利！" />';
+bannerStr = bannerStr + '</a>';
+bannerStr = bannerStr + '</div>';
+bannerStr = bannerStr + '</div>';
+window.document.write(bannerStr);

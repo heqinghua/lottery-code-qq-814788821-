@@ -1,0 +1,1241 @@
+﻿@charset "utf-8";
+.iconKjToday, .iconNew {
+    background: url(../images/tipimgs.png?t=20120306) no-repeat
+}
+
+.navBread {
+    height: 16px;
+    width: 960px;
+    margin: 10px auto;
+    font: 12px/16px "宋体"
+}
+
+.togetherSalle {
+    font-size: 12px;
+}
+
+.togetherSalle .sider_area {
+    width: 190px
+}
+
+.togetherSalle .main_right {
+    float: right;
+    margin-left: 0;
+    width: 790px
+}
+
+.togetherSalle .all_title {
+    background: url(/Lottery/GroupBy/images/repeat_x.png) 0 -351px repeat-x;
+    border: 1px solid #bc2218;
+    font: bold 16px/29px "微软雅黑";
+    height: 29px;
+    color: #fff;
+}
+
+.titLink {
+    height: 30px
+}
+
+.togetherSalle .all_title em, .titLink {
+    width: 102px;
+    height: 18px;
+    background: url(../images/salle.png?t=20130523) 0 1px no-repeat;
+    text-indent: -999px;
+    overflow: hidden;
+    text-align:center;
+    color:#fff;
+}
+
+.togetherSalle .all_title em.ggTit {
+    background-position: -107px 1px;
+    width: 73px
+}
+
+.togetherSalle .block_con {
+    padding-top: 0;
+    background-color: #faf4e6;
+    border: solid #f0dcb7;
+    border-width: 0 1px
+}
+
+.ulMode1 {
+    padding: 10px 0 10px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #f0dcb7
+}
+
+.ulMode1 li {
+    right: -1px;
+    position: relative;
+    height: 31px;
+    line-height: 31px;
+    padding-left: 15px;
+    cursor: pointer;
+    display: block;
+    background-position: right -500px
+}
+
+.ulMode1 li.active {
+    background: 0;
+    font-weight: bold;
+    border-top: 1px solid #e0b68d;
+    border-left: 1px solid #deb186;
+    border-bottom: 1px solid #f1deba;
+    background-color: #fff
+}
+
+.ulMode1 li.active a, .ulMode1 li.active a:hover {
+    color: #7d241e;
+    text-decoration: none
+}
+
+.ulMode1 li a {
+    display: inline-block;
+    width: 140px;
+    height: 100%
+}
+
+.ulMode1 li a, .ulMode1 li a:visited {
+    color: #7d241e
+}
+
+.ulMode1 li a:hover {
+    text-decoration: underline
+}
+
+.ulMode1 li .img1, .ulMode1 li .img2, .ulMode1 li .img3, .ulMode1 li .img4, .ulMode1 li .img5, .ulMode1 li .img6 {
+    background-position: -284px -168px;
+    display: inline-block;
+    height: 26px;
+    width: 25px;
+    position: absolute;
+    left: -16px;
+    top: 2px
+}
+
+.ulMode1 li .img2 {
+    background-position: -315px -168px
+}
+
+.ulMode1 li .img3 {
+    background-position: -342px -168px
+}
+
+.ulMode1 li .img4 {
+    background-position: -151px -200px
+}
+
+.ulMode1 li .img5 {
+    background-position: -211px -200px
+}
+
+.ulMode1 li .img6 {
+    background-position: -243px -200px
+}
+
+.iconKjToday {
+    display: inline-block;
+    width: 56px;
+    height: 16px;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    overflow: hidden;
+    left: auto;
+    cursor: pointer;
+    background-position: 0 -124px
+}
+
+.togetherSalle .block_con h3 {
+    font: bold 14px/16px "宋体";
+    color: #c2281d;
+    padding: 11px 0 0 30px
+}
+
+.togetherSalle h3.leftLink {
+    border-bottom: 1px solid #f0dcb7;
+    padding: 5px 0 5px 15px;
+    position: relative;
+    right: -2px
+}
+
+.togetherSalle h3.leftLink a {
+    display: block;
+    width: 157px;
+    height: 33px;
+    line-height: 33px;
+    padding-left: 15px
+}
+
+.togetherSalle h3.titActive a, .togetherSalle h3.titActive a:link, .togetherSalle h3.titActive a:visited, .togetherSalle h3.titActive a:hover {
+    background-color: #fff;
+    border-bottom: 1px solid #f1deba;
+    border-left: 1px solid #deb186;
+    border-top: 1px solid #e0b68d;
+    padding-left: 14px;
+    text-decoration: none;
+    color: #7d241e;
+    height: 31px;
+    line-height: 31px
+}
+
+.phbCut {
+    background-color: #eaeaea
+}
+
+.phbCut li {
+    float: left;
+    font: bold 12px/24px "宋体";
+    height: 24px;
+    border-bottom: 1px solid #e0e0e0;
+    width: 93px;
+    text-align: center
+}
+
+.phbCut li.active {
+    font-weight: bold;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #fff
+}
+
+.phbCut li.liEnd {
+    border-right: 0
+}
+
+.iconNew {
+    background-position: -44px -106px
+}
+
+.phbTwrap {
+    padding: 8px 0 13px;
+    line-height: 23px
+}
+
+.phbTwrap .c_BA2636 {
+    font-family: Tahoma;
+    color: #ba2636
+}
+
+.phbTwrap a, .phbTwrap a:link, .phbTwrap a:visited {
+    color: #2b2b2b
+}
+
+.phbTwrap a.c_1e50a2, .phbTwrap a.c_1e50a2:visited {
+    color: #1e50a2
+}
+
+.phbTwrap a:hover {
+    color: #c9171e
+}
+
+.phbInfo {
+    border: 1px solid #e0e0e0;
+    margin-top: 10px
+}
+
+.phbTwrap th {
+    color: #919191
+}
+
+.ggPlace {
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    width: 188px;
+    height: 250px;
+    overflow: hidden
+}
+
+.ggPlace img {
+    width: 188px;
+    height: 250px
+}
+
+.phbInitiator td, .phbInitiator th {
+    padding: 0 5px 0 8px;
+    white-space: nowrap
+}
+
+.scroll_box {
+    width: 100%;
+    white-space: normal;
+    margin-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+    border: solid #e3e3e3 1px;
+    overflow: hidden
+}
+
+.scroll_box p {
+    height: 30px;
+    padding-left: 43px;
+    font-family: tahoma
+}
+
+.scroll_box p a {
+    font-family: "宋体"
+}
+
+.iconNotice {
+    width: 16px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    margin: 10px 0 0 17px;
+    background: url(../images/salle.png?t=20130523) right 0 no-repeat
+}
+
+.toBuyMenTit {
+    height: 29px
+}
+
+.faWrap .toBuyMenTit {
+    height: 38px
+}
+
+.faWrap .hDeng {
+    background: 0;
+    line-height: 38px
+}
+
+.hTit, .hotFan {
+    float: left;
+    display: block;
+    width: 67px;
+    height: 16px;
+    background: url(../images/salle.png?t=20130523) no-repeat;
+    text-indent: -999px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 3px 0 0 10px
+}
+
+.hTit {
+    background-position: 0 -21px
+}
+
+.hotFan {
+    background-position: 0 -43px;
+    margin-top: 12px
+}
+
+.hDeng {
+    display: block;
+    padding: 0 10px 0 17px;
+    font-weight: normal;
+    font-size: 12px;
+    background: url(../images/light.gif) 0 3px no-repeat;
+    color: #959595
+}
+
+.hDeng2 {
+    background: url(../images/light.gif) 0 3px no-repeat
+}
+
+.faWrap {
+    border: 1px solid #e0e0e0;
+    margin-top: 10px
+}
+
+.buy_btnGray:link, .buy_btnGray:visited, .buy_btnGray:hover {
+    color: #939393;
+    text-decoration: none
+}
+
+.buy_btnGray {
+    background: url(../images/groupbuy.png?t=20120319) no-repeat scroll -110px -21px;
+    width: 53px;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 5px;
+    float: left;
+    cursor: default;
+    height: 21px;
+    line-height: 21px;
+    line-height: 25px \9;
++ line-height: 23 px;
+    _line-height: 23px
+}
+
+.group_buy .buy_btn, .group_buy .againbuy_btn {
+    height: 21px;
+    line-height: 21px;
+    line-height: 23px \9;
++ line-height: 22 px;
+    _line-height: 21px
+}
+
+.btn_mini {
+    height: 21px;
+    line-height: 21px;
+    line-height: 25px \9;
++ line-height: 23 px;
+    _line-height: 23px
+}
+
+.faWrap .gains_imgs {
+    margin-right: 0
+}
+
+.hmUserlist {
+    padding: 5px 14px;
+    border: 1px solid #e3e3e3
+}
+
+.hmUserlist li {
+    float: left;
+    display: block;
+    width: 129px;
+    line-height: 23px;
+    padding-left: 17px
+}
+
+.hmUserlist li a, .hmUserlist li a:visited, .hmUserlist li a:link {
+    color: #2b2b2b
+}
+
+.hmUserlist li a:hover {
+    color: #c9171e
+}
+
+.ifSearch .numberSearch {
+    margin-left: 10px
+}
+
+.ifShaiXuan label {
+    margin-left: 9px;
++ margin-left: 0;
+    _margin-left: 0
+}
+
+.ifShaiXuan label input {
+    margin-right: 3px;
+    border: 0;
+    height: auto;
+    line-height: auto;
+    _margin-right: 0
+}
+
+.aCursor {
+    cursor: pointer
+}
+
+a.aCursor:hover {
+    text-decoration: none
+}
+
+.selected .mlPad {
+    margin-left: 3px;
+    _margin-left: 0
+}
+
+.selected {
+    padding: 3px 0 3px 9px
+}
+
+.btnTbuy {
+    width: 106px;
+    height: 28px;
+    display: block;
+    background: url(../images/salle.png?t=20130523) -1px -93px no-repeat;
+    margin: 5px 10px 0 0;
+    text-indent: 999px;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.toBuyMen .server_tel_tips {
+    white-space: nowrap;
+    line-height: 18px;
+    display: block
+}
+
+.hmFamousTip {
+    background-color: #fff9d6;
+    border: 1px solid #e0a654;
+    padding: 8px 0 8px 10px;
+    position: absolute;
+    z-index: 1000;
+    font: 12px/20px Tahoma;
+    display: none;
+    width: 287px
+}
+
+.hmFamousTip h3 {
+    font: bold 14px/19px Tahoma;
+    height: 20px
+}
+
+.row1 p i {
+    font-style: normal;
+    color: #2b2b2b
+}
+
+.row1 span {
+    float: left;
+    margin: 0 10px 0 0
+}
+
+.row1 div {
+    float: left;
+    padding: 0 0 5px 0;
+    width: 215px
+}
+
+.pHmInfo {
+    color: #717172
+}
+
+.pAward strong {
+    color: #c00
+}
+
+.btnFollow {
+    background: url(../img/hall/salle.png?t=20130523) no-repeat -122px -65px;
+    width: 65px;
+    height: 21px
+}
+
+.btnFollow, a.btnFollow:link, a.btnFollow:visited, a.btnFollow:hover {
+    color: #fff;
+    float: right;
+    text-align: center;
+    margin: 0 10px 0 0
+}
+
+.btnWrap {
+    display: block;
+    width: 100%
+}
+
+.hmFamousTip b {
+    background: url(../img/hall/salle.png?t=20130523) no-repeat -250px -104px;
+    width: 11px;
+    height: 7px;
+    position: absolute;
+    margin: 8px 0 0 62px;
+    _margin-top: 8px;
+    z-index: 2
+}
+
+.hmCzTip {
+    border: 1px solid #b4070c;
+    position: absolute;
+    z-index: 1;
+    top: 33px;
+    left: -183px;
+    background: #fff;
+    width: 259px;
+    padding: 11px 14px
+}
+
+.hmCzTip li {
+    float: left;
+    width: 64px
+}
+
+.hmCzTip li a, .hmCzTip li a:link, .hmCzTip li a:visited {
+    color: #2b2b2b
+}
+
+.hmCzTip li a:hover {
+    color: #c9171e
+}
+
+.hmCzTip ul.ulBorder {
+    border-bottom: 1px dotted #aaa;
+    padding-bottom: 7px;
+    margin-bottom: 7px
+}
+
+.toBuyMenTit span.f_right {
+    position: relative
+}
+
+.cz_title {
+    background-position: 0 -301px;
+    height: 65px;
+    border: 1px solid #cbcbcb;
+    border-bottom: 0;
+    padding: 10px 0 0 110px;
+    position: relative;
+    font-size: 12px;
+    line-height: 30px
+}
+
+.main_right .czDetail {
+    width: auto;
+    background-image: none;
+    background-color: #eee;
+    border: 0;
+    padding: 4px;
+    height: auto
+}
+
+.czIn {
+    border: 1px solid #fff;
+    background: url(../images/index_repeat.png?t=20120410) 0 -1123px repeat-x;
+    padding-left: 105px;
+    height: 81px;
+    overflow: hidden
+}
+
+.czIn .f_left {
+    width: 362px;
+    overflow: hidden
+}
+
+.cz_title .czIn .end_time {
+    background-position: 67px 0;
+    width: 246px;
+    font-family: Tahoma;
+    margin: 13px 0 9px 0
+}
+
+.czIn .f_left h1 {
+    font: bold 14px/35px Tahoma;
+    height: 30px;
+    margin: 5px 0 11px
+}
+
+.czIn .f_left em {
+    font: bold 20px/35px "微软雅黑";
+    margin-right: 10px
+}
+
+.czIn .f_left h1 strong {
+    color: #c2281d;
+    margin: 0 5px
+}
+
+.cz_title .cz_t_imgs {
+    margin: -15px 0 0 16px
+}
+
+.czIn .f_left p a {
+    text-decoration: none;
+    width: 74px;
+    height: 24px;
+    line-height: 22px;
+    line-height: 24px \9;
++ line-height: 24 px;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-right: 10px
+}
+
+.hmOver {
+    padding: 11px 19px 0 0;
+    display: block;
+    white-space: nowrap
+}
+
+.czIn .f_left p.PGg a {
+    width: 98px
+}
+
+.btnSalle, .btnSalleGray, .btnGg, .btnGgGray {
+    background: url(../images/salle.png?t=20130523) 0 -125px no-repeat
+}
+
+.btnSalleGray {
+    background-position: -75px -125px;
+    color: #2b2b2b
+}
+
+.btnGg {
+    background-position: 0 -152px
+}
+
+.btnGgGray {
+    background-position: -100px -152px;
+    color: #2b2b2b
+}
+
+.pJc strong {
+    font: bold 14px/30px Tahoma;
+    margin: 0 5px;
+    color: #ba2636
+}
+
+.divCut {
+    background-color: #f1f1f1;
+    height: 32px;
+    padding-top: 3px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: 10px;
+    margin-bottom: 8px
+}
+
+.divCut li {
+    float: left;
+    font: 14px/31px "宋体";
+    height: 31px;
+    width: 93px;
+    text-align: center;
+    cursor: hand;
+    cursor: pointer
+}
+
+.divCut li.whAuto {
+    width: auto;
+    padding: 0 15px
+}
+
+.divCut li.active {
+    font-weight: bold;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: -1px;
+    border: 1px solid #e0e0e0;
+    border-bottom: 1px solid #fff;
+    border-radius: 2px
+}
+
+.divCut li a {
+    text-decoration: none
+}
+
+.divCut ul {
+    float: left
+}
+
+.divCut span {
+    float: right;
+    padding-right: 10px;
+    line-height: 28px;
+    color: #949494
+}
+
+.divCut .dateSele label, .divCut .dateSele select {
+    display: inline-block;
+    _vertical-align: middle
+}
+
+.tjUl {
+    line-height: 27px;
+    padding: 17px 14px;
+    text-align: left
+}
+
+.rWidth {
+    width: 200px
+}
+
+.iconAroow {
+    width: 4px;
+    height: 7px;
+    display: inline-block;
+    float: left;
+    background: url(../images/salle.png?t=20130523) -257px -45px no-repeat
+}
+
+.dlSfc {
+    padding: 14px 0
+}
+
+.dlSfc dt, .dlSfc dd {
+    float: left;
+    font: normal 12px/18px "宋体"
+}
+
+.dlSfc dd em {
+    width: 17px;
+    height: 17px;
+    font: bold 12px/17px "宋体";
+    display: inline-block;
+    background-color: #f17c28;
+    color: #fff;
+    text-align: center;
+    margin-right: 5px
+}
+
+.bgGrayArrow {
+    background: url(../images/salle.png?t=20130523) -183px -19px no-repeat;
+    color: #fff;
+    width: 60px;
+    height: 18px;
+    text-align: center;
+    margin-right: 10px
+}
+
+.tjUl li em {
+    margin: 11px 7px 0 0
+}
+
+.selectGg {
+    height: 20px
+}
+
+.selectGg option {
+    padding: 0 10px
+}
+
+.group_buy .secrecy, .group_buy .semiovert, .group_buy .public {
+    _left: 0
+}
+
+.main_right .award_box {
+    width: 172px
+}
+
+.main_right .against, .main_right .against_detail {
+    margin: 0;
+    width: 100%;
+    border-color: #e3e3e3
+}
+
+.main_right .against .btn_detail, .main_right .against_detail .btn_detail {
+    width: 172px
+}
+
+.main_right .table_r14_hm td {
+    padding: 0 9px
+}
+
+.main_right .table_r14_hm th.award, .main_right .table_r14_hm td.award {
+    width: 40px;
+    padding: 0;
+    background-color: #f17c28
+}
+
+.award_box p .c_ba2636 {
+    font-family: "宋体"
+}
+
+.faWrap .selected {
+    height: 23px
+}
+
+.selected .ssWidth {
+    width: 187px;
+    height: 21px;
+    line-height: 21px;
+    background: url(../images/salle.png?t=20130523) 0 -179px no-repeat;
+    border: 0;
+    padding: 0 0 0 5px;
+    color: #949494
+}
+
+.labTit {
+    margin-left: 35px;
+    color: #949494
+}
+
+#tabGGtj th, #tabGGtj td {
+    text-align: center;
+    padding: 9px 5px
+}
+
+#tabGGtj td.t_l {
+    text-align: left
+}
+
+#tabGGtj .t_r {
+    text-align: right
+}
+
+#tabGGtj em.c_ba2636 {
+    font-family: Tahoma
+}
+
+.spanOrderType label {
+    margin: 0 10px 0 0
+}
+
+.spanOrderType input {
+    margin: 0 5px 0 0;
+    border: 0
+}
+
+.iconNum {
+    width: 16px;
+    height: 16px;
+    font: bold 12px/15px Arial;
+    color: #ffe400;
+    background: url(../images/salle.png?t=20130523) -180px 0 no-repeat;
+    display: block
+}
+
+.tjHasTip, .tjHasTipActive {
+    height: 21px;
+    margin-left: 10px
+}
+
+.tjHasTip {
+    width: 45px
+}
+
+.tjHasTipActive {
+    width: 41px
+}
+
+.tjHasTip a, .tjHasTip a:link, .tjHasTip a:visited, .tjHasTip a:hover {
+    text-decoration: underline;
+    color: #ba2636
+}
+
+.tjHasTipActive a, .tjHasTipActive a:link, .tjHasTipActive a:visited, .tjHasTipActive a:hover {
+    text-decoration: underline;
+    color: #ba2636
+}
+
+.tjHasTipActive {
+    background-color: #fff;
+    margin-bottom: -2px;
+    position: relative;
+    z-index: 2;
+    border: 2px solid #bababa;
+    border-bottom: 0
+}
+
+.tjHasTipActive a {
+    font-weight: bold
+}
+
+.tjTip {
+    width: 430px;
+    line-height: 23px;
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+    border: 2px solid #bababa
+}
+
+.faWrap .addStyle {
+    width: 510px
+}
+
+.addStyle .divTinfo {
+    height: 270px;
+    overflow-y: scroll;
+    overflow-x: auto
+}
+
+.tjTip li em {
+    color: #f00;
+    font-family: Tahoma
+}
+
+.tjTip li em.c_2b2b2b {
+    color: #2b2b2b
+}
+
+.tjTip th, .tjTip td {
+    text-align: center;
+    line-height: 17px;
+    padding: 3px 0
+}
+
+.tjTip .t_l {
+    text-align: left
+}
+
+.tdTznr em {
+    float: left
+}
+
+.emState1 {
+    width: 65px;
+    text-align: right
+}
+
+.emScore {
+    width: 24px
+}
+
+.emState2 {
+    width: 65px;
+    text-align: left
+}
+
+.tdTznr em.emInfo {
+    padding-right: 5px;
+    float: none;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px
+}
+
+.divTinfo {
+    padding: 10px 7px 0
+}
+
+.divTinfo table {
+    white-space: normal;
+    word-wrap: break-word;
+    break-word: break-all;
+    table-layout: fixed
+}
+
+.tr_faf8e6 {
+    background-color: #faf8e6
+}
+
+.faType {
+    background: #efefef;
+    padding: 0 10px;
+    height: 30px;
+    font: bold 12px/30px "宋体";
+    color: #7b5931
+}
+
+.faType a {
+    padding-right: 5px;
+    font-weight: normal
+}
+
+.btnGray {
+    width: 66px;
+    height: 20px;
+    display: block;
+    float: left;
+    background: url(../images/salle.png?t=20130523) -54px -65px no-repeat;
+    text-align: center;
+    line-height: 22px;
+    margin: 5px 10px 0 0
+}
+
+.all_lottery h2, .all_lottery_big h2 {
+    top: 35px
+}
+
+.all_lottery .cz_list, .all_lottery_big .cz_list {
+    top: 35px
+}
+
+.iconDown {
+    padding-left: 15px;
+    background: url(../images/salle.png?t=20130523) -250px -62px no-repeat;
+    height: 22px;
+    line-height: 22px
+}
+
+.all_lottery iframe, .all_lottery_big iframe {
+    top: 35px
+}
+
+.modBody {
+    margin: 10px 0 0;
+    border: 1px solid #e0e0e0
+}
+
+.modBody h3 {
+    background: #eaeaea;
+    border-bottom: 1px solid #e0e0e0;
+    font: bold 12px/24px "宋体";
+    height: 24px;
+    padding: 0 0 0 13px
+}
+
+.modBody ul {
+    padding: 8px 0 13px
+}
+
+.modBody li {
+    padding: 0 5px 0 10px;
+    line-height: 21px;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.modBody li a, .modBody li a:link, .modBody li a:visited {
+    color: #2b2b2b
+}
+
+.modBody li a:hover {
+    color: #c9171e
+}
+
+.c_BA2636 {
+    color: #ba2636
+}
+
+.czInAuto {
+    height: auto;
+    background: url(../img/hall/repeat_x.png) 0 -140px repeat-x #fff
+}
+
+.ico_clock, .ico_run, .ico_money, .ico_award {
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 14px;
+    margin: 0 5px 0 0;
+    _margin: 5px 5px 5px 0;
+    background-image: url(../img/icon16px.png?t=201301251048);
+    background-repeat: no-repeat
+}
+
+.ico_clock {
+    background-position: -119px -21px
+}
+
+.ico_run {
+    background-position: -135px -21px
+}
+
+.ico_money {
+    background-position: -151px -21px
+}
+
+.ico_award {
+    background-position: -168px -21px
+}
+
+.redball_20, .blueball_20 {
+    background: url("../img/num_bg.png?t=20130637") no-repeat scroll 0 -69px;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 1px;
+    text-align: center;
+    width: 20px
+}
+
+.blueball_20 {
+    background-position: -49px -69px
+}
+
+.list_info {
+    margin: 10px 0
+}
+
+.list_info li {
+    height: 28px;
+    line-height: 28px
+}
+
+.dlszc {
+    padding: 0;
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 15px
+}
+
+.dlszc dt {
+    position: relative;
+    top: 2px;
+    line-height: 18px
+}
+
+.dlszc dd {
+    margin: -18px 0 0 70px
+}
+
+.dlszc .buyNow {
+    background: url(../img/hall/salle.png?t=20130523) -109px -98px no-repeat;
+    width: 72px;
+    height: 23px;
+    border: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    cursor: pointer
+}
+
+.rtable {
+    width: 250px;
+    line-height: 20px;
+    margin: 15px 0 10px 0
+}
+
+.rtable table {
+    border: 1px solid #d7d7d7;
+    border-top: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    border-collapse: separate;
+    margin-bottom: 5px
+}
+
+.rtable table th {
+    border-top: 1px solid #d7d7d7;
+    text-align: center;
+    background: #f7f7f7;
+    font-weight: bold
+}
+
+.rtable table td {
+    border-top: 1px solid #d7d7d7
+}
+
+.rtable table .dott td {
+    border-top: 1px dotted #d7d7d7
+}
+
+.rtable a {
+    font-family: simsun
+}
+
+.tjTip_szc {
+    width: 250px
+}
+
+.tjTip_szc table th, .tjTip_szc table td {
+    border-top: 1px solid #e7caa8;
+    border-bottom: 1px solid #e7caa8
+}
+
+.tjTip_szc table th {
+    background: #fcfbf0;
+    font-weight: bold
+}
+
+.tjTip_szc .ico_award {
+    _margin: 8px 5px 8px 0
+}
+
+.tjTip_szc .faType {
+    margin-top: 5px
+}
+
+.hot_block {
+    width: 990px
+}
+
+#hot_block {
+    width: 880px
+}
+
+.ulMode1 .cz_oneYiJiaJiang {
+    background-position: 0 -262px;
+    left: 58px;
+    width: 50px;
+    position: absolute;
+    top: 8px;
+    cursor: pointer
+}
+
+.ulMode1 .active .cz_oneYiJiaJiang {
+    left: 60px
+}
+
+.twoIcon .iconKjToday {
+    right: 2px
+}
+
+.oneYiJjLong {
+    background: url(../img/hall/salle.png?t=20130523) no-repeat scroll -72px -40px transparent;
+    display: inline-block;
+    height: 23px;
+    width: 108px;
+    vertical-align: middle;
+    margin: 0 0 0 5px
+}
+
+.czDetail .cz_oneYiJiaJiang {
+    background: url(../img/hall/icon.png?t=20130523) no-repeat scroll 0 0 transparent;
+    height: 56px;
+    left: 384px;
+    position: absolute;
+    top: -3px;
+    width: 112px;
+    z-index: 1
+}

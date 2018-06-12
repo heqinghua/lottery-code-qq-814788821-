@@ -1,0 +1,115 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Ytg.Scheduler.Comm.Bets.Calculate.Ssc.RenXuanEr;
+
+namespace Ytg.Scheduler.Comm.Bets.Calculate.Ssc.RenXuanSan
+{
+    /// <summary>
+    /// 组六复试  2016 01 21
+    /// </summary>
+    public class RenXuanZuLiuFuShi : BaseRenXuan
+    {
+        /// <summary>
+        /// 计算中奖情况 todo://还需要继续写的
+        /// </summary>
+        /// <param name="issueCode"></param>
+        /// <param name="openResult"></param>
+        /// <param name="item"></param>
+        protected override void IssueCalculate(string issueCode, string openResult, BasicModel.LotteryBasic.BetDetail item)
+        {
+            //开奖结果
+            openResult = openResult.Replace(",", "");
+            string postionStr = "";
+            string content = SplitRenXuanContent(item.BetContent, ref postionStr);
+
+            List<string> winRes = new List<string>();
+            Combinations<int> v = new Combinations<int>(postionStr.Select(c => Convert.ToInt32(c.ToString())).ToList(), 3);
+            foreach (var c in v._combinations)
+            {
+                winRes.Add(string.Join("", openResult[c[0]-1], openResult[c[1]-1], openResult[c[2]-1]));
+            }
+
+            Combinations<string> noteResult = new Combinations<string>(content.Replace(",","").Select(x => x.ToString()).ToList(), 3);
+            var list = noteResult._combinations;
+            
+
+            var count = 0;
+            if (list != null && list.Count > 0)
+            {
+                foreach(var lst in list){
+                    if (winRes.Any(x => x.Contains(lst[0]) && x.Contains(lst[1]) && x.Contains(lst[2])))
+                        count++;
+                }
+            }
+
+            if (count > 0)
+            {
+                item.IsMatch = true;
+                decimal stepAmt = 0;
+                item.WinMoney = TotalWinMoney(item, GetBaseAmt(item, ref stepAmt), stepAmt, 1);
+            }
+        }
+
+        /// <summary>
+        /// 计算投注数
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public override int TotalBetCount(BasicModel.LotteryBasic.BetDetail item)
+        {
+            string postionStr = "";
+            string content = SplitRenXuanContent(item.BetContent, ref postionStr);
+
+            if (string.IsNullOrEmpty(content) || content.Length < 1 || postionStr.Length < 3)
+                return 0;
+
+            int len = content.Replace(",", "").Length;
+            int notes = 0;
+            Combinations<int> v = new Combinations<int>(postionStr.Select(c => Convert.ToInt32(c.ToString())).ToList(), 3);
+            foreach (var c in v._combinations)
+            {
+                notes += CombinationHelper.Cmn(len, 3);
+            }
+
+            return notes;
+        }
+
+
+        protected override int PostionLen
+        {
+            get
+            {
+                return 3;
+            }
+        }
+
+        public override string HtmlContentFormart(string betContent)
+        {
+            if (string.IsNullOrEmpty(betContent))
+                return string.Empty;
+            betContent = betContent.Replace("&", ",");
+            string postionStr = string.Empty;
+            string contentCenter = this.SplitRenXuanContent(betContent, ref postionStr);
+            if (!this.VerificationPostion(postionStr)
+                || string.IsNullOrEmpty(contentCenter))
+                return string.Empty;
+
+
+            var contentArray = contentCenter.Split(',');
+            var list = new List<string>();
+            int itemCount = 0;
+            foreach (var item in contentArray)
+            {
+                int num = Convert.ToInt32(item);
+                if (num < 0 || num > 9) return string.Empty;
+                itemCount++;
+            }
+            if (itemCount >= 3)
+                return betContent;
+            return string.Empty;
+        }
+    }
+}

@@ -1,0 +1,4 @@
+配置在appSettings里面。
+<!--易优付支付的商户ID和密钥-->
+<add key="ekaid" value="58"/>
+<add key="ekakey" value="s7CSOO45F4TRztpm"/>

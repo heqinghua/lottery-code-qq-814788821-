@@ -1,0 +1,8 @@
+﻿<Window x:Class="Ytg.Chart.Contomer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="客服1 - 苹果娱乐，为梦想加速！" Height="434" Width="286">
+    <Grid>
+        
+    </Grid>
+</Window>

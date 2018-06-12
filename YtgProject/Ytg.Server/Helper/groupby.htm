@@ -1,0 +1,109 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="IE=11.0000" http-equiv="X-UA-Compatible">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>中盛娱乐-合买中心</title>
+
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css" />
+    <link href="resource/help.css" rel="stylesheet" type="text/css" />
+    <link href="resource/group.css" rel="stylesheet" type="text/css" />
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>
+    <script type="text/javascript">
+			jQuery(document).ready(function() {
+
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+    </script>
+
+
+    <BODY>
+        <DIV id="right-main">
+            <DIV class="xgnc_mid">
+                <DIV id="right-main-content">
+
+
+
+
+                    <ul>
+                        <li id="100043" class="active">
+                            <h3>1• 什么是合买佣金？</h3>
+                            <p>
+                                佣金是合买中奖以后，发起人从中奖金额里面抽出一部分作为奖励的机制，本站不提倡发起合买抽取佣金的行为。
+                            </p>
+                        </li>
+                        <li id="100044">
+                            <h3>2• 请问发起的合买如何撤销？</h3>
+                            <p>
+                                合买只有发起人才可以撤销，而且撤销要在订单还没有出票以前，如果出票了是无法撤销的。
+                            </p>
+                        </li>
+                        <li id="100045">
+                            <h3>3• 怎么计算我合买中了多少钱？</h3>
+                            <p>
+                                合买中奖后，若方案不盈利(即税后奖金小于方案本金)，税后奖金将按参与份额比例分配到该方案的各参与会员的预付款中；
+
+                                若方案盈利(即税后奖金大于方案本金)，则发起人先提成税后奖金的x％作为方案制作佣金（佣金由发起人在发起方案时设定），余下奖金
+
+                                将按参与份额比例分配到该方案的各参与用户的预付款中。我们不收取任何佣金或者手续费。
+                            </p>
+                        </li>
+                       
+                    </ul>
+
+
+
+
+                </DIV>
+            </DIV>
+    </BODY>
+</html>

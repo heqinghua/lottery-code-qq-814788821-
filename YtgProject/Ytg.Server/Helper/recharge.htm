@@ -1,0 +1,182 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-充值帮助</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+
+    <ul>
+        <li id="100017" class="active">
+            <h3>1• 使用网上银行安全吗？</h3>
+            <p>
+                用户在乐诚网平台充值时选择任一银行卡支付通道后立即进入银行网关，银行卡资料全部在银行网关加密页面上填写，资料提交过程全部采用国际通用的SSL或SET及数字证书进行加密传输，安全性由银行全面提供支持和保护，各银行网上支付系统对网上支付的安全提供保障。 
+            </p>
+        </li>
+        <li id="100018">
+            <h3>2• 通过网上充值，出现该页无法显示时怎么办？</h3>
+            <p>
+                A：没有升级IE浏览器，导致加密级别过低，无法进入银行系统。 请升级到8.0及以上版本。 
+                <br />
+                B：上网环境或上网方式受限，可能是网络服务商限制，如有条件更换一种上网方式或环境。 
+                <br />
+                C：瞬间网络不通，尝试刷新页面；如果刷新不能解决问题，可能由于浏览器设置缓存，请在IE菜单—工具—Internet选项—点击“删除cookies”和“删除文件”，用以清除临时文件。 
+            </p>
+        </li>
+        <li id="100019">
+            <h3>3• 如何修改已绑定银行卡？</h3>
+            <p>
+                若您需要修改银行卡信息，而该信息已被绑定，无法修改，请点击“在线客服”与平台客服人员联系，客服与您确认个人信息会给您解除绑定，您就可以修改银行卡信息了。
+            </p>
+        </li>
+        <li id="100020">
+            <h3>4• 银行充值提款的手续费怎么收取？</h3>
+            <p>
+                A：我们会返还您的充值手续费至平台游戏币中； 
+                <br />
+                B：我们不收取提款手续费，无论是跨行或跨地区； 
+                <br />
+                C：若您提款需要汇入的银行是跨行或跨地区可能会有部分时间延误问题，少则几分钟，多则数小时，请耐心等待。 
+            </p>
+        </li>
+        <li id="100021">
+            <h3>5• 为何充值不到帐？</h3>
+            <p>
+                A：平台填写的存款金额和实际汇款金额不一致，会导致游戏平台不到账； 
+                <br />
+                B：使用网上银行在线充值，充值完成后一定要点击返回商户按钮
+              <!--  <br />
+                C：汇款时未使用平台提供的最新银行信息； 
+                <br />
+                D：没有使用网银进行汇款（银行柜台和ATM及手机汇款会不到帐）； -->
+                <br />
+                C：存款时没有从平台发起存款请求或者没有使用平台最新收款银行信息； 
+                <br />
+                D：如果因用户没有使用平台的最新收款信息而汇款到旧的收款银行帐号而损失，须由用户自行承担。 
+                <br />
+                E：部分银行垮地区转账无法实时到账，少则几分钟，多则数小时，请耐心等待。 
+            </p>
+        </li>
+        <li id="100022">
+            <h3>6•平台充值限额及服务时间</h3>
+            <p> 
+                A：在线充值时间：7*24小时自动到账<br />
+                B：单次充值限额：10元 - 50000元
+                <!--<table class="table">
+                    <thead>
+                        <tr>
+                            <td>所属银行</td>
+                            <td>充值时间</td>
+                            <td>充值限额</td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>工商银行</td>
+                        <td>09:00am-次日02:00</td>
+                        <td>最低100元， 最高45,000元</td>
+                    </tr>
+                    <tr>
+                        <td>招商银行</td>
+                        <td>09:00am-次日02:00</td>
+                        <td>最低100元， 最高45,000元</td>
+                    </tr>
+                    <tr>
+                        <td>建设银行</td>
+                        <td class="text-red">09:00am-当晚22:00</td>
+                        <td>最低100元， 最高45,000元</td>
+                    </tr>
+                    <tr>
+                        <td>农行跨行到招行在线充值</td>
+                        <td>09:00am-次日02:00</td>
+                        <td>最低100元， 最高45,000元</td>
+                    </tr>
+                    <tr>
+                        <td>建行跨行到招行在线充值</td>
+                        <td>09:00am-次日02:00</td>
+                        <td>最低100元， 最高45,000元</td>
+                    </tr>
+                </table>-->
+            </p>
+            <p>
+            </p>
+        </li>
+        <!--<li id="100023">
+            <h3>7• 如何查询充值记录？</h3>
+            <p>
+
+            </p>
+        </li>-->
+    </ul>
+
+
+
+
+</DIV></DIV>
+</BODY></html>

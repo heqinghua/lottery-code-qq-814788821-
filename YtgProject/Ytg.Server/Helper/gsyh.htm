@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-工商银行充值</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+
+
+    <ul>
+        <li>
+            <h3>1• 点击“账户充值”选项，选择“中国工商银行”，输入所要充值金额，获取平台工行收款人姓名 ，收款E-MAIL帐号，附言所需输入的充值订单号；</h3>
+            <p>
+                客户点击复制时,如果出现不允许访问或者错误时,很有可能是客户的浏览器设置问题（很有可能是火狐浏览器），我们建议客户使用其他浏览器再进行操作。 
+            </p>
+        </li>
+        <li>
+            <h3>2• 登陆<a href="https://mybank.icbc.com.cn/icbc/perbank/index.jsp" target="_blank">https://mybank.icbc.com.cn/icbc/perbank/index.jsp</a> 工商银行网站；</h3>
+        </li>
+        <li>
+            <h3>3• 登陆后点击【转账汇款】选项；</h3>
+            <p>
+                <img src="/Helper/resource/images/11.jpg" />
+            </p>
+        </li>
+        <li>
+            <h3>4.在页面左侧菜单下面选择【E-mail汇款】</h3>
+            <p>
+                <img src="/Helper/resource/images/12.png" />
+            </p>
+        </li>
+        <li>
+            <h3>5• 输入平台获取的收款人姓名、收款E-MAIL；充值金额，并在‘附言’处粘帖附言（充值订单号）。 工行网站的粘贴处是不能使用右键复制的，一定要使用Ctrl+V进行粘贴。 </h3>
+            <p>
+                <img src="/Helper/resource/images/13.png" />
+            </p>
+        </li>
+        <li>
+            <h3>6. 选择支付帐户；</h3>
+            <p>
+                <img src="/Helper/resource/images/14.png" />
+            </p>
+        </li>
+        <li>
+            <h3>7.支付信息确认后，跳转至“交易成功”页面；</h3>
+            <p>
+                <img src="/Helper/resource/images/15.png" width="100%" />
+            </p>
+        </li>
+        <li>
+            <h3>8、 支付信息确认后，进入个人中心的充值记录中查看游戏币到账情况。</h3>
+        </li>
+    </ul>
+
+
+
+
+
+</DIV></DIV>
+</BODY></html>

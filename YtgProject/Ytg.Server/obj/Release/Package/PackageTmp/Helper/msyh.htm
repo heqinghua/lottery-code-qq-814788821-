@@ -1,0 +1,98 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-民生跨招商银行充值</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+    <ul>
+        <li>1. 输入所要充值金额，获取平台收款招商银行“收款人姓名” 、“收款人账号”、“附言所需输入的充值订单号”。</li>
+        <li>2. 登陆https://per.cmbc.com.cn/pweb/static/login.html民生银行网站；</li>
+        <li>3. 登陆后点击“跨行账户管理”，然后点击“本行转他行”；</li>
+        <li>
+            <img src="/Helper/resource/images/m1.png" /></li>
+        <li>4. 跳转“本行转他行”页面,填入在平台上获取的招行收款人姓名,收款人账号,金额，“用途”需选择“其他”并填入附言，点击“确定”；</li>
+        <li>
+            <img src="/Helper/resource/images/m2.png" /></li>
+        <li>
+            <img src="/Helper/resource/images/m3.png" /></li>
+        <li>5. 跳转“转账确认”页面后并输入“交易密码”后点击“确认”；</li>
+        <li>
+            <img src="/Helper/resource/images/m4.png" /></li>
+        <li>6. 支付信息确认后跳转”转账交易成功”页面； </li>
+    </ul>
+
+
+
+
+
+
+</DIV></DIV>
+</BODY></html>

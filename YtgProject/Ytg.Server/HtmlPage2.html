@@ -1,0 +1,844 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>168Club</title>
+	<link href="/static/images/skin/feile/favicon.ico" rel="shortcut icon" type="images/x-icon"/>
+        <link rel="stylesheet" href="/static/css/skin/feile/comn.css" />
+        <link rel="stylesheet" href="/static/css/skin/feile/keyframes.css" />
+        <link rel="stylesheet" href="/static/css/skin/feile/main.css" />
+        <link rel="stylesheet" href="/static/css/skin/feile/homepg.css" />
+        <link href="/static/css/skin/base.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="/static/css/skin/layout.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="/static/css/skin/home.css" rel="stylesheet" type="text/css" media="all"/>
+        <script type="text/javascript" src="/static/js/fl/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="/static/js/fl/jquery.sortable.js"></script>        
+        <script type="text/javascript" src="/static/fl888/js/config.js"></script>
+        <script type="text/javascript" src="/static/fl888/js/base.js?20150107"></script>
+        <script type="text/javascript" src="/static/fl888/js/common.js?20121107"></script>
+        <!--消息框代码开始-->
+        <script type="text/javascript" src="/static/js/skin/artDialog/dialog-min.js?skins=blue"></script>
+        <link type="text/css" rel="stylesheet" href="/static/js/skin/artDialog/ui-dialog.css"/>
+        <script type="text/javascript" src="/static/fl888/js/dialog-plus-min.js"></script>
+
+         <script type="text/javascript">
+             Suke = $.extend(Suke, {
+                 SITENAME: "168Club",
+                 SITEURL: window.location.host,
+                 RESOURCEURL: "/static",
+                 BASEURL: "/",
+                 SERVICEURL: "",
+                 NOTEFREQUENCY: 10000
+             });
+             Suke.namespace("Suke.Lottery.user");
+             Suke.common.user.info = {
+                 user_id: '14472',
+                 username: 'heqinghua',
+                 nickname: 'heqinghua'
+             };
+
+        </script>
+    </head>
+    <body><link type="text/css" rel="stylesheet" href="/static/js/fl/dialogUI/dialogUI.css"/>
+<script type="text/javascript" src="/static/js/fl/dialogUI/jquery.dialogUI.js"></script>
+<script type="text/javascript" src="/static/js/fl/dialogUI/jquery.dragdrop.js"></script>
+<script type="text/javascript">
+    if (window.parent == window) {
+        window.location.href = window.location.pathname;
+    }
+    $(function () {
+        $('#main', parent.document).height($('#main', parent.document).contents().find("body").height());
+    });
+    function jjtc() {
+        parent.$.alert('即将推出，敬请期待');
+    }
+    function getCurProjects(lotteryId) {
+        $("#lottery-number-logs-contents").hide();
+        $("#projectloading").show();
+        $.ajax({
+            url: "/?controller=default&action=ajax",
+            dataType: 'html',
+            type: 'post',
+            data: 'flag=projects&lottery=' + lotteryId,
+            error: function () {
+                $("#projectloading").hide();
+                $("#lottery-number-logs-contents").show();
+            },
+            success: function (data) {
+                $("#projectloading").hide();
+                $("#lottery-number-logs-contents").html(data);
+                $("#lottery-number-logs-contents").show();
+                $('#main', parent.document).height($('#main', parent.document).contents().find("body").height()); //重设 iframe 高度
+            }
+        });
+    }
+    /**
+     * 撤单
+     * @param {type} id
+     * @returns {undefined}
+     */
+    function cancelProject(id) {
+        parent.$.confirm("确认要撤单？", function () {
+            $.ajax({
+                url: "/?controller=default&action=ajax",
+                dataType: 'json',
+                type: 'post',
+                data: 'flag=cancelproject&projectid=' + id,
+                success: function (json) {
+                    Suke.common.alert(json.info);
+                    getCurProjects(1);
+                }
+            });
+        });
+    }
+    $(function () {
+        $(".sel_times").click(function () {
+            var lt_sel_times = parseInt($("#lt_sel_times").val());
+            if ($(this).attr("value") == '1') {
+                if (lt_sel_times > 99999)
+                    return;
+                $("#lt_sel_times").val(lt_sel_times + 1);
+            } else {
+                if (lt_sel_times <= 1) {
+                    $("#lt_sel_times").val(1);
+                    return;
+                }
+                $("#lt_sel_times").val(lt_sel_times - 1);
+            }
+            $("#lt_sel_times").keyup();
+        });
+        getCurProjects(1);
+    });
+</script>
+<style>
+    #lottery-number-logs-contents {font-size: 12px}
+    #lottery-number-logs-contents a{color: #ff6600;}
+    #lottery-number-logs-title span {
+    background:url("/static/images/skin/rec_tzicon_bg.png") no-repeat left center;
+    display: inline-block;
+    height: 28px;
+    line-height: 26px;
+    padding-left: 26px;
+}
+.lottery-number-logs #lottery-number-logs-title a {
+    display: inline-block;
+    float: right;
+	width:64px; height:26px; text-indent:-3000px;
+	background: url("/static/images/skin/tz_balls_bg.png") no-repeat scroll -61px -310px rgba(0, 0, 0, 0);
+}
+</style>
+<div id="soundBox" style="width:1px; height:1px; position:absolute;">
+<embed id="boardcastBox" src="/static/fl/source/soundBox.swf" loop="false" menu="false" quality="best" width="1" height="1" name="boardcastBox" style="position:absolute; top:-10px;" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="Ctext=1a3f677c" wmode="window">
+</div>
+<div id="soundBox1" style="width:1px; height:1px; position:absolute;">
+<embed id="boardcastBox1" src="/static/fl/source/soundBox.swf" loop="false" menu="false" quality="best" width="1" height="1" name="boardcastBox1" style="position:absolute; top:-10px;" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="Ctext=1a3f677c" wmode="window">
+</div>
+<div id="soundBox2" style="width:1px; height:1px; position:absolute;">
+<embed id="boardcastBox2" src="/static/fl/source/soundBox.swf" loop="false" menu="false" quality="best" width="1" height="1" name="boardcastBox2" style="position:absolute; top:-10px;" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="Ctext=1a3f677c" wmode="window">
+</div><script type="text/javascript" src="/static/js/skin/tab.js"></script>
+<script src="/static/js/common/calendar/jquery.dynDateTime.js" type="text/javascript"></script>
+<script src="/static/js/common/calendar/lang/calendar-utf8.js" type="text/javascript"></script>
+<link href="/static/js/common/calendar/css/calendar-win2k-cold-1.css" media="all" type="text/css" rel="stylesheet">
+<!--------------------->
+<script language="javascript" src="/static/js/skin/swfobject/swfobject.js"></script>
+<script language="javascript" src="/static/js/skin/common.js"></script>
+<script language="javascript" src="/static/js/skin/lottery/youxi_lang_zh.js"></script>
+<script language="javascript" src="/static/js/skin/soundBox.js"></script>
+
+<script language="javascript" type="text/javascript">
+    function intval(mixed_var, base) {
+        var tmp;
+        var type = typeof (mixed_var);
+        if (type === 'boolean') {
+            return +mixed_var;
+        } else if (type === 'string') {
+            tmp = parseInt(mixed_var, base || 10);
+            return (isNaN(tmp) || !isFinite(tmp)) ? 0 : tmp;
+        } else if (type === 'number' && isFinite(mixed_var)) {
+            return mixed_var | 0;
+        } else {
+            return 0;
+        }
+    }
+    function show_on() {
+        $("#lt_help_div").show("slow");
+    }
+    function close_on() {
+        $("#lt_help_div").hide("slow");
+    }
+    (function ($) {
+        $(document).ready(function () {
+            $.gameInit({
+                data_label: [
+                data_methods: lottery_methods,
+                cur_issue: { issue: '20150615-108', endtime: '2015-06-15 22:59:30' },
+                issues: {//所有的可追号期数集合
+                    today: [
+                                { issue: '20150615-108', endtime: '2015-06-15 22:59:30' }, { issue: '20150615-109', endtime: '2015-06-15 23:04:30' }, { issue: '20150615-110', endtime: '2015-06-15 23:09:30' }, { issue: '20150615-111', endtime: '2015-06-15 23:14:30' }, { issue: '20150615-112', endtime: '2015-06-15 23:19:30' }, { issue: '20150615-113', endtime: '2015-06-15 23:24:30' }, { issue: '20150615-114', endtime: '2015-06-15 23:29:30' }, { issue: '20150615-115', endtime: '2015-06-15 23:34:30' }, { issue: '20150615-116', endtime: '2015-06-15 23:39:30' }, { issue: '20150615-117', endtime: '2015-06-15 23:44:30' }, { issue: '20150615-118', endtime: '2015-06-15 23:49:30' }, { issue: '20150615-119', endtime: '2015-06-15 23:54:30' }, { issue: '20150615-120', endtime: '2015-06-15 23:59:30' }],
+                    tomorrow: [
+                                        { issue: '20150616-001', endtime: '2015-06-16 00:04:30' }, { issue: '20150616-002', endtime: '2015-06-16 00:09:30' }, { issue: '20150616-003', endtime: '2015-06-16 00:14:30' }, { issue: '20150616-004', endtime: '2015-06-16 00:19:30' }, { issue: '20150616-005', endtime: '2015-06-16 00:24:30' }, { issue: '20150616-006', endtime: '2015-06-16 00:29:30' }, { issue: '20150616-007', endtime: '2015-06-16 00:34:30' }, { issue: '20150616-008', endtime: '2015-06-16 00:39:30' }, { issue: '20150616-009', endtime: '2015-06-16 00:44:30' }, { issue: '20150616-010', endtime: '2015-06-16 00:49:30' }, { issue: '20150616-011', endtime: '2015-06-16 00:54:30' }, { issue: '20150616-012', endtime: '2015-06-16 00:59:30' }, { issue: '20150616-013', endtime: '2015-06-16 01:04:30' }, { issue: '20150616-014', endtime: '2015-06-16 01:09:30' }, { issue: '20150616-015', endtime: '2015-06-16 01:14:30' }, { issue: '20150616-016', endtime: '2015-06-16 01:19:30' }, { issue: '20150616-017', endtime: '2015-06-16 01:24:30' }, { issue: '20150616-018', endtime: '2015-06-16 01:29:30' }, { issue: '20150616-019', endtime: '2015-06-16 01:34:30' }, { issue: '20150616-020', endtime: '2015-06-16 01:39:30' }, { issue: '20150616-021', endtime: '2015-06-16 01:44:30' }, { issue: '20150616-022', endtime: '2015-06-16 01:49:30' }, { issue: '20150616-023', endtime: '2015-06-16 01:54:30' }, { issue: '20150616-024', endtime: '2015-06-16 09:59:05' }, { issue: '20150616-025', endtime: '2015-06-16 10:09:05' }, { issue: '20150616-026', endtime: '2015-06-16 10:19:05' }, { issue: '20150616-027', endtime: '2015-06-16 10:29:05' }, { issue: '20150616-028', endtime: '2015-06-16 10:39:05' }, { issue: '20150616-029', endtime: '2015-06-16 10:49:05' }, { issue: '20150616-030', endtime: '2015-06-16 10:59:05' }, { issue: '20150616-031', endtime: '2015-06-16 11:09:05' }, { issue: '20150616-032', endtime: '2015-06-16 11:19:05' }, { issue: '20150616-033', endtime: '2015-06-16 11:29:05' }, { issue: '20150616-034', endtime: '2015-06-16 11:39:05' }, { issue: '20150616-035', endtime: '2015-06-16 11:49:05' }, { issue: '20150616-036', endtime: '2015-06-16 11:59:05' }, { issue: '20150616-037', endtime: '2015-06-16 12:09:05' }, { issue: '20150616-038', endtime: '2015-06-16 12:19:05' }, { issue: '20150616-039', endtime: '2015-06-16 12:29:05' }, { issue: '20150616-040', endtime: '2015-06-16 12:39:05' }, { issue: '20150616-041', endtime: '2015-06-16 12:49:05' }, { issue: '20150616-042', endtime: '2015-06-16 12:59:05' }, { issue: '20150616-043', endtime: '2015-06-16 13:09:05' }, { issue: '20150616-044', endtime: '2015-06-16 13:19:05' }, { issue: '20150616-045', endtime: '2015-06-16 13:29:05' }, { issue: '20150616-046', endtime: '2015-06-16 13:39:05' }, { issue: '20150616-047', endtime: '2015-06-16 13:49:05' }, { issue: '20150616-048', endtime: '2015-06-16 13:59:05' }, { issue: '20150616-049', endtime: '2015-06-16 14:09:05' }, { issue: '20150616-050', endtime: '2015-06-16 14:19:05' }, { issue: '20150616-051', endtime: '2015-06-16 14:29:05' }, { issue: '20150616-052', endtime: '2015-06-16 14:39:05' }, { issue: '20150616-053', endtime: '2015-06-16 14:49:05' }, { issue: '20150616-054', endtime: '2015-06-16 14:59:05' }, { issue: '20150616-055', endtime: '2015-06-16 15:09:05' }, { issue: '20150616-056', endtime: '2015-06-16 15:19:05' }, { issue: '20150616-057', endtime: '2015-06-16 15:29:05' }, { issue: '20150616-058', endtime: '2015-06-16 15:39:05' }, { issue: '20150616-059', endtime: '2015-06-16 15:49:05' }, { issue: '20150616-060', endtime: '2015-06-16 15:59:05' }, { issue: '20150616-061', endtime: '2015-06-16 16:09:05' }, { issue: '20150616-062', endtime: '2015-06-16 16:19:05' }, { issue: '20150616-063', endtime: '2015-06-16 16:29:05' }, { issue: '20150616-064', endtime: '2015-06-16 16:39:05' }, { issue: '20150616-065', endtime: '2015-06-16 16:49:05' }, { issue: '20150616-066', endtime: '2015-06-16 16:59:05' }, { issue: '20150616-067', endtime: '2015-06-16 17:09:05' }, { issue: '20150616-068', endtime: '2015-06-16 17:19:05' }, { issue: '20150616-069', endtime: '2015-06-16 17:29:05' }, { issue: '20150616-070', endtime: '2015-06-16 17:39:05' }, { issue: '20150616-071', endtime: '2015-06-16 17:49:05' }, { issue: '20150616-072', endtime: '2015-06-16 17:59:05' }, { issue: '20150616-073', endtime: '2015-06-16 18:09:05' }, { issue: '20150616-074', endtime: '2015-06-16 18:19:05' }, { issue: '20150616-075', endtime: '2015-06-16 18:29:05' }, { issue: '20150616-076', endtime: '2015-06-16 18:39:05' }, { issue: '20150616-077', endtime: '2015-06-16 18:49:05' }, { issue: '20150616-078', endtime: '2015-06-16 18:59:05' }, { issue: '20150616-079', endtime: '2015-06-16 19:09:05' }, { issue: '20150616-080', endtime: '2015-06-16 19:19:05' }, { issue: '20150616-081', endtime: '2015-06-16 19:29:05' }, { issue: '20150616-082', endtime: '2015-06-16 19:39:05' }, { issue: '20150616-083', endtime: '2015-06-16 19:49:05' }, { issue: '20150616-084', endtime: '2015-06-16 19:59:05' }, { issue: '20150616-085', endtime: '2015-06-16 20:09:05' }, { issue: '20150616-086', endtime: '2015-06-16 20:19:05' }, { issue: '20150616-087', endtime: '2015-06-16 20:29:05' }, { issue: '20150616-088', endtime: '2015-06-16 20:39:05' }, { issue: '20150616-089', endtime: '2015-06-16 20:49:05' }, { issue: '20150616-090', endtime: '2015-06-16 20:59:05' }, { issue: '20150616-091', endtime: '2015-06-16 21:09:05' }, { issue: '20150616-092', endtime: '2015-06-16 21:19:05' }, { issue: '20150616-093', endtime: '2015-06-16 21:29:05' }, { issue: '20150616-094', endtime: '2015-06-16 21:39:05' }, { issue: '20150616-095', endtime: '2015-06-16 21:49:05' }, { issue: '20150616-096', endtime: '2015-06-16 21:59:05' }, { issue: '20150616-097', endtime: '2015-06-16 22:04:30' }, { issue: '20150616-098', endtime: '2015-06-16 22:09:30' }, { issue: '20150616-099', endtime: '2015-06-16 22:14:30' }, { issue: '20150616-100', endtime: '2015-06-16 22:19:30' }, { issue: '20150616-101', endtime: '2015-06-16 22:24:30' }, { issue: '20150616-102', endtime: '2015-06-16 22:29:30' }, { issue: '20150616-103', endtime: '2015-06-16 22:34:30' }, { issue: '20150616-104', endtime: '2015-06-16 22:39:30' }, { issue: '20150616-105', endtime: '2015-06-16 22:44:30' }, { issue: '20150616-106', endtime: '2015-06-16 22:49:30' }, { issue: '20150616-107', endtime: '2015-06-16 22:54:30' }, { issue: '20150616-108', endtime: '2015-06-16 22:59:30' }, { issue: '20150616-109', endtime: '2015-06-16 23:04:30' }, { issue: '20150616-110', endtime: '2015-06-16 23:09:30' }, { issue: '20150616-111', endtime: '2015-06-16 23:14:30' }, { issue: '20150616-112', endtime: '2015-06-16 23:19:30' }, { issue: '20150616-113', endtime: '2015-06-16 23:24:30' }, { issue: '20150616-114', endtime: '2015-06-16 23:29:30' }, { issue: '20150616-115', endtime: '2015-06-16 23:34:30' }, { issue: '20150616-116', endtime: '2015-06-16 23:39:30' }, { issue: '20150616-117', endtime: '2015-06-16 23:44:30' }, { issue: '20150616-118', endtime: '2015-06-16 23:49:30' }, { issue: '20150616-119', endtime: '2015-06-16 23:54:30' }, { issue: '20150616-120', endtime: '2015-06-16 23:59:30' }]
+                },
+                servertime: '2015-06-15 22:58:06',
+                lotteryid: parseInt(1, 10),
+                ajaxurl: './?controller=game&action=play',
+                ontimeout: function () {
+                    $.ajax({
+                        type: 'POST',
+                        url: './?controller=game&action=play&curmid=50',
+                        data: "lotteryid=1&flag=gethistory",
+                        success: function (data) {
+
+                            var partn = /<script.*>.*<\/script>/;
+                            if (data == 'empty' && partn.test(data)) {
+                                return;
+                            }
+                            if (data != 'empty') {
+                                eval("data=" + data);
+                                processCode(data[0].issue, data[0].code);
+                            }
+                        }
+                    });
+                },
+                onfinishbuy: function () {
+                    $.ajax({
+                        type: 'POST',
+                        url: './?controller=game&action=play&curmid=50',
+                        data: "lotteryid=1&flag=getprojects",
+                        success: function (data) {
+                            var partn = /<script.*>.*<\/script>/;
+                            if (data == 'empty' && partn.test(data)) {
+                                return;
+                            }
+                            eval("data=" + data);
+                            $(".history_pro", "#history_project").remove();
+                            var html = '';
+                            var selectedcss = '';
+                            $.each(data, function (i, n) {
+                                html += '<tr class="history_pro">';
+                                if (i % 2 == 0) {
+                                    selectedcss = ' class="odd" bgcolor="#CCCCCC" align="center"';
+                                } else {
+                                    selectedcss = ' bgcolor="#CCCCCC" align="center"';
+                                }
+                                html += '<td' + selectedcss + ' height="30"><a href="./index.php?controller=gameinfo&action=gamedetail&id=' + n.projectid + '" target="_blank" title="查看注单详情" class="projectidarea">' + n.projectid + '</a></td>';
+                                html += '<td' + selectedcss + '>' + n.writetime + '</td>';
+                                html += '<td' + selectedcss + '>' + n.methodname + '</td>';
+                                html += '<td' + selectedcss + '>' + n.issue + '</td>';
+                                html += '<td' + selectedcss + '>' + n.modes + '</td>';
+                                if (n.code.length > 20) {
+                                    html += '<td' + selectedcss + '><span class="project_more">号码详情</span><div style="display:none;">' + n.code + '</div></td>';
+                                } else {
+                                    html += '<td' + selectedcss + '>' + n.code + '</td>';
+                                }
+                                html += '<td' + selectedcss + '>' + n.multiple + '</td>';
+                                html += '<td' + selectedcss + '>' + moneyFormat(n.totalprice) + '</td>';
+                                html += '<td' + selectedcss + '>' + (parseInt(n.taskid, 10) > 0 ? "是" : "否") + '</td>';
+                                html += '</tr>';
+                            });
+                            $(html).insertAfter("#project_title");
+                        }
+                    });
+                    getCurProjects(1);
+                }
+            });
+            if ('58914' != '') {
+                processCode('20150615-107', '58914');
+            }
+            $('span[class="project_more"]', "#history_project").live("click", function () {
+                var mme = this;
+                var $h = $('<span style="display: block;" id="task_div">号码详情[<span class="close">关闭</span>]<br><textarea readonly="readonly" class="code1">' + $(mme).next().html() + '</textarea></span>');
+                $(this).openFloat($h, "projects_more");
+                $("span", $(this).parent()).filter(".close").click(function () {
+                    $(mme).closeFloat();
+                });
+            });
+            var iLid = parseInt(1, 10);
+            var position = -(iLid - 1) * 75;
+            $("#right_top_01_02").css("background-position", "0px " + position + "px");
+            //Suke.common.alert("hha");
+            function a() {
+                var currentissue = $('.no_old').html();
+                $.ajax({
+                    type: 'POST',
+                    url: './?controller=game&action=play&curmid=50',
+                    data: "lotteryid=1&flag=gethistory&currentissue=" + currentissue,
+                    success: function (data) {
+                        if (data == 'empty') {
+                            return;
+                        }
+                        if (data != 'empty') {
+                            eval("data=" + data);
+                            //	alert(data[0].iscurent)
+                            processCode(data[0].issue, data[0].code, data.iscurent);
+                        }
+                    }
+                });
+                setTimeout(a, 30000);
+            }
+            a();
+        });
+    })(jQuery);
+    var lotterytype = 0;
+    var times = true;
+    function processCode(issue, code, iscurent) {
+        $('.no_old').html(issue);
+        if (issue.length >= 12) {
+            $('.no_old').css("left", "-6px");
+            $('.no_old').css("right", "0px");
+        }
+        if (issue.length == 11) {
+            $('.no_old').css("left", "-4px");
+            $('.no_old').css("right", "0px");
+        }
+        if (issue.length == 7) {
+            $('.no_old').css("left", "15px");
+        }
+        if (issue.length == 8) {
+            $('.no_old').css("left", "12px");
+        }
+        var cStr = '';
+        var aTmp = new Array();
+        //处理中奖号码
+        if (code.indexOf(' ') == -1) {
+            //无空格
+            aTmp = code.split('');
+        } else {
+            //有空格
+            aTmp = code.split(' ');
+        }
+        /*
+        while (aTmp.length < 5){
+        aTmp.push("★");
+        }
+        */
+        if (iscurent == 2) {//增加动态抓取
+            var latestlot = "<ul><li class=\"qihao1\">" + issue + "<\/li><li class=\"haoma1\">";
+            var sCode = "";
+            for (var ci = 0; ci < aTmp.length; ci++) {
+                sCode += "<span>" + aTmp[ci] + "<\/span>";
+            }
+            var sInsertHtml = latestlot + sCode + "</li></ul>";
+            //倒计时开始 sam
+            animateStart();
+            djs.boolean = true;
+            if (djs.boolean) {
+                djs.dataStr = aTmp.join("-");
+                djs.dataHtml = sInsertHtml;
+                setTimeout(animateStop, djs.keep * 1000);
+            }
+        }
+        var num_single = 0, num_double = 0;
+        var num_codesort = aTmp; //排序
+
+        if (times) {
+            $('.num_open ul li span span').html("");
+        }
+        for (var ci = 0; ci < aTmp.length; ci++) {
+            var curNum = aTmp[ci];
+            //curNum=parseInt(curNum,10);
+            //$('#last_code_num'+ci).html(curNum);
+            if (times) {
+                (function (i, num) {
+                    window.setTimeout(function () {
+                        $('#last_code_num' + i).html(num);
+                        $('.num_open ul li').eq(i).css({ "left": 67 * i + "px" }).fadeIn();
+                    }, 500 * (aTmp.length - i), i, num);
+                })(ci, curNum);
+            }
+
+            var code_word = '';
+            if (curNum >= 5) {
+                code_word += '大';
+            } else {
+                code_word += '小';
+            }
+            if (curNum % 2 == 0) {
+                code_word += '双'; num_double++;
+            } else {
+                code_word += '单'; num_single++;
+            }
+            //$('#last_code_word'+ci).html(code_word);
+        }
+        times = false;
+        if (lotterytype == 0) {
+            var last_code_desc1 = "组三";
+            if (aTmp[0] == aTmp[1] && aTmp[0] == aTmp[2]) {
+                last_code_desc1 = "豹子";
+            } else if (aTmp[0] != aTmp[1] && aTmp[0] != aTmp[2] && aTmp[1] != aTmp[2]) {
+                last_code_desc1 = "组六";
+            }
+            $("#last_code_desc1").html(last_code_desc1);
+            var last_code_desc2 = "组三";
+            if (aTmp[2] == aTmp[3] && aTmp[2] == aTmp[4]) {
+                last_code_desc2 = "豹子";
+            } else if (aTmp[2] != aTmp[3] && aTmp[2] != aTmp[4] && aTmp[3] != aTmp[4]) {
+                last_code_desc2 = "组六";
+            }
+            $("#last_code_desc2").html(last_code_desc2);
+        } else if (lotterytype == 2) {
+            num_codesort = num_codesort.sort();
+            var last_code_desc1 = num_single + "单" + num_double + "双";
+            $("#last_code_desc1").html(last_code_desc1);
+            var last_code_desc2 = num_codesort[2];
+            $("#last_code_desc2").html(last_code_desc2);
+        } else if (lotterytype == 3) {
+            //cStr += '<div class="bonusnumber"><div>';
+            var total = ups = downs = odds = evens = 0;
+            for (var ci = 0; ci < aTmp.length; ci++) {
+                total += intval(aTmp[ci]);
+                if (intval(aTmp[ci]) < 41) {
+                    ups += 1;
+                } else {
+                    downs += 1;
+                }
+                if (intval(aTmp[ci]) % 2 == 0) {
+                    evens += 1;
+                } else {
+                    odds += 1;
+                }
+                //cStr += '<span class="ball">'+aTmp[ci]+'</span>';
+            }
+            var cheziStr = '和值：' + total + '(';
+            if (total > 810) {
+                cheziStr += '大';
+            } else if (total < 810) {
+                cheziStr += '小';
+            } else {
+                cheziStr += '和';
+            }
+            cheziStr += ',' + (total % 2 == 0 ? '双' : '单') + ')';
+            var cpanStr = '盘面：(';
+            if (ups > downs) {
+                cpanStr += '上';
+            } else if (ups == downs) {
+                cpanStr += '中';
+            } else {
+                cpanStr += '下';
+            }
+            cpanStr += ',';
+            if (odds > evens) {
+                cpanStr += '奇';
+            } else if (odds == evens) {
+                cpanStr += '和';
+            } else {
+                cpanStr += '偶';
+            }
+            cpanStr += ')';
+            $('#last_code_desc1').html(cheziStr);
+            $('#last_code_desc2').html(cpanStr);
+        }
+    }
+    //清空追号方案
+    var cleanTraceIssue = function () {
+        $("input[name^='lt_trace_issues']", $($.lt_id_data.id_tra_issues)).attr("checked", false);
+        $("input[name^='lt_trace_times_']", $($.lt_id_data.id_tra_issues)).val(0).attr("disabled", true);
+        $("span[id^='lt_trace_money_']", $($.lt_id_data.id_tra_issues)).html('0.00');
+        $("td", $($.lt_id_data.id_tra_issues)).removeClass("selected");
+        $('#lt_trace_hmoney').html(0);
+        $('#lt_trace_money').val(0);
+        $('#lt_trace_count').html(0);
+        $.lt_trace_issue = 0;
+        $.lt_trace_money = 0;
+    };
+    function div_slow_show(showslow_id) {
+        $("#div_slow_id_" + showslow_id).show("slow");
+    }
+    function div_slow_hide(showslow_id) {
+        $("#div_slow_id_" + showslow_id).hide("slow");
+    }
+    var setCookie = function (name, value, expire, path) {
+        //expire=expire||30*24*60*60*1000;
+        var curdate = new Date();
+        var cookie = name + "=" + encodeURIComponent(value) + "; ";
+        if (expire != undefined || expire == 0) {
+            if (expire == -1) {
+                expire = 366 * 86400 * 1000; //保存一年
+            } else {
+                expire = parseInt(expire);
+            }
+            curdate.setTime(curdate.getTime() + expire);
+            cookie += "expires=" + curdate.toUTCString() + "; ";
+        }
+        path = path || "/";
+        cookie += "path=" + path;
+        document.cookie = cookie;
+    };
+    var getCookie = function (name) {
+        var re = "(?:; )?" + encodeURIComponent(name) + "=([^;]*);?";
+        re = new RegExp(re);
+        if (re.test(document.cookie)) {
+            return decodeURIComponent(RegExp.$1);
+        }
+        return '';
+    };
+    setCookie('last_lottery_url', top.location.href);
+    $(function () {
+        var _wrap = $('#zjtgul');
+        var _interval = 2000;
+        var _moving;
+        _wrap.hover(function () {
+            clearInterval(_moving);
+        }, function () {
+            _moving = setInterval(function () {
+                var _field = _wrap.find('li:first');
+                var _h = _field.height();
+                _field.animate({ marginTop: -_h + 'px' }, 600, function () {
+                    _field.css('marginTop', 0).appendTo(_wrap);
+                })
+            }, _interval)
+        }).trigger('mouseleave');
+    });
+    /*开奖声音*/
+    var kaijiang = $("#soundBox").soundBox({
+        bgDir: '/static/fl/music/kaijiang',
+        swfDir: '/static/fl/source/soundBox.swf',
+        swfId: 'boardcastBox',
+        bgType: ['mp3'],
+        audioId: "chatAudio"
+    });
+    /*封单声音*/
+    var fengdan = $("#soundBox1").soundBox({
+        bgDir: '/static/fl/music/fengdan',
+        swfDir: '/static/fl/source/soundBox.swf',
+        swfId: 'boardcastBox1',
+        bgType: ['mp3'],
+        audioId: "chatAudio1"
+    });
+    /*一分钟提醒*/
+    var minute1 = $("#soundBox2").soundBox({
+        bgDir: '/static/fl/music/minute',
+        swfDir: '/static/fl/source/soundBox.swf',
+        swfId: 'boardcastBox2',
+        bgType: ['mp3'],
+        audioId: "chatAudio2"
+    });
+    /*倒计时动画开始 =============================================== */
+    //倒计时配置信息
+    var djs = {
+        autoArr: [], //存放定时器
+        autoTime: 1000, //滚动间隔时间
+        stopTime: 1000, //逐个停止时间间隔
+        dataArr: [], //最终显示数目
+        dataStr: "",
+        dataHtml: "",
+        boolean: false, //倒计时开关,默认为关
+        keep: 0, //开奖后动画持续多少秒
+        fltr: false, //从左往右开奖
+        node: ".num_open ul li"
+    };
+    //添加span到对应的li
+    function autoMath(node, num) {
+        var h = joinHtml(num);
+        $(node).empty();
+        if (num) {
+            $(h).appendTo($(node)).show();
+            $(node).fadeIn();
+            //kaijiang._mPlay();
+        } else {
+            $(h).appendTo($(node)).fadeIn();
+        }
+    }
+
+    //动画开始
+    function animateStart() {
+        if (djs.boolean == false) {
+            $(djs.node).empty();
+            $.each($(djs.node), function (i, v) {
+                $(v).empty();
+                /*if(document.all){
+                 djs.autoArr[i] = window.setInterval(autoMath,djs.autoTime,v,djs.dataArr[i]);
+                 }else{*/
+                //动画
+                autoMath(v, djs.dataArr[i]);
+                //}
+            });
+            djs.boolean = true;
+        }
+    }
+    //animateStart();
+
+    //拼接span标签
+    function joinHtml(num) {
+        if (num) {
+            return '<span style="display:none;">' + num + '</span>';
+        } else {
+            var ra = Math.floor(Math.random() * 10);
+            //return '<span class="rotate">' + ra + '</span>'; //chrome css3动画
+            return '<span style="display:none;" class="rotate1">' + ra + '</span>';
+        }
+    }
+
+    //动画结束
+    function animateStop() {
+        var len = $(djs.node).length;
+        var arr = djs.dataStr.split("-");
+        $(djs.node).hide();
+        if (djs.boolean) {
+            /*if(document.all){
+             $.each(djs.autoArr,function(i){
+             (function(j){
+             var n = 0;
+             if(djs.fltr){
+             n = j + 1;
+             }else{
+             n = len - j + 1;
+             }
+             window.setTimeout(function(){
+             window.clearInterval(djs.autoArr[j]);
+             $.each($(djs.node),function(k,v){
+             if(k==j){
+             autoMath(v,arr[k]);
+             }
+             })
+             },djs.stopTime*(n));
+             })(i);
+             });
+             }else{*/
+            //chrome css3动画
+            $.each($(djs.node), function (k, v) {
+                var n = 0;
+                if (djs.fltr) {
+                    n = k + 1;
+                } else {
+                    n = len - k + 1;
+                }
+                window.setTimeout(function () {
+                    if (k == 0) {
+                        //kaijiang._mPlay();
+                        autoMath(v, arr[k]);
+                    } else {
+                        autoMath(v, arr[k]);
+                    }
+                }, djs.stopTime * (n));
+            });
+            //}
+            $(".cai_co").prepend(djs.dataHtml);
+            if ($(".cai_co ul").length > 5) {
+                $(".cai_co ul:last").remove();
+            }
+            window.setTimeout(function () { djs.boolean = false; }, djs.stopTime * (len + 1));
+        }
+    }
+    /*倒计时动画结束 =============================================== */
+
+</script>
+
+<div class="lottery_frame">
+			<div class="lott_ssc_icon">
+            	<div>
+				 											 <div class="ssc_icon"></div>
+                    <div class="ssc_type_con">重庆时时彩</div>
+                        				                </div>
+            </div>
+        	<div class="hc_current">
+            	<div class="hccurdiv_1"><span class="periods">第<span id="current_issue"></span>期</span></div>
+                <!--<p class="djq"> <span id="current_issue"></span></p>
+                <p>截止时间：<span id="current_endtime">0000-00-00 00:00:00</span></p>-->
+                <div class="clock"><span id="count_down"></span></div>
+                <div class="hccurdiv_3">投注截止时间</div>
+            </div>
+            <div class="hc_open">
+            	<div class="lo_title">
+                <h2 class="dlh2">
+                	<dl>
+                                                               <dd class="title">重庆时时彩</dd>
+                        
+                                           <!-- <dd><span id="current_issue"></span></dd>-->
+                   <dd>
+                   			<span class="periods periods_2">第<span class="no_old"><strong style="color:#947026;">20150615-107</strong></span>期开奖结果</span>
+                   </dd>
+                </dl>
+                
+                </h2>
+                </div>
+                <div class="num_open">
+                	<ul class="ssc_open">
+                        <li><span class="each"><span id="last_code_num0">★</span></span></li>
+                        <li><span class="each"><span id="last_code_num1">★</span></span></li>
+                        <li><span class="each"><span id="last_code_num2">★</span></span></li>
+                                            <li><span class="each"><span id="last_code_num3">★</span></span></li>
+                        <li><span class="each"><span id="last_code_num4">★</span></span></li>
+                                        </ul>
+                </div>
+                <div class="num_type">
+                	                           
+                           								前三：<span id="last_code_desc1">----</span>&nbsp;&nbsp;后三：<span id="last_code_desc2">----</span>                            							
+                                                <span id="soundCtl" class="soundon" style="display: inline-block"></span>
+                </div>
+            </div>
+            <div class="hc_history">
+            	<div class="hc_history_tit"><span class="date">历史开奖号</span><span class="number"><a onclick="checkClientOpen('/?controller=game&action=bonuscode&lotteryid=1&issuecount=30','',true,false)" href='#' class="lhfx-btn">漏号分析</a></span></div>
+
+            	<div class="cai_co">
+                                    <ul>
+                        <li>20150615-107</li>
+                        <li class="haoma1"><span>5</span><!-- --><span>8</span><!-- --><span>9</span><!-- --><span>1</span><!-- --><span>4</span><!-- --></li>
+                    </ul>
+				                    <ul>
+                        <li>20150615-106</li>
+                        <li class="haoma1"><span>8</span><!-- --><span>8</span><!-- --><span>9</span><!-- --><span>6</span><!-- --><span>9</span><!-- --></li>
+                    </ul>
+				                    <ul>
+                        <li>20150615-105</li>
+                        <li class="haoma1"><span>2</span><!-- --><span>1</span><!-- --><span>6</span><!-- --><span>3</span><!-- --><span>3</span><!-- --></li>
+                    </ul>
+				                    <ul>
+                        <li>20150615-104</li>
+                        <li class="haoma1"><span>2</span><!-- --><span>7</span><!-- --><span>3</span><!-- --><span>9</span><!-- --><span>4</span><!-- --></li>
+                    </ul>
+				                    <ul>
+                        <li>20150615-103</li>
+                        <li class="haoma1"><span>1</span><!-- --><span>8</span><!-- --><span>4</span><!-- --><span>0</span><!-- --><span>8</span><!-- --></li>
+                    </ul>
+				                    <ul>
+                        <li>20150615-102</li>
+                        <li class="haoma1"><span>8</span><!-- --><span>4</span><!-- --><span>1</span><!-- --><span>6</span><!-- --><span>4</span><!-- --></li>
+                    </ul>
+				                </div>
+            </div>
+        </div>
+<script>
+    $("#soundCtl").click(function () {
+        if ($(this).hasClass('soundon')) {
+            $(this).removeClass().addClass('soundoff');
+        } else {
+            $(this).removeClass().addClass('soundon');
+        }
+        kaijiang._soundCtl();
+        fengdan._soundCtl();
+        minute1._soundCtl();
+    });
+</script><script language="javascript" src="/static/js/fl/lottery/methods/1.js?20150427"></script>
+<script language="javascript" src="/static/js/fl/lottery/jquery.youxi.main.js?20150427"></script>
+<script language="javascript" src="/static/js/fl/lottery/jquery.youxi.selectarea.js?20150427"></script>
+<script language="javascript" src="/static/js/fl/lottery/jquery.youxi.trace.js?20150427"></script>
+<div id="subContent_bet" style="width: 860px;margin-left:238px ">
+    <!--投注页面头部可视代码开始-->
+    <div class="bg clearfix">
+        <!--投注页面头部可视代码结束-->
+        <div class="box">
+  <div class="Menubox title clearfix">
+      <ul id="lotteryType" style="float: left;"></ul>
+            <div class="ren" style="padding: 0px"><a href="?show=bet&rxwf=on">任选玩法</a></div>
+        </div>
+<!--  <div class="" style="position:relative;"><div id="wrapshow"><span id="nfdprize"></span></div></div>-->
+    <div class="Contentbox" id="lotteryDetail">
+    <div class="minitype p15" id="lt_samll_label">
+    
+    </div>
+   <div class="minitype">
+        <span>玩法说明：</span><span id="lt_desc" class="help_con"></span>&nbsp;<span id="lt_example" class="help_exp"><i></i>示例</span><div id="lt_example_div" style="display:none;"></div>&nbsp;&nbsp;<span id="lt_help" class="help_help"><i></i>帮助</span><div id="lt_help_div"  style="display:none;"></div>
+    </div>
+   <!-- <label for="smalllabel_0_0" class="com_btn"><span>复式</span></label><label for="smalllabel_0_0" class="com_btn_h"><span>复式</span></label>-->
+	<div class="minitype" id="poschoose"></div>
+     <!--<div id="right_03" class="grayTop">
+		<div class="right_02_05"></div>
+		<div class="right_02_06"></div>
+		</div>-->
+    <!--选号区 -->
+    <div id="lt_selector"></div>
+    <!--选号区结束 -->
+    <!--<div id="right_04" class="grayBottom">
+      <div class="right_02_07"></div>
+      <div class="right_02_08"></div>
+    </div>-->
+    <form method="post" name="buyform" action="">
+      <input type="hidden" name="lotteryid" id="lotteryid" value="1" />
+      <input type="hidden" name="curmid" id="curmid" value="50" />
+	  <input type="hidden" name="poschoose" value="" />
+      <input type="hidden" name="flag" id="flag" value="save" />
+      <input type="hidden" name="play_source" id="play_source" />
+      <div class="clearfix grayBet" style="clear:both;">
+      	<span class="floatR"><input id="lt_sel_insert" type="button" value="添加投注" class="formOk" /></span>
+        <div class="floatL">您选择了 <span class="yellow" id="lt_sel_nums">0</span> 注，共 <span class="red" id="lt_sel_money">0</span> 元　 <label class="com_btn sel_times" value="0"><span>-</span></label> <input id="lt_sel_times" type="text" style="width: 36px" class="num_input"  value="1" border="0"/> <label class="com_btn sel_times" value="1"><span>+</span></label> 倍 
+            <span id="moneyModle">
+           模式
+            <label value="1" class="com_btn"><span>元</span></label>
+         <label  value="2" class="com_btn_h"><span>角</span></label>
+          <label value="3" class="com_btn_h"><span>分</span></label>
+        </span>
+            <div class="" style="position:relative;display: inline-block; *display:inline; margin-left: 8px"><span id="nfdprize"></span></div>
+      </div></div>
+      <div class="lottery_list">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%" height="20"><div class="cleanall"></div></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td width="100%"><div class="whiteDetail">
+                  <table cellspacing="1" cellpadding="0" id="lt_cf_content">
+                  </table>
+                </div></td>
+            <td><!--<div class="layout_jixian" id="lt_random_area"> </div>--></td>
+          </tr>
+		</table>
+      </div>
+      <div class="tjBox clearfix">
+      	<div class="floatR"><a href="#_" class="tjBt" onclick="return(false);" id="lt_sendok">立即投注</a></div>
+        <div class="floatL">
+          <div class="choose">
+                 <span> 已选择 <span id="lt_cf_count" class="yellow">0</span> 单</span>
+                  总注数 <span class="yellow" id="lt_cf_nums">0</span> 注，总金额 <span class="red" id="lt_cf_money">0</span> 元<span style="display:none;">， 起始期：<span id="lt_issues"></span></span>
+          </div>　
+          <div class="zuihao_box" style="*display:inline;">
+              <label><span style="background:none; border:none; display:inline;"><input type="checkbox" name="lt_trace_if" id="lt_trace_if_button"  value="no" />发起追号</span></label>　
+              <label><span style="background:none; border:none; display:inline;"><input name="lt_trace_stop" type="checkbox" value="yes" id="lt_trace_stop" disabled="disabled" />中奖后停止追号</span></label>
+          </div>
+        </div>
+      </div>
+      <!--我要追号-->
+      <div id="lt_trace_box1" class="wyzhContent" style="display:none;">
+          <div id="lt_trace_label"></div>
+        <div class="head clearfix">
+          <div class="headContent">
+            <p>追号期数： <select class="select3" id="lt_trace_qissueno">
+                <option value="">请选择</option>
+                <option value="5">5期</option>
+                <option value="10">10期</option>
+                <option value="15">15期</option>
+                <option value="20">20期</option>
+                <option value="25">25期</option>
+                <option value="all">全部</option>
+              </select> 总期数： <span id="lt_trace_count">0</span> 期   追号总金额： <span id="lt_trace_hmoney">0.00</span> 元
+            <p>
+              <!--<p>追号计划： 起始倍数 <input name="" type="text" value="1" size="3" /> 最低收益率  <input name="" type="text" value="50" size="3" /> % 追号期数: <input name="" type="text" value="10" size="3" /></p>-->
+              <span id="lt_trace_labelhtml"></span> <span class="red" id="lt_trace_alcount" style="display:none;">全部追号期数</span>
+              <input name="" type="button" value="生成" class="formSC" id="lt_trace_ok" />
+          </div>
+        </div>
+        <div class="zhlist"  id="lt_trace_issues"></div>
+      </div>
+      <div  id="sty1-number" class="lottery-number-logs" style="padding:5px 12px;">
+	<div id="lottery-number-logs-title" style="padding:  0 4px">
+		<span>投注记录</span>
+		<a href="javascript:getCurProjects(1);">刷新</a>
+		<div class="clear"></div>
+	</div>
+          <div id="projectloading" style="text-align: center;display: none; height: 100px; vertical-align: middle;"><img style="vertical-align: middle;margin-top: 40px" src="/static/images/loading.gif"/></div>
+          
+            <div id="lottery-number-logs-contents" >
+            
+          </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        //标识客户端投注来源
+        if (getCookie('isclient') == 1) {
+            $("#play_source").val(4);
+        }
+    })
+</script>    </div></div>
+<!-- bet -->
+</div>
+</div>
+</body>
+</html>

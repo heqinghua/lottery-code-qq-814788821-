@@ -1,0 +1,19 @@
+﻿body {
+    font-family:'Microsoft YaHei';
+    font-size:12px;
+}
+
+.loginTitle {background:#ffffff;height:50px;line-height:50px;color:black;font-size:30px;}
+.inputTool {height:30px;line-height:30px;}
+.loginButton {background:#007acc;color:#fff;width:190px;height:30px;border:none;}
+
+.loginText {border:1px solid #c7c7c7;width:200px;height:30px;line-height:30px;}
+.loginText:focus {border:1px solid #3a9ee7;}
+
+.formTable{width:100%;border:0px;table-layout: auto;border-collapse: collapse;margin-top:20px; }
+.formTable tbody td{ text-align:right; background:#FFFFFF;height:35px;line-height:35px; color:#000;border: #ebeced 0px solid;margin:0px;padding:0px;cursor:pointer;}
+.formTable tbody td div {text-align:left;margin-left:5px;}
+
+.formText {height:25px;line-height:25px; width:80%;border:1px solid #E6E6E6;}
+.formTextarea {height:200px;line-height:25px; width:80%;border:1px solid #E6E6E6;}
+.windowbotBar {text-align:center;padding:5px;border-bottom:none;border-left:none;border-right:none;}

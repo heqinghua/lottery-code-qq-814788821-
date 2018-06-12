@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-建设银行充值</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+
+    <ul>
+        <li>
+            <h3>1• 点击“账户充值”选项，选择“中国建设银行”，输入所要充值金额，获取平台工行收款人姓名 ，收款帐号；</h3>
+            <p>
+                客户点击复制时,如果出现不允许访问或者错误时,很有可能是客户的浏览器设置问题（很有可能是火狐浏览器），我们建议客户使用其他浏览器再进行操作 
+            </p>
+        </li>
+        <li>
+            <h3>2• 登陆建设银行网站；<a href="https://ibsbjstar.ccb.com.cn/app/V5/CN/STY1/login.jsp" target="_blank">https://ibsbjstar.ccb.com.cn/app/V5/CN/STY1/login.jsp</a></h3>
+        </li>
+        <li>
+            <h3>3• 登陆后点击“转账汇款”,然后点击“活期转账汇款, 跳转跨行转账页面；</h3>
+            <p>
+                <img src="/Helper/resource/images/8.png" />
+            </p>
+        </li>
+        <li>
+            <h3>4• 填写转账信息页面,填入在平台上获取的【建行】收款人姓名,收款人账号及金额,点击“下一步”；</h3>
+            <p>
+                <img src="/Helper/resource/images/9.png" />
+            </p>
+        </li>
+        <li>
+            <h3>5• 跳转至确认转账信息页面，确认信息无误后点击“确认”按钮；</h3>
+        </li>
+        <li>
+            <h3>6• 确认后需输入建行“网银盾密码”进行支付（为了您的资金安全，请用软键盘进行输入）；</h3>
+            <p>
+                <img src="/Helper/resource/images/10.png" />
+            </p>
+        </li>
+        <li>
+            <h3>7• 支付信息确认后，进入个人中心的充值记录中查看游戏币到账情况。</h3>
+        </li>
+    </ul>
+
+
+
+
+</DIV></DIV>
+</BODY></html>

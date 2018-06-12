@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB9F2980-CA48-4F96-9899-1489B79B3A3B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ytg.Service</RootNamespace>
+    <AssemblyName>Ytg.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Quartz.Net\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\packages\Quartz.Net\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountRoleService.cs" />
+    <Compile Include="ActivityService.cs" />
+    <Compile Include="BannerService.cs" />
+    <Compile Include="CommissionsService.cs" />
+    <Compile Include="CompanyBankService.cs" />
+    <Compile Include="CountDataService.cs" />
+    <Compile Include="DataBaseBakService.cs" />
+    <Compile Include="DnsService.cs" />
+    <Compile Include="LargeRotaryService.cs" />
+    <Compile Include="LiBaoEntityService.cs" />
+    <Compile Include="LockIpInfoService.cs" />
+    <Compile Include="Logic\LogHelper.cs" />
+    <Compile Include="Logic\RebateHelper.cs" />
+    <Compile Include="Logic\SysSettingHelper.cs" />
+    <Compile Include="Lott\BaseDataCatch.cs" />
+    <Compile Include="Lott\BuyTogetherService.cs" />
+    <Compile Include="Lott\GroupNameTypeService.cs" />
+    <Compile Include="Lott\HotLotteryService.cs" />
+    <Compile Include="Lott\PlayTypeRadiosBonusService.cs" />
+    <Compile Include="Lott\PlayTypeRadiosBonusServiceCatch.cs" />
+    <Compile Include="Lott\PlayTypeRadioServiceCatch.cs" />
+    <Compile Include="Lott\SysCatchNumIssueService.cs" />
+    <Compile Include="Lott\SysCatchNumService.cs" />
+    <Compile Include="MarketService.cs" />
+    <Compile Include="MentionQueusService.cs" />
+    <Compile Include="MessageService.cs" />
+    <Compile Include="NewsService.cs" />
+    <Compile Include="PermissionService.cs" />
+    <Compile Include="RankingsService.cs" />
+    <Compile Include="RecordTempService.cs" />
+    <Compile Include="RolePermissionService.cs" />
+    <Compile Include="RoleService.cs" />
+    <Compile Include="SendHisterService.cs" />
+    <Compile Include="SignService.cs" />
+    <Compile Include="SysAccountLogsService.cs" />
+    <Compile Include="SysAccountService.cs" />
+    <Compile Include="SysLogService.cs" />
+    <Compile Include="SysMenuService.cs" />
+    <Compile Include="SysMessagesService.cs" />
+    <Compile Include="SysOperateService.cs" />
+    <Compile Include="SysOperationLogService.cs" />
+    <Compile Include="SysQuotaDetailService.cs" />
+    <Compile Include="SysQuotaService.cs" />
+    <Compile Include="SysRoleService.cs" />
+    <Compile Include="SysSettingService.cs" />
+    <Compile Include="SysUserBankService.cs" />
+    <Compile Include="SysUserSessionService.cs" />
+    <Compile Include="VipMentionApplyService.cs" />
+    <Compile Include="YtgCache\DictionaryCache.cs" />
+    <Compile Include="CrudService.cs" />
+    <Compile Include="Data\GeneralService.cs" />
+    <Compile Include="EnbService.cs" />
+    <Compile Include="FormAuthService.cs" />
+    <Compile Include="Lott\BetDetailService.cs" />
+    <Compile Include="Lott\LotteryCycleService.cs" />
+    <Compile Include="Lott\LotteryIssueService.cs" />
+    <Compile Include="Lott\LotteryService.cs" />
+    <Compile Include="Lott\LotteryTypeService.cs" />
+    <Compile Include="Lott\PlayNumTypeService.cs" />
+    <Compile Include="Lott\PlayTypeRadioService.cs" />
+    <Compile Include="Lott\PlayTypeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryService.cs" />
+    <Compile Include="SysBankPoundageService.cs" />
+    <Compile Include="SysBankTransferService.cs" />
+    <Compile Include="SysBankTypeService.cs" />
+    <Compile Include="SysDictionaryService.cs" />
+    <Compile Include="SysNoticeService.cs" />
+    <Compile Include="SysUserBalanceDetailService.cs" />
+    <Compile Include="SysUserBalanceService.cs" />
+    <Compile Include="SysUserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ytg.BasicModel\Ytg.BasicModel.csproj">
+      <Project>{656b3757-5a1a-4012-b1ab-7a27ae031d8e}</Project>
+      <Name>Ytg.BasicModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ytg.Comm\Ytg.Comm.csproj">
+      <Project>{1bd42953-cbab-4abc-a40f-6462ea603a5a}</Project>
+      <Name>Ytg.Comm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ytg.Core\Ytg.Core.csproj">
+      <Project>{182da640-e2e1-4c9e-9ac6-c751527bbf55}</Project>
+      <Name>Ytg.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ytg.Data\Ytg.Data.csproj">
+      <Project>{3b1d2f30-ecb5-4add-be9b-0af09a0c69cd}</Project>
+      <Name>Ytg.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

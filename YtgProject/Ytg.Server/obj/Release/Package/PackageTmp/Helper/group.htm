@@ -1,0 +1,118 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-团队管理</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+
+    <ul>
+        <li id="100043" class="active">
+            <h3>1• 什么叫圈子管理？</h3>
+            <p>
+                圈子管理就是代理团队管理 
+            </p>
+        </li>
+        <li id="100044">
+            <h3>2• 圈子管理的好处有哪些？</h3>
+            <p>
+                单独将代理团队涉及的管理及内容展示在圈子管理中，更加团队管理•查询及处理问题，逻辑更加清晰流畅 
+            </p>
+        </li>
+        <li id="100045">
+            <h3>3• 圈子管理中我的团队有哪些内容？</h3>
+            <p>
+                团队余额：我的代理团队的余额 
+                <br />
+                我的返点：我在乐诚网所获得的返点 
+                <br />
+                账户余额：我的账户余额 
+                <br />
+                奖金限额：我在同一游戏、同一玩法、同一奖期中购买相同号码的最大可中奖金额度 
+                <br />
+                代理团队：我的下级及下级相关游戏数据 
+                <br />
+                用户名查询：直接查找我的指定下级 
+            </p>
+        </li>
+        <li id="100046">
+            <h3>4• 如何增加用户？</h3>
+            <p>
+                1.增加用户： 点击进入 用户管理=>增加用户页面，选择需要新增用户的“用户级别”，输入“登陆账号”、“登陆密码”、“用户昵称”点击“确认注册按钮”;<br />
+                2.推广设定： 点击进入 用户管理=>推广设定，设定好自身保留的返点，然后复制“您的推广注册地址”发送给用户，用户填写账号、昵称后即注册成功
+            </p>
+        </li>
+    </ul>
+
+
+
+
+</DIV></DIV>
+</BODY></html>

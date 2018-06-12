@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <title>域名验证</title>
+    <link rel="stylesheet" type="text/css" href="/Content/Css/style.css" />
+     <link rel="stylesheet" type="text/css" href="/Content/Css/feile/main.css" />
+    <script src="Content/Scripts/jquery-1.7.min.js" type="text/javascript"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if lte IE 6]><script src="Content/Scripts/json2.js"></script><![endif]-->
+    <!--[if lte IE 7]><script src="Content/Scripts/json2.js"></script><![endif]-->
+    <!--[if IE 8]><script src="/Content/Scripts/json2.js"></script><![endif]-->
+    <link href="/Css/login_comm.css" rel="stylesheet" />
+    <link href="/Content/Scripts/Dialog/dialogUI.css" rel="stylesheet" />
+    <script src="/Content/Scripts/Dialog/jquery.dialogUI.js" type="text/javascript"></script>
+</head>
+<body style="background:#bd8f35 url('http://cfapu.img48.wal8.com/img48/545266_20160510012323/146281532821.jpg');">
+    <div id="login_conn"  style="height:470px;margin-top:100px;">
+    <div class="minghao"><img src="/Content/Images/baofa.png" alt="乐诚网"/></div>
+    <div class="con condiv" >        
+        <div class="left">
+            <div class="banner-area" style="margin-top:45px; margin-left:38px;">
+                <script type="text/javascript" src="Content/Banner/BannerHtml.js"></script>    
+            </div>
+        </div>
+        <div class="right" >
+            <h1>域名验证</h1>
+            <div id="J-errorBox" class="sl-error sl-error-display"><img src="/Content/Images/error.png" /><span class="sl-error-text">dds</span></div>
+            <div id="loginfst" >
+                <p>域名</p>
+            <ul>
+                <li><input id="username" name="username" class="user" type="text" value="http://" placeholder="请输入需验证的域名" /></li>
+                <li><p>验证码</p><table style="padding:0px;margin-left:-2px;">
+                        <tr>
+                            <td style="padding:0px;margin:0px;"><input id="code" name="code" type="text" placeholder="请输入验证码" class="paw code" /></td>
+                            <td style="padding:0px;margin:0px;"> <img  width="78" id="codeImg" style="cursor: pointer;height:34px;" /></td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            <p ><input type="button" class="btn" id="nextbtn" value="验 证" /></p>
+           
+           </div>
+           
+        </div>
+        
+         <div style="clear: both;"></div>
+    </div>
+   </div>
+   
+  <div id="footer" class="foot_s" style="position:absolute;margin-top:100px;">
+            <div class="ft-shadow"></div>
+            <div class="fs_c clearfix">
+                <div class="col-1" id="footer-col-1">
+                    <p class="p1">运营资质&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 博彩责任</p>
+                </div>
+                <div class="ft-vline"></div>
+            </div>
+        </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var isNexting = false;
+    var isLogining = false;
+    $(function () {
+        changeCode();
+        $("#footer").css("top", ($(document).height() - 140));
+        setCookie("nick_span_updated", "");
+
+    })
+    window.onresize = function () {
+        $("#footer").css("top", ($(document).height() - 140));
+        // $("#login_conn").css("margin-top", (($(window).height() - 500) / 2));
+    }
+    function next() {
+
+        $("#J-errorBox").hide();
+        var account = $("#username").val();
+        var code = $("#code").val();
+        if (account == "" || account.length < 6) {
+            $("#J-errorBox").show();
+            changeCode();
+            $(".sl-error-text").html("域名输入错误");
+            return;
+        }
+        if (code == "" || code.length != 4) {
+            $("#J-errorBox").show();
+            changeCode();
+            $(".sl-error-text").html("验证码输入错误");
+            return;
+        }
+        if (isNexting)
+            return;
+        isNexting = true;
+        $("#nextbtn").val("处理中...");
+        $.ajax({
+            type: 'POST',
+            url: '/Page/Initial.aspx',
+            data: "action=verification&account=" + account + "&code=" + code + "&dt=" + new Date(),
+            success: function (data) {
+                $("#J-errorBox").hide();
+                changeCode();
+                $("#username").val("http://");
+                $("#code").val("");
+                isNexting = false;
+                $("#nextbtn").val("验 证");
+                var jsonData = JSON.parse(data);
+                if (jsonData.Code == 0) {
+                    //获取成功，
+                    $.alert("此域名可放心使用!");
+                } else if (jsonData.Code == 1004) {//
+                    $("#code").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("验证码输入错误");
+                } else {//不存在
+                    //$("#username").select();
+                    //$("#J-errorBox").show();
+                    $.alert("请注意，此域名不是本平台使用域名！");
+                }
+            }
+        });
+    }
+
+    function changeCode() {
+        $("#codeImg").attr("src", "/CheckImage.aspx?tp=dns&dt=" + new Date());
+    }
+
+    $(document).ready(function () {
+        $("#nextbtn").click(function () {
+            next();
+        });
+        window.onkeydown = function (key) {
+            if (key.keyCode == 13) {
+                if ($("#loginfst").css("display") == "block")
+                    next();
+                else
+                    login();
+            }
+        }
+        $("#codeImg").click(function () {
+            changeCode();
+        });
+
+        $("#login_btn").click(function () {
+            login();
+        });
+    });
+
+    var setCookie = function (name, value, expire, path) {
+        var curdate = new Date();
+        var cookie = name + "=" + encodeURIComponent(value) + "; ";
+        if (expire != undefined || expire == 0) {
+            if (expire == -1) {
+                expire = 366 * 86400 * 1000;//保存一年
+            } else {
+                expire = parseInt(expire);
+            }
+            curdate.setTime(curdate.getTime() + expire);
+            cookie += "expires=" + curdate.toUTCString() + "; ";
+        }
+        path = path || "/";
+        cookie += "path=" + path;
+        document.cookie = cookie;
+    };
+
+
+</script>

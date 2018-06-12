@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/lotterySite.Master" AutoEventWireup="true" CodeBehind="video.master.cs" Inherits="Ytg.ServerWeb.Views.videoGame.video" %>
+
+<asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
+    <link href="/Content/Css/style.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(function () {
+            $("#video_").addClass("cur");
+            var hg = $(window).height() - 250;
+            $("#mainContent").css("min-height", 780);
+            $('body').css("background", "#262626");
+        })
+    </script>
+    <asp:ContentPlaceHolder ID="usersHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="ContentPlaceHolder1"  runat="server">
+     <div id="mainContent" style="width:1200px; margin-top: 15px;margin:auto; background: transparent;"> 
+                    <div id="contentBox" style="overflow-y:hidden;width: 100%;height: auto;margin-top: 0">
+                        <asp:ContentPlaceHolder ID="ContentUsers" runat="server"></asp:ContentPlaceHolder>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+         <div class="clearfix"></div>
+</asp:Content>

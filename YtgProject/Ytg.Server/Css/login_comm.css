@@ -1,0 +1,73 @@
+﻿ body {margin: 0px;padding: 30px 0 0 0;font-family:'Microsoft YaHei', Arial, Helvetica, sans-serif;font-size: 14px;}
+     .condiv {background:#fff;border-radius:5px; /*-webkit-box-shadow:0px 5px 25px 5px #162669; -moz-box-shadow:0px 5px 25px 5px #162669;box-shadow:0px 5px 25px 5px #162669;*/}
+        .condiv .banner {margin-left:10px;margin-top:33px;}
+        .minghao {width:960px;margin:auto;margin-bottom:10px;}
+        .minghao .img {}
+        ul, li {list-style: none;}
+        p, ul, li, h1 {margin: 0;padding: 0;}
+        a {color: #03c;text-decoration: none;}
+        a:hover {text-decoration: underline;}
+        .con {width: 960px;margin: 0 auto;}
+        .left {float: left;width: 575px;height: 400px;text-align:center;background:url('/Content/Images/line.png') no-repeat;background-position:right;background-position-x:right;}
+        .left p span {font-size: 28px;}
+        .right {padding-left: 80px;float: left;width: 300px;}
+        .right h1 {padding-top:20px;padding-bottom:10px;font-weight:500;color:#666;font-size:22px;}
+        .right li {margin-bottom: 10px;color:#c1c4c5;}
+        .right li input {width: 220px;height: 32px;border: 1px solid #bababa;line-height: 32px;padding-left: 25px;color: #666;background: url('/Content/Images/icon.jpg') no-repeat;border-radius:5px; }
+        .right li input.user {background-position: 7px 10px;}
+        .right li input.code {width:140px;}
+        .right li input.user:focus {background-position: 7px -15px;}
+        .right li input.paw {background-position: 7px -40px;}
+        .right li input.paw:focus {background-position: 7px -72px;}
+        .right p {padding-bottom: 10px;display:inline-block;width:100%;color:#c1c4c5;}
+        .right .btn {color: #fff;height: 54px;line-height: 54px;border: none;margin: 30px 0;float: left;width:252px;font-size:16px; background:url('/Content/Images/logincomm.png') no-repeat;}
+        .right .btn:hover {background:url('/Content/Images/logincomm.png') no-repeat 0px -64px;}
+        .right p span {float: left;margin: 30px 0 0px 0px;line-height: 30px;font-size: 12px;}
+        .right h2 {height: 70px;}
+        p .bottom {height: 100px;width: 100%;background-color: #676f78;padding-top: 20px;margin-top: 50px;position: absolute;bottom: 0px;}
+        .bottom p {font-size: 18px;color: #d4d5d6;text-align: right;}
+        .bottom p span {line-height: 30px;font-size: 12px;}
+        .bottom a {margin: 10px 10px 10px 10px;}
+    .sl-error-display {display:none;height: auto; opacity: 1;line-height: 26px;background: #FDEEE9;border: 1px solid #fadcd3;width:281px;position:absolute;}
+    .sl-error-display img {position:absolute;padding-top:2px;padding-left:2px;}
+    .sl-error-display .sl-error-text {display: block;padding-left: 25px;line-height: 20px;color:#cd0228; }
+       /*@media screen and (min-width: 1600px) {
+          .right li input {width: 320px;height: 32px;border: 1px solid #bababa;line-height: 32px;padding-left: 25px;color: #666;background: url('/Content/Images/icon.jpg') no-repeat;}
+          .right li input.code {width:241px;}
+
+      }*/
+        a {color:#000;}
+        a:hover {text-decoration:underline;}
+    #why {color:red;}
+.backSpan {padding-right:120px;color:red;float:right;}
+
+
+#login_header{ height:68px; background:#37354d;position:fixed;top:0px;left:0px;right:0px;}
+.login_header_in{ width:1100px; margin:0 auto; height:60px; padding-top:8px;}
+.login_header_in .logo_f{ float:left;}
+.header_right{ float:right;}
+.header_right a{ display:block; height:50px; margin-right:30px; float:left; line-height:50px; background: url(/images/login/ico01.jpg) no-repeat left center; padding-left:30px;color:#fff; }
+.header_right .a00{ background-image:url(/Css/new/test_int.png);}
+.header_right .a01{ background-image:url(/Css/new/ico01.png);}
+.header_right .a02{ background-image:url(/Css/new/ico02.png);}
+.header_right .a03{ background-image:url(/Css/new/ico03.png);}
+.equipment_sub {
+    display: none;
+    position: absolute;
+    z-index: 8;
+    top: 49px;
+    width: 240px;
+    height: 170px;
+    background: #ebebeb;
+    right: 0px;
+}
+.equipment_sub_l {
+    width: 110px;
+    float: left;
+    padding: 10px 5px 0;
+}
+.equipment_sub_l {
+    width: 110px;
+    float: left;
+    padding: 10px 5px 0;
+}

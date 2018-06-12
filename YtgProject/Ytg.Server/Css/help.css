@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+/*公共样式开始*/
+html, body { margin: 0px; padding: 0px; text-align: center; font-family: Verdana, Arial; font-size: 12px; color: #333333; width: 100%;background-color:#d4d4d4; }
+textarea {resize: none;}
+a, a:link, a:visited, a:active {hide-focus: expression(this.hideFocus=true); outline: none; cursor:pointer; }
+img { border: 0px;vertical-align: middle;}
+li {hide-focus: expression(this.hideFocus=true); outline: none; list-style-type: none; text-align: left; line-height: 25px;margin: 5px; }
+form { margin: 0px; }
+.clear,.c { margin: 0px; padding: 0px; clear: both; height: 0px; width: 0px; font-size: 0px; line-height: 0px; }
+h1, h2, h3, h4, h5, p, ul, li { margin: 0px; padding: 0px; }
+.unit { position:relative; padding-top:32px; z-index:1;_zoom:1; }
+.unit_title { position: absolute; background:url(/images/game_bg.gif) repeat-x left -326px; height:32px;height:32px; line-height:32px; font-weight:bold; font-size:14px; width:781px; top:0; overflow:visible; }
+.ut_l, .ut_r { background:url(/images/game_bg.gif) repeat-x left -294px; float:left; height:32px; width:3px;}
+.ut_r { float:right; background-position:right -294px;}
+#rightcon { padding: 5px;overflow-x: hidden; overflow-y: auto; text-align: left; scrollbar-face-color: #E6F5FF; scrollbar-highlight-color: #ffffff; scrollbar-shadow-color: #B0D4ED; scrollbar-3dlight-color: #B0D4ED; scrollbar-arrow-color: #4B6888; scrollbar-track-color: #fdfdfd; scrollbar-darkshadow-color: #ffffff; background-color:#d4d4d4; *position:relative;_zoom:1; }
+.rc_con { margin-bottom: 10px; position:relative;_zoom:1; }
+.rc_con_lt, .rc_con_rt, .rc_con_lb, .rc_con_rb { position:absolute; background:url(/images/bg.gif) no-repeat; width:7px; height:7px; _line-height:0; _font-size:0;}
+.rc_con_lt { background-position:0 0; left:0; top:0;}
+.rc_con_rt { background-position:-7px top; right:0; top:0;}
+.rc_con_lb { background-position:left -7px; left:0; bottom:0;}
+.rc_con_rb { background-position:-7px -7px; right:0; bottom:0;}
+.rc_con h5 { background:url(/images/bg.gif) repeat-x left -51px; height: 44px;border-left:1px solid #fff;border-right:1px solid #fff; }
+.rc_con h5 .rc_con_title, .help_con .rc_con_title { background:url(/images/bg.gif) no-repeat 15px -138px; height: 44px; border-left:1px solid #ccc;border-right:1px solid #ccc;}
+.game_rc { width:795px; margin:0 auto;}
+.gm_con { margin-bottom: 10px; position:relative;_zoom:1; }
+.gm_con_lt, .gm_con_rt, .gm_con_lb, .gm_con_rb { position:absolute; background: url(/images/game_bg.gif) no-repeat left top; width:4px; height:4px; _line-height:0; _font-size:0;}
+.gm_con_lt { left:0; top:0;}
+.gm_con_rt { background-position:-4px top; right:0;_right:-1px; top:0;}
+.gm_con_lb { background-position:left -4px; left:0; bottom:0; _bottom:-1px;}
+.gm_con_rb { background-position:-4px -4px; right:0;_right:-1px; bottom:0; _bottom:-1px;}
+.gm_con_to { border:1px solid #fff; background-color:#eaeaea; padding:4px 6px; _padding:4px 6px 0 6px;}
+/* help  */
+.help_con .rc_con_title { background-position: 8px -200px; border:none; height:28px; }
+.help_con .tz_body { margin-left:35px;}
+.help_con .unit { padding-top:33px;}
+.help_con .unit_title { background: url(/images/help_bg2.gif) repeat-x left -117px; width:80%; height:33px; line-height:29px; font-weight:bold; font-size:12px;}
+.help_con .ut_l, .help_con .ut_r { background:url(/images/help_bg2.gif) repeat-x left -77px; height:33px;}
+.help_con .ut_r { float:right; background-position:right -157px;}
+.help_con .u_tab_div { }
+.help_con .u_tab_no { background: url(/images/help_bg2.gif) no-repeat right -195px; padding: 3px 10px 0 8px; }
+.help_con .u_tab_hover { background:url(/images/help_bg2.gif) no-repeat right -40px; height:33px; margin:0 0 0 -3px;}
+.help_con .u_tab_hover a { background:url(/images/help_bg2.gif) no-repeat left top; height:33px; padding: 0 10px 0 10px; _float:left; }
+.help_con #tabCon {border-top:none;border-right:1px solid #ddd;border-bottom:1px solid #ddd; border-left:1px solid #ddd; position:relative; z-index:-2;_zoom:1;}
+.help_con #tabCon .tabcon_n { border:none; background-color:#fff; padding:2px 8px; min-height:300px;_height:300px;}
+.help_menu { position: absolute; left:-4px; top:34px;}
+.help_menu a { display:block; font-size:14px; line-height:15px; width:39px; padding: 8px 0 0 0; background:url(/images/help_bg.gif) no-repeat -50px top; margin-bottom:3px; color:#333; text-decoration:none;}
+.help_menu a strong, .help_menu a span { display:block; width:20px; padding:0 12px 13px 7px; background:url(/images/help_bg.gif) no-repeat -50px bottom; }
+.help_menu a span { font-size:12px; line-height:13px;}
+.help_menu a:hover { background-position: -100px top; color:#fff;}
+.help_menu a:hover strong, .help_menu a:hover span  { background-position: -100px bottom;}
+.help_con .help_menu a.act, .betting_input .help_menu a.act { background-position: left top; color:#fff;}
+.help_con .help_menu a.act strong, .betting_input .help_menu a.act span { background-position: left bottom;}
+.tz_body { padding-bottom:3px;}
+.unit { position:relative; padding-top:32px; z-index:1;_zoom:1; }
+.unit_title { position: absolute; background:url(/images/game_bg.gif) repeat-x left -326px; height:32px;height:32px; line-height:32px; font-weight:bold; font-size:14px; width:781px; top:0; overflow:visible; }
+.ut_l, .ut_r { background:url(/images/game_bg.gif) repeat-x left -294px; float:left; height:32px; width:3px;}
+.ut_r { float:right; background-position:right -294px;}
+.u_tab_no, .u_tab_no2 { float:left; background: url(/images/game_bg.gif) no-repeat right -425px; text-align:center; display: block; padding:3px 15px 0 15px; }
+.u_tab_no a, .u_tab_no2 a { color:#333; text-decoration:none; _float:left;}
+.u_tab_hover, .u_tab_hover2 { float:left; background:url(/images/game_bg.gif) no-repeat right -390px; text-align:center; display: block; height:34px; margin:0 0 0 -3px; }
+.u_tab_hover a, .u_tab_hover2 a { display:block; background:url(/images/game_bg.gif) no-repeat left -390px; height:34px; padding:0 15px; color:#fff; text-decoration:none; _float:left;}
+.news_list li{margin-top: 5px;}
+.news_list p{line-height: 25px;margin: 5px;padding-left: 5px;}
+.news_list p.arrow{background:url(/images/arrow.gif) no-repeat left 12px;padding-left: 13px;}
+.news_list li ul{line-height: 30px;margin: 5px;font-weight:bold;background:url(/images/arrow.gif) no-repeat left 12px;padding-left: 13px;}
+.news_list li ul li{list-style-type:decimal;list-style-position:inside;font-weight:normal;}
+.news_list li ul p{font-weight:normal;}
+.news_list li table{background: #CCC;}
+.news_list li table tr{background: #FFF;}
+.news_list li table .title{color: #F00;font-size: 14px;font-weight:bold;padding: 10px;}
+.news_list li th{text-align: center;font-weight:bold;line-height: 25px;height: 25px;padding: 5px 20px;}
+.news_list li td{padding: 5px 20px;text-align: left;}
+/*底部样式开始*/
+#copyright { background:url(/images/footer_bg.gif) no-repeat center center; text-align: center; height:27px; margin-bottom:15px; }
+#copyright p { line-height: 25px; color: #e6e6e6; }
+/* win_bot*/
+.win_bot { position:fixed; right:0; bottom:0; background:url(/images/ts.gif) no-repeat left -120px; width:218px; height:124px; z-index:999; text-align:left;}
+.win_bot h5 { display:block; float:left; font-weight:normal; color:#fff; height: 16px;line-height: 16px;overflow: hidden;padding: 6px 0 8px 20px;width: 140px;}
+.wb_close { float:right; background:url(/images/ts.gif) no-repeat right -120px; width:14px; height:14px; cursor:pointer; margin:8px;_margin: 8px 4px 0 0;}
+.wb_con { padding:0 0 0 10px; margin:0 3px 3px 0; height:70px; overflow-x:hidden; overflow-y:scroll;}
+.wb_con p { text-indent:20px;}
+a.wb_p, a.wb_n { display:block; float:left; color:#333; text-decoration:none; margin:1px 10px 0 13px; _margin:4px 4px 0 6px; width:40px; text-align:center; height:16px;}
+a.wb_p{ padding-left:12px;}
+a.wb_n{ padding-right:12px; float:right;}

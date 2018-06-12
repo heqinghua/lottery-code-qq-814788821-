@@ -1,0 +1,25 @@
+2016-03-30 14:19:54,086 [1] DEBUG WebSocketServer-49205706 - Listener (127.0.0.1:4534) was started
+2016-03-30 14:20:02,579 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:20:02,580 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:20:57,665 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:20:57,665 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:21:22,546 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:21:22,546 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:21:53,235 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:21:53,236 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:22:17,803 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:22:17,803 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:23:10,179 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:23:10,180 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:29:26,184 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:29:26,184 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:30:01,944 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:30:01,944 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:30:25,952 [9] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:30:25,952 [9] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:30:54,753 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:30:54,753 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:31:22,076 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:31:22,076 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426
+2016-03-30 14:31:33,977 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5426
+2016-03-30 14:31:33,977 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5426

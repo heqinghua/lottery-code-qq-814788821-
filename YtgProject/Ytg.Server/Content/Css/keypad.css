@@ -1,0 +1,134 @@
+﻿/* Main style sheet for jQuery Keypad v1.1.0 */
+button.keypad-trigger {
+	width: 25px;
+	padding: 0px;
+}
+
+img.keypad-trigger {
+vertical-align: middle;
+float: left;
+display: inline;
+margin: 0 0 0 2px;
+cursor: pointer;
+}
+#user span label img.keypad-trigger { position:absolute; top:6px; right:25px;}
+
+div.input_bg img.keypad-trigger {
+vertical-align: middle;
+height: 26px;
+width: 32px;
+position: absolute;
+z-index: 1;
+left:318px;
+margin-top: 5px;
+cursor:pointer;	
+}
+
+input.password { display:inline; float:left; }
+#keypad-div {
+	display: none;
+	z-index: 500;
+	margin-top:2px;
+	margin-left: 130px;    
+	padding:5px;
+    /*background: #e6c599;*/
+    background: #ccc;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14px;
+
+}
+.keypad-keyentry {
+	width: 0px;
+	z-index: -10;
+}
+.keypad-inline {
+	position: relative;
+	top: -1.5em;
+	border: 1px solid #888;
+	background-color: #f4f4f4;
+}
+.keypad-disabled {
+	position: absolute;
+	z-index: 100;
+	background-color: white;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.keypad-rtl {
+	direction: rtl;
+}
+.keypad-prompt {
+	clear: both;
+	width: 100%;
+	text-align: center;
+}
+.keypad-row {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+.keypad-space {
+	float: left;
+	margin: 2px;
+	width: 8px;
+}
+.keypad-half-space {
+	float: left;
+	margin: 1px;
+	width: 6px;
+}
+.keypad-key, .keypad-key-down, .keypad-key-over {
+	float: left;
+	margin: 1px;
+	padding: 0px;
+	width: 24px;
+	height:27px;
+	background-color: #f4f4f4;
+
+	text-align: center;
+	cursor:default;
+
+	border:0px;
+}
+.keypad-key {
+	background:url("keypad_hover.png");
+	color:#86450f;font-size:16px;
+}
+.keypad-key[disabled] {
+	border: 2px outset;
+}
+.keypad-key-down {
+	background:url("keypad_down.png");
+}
+.keypad-row button{ cursor: pointer;}
+body .keypad-row .keypad-key-over{
+    background:url("keypad_down.png");
+}
+
+.keypad-key-over {
+	background:url("keypad_down38.png"); color:#fff;
+}
+.keypad-clear, .keypad-back, .keypad-close, .keypad-shift {
+	width:74px;
+    font-size:12px;
+	background:url("keypad_normal.png");
+}
+
+.keypad-shift-down {
+	width:74px;
+	background:url("keypad_normal_70.png");
+}
+.keypad-shift-over{
+	background:url("keypad_down.png");
+}
+.keypad-cover {
+	display: none;
+	display/**/: block;
+	position: absolute;
+	z-index: -1;
+	filter: mask();
+	top: -4px;
+	left: -4px;
+	width: 125px;
+	height: 200px;
+}

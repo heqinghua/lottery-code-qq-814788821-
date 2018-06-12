@@ -1,0 +1,6 @@
+﻿/*可以在这里添加你自己的css*/
+.ueditor {padding:0 20px;}
+.ueditor p{display:block;line-height:25px;}
+
+.ueditor table{border:1px solid #ccc;display:block;width:100%;}
+.ueditor table td tr{border:1px solid #ccc;border-collapse: collapse;padding:5px;}

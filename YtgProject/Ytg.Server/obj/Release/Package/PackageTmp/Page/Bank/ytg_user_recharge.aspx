@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ytg_user_recharge.aspx.cs" Inherits="Ytg.ServerWeb.Page.Bank.ytg_user_recharge" %>

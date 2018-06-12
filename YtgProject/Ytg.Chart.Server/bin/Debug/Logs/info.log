@@ -1,0 +1,2 @@
+2016-06-13 00:20:23,543 [1] INFO  WebSocketServer-49205706 - The server instance WebSocketServer-49205706 has been started!
+2016-06-13 00:20:23,544 [1] INFO  Ytg.Chart.Comm.Web.YtgWebSocketServer - 启动聊天服务成功！127.0.0.1:4534

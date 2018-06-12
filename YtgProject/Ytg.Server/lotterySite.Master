@@ -1,0 +1,870 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="lotterySite.master.cs" Inherits="Ytg.ServerWeb.lotterySite" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><%=Ytg.ServerWeb.BootStrapper.SiteHelper.GetSiteName() %></title>
+    <%--  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />--%>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/templates/base.css" rel="stylesheet" />
+    <%--  <link href="/Content/images/skin/favicon.ico" rel="shortcut icon" type="images/x-icon" />--%>
+    <link href="/Content/Css/feile/comn.css" rel="stylesheet" />
+    <link href="/Content/Css/feile/keyframes.css" rel="stylesheet" />
+    <link href="/Content/Css/feile/main.css" rel="stylesheet" />
+    <link href="/Content/Css/feile/homepg.css" rel="stylesheet" />
+    <link href="/Content/Css/base.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/Css/layout.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/Css/home.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/Content/Scripts/jquery-1.7.min.js" type="text/javascript"></script>
+    <!--[if lte IE 6]><script src="/Content/Scripts/json2.js"></script><![endif]-->
+    <!--[if lte IE 7]><script src="/Content/Scripts/json2.js"></script><![endif]-->
+    <!--[if IE 8]><script src="/Content/Scripts/json2.js"></script><![endif]-->
+    <script src="/Content/Scripts/jquery.sortable.js"></script>
+    <script src="/Content/Scripts/config.js" type="text/javascript"></script>
+    <script src="/Content/Scripts/basic.js" type="text/javascript"></script>
+    <script src="/Content/Scripts/common.js" type="text/javascript"></script>
+    <script src="/Content/Scripts/comm.js" type="text/javascript"></script>
+    <!--消息框代码开始-->
+    <script src="/Content/Scripts/dialog-min.js" type="text/javascript"></script>
+    <link href="/Content/Css/ui-dialog.css" rel="stylesheet" />
+    <script src="/Content/Scripts/dialog-plus-min.js" type="text/javascript"></script>
+    <!--头部结束-->
+    <link href="/Content/Scripts/Dialog/dialogUI.css" rel="stylesheet" type="text/css" />
+    <script src="/Content/Scripts/Dialog/jquery.dialogUI.js" type="text/javascript"></script>
+    <script src="/Content/Scripts/Dialog/jquery.dragdrop.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        Ytg = $.extend(Ytg, {
+            SITENAME: "<%=Ytg.ServerWeb.BootStrapper.SiteHelper.GetSiteName() %>",
+            SITEURL: window.location.host,
+            RESOURCEURL: "/Content",
+            BASEURL: "/",
+            SERVICEURL: "",
+            NOTEFREQUENCY: 10000
+        });
+        // Ytg.namespace("Ytg.Lottery.user");
+        Ytg.common.user.info = {
+            user_id: '<%=CookUserInfo.Id%>',
+            username: '<%=CookUserInfo.Code%>',
+            nickname: '<%=CookUserInfo.NikeName%>'
+        };
+
+        function logout() {
+            //
+            if (confirm("确定要退出吗？")) {
+                $.ajax({
+                    url: "/Page/Initial.aspx",
+                    type: 'post',
+                    data: "action=logout",
+                    success: function (data) {
+                        var jsonData = JSON.parse(data);
+                        //清除
+                        if (jsonData.Code == 0) {
+                            window.location = "/login.html";
+                        }
+                    }
+                });
+            }
+
+        }
+        function activi(url) {
+            window.location.href = url;
+        }
+
+        function updateNickName() {
+            if ($("#id_nickName").val() == "" && $("#id_nickName").val() == $("#id_nickName").val()) {
+                $("#nick_span").show();
+                $("#id_nickName").hide();
+                return;
+            }
+
+            // 修改昵称
+            $.ajax({
+                url: "/Page/Users.aspx",
+                type: 'post',
+                data: "action=updatenickname&nickName=" + $("#id_nickName").val(),
+                success: function (data) {
+                    $("#id_nickName").hide();
+                    $("#nick_span").show();
+                    var jsonData = JSON.parse(data);
+                    //清除
+                    if (jsonData.Code == 0) {
+                        $("#nick_span").html($("#id_nickName").val());
+                        setCookie("nick_span_updated", encodeURI($("#id_nickName").val()));
+                    } else if (jsonData.Code == 1009) {
+                        alert("由于您长时间未操作,为确保安全,请重新登录！"); window.location = "/login.html";
+                    }
+                }
+            });
+        }
+        $(function () {
+            //判断是否为客户端登录
+            if (getCookie("clien_cookie") == "client") {
+                //隐藏客户端下载
+                $(".khd_download").hide();
+            }
+            if (getCookie("nick_span_updated") != null && getCookie("nick_span_updated") != "") {
+                var up = decodeURI(getCookie("nick_span_updated"));
+                $("#nick_span").html(up);
+                $("#id_nickName").val(up)
+            }
+            $("#nick_span").click(function () {
+                $("#nick_span").css("display", "none");
+                $("#id_nickName").show();
+                $("#id_nickName").focus();
+            });
+            $("#id_nickName").focusout(function () {
+                if ($("#nick_span").css("display") == "none") {
+                    updateNickName();
+                }
+            });
+
+            $.ajax({
+                url: "/Page/Initial.aspx?action=alertnews",
+                type: 'post',
+                data: "" ,
+                success: function (data) {
+                    //console.info(data);
+                    var jsonData = JSON.parse(data);
+                    if (jsonData.Code == 0 && jsonData.Data != null) {
+                        
+                        var showdata = jsonData.Data;
+                        console.info(getCookie("alert_news_show"));
+                        if (getCookie("alert_news_show") == showdata.Id) {
+                            return;
+                        }
+                        showNewDetails(showdata.Title, showdata.Id);
+                        setCookie("alert_news_show", showdata.Id);
+                    }
+                    
+                }
+            });
+        });
+        function closeDialog() {
+            $.dialog({ id: 'open_news' }).close();
+        }
+        function showNewDetails(title, id) {
+            $.dialog({
+                id: 'open_news',
+                fixed: true,
+                lock: true,
+                max: false,
+                min: false,
+                width: 600,
+                height: 310,
+                title: title,
+                content: 'url:/views/NewsDetails.aspx?id=' + id
+            });
+        }
+        function showDownloadClient() {
+            $.dialog({
+                id: 'show_Download_Client',
+                fixed: false,
+                lock: false,
+                max: false,
+                min: false,
+                width: 610,
+                height: 310,
+                title: "客户端下载",
+                content: 'url:/DownloadClient.aspx?date=' + new Date()
+            });
+        }
+
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <div id="basediv">
+        <style>
+            body {
+                /*background: #fff url("/Content/images/skin/bg-caizhong.jpg") no-repeat center top;*/
+            }
+
+            .bottom p {
+                font-size: 18px;
+                color: #d4d5d6;
+                text-align: right;
+            }
+
+                .bottom p span {
+                    line-height: 30px;
+                    font-size: 12px;
+                }
+
+            .bottom a {
+                margin: 10px 10px 10px 10px;
+            }
+
+            .acali {
+                background: url('/Content/Images/def/down.png') no-repeat;
+                background-position: center;
+                background-position: 88px 25px;
+                text-align: left;
+                width: 100px;
+            }
+
+            .dwMenu {
+                width: 120px;
+                position: absolute;
+                z-index: 10000;
+                display: none;
+            }
+
+                .dwMenu ul {
+                    position: relative;
+                    padding: 5px;
+                    min-width: 120px;
+                    max-height: 280px;
+                    border: 1px solid #dbdbdb;
+                    background: #fff;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    margin-top: 10px;
+                }
+
+                    .dwMenu ul li {
+                        display: block;
+                        padding: 4px 10px;
+                        line-height: 20px;
+                        font-size: 14px;
+                        color: #666;
+                        white-space: nowrap;
+                        cursor: pointer;
+                    }
+
+                        .dwMenu ul li:hover {
+                            color: #cd0228;
+                            text-decoration: none;
+                        }
+
+            .a_r_row {
+                display: none;
+                position: absolute;
+                left: 15px;
+                width: 21px;
+                height: 11px;
+                text-indent: -9999px;
+                background: url(/Content/Images/Skin/skin_icons.png) -40px -356px no-repeat;
+            }
+
+        </style>
+        <div id="sound" style="position: absolute;"></div>
+        <%--<div id="header">
+           <div class="headlogo" style="margin-left: 20px; margin-top: 43px;">
+                <img style="display: <%=IsMobile %>" src="/Content/Images/baofa.png" alt="乐诚网" />
+            </div>
+            <div id="hd-login" style="display: none;">
+                <div class="hd_notice">
+                    <span>中奖名单：</span>
+                    <ul id="marquee2" class="marquee" direction="up">
+                    </ul>
+                </div>
+            <div class="mw clearfix">
+                    <div class="headzx"><a onclick="logout();" href="#"></a></div>
+                    <div class="zhdiv2" style="float: right;"><a href="javascript:showCustomerServer('<%=CustomerServceUrl %>');" style="color: #fef298;" id="zakfUrl">在线客服</a></div>
+                    <div class="headqk"><a href="/Views/Users/Mention.aspx">取款</a></div>
+                    <div class="headcz"><a href="<%=playStr %>">充值</a></div>
+                   <div id="refMonery" class="yediv2" style="cursor: pointer;" title="点击刷新金额">金额：<span class="balance" id="refff">0.0000</span>&nbsp;&nbsp;&nbsp;&nbsp; </div>
+
+                <div class="zhdiv2">昵称：<span id="nick_span"><%=CookUserInfo.NikeName%></span><input type="text" id="id_nickName" value="<%=CookUserInfo.NikeName%>" maxlength="6" style="display: none;" /></div>
+             
+                </div>
+            </div>--%>
+            <!--导航-->
+            <%--<div id="site-nav" style="display:none;">
+                <div class="example">
+                    <div class="menu">
+                        <span>
+                            <ul id="nav">
+                                <li id="home_"><a href="/default.aspx">平台首页</a></li>
+                                <li id="lottery_li" runat="server"><a href="#" class="posbox" id="lottery_li_a">彩票投注<i></i></a>
+                                    <div class="lottery_meny">
+                                        <div class="wrp2">
+                                            <ul>
+                                                <asp:Repeater ID="rptMenus" runat="server" OnItemDataBound="rptMenus_ItemDataBound">
+                                                    <ItemTemplate>
+                                                        <li>
+                                                            <h3><%#Eval("ShowTitle") %></h3>
+                                                            <ul>
+                                                                <asp:Repeater ID="rptChildren" runat="server">
+                                                                    <ItemTemplate>
+                                                                        <li><a href="/lottery.aspx?LotteryCode=<%# Eval("LotteryCode") %>&Id=<%#Eval("Id") %>&LotteryName=<%# System.Web.HttpUtility.UrlEncode(Eval("LotteryName").ToString())%>&ImageSource=<%# Eval("ImageSource") %>"><%# Eval("LotteryName") %>  </a></li>
+                                                                    </ItemTemplate>
+                                                                </asp:Repeater>
+                                                            </ul>
+                                                        </li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a id="video_" href="/Views/videoGame/index.aspx">真人娱乐</a></li>
+                                <li><a id="users_" href="/Views/Users/UpdatePwd.aspx">个人中心</a></li>
+                                <li id="userManagerLi" runat="server"><a id="usermanager_" href="/Views/UserGroup/UsersList.aspx">用户中心</a></li>
+                                <li><a id="reporest_" href="/Views/Report/AmountChangeList.aspx">游戏报表</a></li>
+                                <li><a id="gameplay_" href="/Views/PalyHis/Betting.aspx">游戏记录</a></li>
+                                <li><a id="payIn" href="<%=playStr %>">充值提现</a></li>
+                                <li><a href="#" class="posbox">平台活动<i></i></a>
+                                    <div class="subs">
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <ul>
+                                                        <li><a href="/Views/Activity/QianDao/QianDao.aspx">签到有礼</a></li>
+                                                        <%-- <li><a href="/Views/Activity/Recharge/recha.aspx">充值大礼包</a></li>
+                                                        <li><a href="/Views/Activity/YongJin/YongJin.aspx">佣金大返利</a></li>
+                                                        <li><a href="/Views/Activity/TouZhu/TouZhu.aspx">投注送礼包</a></li>
+                                                        <li id="zd_gz" runat="server"><a href="/Views/Activity/rgz/RgzPage.aspx">代理日工资</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a id="helper_" href="/Views/Help/Help.aspx">帮助中心</a></li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+            </div>--%>
+            <!--导航-new-->
+             <script type="text/javascript">
+                        //var isautoRefbanner=undefined;
+                        $(function () {
+                            $("#refMonery").click(function () {
+                                Ytg.common.user.refreshBalance();
+                            });
+                            try {
+                                if (isautoRefbanner == undefined || isautoRefbanner == true) {
+                                    Ytg.common.user.refreshBalance();
+
+                                }
+                            } catch (ex) {
+                                Ytg.common.user.refreshBalance();
+                            }
+                        });
+                    </script>
+            <header class="header">
+                <!--会员信息-->
+                <div class="userinfo" id="userInfo">
+                    <div class="inner">
+                        <div class="sec">
+                            <span id="nick_span"><%=CookUserInfo.NikeName%></span>
+                            <%--<span class="icon icon-vipbg">vip0</span>--%><br>
+                            
+                            <span>余额：<span class="balan lostmoney" id="refff">0.00</span>
+                                <a title="刷新余额" id="refMonery" style="color:#fff;">&nbsp;刷新余额</a>
+                            </span>
+                        </div>
+                        <div class="sec2">
+                            <a class="button" href="<%=playStr %>" target="mainframe">充值</a>
+                            <a class="button" href="/Views/Users/Mention.aspx" target="mainframe">提款</a>
+                            <a class="button" href="javascript:logout();">&nbsp;退出</a>
+                        </div>
+                        
+                        <div class="qiandao_box">
+                            <div id="qiandao"><i class="icon icon-qiandao-on"></i>每日签到</div>
+                        </div>
+                    </div>
+                </div>
+                <!--会员信息 end-->
+                <!--导航-->
+                <a class="logo" style="float: left; width: 160px; text-align: center; background: #475ab3" href="/lottery.aspx?LotteryCode=cqssc&Id=1&LotteryName=重庆时时彩&ImageSource="  title="business">
+                    <img style="height: 90px;" src="/content/cklogo.png">
+                </a>
+                <nav class="nav">
+                    <ul class="cfix">
+                        <li class="first menu_li" id="lottery_game" runat="server"><a href="/lottery.aspx?LotteryCode=cqssc&Id=1&LotteryName=重庆时时彩&ImageSource=" ><i class="icon icon-game"></i><p>游戏大厅</p><em></em></a></li>
+                        <li class="first menu_li" id="lottery_group" runat="server"><a href="/Lottery/GroupBy/index.aspx" ><i class="icon icon-qianbi"></i><p>合买大厅</p><em></em></a></li>
+                        <li class="menu_li" id="lottery_chongti"><a href="<%=playStr %>" ><i class="icon icon-account"></i><p>账户充提</p><em></em></a></li>
+                        <li class="menu_li" id="lottery_report"><a href="/Views/Report/AmountChangeList.aspx" ><i class="icon icon-report"></i><p>我的彩票</p><em></em></a></li>
+                        <li class="menu_li" id="lottery_dl" runat="server"><a href="/Views/UserGroup/UsersList.aspx"><i class="icon icon-agent"></i><p>代理管理</p><em></em></a></li>
+                        <li id="lottery_download"><a href="/downloadcenter.html" target="_blank"><i class="icon icon-download"></i><p>下载中心</p><em></em></a></li>
+                        <li id="lottery_helper"><a href="/Views/Help/Help.aspx" ><i class="icon icon-help"></i><p>帮助中心</p><em></em></a></li>
+                        <li id="lottery_customer"><a href="javascript:void(0);"  onclick="javascript:showCustomerServer('');"><i class="icon icon-kefu"></i><p>在线客服</p><em></em></a></li>
+                        <li class="last" id="lottery_activity" style="display:none;"><a href="javascript:void(1);" ><i class="icon icon-qianbi"></i><p>优惠活动</p><em></em></a>
+                            <div class="menu_pop"  id="pop_activity" style="color:#fff;" >
+	                    	<em style="display:block;top:-8px;"></em>
+	                    	<dl>
+	                    		<dd><a href="/Views/Activity/dzp/Dzp.aspx" >幸运大转盘</a></dd>
+	                    		<dd><a href="/Views/Activity/QianDao/QianDao.aspx" >签到有你</a></dd>
+	                    	</dl>
+	                    </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!--导航 end-->
+            </header>
+        <script type="text/javascript">
+            $(function () {
+                $("#lottery_activity").mouseenter(function () {
+                    $("#pop_activity").show();
+                });
+                var activityhide = false;
+                $("#pop_activity").mouseenter(function () {              
+                    activityhide = true;
+                });
+                $("#pop_activity").mouseleave(function (event) {
+                    if (activityhide) {
+                        $("#pop_activity").hide();
+                        activityhide = false;
+                    }
+                });
+            })
+        </script>
+        <style type="text/css">
+            .nav a:hover {color:#fff;}
+        </style>
+        </div>
+        <a href="javascript:void(0);" onclick="showDownloadClient()" class="khd_download" style="display: none;"></a>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <div class="clearfix"></div>
+        </asp:ContentPlaceHolder>
+        <!--页脚-->
+        <div id="footer" class="foot_s" style="display:none;">
+            <div class="ft-shadow"></div>
+            <div class="fs_c clearfix">
+                <div class="col-1" id="footer-col-1">
+                    <p class="p1">运营资质&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 博彩责任</p>
+                </div>
+                <div class="ft-vline"></div>
+            </div>
+        </div>
+        <!--talk_pop_list end-->
+
+    </div>
+    <!--页脚结束-->
+    <style type="text/css">
+        /*body {overflow-x:hidden;}*/
+        .lineUser {
+            color: #667885;
+            font-size: 12px;
+            font-family: "Verdana";
+            font-weight: bold;
+        }
+
+            .lineUser:hover {
+                color: #667885;
+            }
+
+        .tpl_text_sch {
+            width: 125px;
+            height: 21px;
+            line-height: 21px;
+            color: #333;
+            background: #FFF;
+            font-size: 12px;
+            border: none;
+            border: 1px solid #dbb6a2;
+            margin-top: 10px;
+        }
+    </style>
+    <link href="/Css/chartwin.css" rel="stylesheet" />
+    <div class="chart">
+        <div class="title" id="chart_tt" style="height: 32px;"></div>
+        <div style="height: 55px; margin-top: 15px;">
+            <img src="/Content/Images/chart/left/lvdian.png">
+            <a href='javascript:void(0);' class="lineUser" id="lineYserHref">user（已连接）</a><span></span>
+            <input type="text" value="" class="tpl_text_sch" id="filter_lineUser" onkeyup="searChildren(this);" onblur="searChildren(this);" />
+        </div>
+        <div class="contentdiv">
+
+            <div class="leftsidebar_box">
+                <dl id="customer">
+                    <dt>
+                        <img src="/Content/Images/chart/left/poplist_arr_right.png">在线客服<span></span>
+                        <dd>
+                            <img src="/Content/Images/chart/left/lvdian.png"><a href='javascript:showCustomerServer();'>&nbsp;在线客服</a><span></span></dd>
+                    </dt>
+                </dl>
+                <dl id="myparent">
+                    <dt>
+                        <img src="/Content/Images/chart/left/poplist_arr_right.png"><label id="mupardlabel">我的上级</label><span></span></dt>
+                </dl>
+                <dl id="mychildrens">
+                    <dt>
+                        <img src="/Content/Images/chart/left/poplist_arr_right.png">我的下级<span></span></dt>
+                </dl>
+                <dl id="mymsr">
+                    <dt>
+                        <img src="/Content/Images/chart/left/poplist_arr_right.png">陌生人<span></span></dt>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="showchart" style="display: none;">
+        <div class="title">&nbsp;&nbsp;</div>
+        <div class="content">
+            <p class="nickName">
+                <img src="/Content/Images/chart/left/huidian.png" id="line_state" />
+                <span id="showchart_nickname">loading</span>
+            </p>
+            <p id="showchart_noreader_msg">没有未读消息</p>
+        </div>
+    </div>
+    <script src="/Content/Scripts/chart/chart.js"></script>
+    <script src="/Content/Scripts/lhgdialog/lhgdialog.js?skin=chrome"></script>
+    <script type="text/javascript" src="/Content/Scripts/jquery.marquee.js"></script>
+
+    <script type="text/javascript">
+        var isConnection = false;
+        var messageChartCookieKey = "messageKey";//未读消息key
+        var noReadMessageArray = new Array();
+        $(function () {
+            //$('body').click(function () {
+
+            //    $("#nav .selected div div").slideUp(100); // hiding popups
+            //    $("#nav .selected").removeClass("selected");
+            //});
+
+            getNotReadMessage();//加载消息
+            $("#chart_tt").click(function () {
+                $(".chart").hide();
+            });
+
+            $(".leftsidebar_box dd").hide();
+            $(".leftsidebar_box dt").click(function () {
+                if ($(this).find("img").attr("src") == "/Content/Images/chart/left/poplist_arr_right.png") {
+                    //展开
+                    $(this).find("img").attr("src", "/Content/Images/chart/left/poplist_arr_down.png");
+                    $(this).parent().find('dd').show();
+                    $(this).parent().find('dd').addClass("menu_chioce");
+                } else {
+                    $(this).find("img").attr("src", "/Content/Images/chart/left/poplist_arr_right.png");//收起
+
+                    $(this).parent().find('dd').hide();
+                    $(this).parent().find('dd').removeClass("menu_chioce");
+                }
+            });
+
+            $(".showchart").click(function () {
+                if ($("#showchart_noreader_msg").html() == "没有未读消息") {
+                    $(".chart").show();
+                }
+                else {
+                    inintOpentChartParams();
+                }
+                //清空面板
+                $("#showchart_noreader_msg").html("没有未读消息")
+                //
+            });
+
+            //连接服务器
+            isConnection = Ytg.Chart.Connection();
+
+            if (isConnection) {
+                $("#line_state").attr("src", "/Content/Images/chart/left/lvdian.png");
+                $("#lineYserHref").html("&nbsp;" + subCode1(Ytg.common.user.info.username) + "");
+            }
+            $("#showchart_nickname").html(subCode(Ytg.common.user.info.username));
+        })
+        function scrtop() {
+            // 让浮动层距离窗口顶部，始终保持80px
+            var tp = ($(window).height() + $(document).scrollTop()) - 88;
+            $(".showchart").css({ "top": tp });
+            $(".chart").css({ "top": (tp - 452) });
+        }
+        /**打开客服窗口*/
+        function showCustomerServer(url) {
+            $.dialog({
+                id: 'showCustomerServer',
+                fixed: false,
+                lock: false,
+                max: false,
+                min: false,
+                title: "在线客服",
+                content: "url:/customer.html?dt=" + new Date() + "&customerCode=<%=CookUserInfo.Code %>",
+                width: 250,
+                height: 120,
+            });
+            $(document.getElementsByName("showCustomerServer")).css({ "overflow": "hidden" })
+
+        }
+
+        function openChart(id, nickname, islogin) {
+            /**将消息设置为已读*/
+            $("#noread_count_spane_" + id).html("");
+            $("#showchart_noreader_msg").html("没有未读消息")
+            $(".noread").html("");
+            /**存储用户聊天信息*/
+            putOpenLinks(id, nickname);
+            /***/
+            var dialogtitle = nickname; //+ "&nbsp;&nbsp;(" + (islogin == true ? "在线" : "离线") + ")";
+            var lst = $.dialog.list;
+            var meopen = null;
+            for (var ls in lst) {
+                if (ls == "openChartDialog") {
+                    meopen = lst[ls];
+                }
+            }
+            if (meopen == null) {
+                $.dialog({
+                    id: 'openChartDialog',
+                    fixed: false,
+                    lock: false,
+                    max: false,
+                    min: false,
+                    title: "平台聊天",
+                    content: "url:/Views/Chart/index.html?id=" + id + "&nickname=" + nickname + "&me=" + Ytg.common.user.info.nickname,
+                    width: 720
+                });
+            } else {
+                //已打开窗口，直接添加上去
+                var openWindow = meopen.content;
+                openWindow.changeLinks(id);//通知更新联系人
+            }
+        }
+        function closeChart() {
+            // $('.ui_dialog').css("background", "#fff");
+            $.dialog({ id: 'openChartDialog' }).close();
+        }
+
+        function sendmsg(id, msg) {
+            Ytg.Chart.chartSend(id, msg);
+            return true;
+        }
+
+        function chartMsg(chartData) {
+
+            var lst = $.dialog.list;
+            var meopen = null;
+            for (var ls in lst) {
+                if (ls == "openChartDialog") {
+                    meopen = lst[ls];
+                }
+            }
+            var jsonMsg = JSON.parse(chartData);
+            //聊天内容存储cookie
+            putUserMessage(jsonMsg.TUid, jsonMsg.Content, jsonMsg.occDate);
+
+            if (meopen != null) {
+                var openWindow = meopen.content;
+                var loadCount = openWindow.appendTo(jsonMsg.Content);
+
+                if (loadCount > 0)//通知聊天框
+                {
+
+                } else {
+                    updatenoread(); //未打开，读取列表
+                }
+                return;
+            } else {
+                updatenoread(); //未打开，读取列表
+                return;
+            }
+        }
+
+        //修改未读消息列表
+        function updatenoread() {
+
+            var allNoReeadCount = 0;
+            if ($(".leftsidebar_box dd").length > 1) {
+                allNoReeadCount = setLstReadCount();
+            } else {
+                var cooksStr = getCookie("message_content");
+
+                if (cooksStr == undefined || cooksStr == null)
+                    return 0;
+                var noReadCount = 0;
+                var jsonData = JSON.parse(cooksStr);
+                allNoReeadCount = jsonData.length;
+            }
+
+            if (allNoReeadCount > 0)
+                $("#showchart_noreader_msg").html("有<span style='color:red;'>" + allNoReeadCount + "</span>条未读消息")
+            else
+                $("#showchart_noreader_msg").html("没有未读消息")
+        }
+
+        function setLstReadCount() {
+            var allNoReeadCount = 0
+            //alert($(".leftsidebar_box dd").length);
+            $(".leftsidebar_box dd").each(function () {
+                var tuserid = $(this).attr("tag");
+                if (tuserid != undefined) {
+                    var noReadCount = getUserNoReadMsgCount(tuserid);
+                    allNoReeadCount += noReadCount;
+                    if (noReadCount > 0) {
+                        $(this).children().filter("span").html("<span class='noread'>&nbsp;(" + (noReadCount) + ")</span>");
+                    }
+                }
+            });
+            return allNoReeadCount;
+        }
+
+        function getUserNoReadMsgCount(userid) {
+            var cooksStr = getCookie("message_content");
+            if (cooksStr == undefined || cooksStr == null)
+                return 0;
+            var noReadCount = 0;
+            var jsonData = JSON.parse(cooksStr);
+            var len = jsonData.length;
+            for (var i = 0; i < len; i++) {
+                var item = jsonData[i];
+                if (item.user_id == userid) {
+                    noReadCount++; 0
+                }
+            }
+            return noReadCount;
+        }
+
+        function emptynoreadlist(userid) {
+            $(".leftsidebar_box dd").each(function () {
+                var tuserid = $(this).attr("tag");
+                if (tuserid == userid) {
+                    $(this).children().filter("span").html("");
+                }
+            });
+        }
+        function isIE() {
+            if (!!window.ActiveXObject || "ActiveXObject" in window)
+                return true;
+            else
+                return false;
+        }
+
+    </script>
+    <!--中奖提示-->
+    <!--中奖提示-->
+    <div id="pop" style="display: none;">
+        <div id="popHead">
+            <a id="popClose" title="关闭">关闭</a>
+            <h2>系统消息</h2>
+        </div>
+        <div id="popContent">
+            <dl>
+                <dd id="popIntro">内容</dd>
+            </dl>
+            <p id="popMore"></p>
+        </div>
+        <div style="margin-top: -3px">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="text-align: left; cursor: pointer;">&nbsp;&nbsp;<input type="button" class="noneState" id="popPre" value="上一条" /></td>
+                    <td style="text-align: right; cursor: pointer;">
+                        <input type="button" value="下一条" id="popNext" class="noneState" />&nbsp;&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--中奖提示-->
+    <script type="text/javascript">
+
+        //中奖提示框
+        function Pop(url, data) {
+
+            this.index = 0;
+            this.count = data.length;
+            this.url = url;
+            this.dataArray = data;
+            this.apearTime = 1000;
+            this.hideTime = 10000;
+            this.delay = 10000;
+            //添加信息
+            this.addInfo();
+            //显示
+            this.showDiv();
+            //关闭
+            this.closeDiv();
+            this.Pre(this);
+            this.Next(this);
+            if (this.count <= 1)
+                $("#popPre,#popNext").removeClass("noneState");
+            $("#popPre,#popNext").addClass("useState");
+        }
+        Pop.prototype = {
+            addInfo: function () {
+                $("#popIntro").html(this.dataArray[this.index].MessageContent);
+                $("#popMore a").attr('href', this.url);
+                this.index++;
+            },
+            showDiv: function (time) {
+                if (!($.browser.msie && ($.browser.version == "6.0") && !$.support.style)) {
+                    $('#pop').slideDown(this.apearTime).delay(this.delay).fadeOut(this.hideTime);
+                } else {//调用jquery.fixed.js,解决ie6不能用fixed
+                    $('#pop').show();
+                    jQuery(function ($j) {
+                        $j('#pop').positionFixed()
+                    })
+                }
+            },
+            closeDiv: function () {
+                $("#popClose").click(function () {
+                    $('#pop').hide();
+                }
+                );
+            },
+            Pre: function (tag) {
+                $("#popPre").click(function () {
+                    if (tag.index <= 0) {
+                        $("#popPre").removeClass("useState")
+                        $("#popPre").addClass("noneState");
+                        $("#popNext").removeClass("noneState");
+                        $("#popNext").addClass("useState");
+                        return;
+                    }
+                    tag.index--;
+                    $("#popIntro").html(tag.dataArray[tag.index].MessageContent);
+                });
+            },
+            Next: function (tag) {
+                $("#popNext").click(function () {
+                    if (tag.index < tag.count - 1) {
+                        tag.index++;
+                        $("#popIntro").html(tag.dataArray[tag.index].MessageContent);
+                    } else {
+                        $("#popNext").removeClass("useState")
+                        $("#popNext").addClass("noneState");
+                        $("#popPre").removeClass("noneState");
+                        $("#popPre").addClass("useState");
+                    }
+                });
+            }
+        }
+        var pop = null;
+
+        function checkPrizeMsg() {
+
+            $.ajax({
+                type: 'POST',
+                url: '/Page/Messages.aspx?action=noreadwinmsg',
+                data: '',
+                timeout: 10000,
+                success: function (data) {
+                    if (data == "")
+                        return;
+                    var jsonData = JSON.parse(data);
+                    if (jsonData.Code == 0) {
+                        if (jsonData.Data.length > 0) {
+                            parent.Ytg.common.user.refreshBalance();
+                        }
+                        pop = new Pop("#", jsonData.Data);
+                    } else if (jsonData == 1009) {
+                        alert("你的帐号已在别处登陆，你被强迫下线！"); window.location = "/login.html";
+                    }
+
+                },
+                error: function () { }
+            });
+            setTimeout(arguments.callee.bind(this), 10000);
+        }
+        $(function () {
+            setTimeout(checkPrizeMsg, 1000);
+            setfootPostion();
+        });
+        window.onchange = function () {
+            setfootPostion();
+        }
+        function setfootPostion() {
+            var minHeight = $(this).height() - (95 + (110));
+            $(".UserInfoBox,.us,").css("min-height", minHeight);
+        }
+    </script>
+</body>
+</html>

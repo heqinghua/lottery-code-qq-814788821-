@@ -1,0 +1,13 @@
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\bin\Debug\Ytg.Chart.Contomer.exe.config
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\bin\Debug\Ytg.Chart.Contomer.exe
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\bin\Debug\Ytg.Chart.Contomer.pdb
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\Ytg.Chart.Contomer.csprojResolveAssemblyReference.cache
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\MainWindow.baml
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\MainWindow.g.cs
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\App.g.cs
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\Ytg.Chart.Contomer_MarkupCompile.cache
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\Ytg.Chart.Contomer.g.resources
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\Ytg.Chart.Contomer.Properties.Resources.resources
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\Ytg.Chart.Contomer.csproj.GenerateResource.Cache
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\Ytg.Chart.Contomer.exe
+G:\SVN\LotteryPalNEW\trunk\Web\YtgProject\Ytg.Chart.Contomer\obj\Debug\Ytg.Chart.Contomer.pdb

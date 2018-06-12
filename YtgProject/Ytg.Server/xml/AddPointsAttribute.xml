@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--销售额升点配置文件-->
+<Items>
+  <!--3天量升点标准-->
+  <Item Day="3" Title="3天量升点标准">
+    <Children SalesStand="5W" targer="0.6"  SSC="0.6(1948)" Eleven="0.6(1892)" Td="0.6(1912)"></Children>
+    <Children SalesStand="10W" targer="0.5" SSC="0.5(1950)" Eleven="0.5(1893.98)" Td="0.5(1914)"></Children>
+    <Children SalesStand="20W" targer="0.4" SSC="0.4(1952)" Eleven="0.4(1895.96)" Td="0.4(1916)"></Children>
+    <Children SalesStand="35W" targer="0.3" SSC="0.3(1954)" Eleven="0.3(1897.94)" Td="0.3(1918)"></Children>
+    <Children SalesStand="55W" targer="0.2" SSC="0.2(1956)" Eleven="0.2(1899.9)" Td="0.2(1920)"></Children>
+    <Children SalesStand="80W" targer="0.1" SSC="0.1(1958)" Eleven="0.1(1901.88)" Td="0.1(1922)"></Children>
+    <Children SalesStand="120W" targer="0" SSC="0(1960)" Eleven="0(1903.86)" Td="0(1924)"></Children>
+  </Item>
+  <!--7天量升点标准-->
+  <Item Day="7" Title="7天量升点标准">
+    <Children SalesStand="10W" targer="0.6" SSC="0.6(1948)" Eleven="0.6(1892)" Td="0.6(1912)"></Children>
+    <Children SalesStand="20W" targer="0.5" SSC="0.5(1950)" Eleven="0.5(1893.98)" Td="0.5(1914)"></Children>
+    <Children SalesStand="40W" targer="0.4" SSC="0.4(1952)" Eleven="0.4(1895.96)" Td="0.4(1916)"></Children>
+    <Children SalesStand="70W" targer="0.3" SSC="0.3(1954)" Eleven="0.3(1897.94)" Td="0.3(1918)"></Children>
+    <Children SalesStand="110W" targer="0.2" SSC="0.2(1956)" Eleven="0.2(1899.9)" Td="0.2(1920)"></Children>
+    <Children SalesStand="160W" targer="0.1" SSC="0.1(1958)" Eleven="0.1(1901.88)" Td="0.1(1922)"></Children>
+    <Children SalesStand="240W" targer="0" SSC="0(1960)" Eleven="0(1903.86)" Td="0(1924)"></Children>
+  </Item>
+  <!--10天量升点标准-->
+  <Item Day="10" Title="10天量升点标准">
+    <Children SalesStand="300W" SSC="0(1960)" Eleven="0(1903.86)" Td="0(1924)"></Children>
+  </Item>
+</Items>

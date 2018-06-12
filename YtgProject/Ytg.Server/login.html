@@ -1,0 +1,327 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="Description" content="" />
+
+    <link href="templates/base.css" rel="stylesheet" />
+    <link href="templates/iconfont.css" rel="stylesheet" />
+    <link href="templates/init.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="login">
+        <div class="bd" style="background:url(/images/login_bg.jpg) no-repeat center top #2f333f fixed">
+            <div class="logo2"></div>
+            <input type="hidden" id="md" value="1">
+            <input type="hidden" id="tpl" value="ba">
+            <div id="loginfst">
+                <form id="J-form-login1" autocomplete="off" action="#" target="#">
+                    <input type="hidden" name="nextGo" value="AJAX" />
+                    <ul class="form">
+                        <li>
+                            <input type="text" id="username" class="text user-name" name="user-name" maxlength="20" value="" placeholder="用户名" autocomplete="off" title="用户名" />
+                            <i class="icon icon-user3"></i>
+                        </li>
+                        <li>
+                            <input id="lgpwd" type="password" title="请确定预留信息正确后再输入密码。" name="user-password" class="text user-password" autocomplete="off" value="" placeholder="密码">
+                            <i class="icon icon-lock"></i>
+                        </li>
+                        <li>
+                            <input type="text" id="code" class="text user-code" name="user-code" value="" placeholder="验证码" autocomplete="off" title="验证码" maxlength="4" />
+                            <i class="iconfont">&#xe63c;</i>
+                            <img id='codeImg' style="top:0;right:0;position: absolute;" src=""  style='cursor:pointer;float:right;' align="absbottom" title="点击刷新" />
+                        </li>
+                        <li>
+                            <input type="button" class="btn disabled sub" value="立即登陆" id="login_btn" />
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div id="loginlst" style="display:none">
+                <form autocomplete="off" id="J-form-login" action="#" target="#">
+                    <input type="hidden" name="nextGo" value="AJAX" />
+                    <ul class="form">
+                        <li>
+                            用&nbsp;户&nbsp;名&nbsp;：<span style="margin-left: 10px;" id="cmname"></span>
+                        </li>
+                        <li>
+                            预留信息：<span style="margin-left: 10px;" id="why"></span>
+                        </li>
+                        <li>
+                            <input id="lgpwd_" type="password" title="请确定预留信息正确后再输入密码。" name="user-password" class="text user-password" autocomplete="off" value="" placeholder="密码">
+                            <i class="icon icon-lock"></i>
+                        </li>
+                        <li id="ggyz" style="display: none;">
+                            谷歌动态密码：<input type="text" style="width:106px" title="请输入谷歌身份验证码。" id="token" name="token" class="text" autocomplete="off" value="" placeholder="谷歌验证码">
+                            <i class="icon icon-lock" style="left: 125px"></i>
+                        </li>
+                        <li>
+                            <input type="button" class="btn disabled sub" id="login_btn" title="请确定预留信息正确后再点击登录。" value="立即登陆" style=" float:left; width:144px;margin-right:20px;">
+                            <input type="button" class="btn disabled" value="换个用户" style=" float:right;width:144px;" onClick="location.reload()">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+            
+            <div class="tip">
+                
+                <a href="/findpassword.html" >忘记密码?</a>
+                <!-- lianxiKF() -->
+                <a href="javascript:void(0);" onclick="window.open('http://kf1.learnsaas.com/chat/chatClient/chatbox.jsp?companyID=831468&configID=65406&jid=1773179176')" class="kefu">
+                    <i class="icon iconfont">&#xe636;</i>联系客服
+                </a>
+            </div>
+            <div style="text-align:center;color:#ff0000;">
+                <div class="text sl-error-text" id="tstext"></div>
+            </div>
+        </div>
+        <div style="display:none;">
+            <div class="banner" style="border: 0px solid #fff;bottom:0px;position:fixed;">
+                <ul>
+                    <li style="background-image: url('/images/logo/01.jpg');">
+                        <a href="#">
+                            <div class="inner" style="height: 250px;">
+                            </div>
+                        </a>
+                    </li>
+                    <li style="background-image: url('/images/logo/02.jpg');">
+                        <a href="#">
+                            <div class="inner" style="height: 250px;"></div>
+                        </a>
+                    </li>
+                    <li style="background-image: url('/images/logo/03.jpg');">
+                        <a href="#">
+                            <div class="inner" style="height: 250px;">
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="Content/Scripts/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="images/index.js"></script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    var isNexting = false;
+    var isLogining = false;
+    $(function () {
+
+        var u = navigator.userAgent;
+
+        //if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1 ) {//安卓手机
+        //    window.location.href = "/wap/login.html";
+        //} else if (u.indexOf('iPhone') > -1) {//
+        //    window.location.href = "/wap/login.html";
+        //}
+
+        //alert();
+        setCookie("clien_cookie", GetQueryString("form"));
+        changeCode();
+        $("#footer").css("top", ($(document).height() - 140));
+        setCookie("nick_span_updated", "");
+
+    })
+    window.onresize = function () {
+        $("#footer").css("top", ($(document).height() - 140));
+        // $("#login_conn").css("margin-top", (($(window).height() - 500) / 2));
+    }
+    /**获取url参数*/
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return (r[2]); return null;
+    }
+
+    function phoneover() {
+        $("#phone_id").css("display", "block");
+    }
+    function phoneout() {
+        $("#phone_id").css("display", "none");
+    }
+
+    function next() {
+
+        $("#J-errorBox").hide();
+        var account = $("#username").val();
+        var code = $("#code").val();
+        if (account == "" || account.length < 6) {
+            $("#J-errorBox").show();
+            changeCode();
+            $(".sl-error-text").html("账号输入错误");
+            return;
+        }
+        //alert(code);
+        if (code == "" || code.length != 4) {
+            $("#J-errorBox").show();
+            changeCode();
+            $(".sl-error-text").html("验证码输入错误");
+            return;
+        }
+        if (isNexting)
+            return;
+        isNexting = true;
+        $("#nextbtn").val("处理中...");
+        $.ajax({
+            type: 'POST',
+            url: '/Page/Initial.aspx',
+            data: "action=getuserwhy&account=" + account + "&code=" + code + "&dt=" + new Date(),
+            success: function (data) {
+                $("#J-errorBox").hide();
+                changeCode();
+                isNexting = false;
+                $("#nextbtn").val("下一步");
+                var jsonData = JSON.parse(data);
+                if (jsonData.Code == 0) {
+                    //获取成功，
+
+                    $("#why").html(((jsonData.ErrMsg == null || jsonData.ErrMsg == '') ? "您还没有设置问候语，为了您的安全，请尽快设置！" : jsonData.ErrMsg));
+                    $("#msg").css("margin-bottom", "0px");
+                    $("#loginfst").hide();
+                    $("#loginlst").show();
+                    $("#cmname").html(account);
+                    $("#lgpwd").focus();
+                } else if (jsonData.Code == 1004) {//
+                    $("#code").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("验证码输入错误");
+                } else if (jsonData.Code == 1003) {
+                    if (jsonData.ErrMsg != "") {
+                        window.location = jsonData.ErrMsg;
+                    } else {
+                        $("#code").select();
+                        $("#J-errorBox").show();
+                        $(".sl-error-text").html("账号已禁用，请联系客服处理");
+                    }
+                } else if (jsonData.Code == 2000) {
+                    if (jsonData.ErrMsg != "") {
+                        window.location = jsonData.ErrMsg;
+                    } else {
+                        $("#code").select();
+                        $("#J-errorBox").show();
+                        $(".sl-error-text").html("IP已锁定，请联系客服处理");
+                    }
+                } else {//不存在
+                    $("#username").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("账号不存在");
+                }
+            }
+        });
+    }
+
+    function login() {
+        $("#J-errorBox").hide();
+        var pwd = $("#lgpwd").val();
+        var account = $("#username").val();
+        var code = $("#code").val();
+        if (account == "" || account.length < 6) {
+            $("#J-errorBox").show();
+            changeCode();
+            $(".sl-error-text").html("账号输入错误");
+            return;
+        }
+        //alert(code);
+        if (code == "" || code.length != 4) {
+            $("#J-errorBox").show();
+            changeCode();
+            $(".sl-error-text").html("验证码输入错误");
+            return;
+        }
+
+        if (pwd == "" || pwd.length < 6) {
+            $("#J-errorBox").show();
+            $(".sl-error-text").html("密码输入错误");
+            return;
+        }
+        setCookie("message_content", "[]");
+        setCookie("line_key", "[]");
+        if (isLogining)
+            return;
+        isLogining = true;
+        $("#login_btn").val("正在登陆...");
+        $.ajax({
+            type: 'POST',
+            url: '/Page/Initial.aspx',
+            data: "action=login&M_LOGINCODE=" + account + "&M_LOGINVIDACODE=" + code + "&M_LOGINPWD=" + pwd,
+            success: function (data) {
+                $("#J-errorBox").hide();
+                isLogining = false;
+                $("#login_btn").val("登陆");
+                var jsonData = JSON.parse(data);
+                if (jsonData.Code == 0) {
+                    //清空聊天cookie
+
+                    //登陆成功，
+                    //window.location = "/protocolfirst.html";
+                    window.location = "/lottery.aspx?LotteryCode=cqssc&Id=1&LotteryName=重庆时时彩&ImageSource=";
+                } else if (jsonData.Code == 1003) {
+                    $("#code").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("账号已禁用，请联系客服处理");
+                } else if (jsonData.Code == 2000) {
+                    if (jsonData.ErrMsg != "") {
+                        window.location = jsonData.ErrMsg;
+                    } else {
+                        $("#code").select();
+                        $("#J-errorBox").show();
+                        $(".sl-error-text").html("IP已锁定，请联系客服处理");
+                    }
+                } else {//
+                    $("#lgpwd").select();
+                    $("#J-errorBox").show();
+                    $(".sl-error-text").html("账号或密码错误");
+                }
+            }
+        });
+    }
+
+    function changeCode() {
+        $("#codeImg").attr("src", "/CheckImage.aspx?tp=login&dt=" + new Date());
+    }
+
+    $(document).ready(function () {
+        $("#nextbtn").click(function () {
+            next();
+        });
+        window.onkeydown = function (key) {
+            if (key.keyCode == 13) {
+                    login();
+            }
+        }
+        $("#codeImg").click(function () {
+            changeCode();
+        });
+
+        $("#login_btn").click(function () {
+            login();
+        });
+    });
+
+    var setCookie = function (name, value, expire, path) {
+        var curdate = new Date();
+        var cookie = name + "=" + encodeURIComponent(value) + "; ";
+        if (expire != undefined || expire == 0) {
+            if (expire == -1) {
+                expire = 366 * 86400 * 1000;//保存一年
+            } else {
+                expire = parseInt(expire);
+            }
+            curdate.setTime(curdate.getTime() + expire);
+            cookie += "expires=" + curdate.toUTCString() + "; ";
+        }
+        path = path || "/";
+        cookie += "path=" + path;
+        document.cookie = cookie;
+    };
+
+
+</script>

@@ -1,0 +1,62 @@
+﻿@charset "utf-8";
+
+html,body { height:100%; min-width:1280px; min-height:600px;}
+
+.logo2 { display:block; width:148px; height:130px; margin:0 auto; background:url(../images/logo/logo2.png) no-repeat;}
+
+.login { position:relative; height:100%; background:url(../images/login_bg.jpg) no-repeat center bottom #2f333f fixed; background-size:cover}
+.login .bd { position:absolute; left:50%; top:30%; margin:-195px 0 0 -154px; width:308px; height:390px;}
+.login .form { margin:52px 0 0;}
+.login .form li { position:relative; margin-bottom:16px;}
+.login .form i { position:absolute; left:13px; top:12px;color: #999;}
+.login .form .text {color:#888; height:21px; line-height:21px; padding:10px 10px 10px 80px; width:218px; border:none 0; background:#fff; border-radius:3px;}
+.login .form .btn { width:100%; height:41px; line-height:41px; border:none 0; color:#fff; font-size:16px; font-weight:bold; cursor:pointer; background:#ffa500; border-radius:3px;}
+.login .tip { margin:30px 0 0; line-height:1.6em; text-align:center; font-size:12px; color:#868b95;}
+.login .tip  a:link,
+.login .tip  a:hover{color:#fff;}
+
+
+.download { position:relative; height:100%; background:url(../images/download_1.jpg) no-repeat center top fixed; background-size:cover}
+.download .logo2 { position:absolute; top:26px; left:66px; }
+.download .bd { position:absolute; left:50%; top:50%; margin:-185px 0 0; width:500px; height:250px; color:#fff;}
+.download .big { font-size:55px; line-height:60px;}
+.download .small { line-height:16px; margin:12px 0 0;}
+.download .btns { margin:35px 0 0;}
+.download .btns p { margin-bottom:14px;}
+.download .btns a { display:block; width:194px; height:46px; line-height:46px; text-align:center; font-weight:bold; color:#253065; background:#fff; border-radius:6px;}
+.download .btns i { display:inline-block; width:18px; height:21px; margin-right:10px; vertical-align:middle; position:relative; top:-2px;}
+.download .ico-iphone { background:url(../images/ico-iphone.png) no-repeat;}
+.download .ico-android { width:16px; background:url(../images/ico-android.png) no-repeat;}
+.download .ft { position:absolute; left:0; bottom:0; width:100%; height:84px; line-height:84px; background:url(../images/download_ft_bg.png) repeat-y center top #253065;}
+.download .ft a { width:50%; display:block; float:left; text-align:center; color:#fff; font-weight:bold;}
+.download2 { background-image:url(../images/download_2.jpg)}
+.download2 .bd { margin:-205px 0 0; left:12%;}
+.download2 .small { width:175px; text-align:justify; text-align-last:justify;}
+.download2 .btns a { width:174px;}
+
+.cesu { position:relative; height:100%; background:url(../images/cusu_bg1.jpg) repeat-x center bottom #475ab3;}
+.cesu .btn { display:block; width:178px; height:178px; margin:120px auto 0; overflow:hidden; background:url(../images/cesu_bg2.png) no-repeat;}
+.cesu .logo2 { margin-top:25px;}
+.cesu .list { width:930px; margin:120px auto 0; color:#fff;}
+.cesu .ft { position:absolute; bottom:34px; left:0; width:100%; text-align:center; line-height:1.8em; font-size:12px; color:#909ad0;}
+.cesu li { float:left; width:225px; padding-right:10px; text-align:center;}
+.cesu li a { color:#fff;}
+.cesu li p { margin:8px 0 0; line-height:1.2em;}
+.cesu li.last { padding:0;}
+.cesu .sec { position:relative; width:0; height:4px; line-height:0; background:#fff;}
+.cesu .sec span { position:absolute; left:50%; top:-10px; margin-left:-18px; font-size:12px;}
+
+input:disabled, input:disabled:hover, input.disabled:hover, input.disabled {
+    color: #888!important;
+    background: #f2f2f2!important;
+}
+.login-loading {
+    display: none;
+	width:308px;
+	text-align: center;
+}
+.form{
+	color: #fff;
+	font-size: 16px;
+    font-weight: bold;
+}

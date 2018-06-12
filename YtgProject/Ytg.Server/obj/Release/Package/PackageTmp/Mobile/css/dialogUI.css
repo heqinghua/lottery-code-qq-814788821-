@@ -1,0 +1,52 @@
+﻿    @charset "utf-8";
+/* CSS Document */
+/*Main layer CSS*/
+.blockUI{display:none;border:none;margin:0;padding:0;position:absolute;width:100%;height:100%;top:0;left:0;}
+.blockOverlay{display:none;border:none;margin:0;padding:0;width:100%;height:100%;top:0;left:0;background-color:#000;opacity:0.5;cursor:default;filter:alpha(opacity=50);}
+.blockMsg{display:none;padding:0;margin:0;top:100px;left:35%;border:0;width:95%;background:#fff; -moz-border-radius: 5px; /* Gecko browsers */-webkit-border-radius: 5px;   /* Webkit browsers */border-radius:5px;            /* W3C syntax */}
+.blockMsg *{padding:0; margin:0;}
+#block_ajaxUploadArea input { width:250px; margin:0 auto;}
+.bottom input{ padding:0 12px; height:32px;cursor:pointer;font-size:14px; 
+               display:inline-block;margin:0 5px;  font-family:"Microsoft Yahei"; font-weight:bold;}
+.blockMsg .title {
+    height:36px;line-height:36px;
+                  font-family:Microsoft YaHei;
+                  font-size:16px;
+                  text-align:Center; 
+                  /*color:#fff;background:#cd0228;*/
+                  border-bottom: solid 1px #CCC;
+                  font-weight:bold;
+}
+.blockMsg .content {text-align:center;background-color:#fff; border-left:3px solid #fff; border-right:3px solid #fff;line-height:30px;font-size:15px;color:#444; font-family:"Microsoft Yahei";}
+.blockMsg .content .detail {padding:20px 5px; font-size:16px; max-height: 200px; overflow:auto;}
+.blockMsg .bottom {background:#fff; border:3px solid #fff; border-top:0;width:95%;height:50px;font-family:Microsoft YaHei;font-size:14px;text-align:right;-moz-border-radius: 5px; /* Gecko browsers */-webkit-border-radius: 5px;   /* Webkit browsers */border-radius:5px; /* W3C syntax */}
+.blockMsg .submit {width:80px;height:34px;cursor:pointer;border:none; color:#fff;background:#cd0228;-moz-border-radius: 5px; /* Gecko browsers */-webkit-border-radius: 5px;   /* Webkit browsers */border-radius:5px;            /* W3C syntax */}
+.blockMsg .cancel {width:80px;height:34px;cursor:pointer;border:1px solid #cccccc;background:#fff; -moz-border-radius: 5px; /* Gecko browsers */-webkit-border-radius: 5px;   /* Webkit browsers */border-radius:5px;            /* W3C syntax */}
+
+
+/*the common window css*/
+.block_box, .block_alert, .block_confirm, .block_ajaxUpload{border:0px;}
+.block_title{width:100%;height:22px;background-color:#0066CC;font-size:14px;font-weight:bold;color:#FFFFFF;text-align:left;padding-left:10px;}
+.block_title_close{width:40px;margin-right:3px;text-decoration:none;color:#FFFFFF;text-align:right;}
+.block_title_close img{border:0;}
+.block_content_box{background-color:#F2F2F2;text-align:left;color: #FFFFFF;}
+.block_content_box .block_content{margin:5px 5px;background-color:#F2F2F2;padding:3px;color: #FFFFFF;}
+.block_bottom{height:25px;background-color:#F2F2F2;text-align:center;vertical-align:top;}
+
+/*Alert layer CSS*/
+.block_alert{width:450px;}
+/*Confirm layer CSS*/
+.block_confirm{width:350px;}
+/*Ajax Upload CSS*/
+.block_ajaxUpload{width:400px;}
+.block_ajaxUpload #block_ajaxUploading{text-align:center;display:none;}
+.block_ajaxUpload #block_ajaxUploadError{color:#FF0000;display:none;}
+/*****************************************************/
+/*示式*/
+.table_top_left {background-image: url(notic_09.png);background-repeat: no-repeat;}
+.table_top_right {background-image: url(notic_09.png);background-position: -12px 0px;}
+.table_buttom_left {background-image: url(notic_09.png);background-position: 0px -51px;height: 11px;width: 11px;overflow:hidden;}
+.table_buttom_right {background-image: url(notic_09.png);background-position: -12px -51px;height: 11px;width: 11px;overflow:hidden;}
+.table_buttom_center {background-image: url(notic_09.png);background-repeat: repeat-x;background-position: 0px -114px;overflow:hidden;}
+.floatarea{border:0;border:1px #cccccc solid;background-color:#fff;width:auto;overflow:auto;overflow-x:hidden;margin:0;padding:8px 0;line-height:20px;word-break: break-all; font-size:14px;text-align:left;}
+form{margin:0; padding:0;}

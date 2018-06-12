@@ -1,0 +1,233 @@
+﻿<html lang="en">
+<head>
+
+    <title>优惠活动</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="/wap/statics/css/jquery-ui.min.css?ver=3.6" type="text/css">
+    <link rel="stylesheet" href="/wap/statics/css/global.css?ver=3.6" type="text/css">
+    <script src="/wap/statics/js/jquery.min.js?ver=3.6"></script>
+    <script src="/wap/statics/js/jquery-ui.min.js?ver=3.6"></script>
+    <script src="/wap/statics/js/iscro-lot.js?ver=3.6"></script>
+
+    <script>
+        isLogin = true;
+    </script>
+    <script>
+    	$(function(){
+    		var _padding = function()
+    		{
+    			try{
+	    			var l = $("body>.header").height();
+		    		if($("body>.lott-menu").length>0)
+		    		{
+		    			l += $("body>.lott-menu").height();
+		    		}
+		    		$("#wrapper_1").css("paddingTop",l+"px");
+	    		}catch(e){}
+	    		try{
+		    		if($("body>.menu").length>0)
+		    		{
+		    			var l = $("body>.menu").height();
+		    		}
+		    		$("#wrapper_1").css("paddingBottom",l+"px");
+	    		}catch(e){}
+    		};
+    		(function(){
+    			_padding();
+    		})();
+    		$(window).bind("load",_padding);
+
+    	});
+    </script>
+    <!-- hide address bar -->
+    <title>活动</title>
+</head>
+<body style="background: rgb(243, 243, 243);">
+    <div class="header">
+        <div class="headerTop">
+            <div class="ui-toolbar-left">
+                <button id="reveal-left" type="button">reveal</button>
+            </div>
+            <h1 class="ui-toolbar-title">活动</h1>
+        </div>
+    </div>
+    <div style="height: 44px;" class="ipad-top"></div>
+  
+
+    <style>
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, input {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+            -webkit-text-size-adjust: none;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+            blockquote:before, blockquote:after, q:before, q:after {
+                content: '';
+                content: none;
+            }
+
+        ins {
+            text-decoration: none;
+        }
+
+        del {
+            text-decoration: line-through;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, "Hiragino Sans GB", 'Microsoft YaHei', sans-serif;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -o-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, "Hiragino Sans GB", 'Microsoft YaHei', sans-serif;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -o-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+
+        .app-list {
+            margin-top: 5px;
+        }
+
+        .app-list-box {
+            background: #fff;
+            border: 1px solid #dddddd;
+            width: 94%;
+            margin: 0px auto 10px;
+            box-sizing: border-box;
+            padding: 10px 15px 0;
+            border-radius: 5px;
+        }
+
+        .list-tit p {
+            font-size: 80%;
+            color: #666;
+            line-height: 26px;
+        }
+
+        .list-pic {
+            overflow: hidden;
+        }
+
+            .list-pic a {
+                display: block;
+                margin: 3px 0;
+            }
+
+            .list-pic img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .list-pic p {
+                font-size: 80%;
+                color: #666;
+                line-height: 22px;
+            }
+
+        .join {
+            border-top: 1px solid #ddd;
+            margin-top: 5px;
+        }
+
+            .join a {
+                color: #000;
+                line-height: 34px;
+                display: block;
+            }
+
+        .join-icon {
+            background: url(/help/promotImg.html?img=join-icon.png) no-repeat;
+            width: 16px;
+            height: 27px;
+            background-size: 8px 13px;
+            float: right;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+
+
+    <div class="ui-panel-animate">
+        <div class="app-list">
+
+            <div class="app-list-box"><div class="list-tit"><h3>签到有你</h3><p>活动时间：每日07:30:00——次日凌晨02:00:00</p></div><div class="list-pic"><a href="/wap/activity/qiandao.aspx"><img src="/wap//statics//images/banner.png"></a><p>活动期间,登录平台并投注1000元,即可激活签到按钮,点击签到可参与每日签到抽奖活动,可抽取1元-5元不等金额的现金奖励(100%中奖)！累计签到天数，还可以获得更多礼包！</p></div><div class="join"><a href="/wap/activity/qiandao.aspx">查看详情<span class="join-icon"></span></a></div></div>
+            <div class="app-list-box"><div class="list-tit"><h3>佣金大返利</h3><p> 活动时间：每日07:30:00 – 次日凌晨02:00:00</p></div><div class="list-pic"><a href="/wap/activity/yongj.aspx"><img src="/wap//statics//images/yongj.png"></a><p>乐诚网推出全新佣金返利系统，前所未有的返利规则，为所有代理用户带来全新福利！</p></div><div class="join"><a href="/wap/activity/yongj.aspx">查看详情<span class="join-icon"></span></a></div></div>
+            <div class="app-list-box"><div class="list-tit"><h3>投注大礼包</h3><p>活动时间：每日07:30:00——次日凌晨02:00:00</p></div><div class="list-pic"><a href="/wap/activity/TouZhu.aspx"><img src="/wap//statics//images/touzhu.png"></a><p>乐诚网推出投注送礼包，前所未有的返利规则，为所有用户带来全新福利！ 只要您在前一天的投注达到活动要求，即可领取相应的礼包，投的越多送的越多！</p></div><div class="join"><a href="/wap/activity/TouZhu.aspx">查看详情<span class="join-icon"></span></a></div></div>
+        </div>
+        <input type="hidden" name="betflag" id="betflag" value="1">
+        <input type="hidden" name="isflush" id="isflush" value="1">
+        <div id="msgBox"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+﻿<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="/wap/statics/css/jquery-ui.min.css?ver=4.4" type="text/css">
+    <link rel="stylesheet" href="/wap/statics/css/global.css?ver=4.4" type="text/css">
+    <script src="/wap/statics/js/jquery.min.js?ver=4.4"></script>
+    <script src="/wap/statics/js/jquery-ui.min.js?ver=4.4"></script>
+    <script src="/wap/statics/js/iscro-lot.js?ver=4.4"></script>
+
+    <script>
+        isLogin = true;
+    </script>
+    <script>
+    	$(function(){
+    		var _padding = function()
+    		{
+    			try{
+	    			var l = $("body>.header").height();
+		    		if($("body>.lott-menu").length>0)
+		    		{
+		    			l += $("body>.lott-menu").height();
+		    		}
+		    		$("#wrapper_1").css("paddingTop",l+"px");
+	    		}catch(e){}
+	    		try{
+		    		if($("body>.menu").length>0)
+		    		{
+		    			var l = $("body>.menu").height();
+		    		}
+		    		$("#wrapper_1").css("paddingBottom",l+"px");
+	    		}catch(e){}
+    		};
+    		(function(){
+    			_padding();
+    		})();
+    		$(window).bind("load",_padding);
+
+    	});
+    </script>
+    <!-- hide address bar -->
+    <title>修改登录密码</title>
+</head>
+<body class="login-bg" onload="loaded()">
+    <div class="header">
+        <div class="headerTop">
+            <div class="ui-toolbar-left">
+                <button id="reveal-left" type="button">reveal</button>
+            </div>
+            <h1 class="ui-toolbar-title">修改登录密码</h1>
+        </div>
+    </div>
+    <div id="wrapper_1" class="scorllmain-content nobottom_bar" style="padding-top: 44px; padding-bottom: 44px;">
+        <div class="sub_ScorllCont">
+            <div class="login">
+                <ul>
+                    <li>
+                        <span class="logi">旧密码</span><input type="password" id="pwd" name="pwd" placeholder="请输入旧密码">
+                    </li>
+                    <li>
+                        <span class="logi">新密码</span><input type="password" id="newpwd" name="newpwd" placeholder="请输入新密码">
+                    </li>
+                    <li>
+                        <span class="logi">确认密码</span><input type="password" id="repwd" name="repwd" placeholder="请再次输入新密码">
+                    </li>
+                </ul>
+                <button class="login-btn" onclick="updatePwd()">立即修改</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+
+    <div class="beet-odds-tips round" id="tip_pop" style="display: none; height:130px;">
+        <div class="beet-odds-info f100">
+            <div class="beet-money" id="tip_pop_content" style="font-size: 120%; margin-top: 15px; color:#666;">
+                号码选择有误
+            </div>
+        </div>
+        <div class="beet-odds-info text-center">
+            <button class="btn-que" style="width: 100%;" onclick="tipOk()"><span>确定</span></button>
+        </div>
+    </div>
+
+    <div id="tip_bg" class="tips-bg" style="display: none;"></div>
+
+    <script>
+    var func;
+    function tipOk() {
+        $('#tip_pop').hide();
+        $('#tip_bg').hide();
+        if (/系统维护/g.test($('div#tip_pop_content').html())) {
+            location.href = '/index/index.html';
+            return;
+        }
+        if (typeof(func) == "function"){
+            func();
+            func = "";
+        }else{
+            if (typeof(doTipOk) == "function") {
+                doTipOk();
+            }
+        }
+    }
+    function msgAlert (msg,funcParm) {
+        $('div#tip_pop_content').html(msg);
+        $('div#tip_pop').show();
+        $('div#tip_bg').show();
+        func = (funcParm == ""||typeof(funcParm) != "function")?'':funcParm;
+    }
+    </script>
+
+
+
+    <script>
+    function updatePwd() {
+        var pwd = $('#pwd').val();
+        var newpwd = $('#newpwd').val();
+        var repwd = $('#repwd').val();
+        if (pwd == '') {
+            msgAlert('请输入旧密码！');
+            return;
+        }
+        if (newpwd == '') {
+            msgAlert('请输入新密码！');
+            return;
+        }
+        if (!/[A-Za-z0-9]{6,12}/g.test(newpwd) || !/[A-Za-z]{1,12}/g.test(newpwd) || !/[0-9]{1,12}/g.test(newpwd)) {
+            msgAlert('密码需6-12个字符，且为英数字符组合!');
+            return;
+        }
+        if (repwd == '') {
+            msgAlert('请输入确认密码！');
+            return;
+        }
+        if (newpwd != repwd) {
+            msgAlert('两次密码不一致！');
+            return;
+        }
+        if (pwd == newpwd) {
+            msgAlert('新旧登录密码不能相同！');
+            return;
+        }
+        $.ajax({
+            url: "/Page/Users.aspx",
+            type: 'post',
+            data: "action=updadwwdasp&oldpwd=" + pwd + "&newpwd=" + newpwd,
+            success: function (data) {
+                
+                var jsonData = JSON.parse(data);
+                if (jsonData.Code == 0) {
+                    msgAlert('修改密码成功！', function () { history.go(-1); });
+                }
+                else {
+                    msgAlert("登录密码修改失败！");
+                }
+                $("#oldpwd").val("");
+                $("#newpwd").val("");
+                $("#renewpwd").val("");
+            }
+        });
+
+    }
+    </script>
+</body>
+</html>

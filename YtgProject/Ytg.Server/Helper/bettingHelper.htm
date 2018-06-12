@@ -1,0 +1,165 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-投注帮助</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+				    $(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+    <ul>
+        <li id="100030">
+            <h3>1• 什么叫彩票代购？</h3>
+            <p>
+                彩票代购指的是由个人出资委托本平台购买所需的彩票，乐诚网平台统筹所有会员各式投注金额合并下注，由本站代理出票，兑奖和派奖。彩票代购无需您外出排队买彩票，不受自然因素困扰，既快捷、方便又高效、安全。 
+            </p>
+        </li>
+        <li id="100031">
+            <h3>2• 如何投注？</h3>
+            <p>
+                进入投注界面，以重庆时时彩为例 
+                <br /> <br />
+                <img src="/Helper/resource/images/bett01.png" width="100%" />
+                <br /> <br />
+                点击“立即投注”，确认投注信息无误后，完成投注流程 
+            </p>
+        </li>
+        <li id="100032">
+            <h3>3• 彩票投注后可以撤单吗？</h3>
+            <p>
+                当然可以，只要您投注的彩票在该期还未截止销售，您的下注就还可以撤销并重新下注。 
+                <br />
+                撤单方法为，点击“投注记录”，在投注记录里头点击“查看详情”，在订单详情页面可以进行“撤单”操作。撤单的前提是该类彩票还未到截止销售时间点。 
+                <br />
+                追号单的撤单需要到&quot;投注记录 -&gt;追号投注查询&quot;里面进行终止任务。 
+            </p>
+        </li>
+        <li id="100033">
+            <h3>4• 第3方开奖机构不开奖，投注单如何处理？</h3>
+            <p>
+                时时彩系列，11选5系列，上海时时乐等彩种，若官方超过30分钟未开奖，平台将对超过30分钟的期数进行撤单返款，依次顺延，撤单后无论第三方以任何形式补开，平台均维持撤单处理。 
+            </p>
+        </li>
+        <li id="100034">
+            <h3>5• 什么是赔付限额？</h3>
+            <p>
+                赔付限额是指该平台账户在某个玩法的某一注号码投注所能获得的最大赔付总额，平台目前设定的<font class="text-red">最高赔付限额为40万（3D和P3奖金限额为10万）。</font>
+            </p>
+        </li>
+        <li id="100035">
+            <h3>6• 参与游戏时提示“奖金超过上限”问题</h3>
+            <p>
+                A：每个账号在同一游戏、同一玩法、同一奖期中购买相同号码的最大可中奖金额。 
+                <br />
+                B：高频彩（时时彩、时时乐、11选5）的奖金限额40万，低频彩（福彩3D、体彩P3）的奖金限额10万。 
+            </p>
+        </li>
+        <li id="100036">
+            <h3>7• 乐诚网在线客服服务时间是什么时候？</h3>
+            <p>
+                在线客服服务时间为：<font class="text-red">早上09：00-次日03:00</font>
+            </p>
+        </li>
+        <li id="100037">
+            <h3>8•福彩3D销售开始时间和销售停止时间是多少？</h3>
+            <p>
+                福彩3D销售周期为：<font class="text-red">每日上午07：00至晚上20：20</font>
+            </p>
+        </li>
+        <li id="100038" class="active">
+            <h3>9•为什么我一个月前的购买记录查不到了?</h3>
+            <p>
+                目前平台只保留5天的历史记录，之前的投注记录会被系统自动清理。 
+            </p>
+        </li>
+        <li id="100039">
+            <h3>10•什么是恶意投注？</h3>
+            <p>
+                恶意投注：用户使用不当程序在平台下注或者已经获知官方开奖结果等类似的情况下，在平台下注的行为视为“恶意投注”，基于公平原则，平台将予以冻结处理。（“恶意投注”的最终解释权归平台所有） 
+            </p>
+        </li>
+        <li id="100040">
+            <h3>11•什么是追号投注？</h3>
+            <p>
+                追号指将一注或一组号码进行两期或两期以上的投注。追号可分为连续追号和间隔追号，连续追号指追号的期数是连续的，间隔追号指追号的期数不连续。追号可增加您所选号码的中奖概率：） 
+            </p>
+        </li>
+        <li id="100041">
+            <h3>12•为什么单式投注时号码导入不成功？</h3>
+            <p>
+                号码导入，有两点要求：号码导入时，必须是文本格式（.txt） 
+                <br />
+                文本内容有格式要求(不同玩法不同要求，请按照每个单式玩法的号码要求进行号码编辑)： 
+                <br />
+                确认要导入的号码文件位置,如果没有请新建(英文状态下书写)； 
+            </p>
+        </li>
+    </ul>
+
+</DIV></DIV>
+</BODY></html>

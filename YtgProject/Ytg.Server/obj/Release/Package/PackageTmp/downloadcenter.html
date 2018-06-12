@@ -1,0 +1,122 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>下载中心</title>
+    <link href="templates/base.css" rel="stylesheet" />
+    <link href="templates/init.css" rel="stylesheet" />
+</head>
+<style type="text/css">
+    .QR-code_i {
+        width: 140px;
+        height: 140px;
+        background-color: #fff;
+        position: absolute;
+        right: 140px;
+        border-radius: 3px;
+        /*top: 5px;*/
+        bottom: 70px;
+        padding: 5px;
+        display: none;
+    }
+
+    .QR-code {
+        width: 140px;
+        height: 140px;
+        background-color: #fff;
+        position: absolute;
+        right: 140px;
+        border-radius: 3px;
+        /*top: 5px;*/
+        bottom: 15px;
+        padding: 5px;
+        display: none;
+    }
+
+        .QR-code img {
+            width: 100%;
+            border: 1px solid #CCC;
+        }
+
+    .QR-code_i img {
+        width: 100%;
+        border: 1px solid #CCC;
+    }
+</style>
+<body>
+    <div class="download">
+        <a class="logo2" href="index.php"></a>
+        <div class="bd">
+            <p class="big">随时随地轻松投注</p>
+            <p class="small">与网站功能同步，走到哪都能投注</p>
+            <div class="btns">
+                <!--<p>
+                    <a class="fl" href="javascript:void(0)" onmouseover="prompts(1,'ios')" onmouseout="prompts(2,'ios')" alt="扫描二维码下载安装游戏" title="扫描二维码下载安装游戏"><i class="ico-iphone"></i>iPhone版下载</a>
+                    <div class="QR-code_i">
+                        <img src="http://47.90.34.76:81/client/resource/images/2wm/ba_ios.png?0.123">
+                    </div>
+
+                    <a class="fl ml20" href="javascript:void(0)" onclick="javascript: window.open('?a=index&m=liveCasino&act=Ba_iOS','','menubar=no,status=yes,scrollbars=yes,top=125,left=100,toolbar=no,width=1200,height=800')"><label style="color:red">苹果安装教程</label></a>
+                </p>-->
+                <p>
+                    <a class="fl mt20" href="/apk/ck.apk" onmouseover="prompts(1,'android')" onmouseout="prompts(2,'android')" alt="扫描二维码下载安装游戏" title="扫描二维码下载安装游戏"><i class="ico-android"></i>Android版下载</a>
+                    <!--<div class="QR-code">
+                        <img src="/apk/ck.apk">
+                    </div>-->
+
+                    <a style="margin-left:20px;" class="fl mt20" href="javascript:void(0)" onmouseover="prompts(1,'wy')" onmouseout="prompts(2,'wy')" alt="扫描二维码进入游戏" title="扫描二维码进入游戏">手机网页地址</a>
+
+                </p>
+                <div style=" display:none;margin-left:215px;padding-top:120px; font-size:15px; " id="wys">
+                    <img src="/images/wap.png" width="200" width="200">
+                    http://www.ck18888.com/wap/login.html <br />
+                    http://www.ck28888.com/wap/login.html <br />
+                </div>
+
+
+
+            </div>
+        </div>
+        
+    </div>
+    <script src="templates/uaest.js"></script>
+    <script src="Content/Scripts/jquery-1.7.min.js"></script>
+    <script language="javascript">
+        function prompts(t, el) {
+
+            if (el == 'ios') {
+                if (t == 1) {
+                    $(".QR-code_i").show();
+                } else {
+                    $(".QR-code_i").hide();
+                }
+            } else if (el == 'android') {
+                if (t == 1) {
+                    $(".QR-code").show();
+                } else {
+                    $(".QR-code").hide();
+                }
+            } else if (el == 'zjh1') {
+                if (t == 1) {
+                    $("#zjh1").show();
+                } else {
+                    $("#zjh1").hide();
+                }
+            } else if (el == 'zjh2') {
+                if (t == 1) {
+                    $("#zjh2").show();
+                } else {
+                    $("#zjh2").hide();
+                }
+            } else {
+                if (t == 1) {
+                    $("#wys").show();
+                } else {
+                    $("#wys").hide();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

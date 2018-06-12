@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDE5ACC3-08EA-4171-96E7-B99B67F6E5D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ytg.Scheduler.Comm</RootNamespace>
+    <AssemblyName>Ytg.Scheduler.Comm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utg.ServerWeb.Admin\js\ueditor\net\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.Net\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Controls.Input">
+      <HintPath>..\Ytg.Client.Manager\lib\System.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bets\AutoLogic\LotteryBackNum.cs" />
+    <Compile Include="Bets\AutoLogic\OpendHistory.cs" />
+    <Compile Include="Bets\AutoLogic\OpendHistoryLogic.cs" />
+    <Compile Include="Bets\BetDetailsCalculate.cs" />
+    <Compile Include="Bets\BetDetailsCalculate_Auto.cs" />
+    <Compile Include="Bets\Calculate\3D\DingWeiDan.cs" />
+    <Compile Include="Bets\Calculate\BaseCalculate.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\QuWei\HeZhiDaXiaoDanShuang.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\QuWei\JiOuPan.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\QuWei\ShangXiaPan.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\RenXuanXing\RenXuanEr.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\RenXuanXing\RenXuanLiu.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\RenXuanXing\RenXuanQi.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\RenXuanXing\RenXuanSan.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\RenXuanXing\RenXuanSi.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\RenXuanXing\RenXuanWu.cs" />
+    <Compile Include="Bets\Calculate\BeiJingKuaiLeBa\RenXuanXing\RenXuanYi.cs" />
+    <Compile Include="Bets\Calculate\FiveSpecialDetailsCalculate.cs" />
+    <Compile Include="Bets\Calculate\K3\ErBuTH\BiaoZhun.cs" />
+    <Compile Include="Bets\Calculate\K3\ErBuTH\DanTuo.cs" />
+    <Compile Include="Bets\Calculate\K3\ErBuTH\Input.cs" />
+    <Compile Include="Bets\Calculate\K3\ErTHDX\BiaoZhun.cs" />
+    <Compile Include="Bets\Calculate\K3\ErTHDX\Input.cs" />
+    <Compile Include="Bets\Calculate\K3\ErTHFX\BiaoZhun.cs" />
+    <Compile Include="Bets\Calculate\K3\HeZhi.cs" />
+    <Compile Include="Bets\Calculate\K3\SanBuTongHao\BiaoZhun.cs" />
+    <Compile Include="Bets\Calculate\K3\SanBuTongHao\DanTuo.cs" />
+    <Compile Include="Bets\Calculate\K3\SanBuTongHao\HeZhi.cs" />
+    <Compile Include="Bets\Calculate\K3\SanBuTongHao\Input.cs" />
+    <Compile Include="Bets\Calculate\K3\SanChongHaoTongXuan.cs" />
+    <Compile Include="Bets\Calculate\K3\SanLianHao.cs" />
+    <Compile Include="Bets\Calculate\K3\SanTongHaoDanXuan.cs" />
+    <Compile Include="Bets\Calculate\LiuHeCai\TeMa\TeMaCalculate.cs" />
+    <Compile Include="Bets\Calculate\Pk10\Er\PkQianErFushiCalculate.cs" />
+    <Compile Include="Bets\Calculate\Pk10\Er\QianSanZhiXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\Pk10\PkDwdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Pk10\PkQianYiFushiCalculate.cs" />
+    <Compile Include="Bets\Calculate\Pk10\San\PkQianSanFushiCalculate.cs" />
+    <Compile Include="Bets\Calculate\Pk10\San\QianSanZhiXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\Pk10\Si\PkQianSiFushiCalculate.cs" />
+    <Compile Include="Bets\Calculate\Pk10\Si\QianSanZuXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\BuDingWei.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\DingWeiDan.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\ErMa\QianErZhiXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\ErMa\QianErZhiXuanFuShi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\ErMa\QianErZuXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\ErMa\QianErZuXuanDanTuo.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\ErMa\QianErZuXuanFuShi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\QuWeiXing\QuWeiCaiZhongWei.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\QuWeiXing\QuWeiDingDanShuang.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanShi\RenXuanBaZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanShi\RenXuanErZhongEr.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanShi\RenXuanLiuZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanShi\RenXuanQiZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanShi\RenXuanSanZhongSan.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanShi\RenXuanSiZhongSi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanShi\RenXuanWuZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanShi\RenXuanYiZhongYi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanTuo\RenXuanBaZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanTuo\RenXuanErZhongEr.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanTuo\RenXuanLiuZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanTuo\RenXuanQiZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanTuo\RenXuanSanZhongSan.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanTuo\RenXuanSiZhongSi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanDanTuo\RenXuanWuZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanFuShi\RenXuanBaZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanFuShi\RenXuanErZhongEr.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanFuShi\RenXuanLiuZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanFuShi\RenXuanQiZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanFuShi\RenXuanSanZhongSan.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanFuShi\RenXuanSiZhongSi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanFuShi\RenXuanWuZhongWu.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\RenXuanFuShi\RenXuanYiZhongYi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\SanMa\QianSanZhiXuanFuShi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\SanMa\QianSanZuXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\SanMa\QianSanZuXuanDanTuo.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\SanMa\QianSanZuXuanFuShi.cs" />
+    <Compile Include="Bets\Calculate\ShiYiXuanWu\SanMa\QiSanZhiXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\SpecialDetailsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\BuDingWei\BdwHsemCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\BuDingWei\BdwHsymCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\BuDingWei\BdwQsemCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\BuDingWei\BdwQsymCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\BuDingWei\BdwSxemCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\BuDingWei\BdwSxymCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\BuDingWei\BdwWsemCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\BuDingWei\BdwWssmCalculate.cs" />
+    <Compile Include="Bets\Calculate\CombinationHelper.cs" />
+    <Compile Include="Bets\Calculate\Combinations.cs" />
+    <Compile Include="Bets\Calculate\Ssc\DaXiaoDanShuang\BaseDxds.cs" />
+    <Compile Include="Bets\Calculate\Ssc\DaXiaoDanShuang\HedxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\DaXiaoDanShuang\HsdxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\DaXiaoDanShuang\QedxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\DaXiaoDanShuang\QsdxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\DingWeiDan\DwdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\HscsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\SjfcCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\SxbxCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\WxZhCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\YffxCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\Zx10Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\Zx120Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\Zx12Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\Zx20Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\Zx30Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\Zx5Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\Zx60Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\ZxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FourStar\SxZhCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FourStar\Zx12Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FourStar\Zx24Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FourStar\Zx4Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FourStar\Zx6Calculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FourStar\ZxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FourStar\ZxfsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouEr\HeZuXuanDanShiCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouEr\HeZuxfsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouEr\HeZuxhzCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouEr\HeZxbdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouEr\HeZxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouEr\HeZxfsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouEr\HeZxhzCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouEr\HeZxkdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\HezwsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\HouSanZ3fsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\HouSanZxhzCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\HsZ6fsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\HsZhCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\HsZsdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\HsZxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\HsZxfsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\HunHeZuXuanCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\SpecialCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\ZuLiuDanShiCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\ZxbdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\ZxhzCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\HouSan\ZxkdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Permutations.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianEr\QeZuxfsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianEr\QeZuxHzCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianEr\QeZuXuanDanShiCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianEr\QeZxbdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianEr\QeZxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianEr\QeZxfsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianEr\QeZxhzCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianEr\QeZxkdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsHunHeZuXuanCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsSpecialCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZ3fsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZ6fsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZhCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZsdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZuLiuDanShiCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZxbdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZxdsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZxfsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZxhzCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZxkdCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZxuanhzCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\QianSan\QsZxwsCalculate.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanEr\BaseRenXuan.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanEr\RenXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanEr\RenXuanZhiXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanEr\RenXuanZhiXuanFushi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanEr\RenXuanZhiXuanHeZhi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanEr\RenXuanZuXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanEr\RenXuanZuXuanFuShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanEr\RenXuanZuXuanHeZhi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSan\RenXuanHunHeZuXuan.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSan\RenXuanZhiXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSan\RenXuanZhiXuanFushi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSan\RenXuanZhiXuanHeZhi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSan\RenXuanZuLiuDanShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSan\RenXuanZuLiuFuShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSan\RenXuanZuSanDanShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSan\RenXuanZuSanFuShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSan\RenXuanZuXuanHeZhi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSi\RenXuanZhiXuanDanShi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSi\RenXuanZhiXuanFushi.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSi\RenXuanZu12.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSi\RenXuanZu24.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSi\RenXuanZu4.cs" />
+    <Compile Include="Bets\Calculate\Ssc\RenXuanSi\RenXuanZu6.cs" />
+    <Compile Include="Bets\Calculate\Ssc\ZuHeWinHelper.cs" />
+    <Compile Include="Bets\Calculate\ZhiXuanDanShiDetailsCalculate.cs" />
+    <Compile Include="Bets\IssueBettingNumsing.cs" />
+    <Compile Include="Bets\IssueCatchNumsing.cs" />
+    <Compile Include="IssueBuilder\GenerateAijiLiangFenSscLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateAiJiSscLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateAijiYiFenCaiLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateHNSscLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GeneratePk_10LotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateYNSscLotteryIssue.cs" />
+    <Compile Include="ZhiXuanFushiDetailsCalculate.cs" />
+    <Compile Include="Bets\FenBetDetailsCalculate.cs" />
+    <Compile Include="Bets\RadioContentFactory.cs" />
+    <Compile Include="Bets\Calculate\Ssc\FiveStar\ZxfsCalculate.cs" />
+    <Compile Include="Bets\ICalculate.cs" />
+    <Compile Include="ConfigHelper.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="IssueBuilder\BaseGenerateSscLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateBjkl8LotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerategdErFenCaiLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\Generategdjsk3LotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerategdWuFenCaiLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerategdYiFenCaiLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\Generatejx11x5LotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateLiuHeLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\Generatesd11x5LotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateErf11x5LotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateShangHaiSslLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateJxSscLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateSscLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateHljSscLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateTjsscLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\Generatewf11x5LotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GenerateXjsscLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\Generategd11x5LotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GrnerateFc3dLotteryIssue.cs" />
+    <Compile Include="IssueBuilder\GrneratePl35LotteryIssue.cs" />
+    <Compile Include="OpenOfficialQueue.cs" />
+    <Compile Include="IYtgJob.cs" />
+    <Compile Include="LogManager.cs" />
+    <Compile Include="LotteryIssuesData.cs" />
+    <Compile Include="OrganizationLotteryCode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="TaskModel.cs" />
+    <Compile Include="OpenOfficialCatchQueue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ytg.BasicModel\Ytg.BasicModel.csproj">
+      <Project>{656b3757-5a1a-4012-b1ab-7a27ae031d8e}</Project>
+      <Name>Ytg.BasicModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ytg.Comm\Ytg.Comm.csproj">
+      <Project>{1bd42953-cbab-4abc-a40f-6462ea603a5a}</Project>
+      <Name>Ytg.Comm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ytg.Core\Ytg.Core.csproj">
+      <Project>{182da640-e2e1-4c9e-9ac6-c751527bbf55}</Project>
+      <Name>Ytg.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ytg.Data\Ytg.Data.csproj">
+      <Project>{3b1d2f30-ecb5-4add-be9b-0af09a0c69cd}</Project>
+      <Name>Ytg.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ytg.Service\Ytg.Service.csproj">
+      <Project>{eb9f2980-ca48-4f96-9899-1489b79b3a3b}</Project>
+      <Name>Ytg.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bets\AutoLogic\readme.txt" />
+    <Content Include="Bets\RadioConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bets\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bets\Calculate\Ssc\zhongsan\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--不允许回收的额度-->
+<Items>
+  <!--10天量达到以下销售额，不允许进行回收-->
+  <Item Day="10" Title="3天量升点标准">
+    <Children SalesStand="1.5W" targer="0.6" ></Children>
+    <Children SalesStand="6W" targer="0.5" ></Children>
+    <Children SalesStand="10W" targer="0.4"></Children>
+    <Children SalesStand="14W" targer="0.3" ></Children>
+    <Children SalesStand="20W" targer="0.2" ></Children>
+    <Children SalesStand="30W" targer="0.1" ></Children>
+    <Children SalesStand="100W" targer="0"></Children>
+  </Item>
+
+</Items>

@@ -1,0 +1,228 @@
+﻿body{
+  background: #eee;
+  padding-bottom: 60px!important;
+}
+
+.title{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  /*font-weight: bold;*/
+  color: #fff;
+  background: #cd0228;
+}
+
+  .title .icon{
+    display: inline-block;
+    width: 32px;
+    height: 40px;
+    margin:  0px 0 0 0;
+    background: url(../../images/sy.png) no-repeat 0 2px;
+    vertical-align: middle;
+  }
+
+.list-lottery .btn-group{
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.btn-group > .btn:nth-child(3):not(:last-child):not(.dropdown-toggle){
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.navbar{
+   background: #CD0228;
+}
+
+.navbar-nav{
+  margin: 0;
+  min-height: 50px;
+}
+
+.navbar-nav li,
+.navbar-nav li a{
+  min-height: 50px;
+  padding: 0;
+  line-height: 50px;
+  text-align: center;
+  color:#fff;
+}
+
+.list-lottery ul li{
+  padding: 15px;
+  list-style: none;
+  list-style-type: none;
+}
+
+.list-lottery li a{
+  display: block;
+  width: 260px;
+  height: 68px;
+}
+
+.list-lottery li{
+  padding: 0;
+  border-bottom: 1px solid rgba(230, 77, 77, 0.3);
+}
+
+.list-lottery li:last-child{
+  border-bottom: none;
+}
+
+.list-lottery ul{
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+  color:#000;
+}
+
+.list-lottery a{
+  color: #000;
+}
+
+.list-lottery .thumb{
+  position: relative;
+  float: left;
+  width: 73px;
+  height: 68px;
+  border-radius: 5px;
+  border-bottom: 1px solid rgb(205, 2, 40);
+  box-shadow: 0 5px 0 #CD0228;
+  text-align: center;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, left top, left bottom, from( #4aaec6 /*{a-bhover-background-start}*/), to( #3ed7f9 /*{a-bhover-background-end}*/)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* FF3.6 */
+  background-image:     -ms-linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* IE10 */
+  background-image:      -o-linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* Opera 11.10+ */
+  background-image:         linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/);
+}
+
+
+.list-lottery .thumb1{
+  position: relative;
+  float: left;
+  width: 73px;
+  height: 68px;
+  border-radius: 5px;
+  border-bottom: 1px solid rgb(67, 106, 115);
+  box-shadow: 0 5px 0 #455C62;
+  text-align: center;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, left top, left bottom, from( #4aaec6 /*{a-bhover-background-start}*/), to( #3ed7f9 /*{a-bhover-background-end}*/)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* FF3.6 */
+  background-image:     -ms-linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* IE10 */
+  background-image:      -o-linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* Opera 11.10+ */
+  background-image:         linear-gradient( #4aaec6 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/);
+}
+
+.list-lottery .suggest{
+  background-image: -webkit-gradient(linear, left top, left bottom, from( #000000 /*{a-bhover-background-start}*/), to( #3ed7f9 /*{a-bhover-background-end}*/)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient( #000000 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient( #000000 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* FF3.6 */
+  background-image:     -ms-linear-gradient( #000000 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* IE10 */
+  background-image:      -o-linear-gradient( #000000 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/); /* Opera 11.10+ */
+  background-image:         linear-gradient( #000000 /*{a-bhover-background-start}*/, #3ed7f9 /*{a-bhover-background-end}*/);
+}
+
+.list-lottery .hot{
+  background-image: -webkit-gradient(linear, left top, left bottom, from( #943C4D /*{a-bhover-background-start}*/), to( #FF0232 /*{a-bhover-background-end}*/)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient( #943C4D /*{a-bhover-background-start}*/, #FF0232 /*{a-bhover-background-end}*/); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient( #943C4D /*{a-bhover-background-start}*/, #FF0232 /*{a-bhover-background-end}*/); /* FF3.6 */
+  background-image:     -ms-linear-gradient( #943C4D /*{a-bhover-background-start}*/, #FF0232 /*{a-bhover-background-end}*/); /* IE10 */
+  background-image:      -o-linear-gradient( #943C4D /*{a-bhover-background-start}*/, #FF0232 /*{a-bhover-background-end}*/); /* Opera 11.10+ */
+ background-image: linear-gradient( #943C4D /*{a-bhover-background-start}*/, #FF0232 /*{a-bhover-background-end}*/);
+}
+
+.lottery-title{
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ rgba(255,255,255,0.7) /*{a-body-shadow-color}*/;
+}
+
+.lottery-name{
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ rgba(255,255,255,0.4) /*{a-body-shadow-color}*/;
+}
+
+.list-lottery p{
+  float: left;
+  padding: 5px 0 0 15px;
+  line-height: 25px;
+  color: #000;
+}
+
+.list-lottery .title-desc{
+  font-size: 16px;
+}
+
+.list-lottery p span{
+  display: block;
+}
+
+.list-lottery .thumb .high-lights{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 73px;
+  height: 43px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from( rgba(255, 255, 255, 0.3) /*{a-bhover-background-start}*/), to( rgba(255, 255, 255, 0.1) /*{a-bhover-background-end}*/)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient( rgba(255, 255, 255, 0.3) /*{a-bhover-background-start}*/, rgba(255, 255, 255, 0.1) /*{a-bhover-background-end}*/); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient( rgba(255, 255, 255, 0.3) /*{a-bhover-background-start}*/, rgba(255, 255, 255, 0.1) /*{a-bhover-background-end}*/); /* FF3.6 */
+  background-image:     -ms-linear-gradient( rgba(255, 255, 255, 0.3) /*{a-bhover-background-start}*/, rgba(255, 255, 255, 0.1) /*{a-bhover-background-end}*/); /* IE10 */
+  background-image:      -o-linear-gradient( rgba(255, 255, 255, 0.3) /*{a-bhover-background-start}*/, rgba(255, 255, 255, 0.1) /*{a-bhover-background-end}*/); /* Opera 11.10+ */
+  background-image:         linear-gradient( rgba(255, 255, 255, 0.3) /*{a-bhover-background-start}*/, rgba(255, 255, 255, 0.1) /*{a-bhover-background-end}*/);
+  border-radius: 0 30px 130px 0;
+}
+
+.go-back {
+    text-indent: -9em;
+    vertical-align: middle;
+    content: '';
+    height: 15px;
+    width: 15px;
+    display: block;
+    border: 5px solid #fff;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    position: absolute;
+    top: 13px;
+    left: 15px;
+}
+
+.ctParent {
+
+background:#fff;border: 1px solid #dedede;
+    -moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */margin:10px;margin-top:60px;
+}

@@ -1,0 +1,123 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html {
+	color: #666;
+}
+body { width: 100%; height: 100%; }
+body,div,p,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,select,button,textarea,blockquote {
+	margin: 0;
+	padding: 0
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+fieldset,img {
+	border: 0
+}
+address,caption,cite,code,dfn,em,i,strong,th,var,optgroup {
+	font-style: normal;
+	font-weight: normal
+}
+ul,ol {
+	list-style: none
+}
+caption,th {
+	text-align: left
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal
+}
+input,button,textarea,select,optgroup,option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit
+}
+input,button,textarea,select {
+	*font-size: 100%
+}
+button { border: 0; }
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word
+}
+a {
+	cursor: pointer
+}
+a:link {
+	text-decoration: none
+}
+a:visited {
+	
+	text-decoration: none
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+a img {
+	border-width: 0;
+	vertical-align: middle
+}
+body,td,th {
+	font-family: Tahoma,"Microsoft YaHei","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	line-height: 1.62;
+}
+table {
+	border-collapse: collapse;
+	border: 0;
+	padding: 0;
+	margin: 0
+}
+wbr: after {
+	content: "\00200B"
+}
+textarea {
+	resize: none
+}
+input[type=text]:focus,input[type=password]:focus,textarea:focus,div:focus,li:focus,a:focus {
+	outline: 0
+}
+input[type="button"]:disabled, button { background: #f3f3f3; color: #bababa; }
+ol {
+	padding: 0 0 0 20px
+}
+textarea {
+	overflow: auto
+}
+input {
+	font-size: 12px; color: #555555;
+}
+input:-moz-placeholder { color: #555; }
+input:-webkit-input-placeholder { color: #555; }
+.clearfix {
+	zoom: 1;
+	_height: 1px;
+}
+p { color: #000; }
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.fleft {
+	float: left
+}
+.fleft img{
+	margin-top:1px;
+}
+.fright {
+	float: right
+}
+
+.hidden
+{
+	display:none;
+}

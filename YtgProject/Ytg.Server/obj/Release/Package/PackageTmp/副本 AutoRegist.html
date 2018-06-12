@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户注册</title>
+    <link rel="stylesheet" type="text/css" href="/Content/Css/style.css" />
+
+    <script src="Content/Scripts/jquery-1.7.min.js" type="text/javascript"></script>
+    <!--[if lte IE 6]><script src="Content/Scripts/json2.js"></script><![endif]-->
+    <!--[if lte IE 7]><script src="Content/Scripts/json2.js"></script><![endif]-->
+    <!--[if lt IE 8]><script src="Content/Scripts/json2.js"></script><![endif]-->
+    <style type="text/css">
+        body {margin: 0px;padding: 30px 0 0 0;font-family:'Microsoft YaHei', Arial, Helvetica, sans-serif;font-size: 14px;overflow: hidden;background:#f2f2f2;}
+        .bottom {height: 100px;width: 100%;background-color: #676f78;margin-top: 50px;position: absolute;bottom: 0px;}
+        .bottom p {font-size: 18px;color: #d4d5d6;text-align: right;}
+        .bottom p span {line-height: 30px;font-size: 12px;}
+        .bottom a {margin: 10px 10px 10px 10px;}
+        .inputTool {height:28px;line-height:28px;}
+        a {color: #03c;text-decoration: none;}
+        a:hover {text-decoration: underline;}
+    </style>
+</head>
+<body >
+        <div style="text-align:center;">
+            <h1 style="margin-top:80px;">乐诚网，为梦想加速</h1>
+            <div style="width:900px;margin:auto;background:#ffffff;height:400px;border: 1px solid #dddddd;">
+                <div style="width: 350px; float: left; height: 350px; text-align:left;padding-left:20px;">
+                    <div style="margin-top:66px;color:red;">声明：</div>
+                    <div>
+                        <p>为了保障用户利益，本平台特此声明如下：</p>
+                        <p style="line-height:25px;">请广大用户认准本娱乐平台唯一域名验证地址：<a href="#">http://www.boyuesite.com</a>（谐音：test），以免造成不必要的损失。   </p>
+                        <p><a href="/login.html">已经注册，开始游戏</a></p>
+                    </div>
+                </div>
+                <div style="float: right; width: 400px; margin: auto; margin-top: 30px; text-align: left; height: 350px; ">
+                    <div id="divmsg" style="color:red;height:32px;line-height:32px;">
+                    </div>
+                    <div>
+                        <div class="inputTool">用户名</div>
+                        <div>
+                            <input id="txtCode" type="text" value="" class="input normal" style="width:300px;" />
+                        </div>
+                    </div>
+
+                    <div style="margin-top:10px;">
+                        <div class="inputTool">昵称</div>
+                        <div>
+                            <input id="txtNickName" type="text" value="" class="input normal" style="width:300px;" />
+                        </div>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <div class="inputTool">验证码</div>
+                        <div style="display:inline-block;">
+                            <table>
+                                <tr>
+                                    <td><input id="txtReCode" type="text" value="" class="input normal" style="width:180px;" /></td>
+                                    <td><img  id="vcode" style="width:110px; height:32px;" alt="验证码" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <input id="btnLogin" type="button" value="注册" class="btn" style="width:200px;"/>
+                        <span style="color:red;">默认密码：a123456</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="bottom">
+        <div style="width: 90%; margin: 0 auto;">
+            <p style="padding-right: 50px; padding-bottom: 0px;padding-top:10px;line-height:25px;">版权所有©2015   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乐诚网</p>
+            <p style="padding-bottom:10px;"><span>法律声明：请务必遵守每个国家或地区的当地法律，本站不能亦不会接受任何人士违反当地法律所引起的责任</span></p>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#vcode").attr("src", "CheckCodeHandler.ashx?date=" + new Date());
+        $("#vcode").click(function () {
+            $("#txtReCode").val("");
+            $("#vcode").attr("src", "CheckCodeHandler.ashx?date=" + new Date());
+        });
+    });
+
+    var isLogining = false;
+    function getPar(par) {
+        //获取当前URL
+        var local_url = document.location.href;
+        //获取要取得的get参数位置
+        var get = local_url.indexOf(par + "=");
+        if (get == -1) {
+            return false;
+        }
+        //截取字符串
+        var get_par = local_url.slice(par.length + get + 1);
+        //判断截取后的字符串是否还有其他get参数
+        var nextPar = get_par.indexOf("&");
+        if (nextPar != -1) {
+            get_par = get_par.slice(0, nextPar);
+        }
+        return get_par;
+    }
+
+    window.onkeydown = function (e) {
+        var keycode = e.which; 
+        if (keycode == 13) {
+            regist();
+        }
+
+    };
+    $("#btnLogin").click(function () {
+        regist();
+    });
+
+    function regist() {
+        if (isLogining)
+            return;
+
+        if ($("#txtCode").val() == "") {
+            $("#divmsg").html("请填写登录名");
+            $("#txtCode").focus();
+            return;
+        }
+        if ($("#txtCode").val().length < 6) {
+            $("#divmsg").html("登录名长度必须为6位");
+            $("#txtCode").focus();
+            return;
+        }
+
+
+        if ($("#txtPwd").val() == "") {
+            $("#divmsg").html("请填写登录昵称");
+            $("#txtPwd").focus();
+            return;
+        }
+
+        if ($("#txtReCode").val() == "") {
+            $("#divmsg").html("请填写验证码");
+            $("#txtReCode").focus();
+            return;
+        }
+        $("#divmsg").html("");
+
+        var data = { "action": "autoregist", "Code": $("#txtCode").val(), "NickName": $("#txtNickName").val(), "VdaCode": $("#txtReCode").val(), "params": getPar("regsionUnqiue") };
+        var dataStr = JSON.stringify(data);
+        isLogining = true;
+        $("#btnLogin").val("正在提交...")
+        $.ajax({
+            type: "POST",
+            url: "/Page/Initial.aspx",
+            data: data,
+            success: function (result) {
+                isLogining = false;
+                $("#btnLogin").val("注册");
+                var data = JSON.parse(result);
+                if (data.Code == 0) {
+                    //成功
+                    alert("恭喜您，注册成功，正在进入平台！");
+                    window.location = "/login.html";
+                } else if (data.Code == 1) {
+                    $("#divmsg").html("非法请求");
+                } else if (data.Code == 1001) {
+                    //账号禁用
+                    $("#divmsg").html("参数错误");
+                } else if (data.Code == 1002) {
+                    $("#divmsg").html("账号已存在");
+                    $("#txtCode").select();
+                    $("#txtCode").focus();
+                }
+                $("#txtReCode").val("");
+                $("#vcode").attr("src", "CheckCodeHandler.ashx?date=" + new Date());
+            },
+            error: function () {
+                $("#txtReCode").val("");
+                $("#vcode").attr("src", "CheckCodeHandler.ashx?date=" + new Date());
+
+                isLogining = false;
+                $("#btnLogin").val("注册");
+                $("#divmsg").html("未知错误！");
+            }
+        })
+    }
+</script>

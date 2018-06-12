@@ -1,0 +1,9 @@
+2016-03-31 01:45:35,508 [1] DEBUG WebSocketServer-49205706 - Listener (127.0.0.1:4534) was started
+2016-03-31 01:46:27,853 [9] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5425
+2016-03-31 01:46:27,854 [9] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5425
+2016-03-31 01:47:17,856 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CHART:{"Content":"111\n","TUid":"346"}
+2016-03-31 01:47:17,903 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 消息入库成功，内容为：{"Content":"111\n","TUid":"346"}
+2016-03-31 01:47:43,146 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:346
+2016-03-31 01:47:43,146 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：346
+2016-03-31 01:47:49,329 [6] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CHART:{"Content":"111\n","TUid":"5425"}
+2016-03-31 01:47:49,334 [6] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 消息入库成功，内容为：{"Content":"111\n","TUid":"5425"}

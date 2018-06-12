@@ -1,0 +1,57 @@
+﻿
+  .jslider .jslider-bg i,
+  .jslider .jslider-pointer { background: url(/Content/Images/Skin/jslider.png) no-repeat 0 0; }
+
+  .jslider { display: inline-block; width: 344px; height: 1em; position: relative; top: 0.6em; font-family: Arial, sans-serif; }
+  .jslider table { width: 100%; border-collapse: collapse; border: 0; }
+  .jslider td, .jslider th { padding: 0; vertical-align: top; text-align: left; border: 0; }
+
+  .jslider table,
+  .jslider table tr,
+  .jslider table tr td { width: 100%; vertical-align: top; }
+.layout-slider{position: relative;width:444px;}
+
+  #line-length,#line-length1{
+      height: 17px;
+      position: absolute;
+      top: 34px;
+      left:0;
+      width:344px;
+      background: url(/Content/Images/Skin/jslider.round.png) 0 -47px;
+      z-index: 1;
+  }
+  #sider1{ height: 100px; margin: 0 auto;}
+  .jslider .jslider-bg i { height: 17px; position: absolute; font-size: 0; top: 0; }
+  .jslider .jslider-bg .l { width: 10%;  left: 0; }
+  .jslider .jslider-bg .f { width: 80%; left: 10%; background-repeat: repeat-x; background-position: 0 -23px; }
+  .jslider .jslider-bg .r { width: 10%; left: 90%; background-position: right 0; }
+  .jslider .jslider-bg .v { position: absolute; width: 60%; left: 20%; top: 0; height: 5px; background-repeat: repeat-x; background-position: 0 -40px; }
+
+  .jslider .jslider-pointer { z-index: 2; width: 13px; height: 15px; background-position: 0 -60px; position: absolute; left: 20%; top: -4px; margin-left: -6px; cursor: pointer; cursor: hand; }
+  .jslider .jslider-pointer-hover { background-position: -20px -60px; }
+  .jslider .jslider-pointer-to { left: 80%; }
+
+  .jslider .jslider-label { font-size: 14px; line-height: 12px; color: #5e4d2f; white-space: nowrap; position: absolute; top: 0px; left: -50px; }
+  .jslider .jslider-label-to { left: auto; right: -50px; }
+
+
+  .jslider .jslider-value { white-space: nowrap; padding: 1px 2px 0; position: absolute; top: 30px; left: 20%;  line-height: 12px; text-align: center; }
+  .jslider .jslider-value span{ background: url(/Content/Images/Skin/jslider.round.png) no-repeat -59px -66px; width:53px; height: 31px; color:#5e4d2f; font-size: 14px; padding-top:13px; display: block}
+  .jslider .jslider-value-to { left: 80%; }
+
+  .jslider .jslider-label small,
+  .jslider .jslider-value small { position: relative; top: -0.4em; }
+
+  .jslider .jslider-scale { position: relative; top: 9px; }
+  .jslider .jslider-scale span { position: absolute; height: 5px; border-left: 1px solid #999; font-size: 0; }
+  .jslider .jslider-scale ins { font-size: 9px; text-decoration: none; position: absolute; left: 0px; top: 5px; color: #999; }
+
+  .jslider-single .jslider-pointer-to,
+  .jslider-single .jslider-value-to,
+  .jslider-single .jslider-bg .v,
+  .jslider-limitless .jslider-label { display: none; }
+
+  .market1_list{ /*background: #f8f8f8;*/ border:1px solid #d8d8d8; overflow: hidden}
+  .market1_list ul{ margin: 0 auto;}
+  .market1_list li{width: 150px;height: 30px;line-height: 30px;float: left;text-align:center;}
+.control_market {margin: auto;text-align: center;width: 800px;padding-left: 25px;}

@@ -1,0 +1,231 @@
+NSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('',18,19.5,1001,1,1001,getdate(),17,19.5,0.02,0.02)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选复式',180000,195000,20,1,76,getdate(),170000,195000,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选单式',180000,195000,20,1,77,getdate(),170000,195000,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('五星组合',180000,195000,20,2,78,getdate(),170000,195000,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选120',1500,1626,21,3,79,getdate(),1416,1626,1.68,1.68)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选60',3000,3255,21,4,80,getdate(),2830,3255,3.40,3.40)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选30',6000,6504,21,4,81,getdate(),5664,6504,6.72,6.72)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选20',9000,9750,21,4,82,getdate(),8500,9750,10.00,10.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选10',18000,19500,21,4,83,getdate(),17000,19500,20.00,20.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选5',36000,39000,21,4,84,getdate(),34000,39000,40.00,40.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('一帆风顺',4.3,4.675,22,4,85,getdate(),4.05,4.675,0.01,0.01)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('好事成双',22,23.875,22,4,86,getdate(),20.75,23.875,0.03,0.03)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('三星报喜',210,228,22,4,87,getdate(),198,228,0.24,0.24)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('四季发财',3900,4227,22,4,88,getdate(),3682,4227,4.36,4.36)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选复式',18000,19500,23,1,89,getdate(),17000,19500,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选单式',18000,19500,23,1,90,getdate(),17000,19500,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('四星组合',18000,19500,23,1,91,getdate(),17000,19500,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选24',750,813,24,1,92,getdate(),708,813,0.84,0.84)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选12',1500,1626,24,1,93,getdate(),1416,1626,1.68,1.68)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选6',3000,3255,24,1,94,getdate(),2830,3255,3.40,3.40)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选4',4500,4875,24,1,95,getdate(),4250,4875,5.00,5.00)
+GO
+--后三INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选复式',1800,1950,25,1,96,getdate(),1700,1950,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选单式',1800,1950,25,1,97,getdate(),1700,1950,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('后三组合',1800,1950,25,1,98,getdate(),1700,1950,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选和值',1800,1950,25,1,99,getdate(),1700,1950,2.00,2.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选跨度',1800,1950,25,1,100,getdate(),1700,1950,2.00,2.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组三复式',600,650.4,26,1,101,getdate(),570,650,0.67,0.67)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组三单式',600,650.4,26,1,102,getdate(),570,650,0.67,0.67)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组六复式',300,325.5,26,1,103,getdate(),280,325,0.34,0.34)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组六单式',300,325.5,26,1,104,getdate(),280,325,0.34,0.34)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('混合组选',0,0,26,1,105,getdate(),0,0,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选和值',0,0,26,1,106,getdate(),0,0,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选包胆',0,0,26,1,107,getdate(),0,0,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('和值尾数',18,19.5,27,1,108,getdate(),17,19.5,0.02,0.02)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('特殊号',0,0,27,1,109,getdate(),0,0,0.00,0.00)
+GO
+--后三INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选复式',1800,1950,28,1,110,getdate(),1700,1950,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选单式',1800,1950,28,1,111,getdate(),1700,1950,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('前三组合',1800,1950,28,1,112,getdate(),1700,1950,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选和值',1800,1950,28,1,113,getdate(),1700,1950,2.00,2.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选跨度',1800,1950,28,1,114,getdate(),1700,1950,2.00,2.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组三复式',600,650.4,29,1,115,getdate(),570,650,0.67,0.67)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组三单式',600,650.4,29,1,116,getdate(),570,650,0.67,0.67)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组六复式',300,325.5,29,1,117,getdate(),280,325,0.34,0.34)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组六单式',300,325.5,29,1,118,getdate(),280,325,0.34,0.34)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('混合组选',0,0,29,1,119,getdate(),0,0,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选和值',0,0,29,1,120,getdate(),0,0,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选包胆',0,0,29,1,121,getdate(),0,0,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('和值尾数',18,19.5,30,1,122,getdate(),17,19.5,0.02,0.02)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('特殊号',0,0,30,1,123,getdate(),0,0,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选复式',180,195,31,1,124,getdate(),170,195,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选单式',180,195,31,1,125,getdate(),170,195,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选和值',180,195,31,1,126,getdate(),170,195,2.00,2.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选跨度',180,195,31,1,127,getdate(),170,195,2.00,2.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选复式',90,97.5,32,1,128,getdate(),85,97.5,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选单式',90,97.5,32,1,129,getdate(),85,97.5,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选和值',90,97.5,32,1,130,getdate(),85,97.5,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选包胆',90,97.5,32,1,131,getdate(),85,97.5,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选复式',180,195,33,1,132,getdate(),170,195,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选单式',180,195,33,1,133,getdate(),170,195,200.00,200.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选和值',180,195,33,1,134,getdate(),170,195,2.00,2.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('直选跨度',180,195,33,1,135,getdate(),170,195,2.00,2.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选复式',90,97.5,34,1,136,getdate(),85,97.5,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选单式',90,97.5,34,1,137,getdate(),85,97.5,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选和值',90,97.5,34,1,138,getdate(),85,97.5,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('组选包胆',90,97.5,34,1,139,getdate(),85,97.5,0.00,0.00)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('后三一码',6.6,7.14,35,1,140,getdate(),6.23,7.13,0.01,0.01)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('前三一码',6.6,7.14,35,1,141,getdate(),6.23,7.13,0.01,0.01)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('后三二码',33,35.85,35,1,142,getdate(),31.1,35.85,0.04,0.04)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('前三二码',33,35.85,35,1,143,getdate(),31.1,35.85,0.04,0.04)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('四星一码',5.2,5.65,36,1,144,getdate(),4.9,5.65,0.01,0.01)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('四星二码',18.4,19.9,36,1,145,getdate(),17.4,19.9,0.02,0.02)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('五星二码',12,13.05,37,1,146,getdate(),11.3,13.05,0.01,0.01)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('五星三码',41,44.45,37,1,147,getdate(),38.7,44.45,0.05,0.05)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('前二大小单双',7.2,7.8,38,1,148,getdate(),6.8,7.8,0.01,0.01)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('后二大小单双',7.2,7.8,38,1,149,getdate(),6.8,7.8,0.01,0.01)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('前三大小单双',14.4,15.6,38,1,150,getdate(),13.6,15.6,0.02,0.02)
+GO
+INSERT INTO [dbo].[PlayTypeRadios]([PlayTypeRadioName],[BonusBasic],[MaxBonus],[NumCode],[IsEnable],[RadioCode],[OccDate],[BonusBasic17],[MaxBonus17],[StepAmt],[StepAmt1700])
+VALUES('后三大小单双',14.4,15.6,38,1,151,getdate(),13.6,15.6,0.02,0.02)
+GO

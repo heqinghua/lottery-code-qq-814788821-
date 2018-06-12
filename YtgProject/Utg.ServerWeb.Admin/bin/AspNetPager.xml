@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AspNetPager</name>
+    </assembly>
+    <members>
+        <member name="T:Wuqi.Webdiyer.AspNetPager">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.OnInit(System.EventArgs)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.OnLoad(System.EventArgs)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.GetHrefString(System.Int32)">
+            <summary>
+            Get the navigation url for the paging button.
+            </summary>
+            <param name="pageIndex">the page index correspond to the button.</param>
+            <returns>href string for the paging navigation button.</returns>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.GetCustomInfoHtml(System.String)">
+            <summary>
+            Replace the property placeholders in the CustomInfoHTML with the property values repectively
+            </summary>
+            <param name="origText">original CustomInfoHTML</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.ConvertQueryStringToCollection(System.String)">
+            <summary>
+            Convert raw query string to NameValueCollection
+            </summary>
+            <param name="s">raw query string</param>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.BuildUrlString(System.String)">
+            <summary>
+            add paging parameter and value to the current url or change parameter value if it already exists when using url paging mode
+            </summary>
+            <param name="pageIndex">page index parameter to be added</param>
+            <returns>href string for the navigattion button</returns>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.CreateNavigationButton(System.Web.UI.HtmlTextWriter,Wuqi.Webdiyer.AspNetPager.NavigationButton)">
+            <summary>
+            Create first, prev, next or last button.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter"/> that represents the output stream to render HTML content on the client.</param>
+            <param name="btn">the navigation button</param>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.AddToolTip(System.Web.UI.HtmlTextWriter,System.Int32)">
+            <summary>
+            Add tool tip text to navigation button.
+            </summary>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.AddPagingButtonLayoutTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            add paging button layout tag
+            </summary>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.CreateNumericButton(System.Web.UI.HtmlTextWriter,System.Int32)">
+            <summary>
+            Create numeric paging button.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter"/> that represents the output stream to render HTML content on the client.</param>
+            <param name="index">the page index correspond to the paging button</param>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.CreateNumericImages(System.Web.UI.HtmlTextWriter,System.Int32,System.Boolean)">
+            <summary>
+            Create numeric image button.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter"/> that represents the output stream to render HTML content on the client.</param>
+            <param name="index">the page index correspond to the button.</param>
+            <param name="isCurrent">if the page index correspond to the button is the current page index</param>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.CreateMoreButton(System.Web.UI.HtmlTextWriter,System.Int32)">
+            <summary>
+            create more (...) button.
+            </summary>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.writeSpacingStyle(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Add paging button spacing styles to HtmlTextWriter
+            </summary>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.AddHyperlinkTarget(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            add target attribute to paging hyperlink
+            </summary>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.AddClassAndStyle(System.String,System.String,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            add css class and style attribute to HtmlTextWriter
+            </summary>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.OnPageChanging(Wuqi.Webdiyer.PageChangingEventArgs)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.OnPageChanged(System.EventArgs)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.GoToPage(System.Int32)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.RaisePostBackEvent(System.String)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPager.RaisePostDataChangedEvent">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="E:Wuqi.Webdiyer.AspNetPager.PageChanging">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="E:Wuqi.Webdiyer.AspNetPager.PageChanged">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ShowNavigationToolTip">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.NavigationToolTipTextFormatString">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.NumericButtonTextFormatString">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CurrentPageButtonTextFormatString">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PagingButtonType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.NumericButtonType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PagingButtonLayoutType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CurrentPageButtonPosition">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.NavigationButtonsPosition">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.NavigationButtonType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.UrlPagingTarget">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.MoreButtonType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PagingButtonSpacing">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ShowFirstLast">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ShowPrevNext">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ShowPageIndex">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ShowMoreButtons">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.FirstPageText">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PrevPageText">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.NextPageText">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.LastPageText">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.NumericButtonCount">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ShowDisabledButtons">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ImagePath">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ButtonImageExtension">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ButtonImageNameExtension">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CpiButtonImageNameExtension">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.DisabledButtonImageNameExtension">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ButtonImageAlign">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.UrlPaging">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.UrlPageIndexName">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.UrlPageSizeName">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ReverseUrlPageIndex">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CurrentPageIndex">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.RecordCount">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PagesRemain">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PageSize">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.RecordsRemain">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.StartRecordIndex">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.EndRecordIndex">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PageCount">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ShowPageIndexBox">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PageIndexBoxType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PageIndexBoxClass">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PageIndexBoxStyle">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.TextBeforePageIndexBox">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.TextAfterPageIndexBox">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.SubmitButtonText">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.SubmitButtonClass">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.SubmitButtonStyle">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.SubmitButtonImageUrl">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ShowBoxThreshold">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.ShowCustomInfoSection">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CustomInfoTextAlign">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CustomInfoSectionWidth">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CustomInfoClass">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CustomInfoStyle">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CustomInfoHTML">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CurrentPageButtonStyle">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CurrentPageButtonClass">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PagingButtonsClass">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PagingButtonsStyle">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.FirstLastButtonsClass">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.FirstLastButtonsStyle">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PrevNextButtonsClass">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PrevNextButtonsStyle">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.MoreButtonsClass">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.MoreButtonsStyle">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.CloneFrom">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.EnableTheming">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.SkinID">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.EnableUrlRewriting">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.UrlRewritePattern">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.FirstPageUrlRewritePattern">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included --> added on 2012-11-11
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.AlwaysShow">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.AlwaysShowFirstLastPageNumber">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.Wrap">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.PageIndexOutOfRangeErrorMessage">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.InvalidPageIndexErrorMessage">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.AspNetPager.LayoutType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.PageChangingEventHandler">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.AboutForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AboutForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AboutForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Wuqi.Webdiyer.PageChangingEventArgs">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.PageChangingEventArgs.#ctor(System.Int32)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="P:Wuqi.Webdiyer.PageChangingEventArgs.NewPageIndex">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.AspNetPagerIDConverter">
+            <summary>
+            AspNetPager type converter used for the design time support
+            </summary>
+        </member>
+        <member name="T:Wuqi.Webdiyer.ShowPageIndexBox">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.ShowPageIndexBox.Never">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.ShowPageIndexBox.Auto">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.ShowPageIndexBox.Always">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.PageIndexBoxType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PageIndexBoxType.TextBox">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PageIndexBoxType.DropDownList">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.ShowCustomInfoSection">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.ShowCustomInfoSection.Never">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.ShowCustomInfoSection.Left">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.ShowCustomInfoSection.Right">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.PagingButtonType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PagingButtonType.Text">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PagingButtonType.Image">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.LayoutType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.LayoutType.Table">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.LayoutType.Div">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.PagingButtonPosition">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PagingButtonPosition.Beginning">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PagingButtonPosition.End">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PagingButtonPosition.Center">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PagingButtonPosition.Fixed">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.PagingButtonLayoutType">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PagingButtonLayoutType.UnorderedList">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PagingButtonLayoutType.Span">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.PagingButtonLayoutType.None">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.NavigationButtonPosition.Left">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.NavigationButtonPosition.Right">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="F:Wuqi.Webdiyer.NavigationButtonPosition.BothSides">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.PagerDesigner">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.PagerDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.PagerDesigner.GetErrorDesignTimeHtml(System.Exception)">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="M:Wuqi.Webdiyer.PagerDesigner.GetDesignTimeHtml">
+            <!-- Badly formed XML file "e:\Projects\AspNetPager\Src\AspNetPagerDocs.xml" cannot be included -->
+        </member>
+        <member name="T:Wuqi.Webdiyer.AspNetPagerActionList">
+            <summary>
+            Designer Action List
+            </summary>
+        </member>
+        <member name="M:Wuqi.Webdiyer.AspNetPagerActionList.#ctor(System.ComponentModel.IComponent)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="T:Wuqi.Webdiyer.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Wuqi.Webdiyer.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Wuqi.Webdiyer.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Wuqi.Webdiyer.Properties.Resources.aspnetpager">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

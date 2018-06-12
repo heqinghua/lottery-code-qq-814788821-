@@ -1,0 +1,132 @@
+body {
+	background: rgb(255, 255, 255);
+}
+.wrap {
+	margin: 0px auto; width: 1000px;
+}
+.clearfix::after {
+	height: 0px; overflow: hidden; clear: both; font-size: 0px; display: block; visibility: hidden; content: ".";
+}
+*:first-child + html .clearfix {
+	-ms-zoom: 1;
+}
+.cleft {
+	clear: left;
+}
+.cright {
+	clear: right;
+}
+.cboth {
+	clear: both;
+}
+.textoverflow {
+	overflow: hidden; display: block; white-space: nowrap; -ms-word-break: break-all; -ms-word-wrap: normal; -ms-text-overflow: ellipsis; max-width: 100%; _width: 100%;
+}
+.rel {
+	position: relative;
+}
+.abs {
+	position: absolute;
+}
+.fix {
+	position: fixed;
+}
+.dis_in {
+	display: inline;
+}
+.dis_bl {
+	display: block;
+}
+.dis_in_bl {
+	display: inline-block;
+}
+.fleft {
+	float: left;
+}
+.fright {
+	float: right;
+}
+.space {
+	letter-spacing: 2px;
+}
+.sprite {
+	background: url("/images/xm/daywin_sprite.png") no-repeat;
+}
+.sprite_shadow {
+	background: url("/images/xm/daywin_sprite.png") repeat-x 0px -215px; width: 100%; height: 6px;
+}
+.sprite_index {
+	background: url("/images/xm/daywin_index.png") no-repeat;
+}
+.sprite_load {
+	background: url("/images/xm/load.png") no-repeat;
+}
+.csdown_sprite {
+	background: url("/images/xm/csdown_sprite.png") no-repeat;
+}
+.customer_left {
+	left: -140px; top: 165px; width: 190px; height: 355px; overflow: hidden; z-index: 98;
+}
+.customer_left .down_side {
+	background-position: -690px 0px; top: 30px; width: 50px; height: 199px; right: 0px;
+}
+.customer_left .down_bg {
+	background-position: 0px 0px; left: 0px; top: 15px; width: 140px; height: 340px; overflow: hidden;
+}
+.customer_left .down_bg a {
+	display: block;
+}
+.customer_left .down_icon {
+	background-position: -457px -100px; left: 30px; top: 15px; width: 80px; height: 90px;
+}
+.customer_left .down_pt {
+	border: 1px solid rgb(56, 105, 145); border-image: none; left: 13px; top: 115px; width: 112px; height: 53px; overflow: hidden;
+}
+.customer_left .down_wx {
+	background-position: -560px 0px; border: 1px solid rgb(56, 105, 145); border-image: none; left: 13px; top: 185px; width: 112px; height: 112px;
+}
+.customer_right {
+	top: 165px; width: 50px; height: 355px; right: 0px; overflow: hidden; z-index: 1000;
+}
+.customer_right .cs_side {
+	background-position: -750px 0px; left: 0px; top: 30px; width: 50px; height: 264px;
+}
+.customer_right .cs_bg {
+	background-position: 0px 15px; top: 0px; width: 0px; height: 355px; right: 0px; overflow: hidden;
+}
+.customer_right .cs_bg a {
+	display: block;
+}
+.customer_right .cs_top {
+	background-position: -447px 0px; left: 21px; top: 0px; width: 98px; height: 78px;
+}
+.customer_right .cs_chat {
+	left: 0px; width: 140px; height: 60px;
+}
+.customer_right .cs_email {
+	left: 0px; width: 140px; height: 60px;
+}
+.customer_right .cs_phone {
+	left: 0px; width: 140px; height: 60px;
+}
+.customer_right .cs_wx {
+	left: 0px; width: 140px; height: 60px;
+}
+.customer_right .cs_chat {
+	background-position: -150px 0px; top: 85px; height: 50px;
+}
+.customer_right .cs_chat:hover {
+	background-position: -150px 0px;
+}
+.customer_right .cs_email {
+	background-position: -300px -60px; top: 135px;
+}
+.customer_right .cs_email:hover {
+	background-position: -150px -60px;
+}
+.customer_right .cs_phone {
+	background-position: -300px -240px; top: 195px;
+}
+.customer_right .cs_wx {
+	background-position: -300px -180px; top: 255px;
+}

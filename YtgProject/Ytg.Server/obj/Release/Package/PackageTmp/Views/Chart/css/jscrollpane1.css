@@ -1,0 +1,261 @@
+﻿@charset "utf-8";
+body ,div ,dl ,dt ,dd ,ol ,li ,h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,pre ,form ,fieldset ,input ,P ,blockquote ,th ,td ,img,
+INS {
+	margin: 0px;
+	padding: 0px;
+	border:0;
+}
+ol{
+	list-style-type: none;
+}
+img,input{
+	border:none;
+}
+:focus{outline:0;}
+
+/*视频聊天区*/
+.talk{
+	margin:0 auto;
+    background:#f4f3ef;
+}
+.talk_title{
+	width: 100%;
+	height:40px;
+	line-height:40px;
+	text-indent: 12px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #afafaf;
+	background:#212121;
+	font-family: "微软雅黑";
+}
+.talk_title span{float:left}
+.talk_title_c {
+	width: 100%;
+	height:30px;
+	line-height:30px;
+}
+.talk_record{
+	width: 100%;
+	overflow: hidden;
+	margin: 0px;
+}
+.talk_word {
+	line-height: 90px;
+	height: 90px;
+	width: 100%;
+}
+.messages {
+    padding-top:5px;
+	height: 60px;
+	width: 99.4%;
+	border:none;
+	overflow:auto;
+	text-indent:5px;
+	color: #666;
+}
+.messages:hover{background-color: #fff;}
+.talk_send{
+	width:50px;
+	height:24px;
+	line-height: 24px;
+	font-size:12px;
+	border:0px;
+	margin-left: 2px;
+	color: #fff;
+	background-image: url(../images/talk_send_btn.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-color: transparent;
+	font-family: "微软雅黑";
+}
+.talk_send:hover {
+	background-position: 0px -24px;
+}
+.btn {background: #947026;color: #fff;height: 40px;line-height: 40px;border: none;margin-top:10px;margin-bottom:5px; width:200px;cursor:pointer;}
+.talk_record ul{ padding-left:5px;}
+.talk_record li {
+	line-height: 25px;
+}
+.talk_word .controlbtn a{
+	margin: 12px;
+}
+.talk .talk_word .order {
+	float:left;
+	display: block;
+	height: 14px;
+	width: 16px;	  
+	background-image: url(../images/loop.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+.talk .talk_word .loop {
+	float:left;
+	display: block;
+	height: 14px;
+	width: 16px;
+	background-image: url(../images/loop.png);
+	background-repeat: no-repeat;
+	background-position: -30px 0px;
+}
+.talk .talk_word .single {
+	float:left;
+	display: block;
+	height: 14px;
+	width: 16px;
+	background-image: url(../images/loop.png);
+	background-repeat: no-repeat;
+	background-position: -60px 0px;
+}
+.talk .talk_word .order:hover,.talk .talk_word .active{
+	background-position: 0px -20px;
+	text-decoration: none;
+}
+.talk .talk_word .loop:hover{
+	background-position: -30px -20px;
+	text-decoration: none;
+}
+.talk .talk_word .single:hover{
+	background-position: -60px -20px;
+	text-decoration: none;
+}
+
+/* * CSS Styles that are needed by jScrollPane for it to operate correctly. * * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane * may not operate correctly without them. */
+.jspContainer{overflow:hidden;position:relative;}
+.jspPane{position:absolute;}
+.jspVerticalBar{position:absolute;top:0;right:0;width:8px;height:100%;background-color:transparent;}
+.jspHorizontalBar{position:absolute;bottom:0;left:0;width:100%;height:8px;background-color:transparent;}
+.jspVerticalBar *,.jspHorizontalBar *{margin:0;padding:0;}
+.jspCap{display:none;}
+.jspHorizontalBar .jspCap{float:left;}
+.jspTrack{
+	position:relative;
+	background-color:transparent;
+}
+.jspDrag{background:#ccc;position:relative;top:0;left:0;cursor:pointer;border:1px solid #333;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.jspHorizontalBar .jspTrack,.jspHorizontalBar .jspDrag{float:left;height:100%;}
+.jspArrow{background:#50506d;text-indent:-20000px;display:block;cursor:pointer;}
+.jspArrow.jspDisabled{cursor:default;background:#80808d;}
+.jspVerticalBar .jspArrow{height:8px;}
+.jspHorizontalBar .jspArrow{width:8px;float:left;height:100%;}
+.jspVerticalBar .jspArrow:focus{outline:none;}
+.jspCorner{background:#eeeef4;float:left;height:100%;}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner{margin:0 -3px 0 0;}
+.jp-container{height:300px;position:relative;background-color: transparent;float:left;overflow-y:auto;overflow-x:hidden;width:565px;border:solid 1px #d1d1d1}
+
+
+/*讨论区*/
+.jp-container .talk_recordbox{
+	min-height:45px;
+	color: #afafaf;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+}
+
+.jp-container .talk_recordbox:first-child{border-top:none;}
+.jp-container .talk_recordbox:last-child{border-bottom:none;}
+.jp-container .talk_recordbox .talk_recordtextbg{
+	float:left;
+	width:10px;
+	height:30px;
+	display:block;
+	background-image: url(../images/talk_recordtext.png);
+	background-repeat: no-repeat;
+	background-position: left top;}
+.jp-container .talk_recordbox .talk_recordtext{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background-color:#b8d45c;
+	max-width:500px;
+	height:auto;
+	display:block;
+	padding: 5px;
+	float:left;
+	color:#333333;
+}
+.jp-container .talk_recordbox h3{
+	font-size:14px;
+	padding:2px 0 5px 0;
+	text-transform:uppercase;
+	font-weight: 100;
+	
+}
+.jp-container .talk_recordbox .user {
+	float:left;
+	display:inline;
+	height: 45px;
+	width: 80px;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+    color:#b8d45c;
+}
+/*自己发言样式*/
+.jp-container .talk_recordboxme{
+	display:block;
+	width:100%;
+	min-height:80px;
+	color: #afafaf;	
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+}
+.jp-container .talk_recordboxme .talk_recordtextbg{
+	float:right;
+	width:10px;
+	height:30px;
+	display:block;
+	background-image: url(../images/talk_recordtextme.png);
+	background-repeat: no-repeat;
+	background-position: left top;}
+
+.jp-container .talk_recordboxme .talk_recordtext{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background-color:#fcfcfc;
+	max-width:500px;
+	height:auto;
+	padding: 5px;
+	color:#666;
+	font-size:12px;
+	float:right;
+	
+}
+.jp-container .talk_recordboxme h3{
+	font-size:14px;
+	padding:2px 0 5px 0;
+	text-transform:uppercase;
+	font-weight: 100;
+	color:#333333;
+	
+}
+.jp-container .talk_recordboxme .user{
+	float:right;
+	height: 45px;
+	width: 45px;
+	margin-top: 0px;
+	margin-right: 20px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	display:inline;
+}
+.talk_time{
+	color: #666;
+	text-align: right;
+	width: 680px;
+	display: block;
+}

@@ -1,0 +1,19 @@
+2016-04-21 01:19:30,254 [1] DEBUG WebSocketServer-49205706 - Listener (127.0.0.1:4534) was started
+2016-04-21 01:19:35,376 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5508
+2016-04-21 01:19:35,376 [5] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5508
+2016-04-21 01:20:05,155 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5508
+2016-04-21 01:20:05,155 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5508
+2016-04-21 01:20:10,573 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5508
+2016-04-21 01:20:10,573 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5508
+2016-04-21 01:20:12,896 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5508
+2016-04-21 01:20:12,896 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5508
+2016-04-21 01:20:16,863 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5508
+2016-04-21 01:20:16,863 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5508
+2016-04-21 01:26:18,243 [11] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5508
+2016-04-21 01:26:18,243 [11] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5508
+2016-04-21 01:26:26,948 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5508
+2016-04-21 01:26:26,949 [8] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5508
+2016-04-21 01:27:08,794 [11] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5508
+2016-04-21 01:27:08,794 [11] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5508
+2016-04-21 01:27:18,315 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新消息，内容为：CONTACT:5508
+2016-04-21 01:27:18,315 [7] DEBUG Ytg.Chart.Comm.Web.YtgWebSocketServer - 接收新连接内容为：5508

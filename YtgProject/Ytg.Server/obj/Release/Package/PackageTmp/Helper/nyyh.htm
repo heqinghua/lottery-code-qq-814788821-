@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="IE=11.0000" http-equiv="X-UA-Compatible">		 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>乐诚网-农行跨招商银行充值</title>
+    
+    <link href="resource/cwlobby.css" rel="stylesheet" type="text/css"/>	
+    <link href="resource/help.css" rel="stylesheet" type="text/css"/> 
+    <link href="resource/group.css" rel="stylesheet" type="text/css"/>     
+    <script src="resource/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="resource/help.js" type="text/javascript"></script>           
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+			
+				$("#main-nav-panle").hover(function() {
+				}, function() {
+					$("#main-nav-panle").hide();
+					$("#main-nav-panle-iframe").hide();
+				});
+				$("#sub-nav-items li ul li").hide();
+				$("#sub-nav-items li ").hover(function() {
+					$(this).find("ul li").show();
+				}, function() {
+					$(this).find("ul li").hide();
+				});
+			});
+			function show_no(id) {
+				$("#code_" + id).show("slow");
+			}
+
+			function show_nocode(id) {
+				$("#ncode_" + id).show("slow");
+			}
+
+			function close_no(id) {
+				$("#code_" + id).hide("slow");
+			}
+
+			function nclose_no(id) {
+				$("#ncode_" + id).hide("slow");
+			}
+
+		
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				//构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg);
+				//匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+				//返回参数值
+			}
+
+
+			$(document).ready(function() {
+				var a = getUrlParam("hnm");
+				if (a != null) {
+					$("#right-main-content ul li").removeClass("active").find("p").hide(100).stop();
+					$("#right-main-content ul ").find("#" + a).addClass('active').find("*").show('slow');
+				}
+			});
+
+		</script>
+		 
+
+<BODY>
+<DIV id="right-main">
+<DIV class="xgnc_mid">
+<DIV id="right-main-content">
+
+
+
+
+    <ul>
+        <li>重要提示：</li>
+        <li>当您进行农行充值时，请获取平台最新收款方信息</li>
+        <li>当您转账成功时，请及时删除收款方资料（具体方法，见下文）</li>
+        <li>方法：</li>
+        <li>1. 获取平台收款招商银行“收款人姓名” 、“收款人账号”、“附言所需输入的充值订单号”。</li>
+        <li>2.</li>
+        <li>
+            <img src="/Helper/resource/images/n1.png" /></li>
+        <li>3. 点击[证书登陆]；</li>
+        <li>
+            <img src="/Helper/resource/images/n2.png" /></li>
+        <li>4. 需验证U盾密码，后即可成功登陆； </li>
+        <li>
+            <img src="/Helper/resource/images/n3.jpg" /></li>
+        <li>5. 进入【个人网银首页】后点击页面上方的【转账汇款】的【单笔转账】；</li>
+        <li>
+            <img src="/Helper/resource/images/n4.jpg" /></li>
+        <li>6. 选择【转出账户】后，需点击【新增收款方】；</li>
+        <li>
+            <img src="/Helper/resource/images/n5.jpg" /></li>
+        <li>7. 并填写【收款方】明细；</li>
+        <li>
+            <img src="/Helper/resource/images/n6.jpg" /></li>
+        <li>
+            <img src="/Helper/resource/images/n7.jpg" /></li>
+        <li>8. 提交后再次需输入U盾密码；</li>
+        <li>9. 使用u盾进行确认；</li>
+        <li>10. 提示您登记的信息已保存；</li>
+        <li>11. 填写充值金额，并在‘转账用途’处粘帖充值订单号，并提交；</li>
+        <li>
+            <img src="/Helper/resource/images/n8.jpg" /></li>
+        <li>12. 跳转【转账确认】页面，确认收款方信息转账金额，附言无误后，请在“加急标志”一栏勾选“加急”，需输入支付密码并提交；</li>
+        <li>
+            <img src="/Helper/resource/images/n9.jpg" /></li>
+        <li>13. 再次输入U盾密码；</li>
+        <li>14. 如有需要，再次使用u盾进行确认；</li>
+        <li>15. 支付信息确认后，跳转至“转账交易成功”页面；</li>
+        <li>
+            <img src="/Helper/resource/images/n10.jpg" /></li>
+        <li>怎样删除收款方资料？</li>
+        <li>1.在个人网上银行点击“转账汇款”，选择【收款方管理】-[收款方维护]；</li>
+        <li>
+            <img src="/Helper/resource/images/n11.jpg" /></li>
+        <li>2.选择您要删除的账户，点击删除；</li>
+        <li>
+            <img src="/Helper/resource/images/n12.jpg" /></li>
+        <li>3.请输入U盾密码，点击确认；</li>
+        <li>4.删除收款方资料成功。</li>
+        <li>
+            <img src="/Helper/resource/images/n13.jpg" /></li>
+    </ul>
+
+
+
+
+</DIV></DIV>
+</BODY></html>

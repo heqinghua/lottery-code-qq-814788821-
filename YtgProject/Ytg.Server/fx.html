@@ -1,0 +1,362 @@
+﻿
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        APP下载
+    </title>
+    <!-- Bootstrap core CSS -->
+    <link href="/fx/bootstrap.min.css" rel="stylesheet">
+    <link href="/fx/theme.css" rel="stylesheet">
+    <link href="/fx/bootstrap-reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="/fx/font-awesome.css" />
+    <link rel="stylesheet" href="/fx/rs-style.css" media="screen">
+    <link rel="stylesheet" href="/fx/settings.css"
+          media="screen">
+    <!-- Custom styles for this template -->
+    <link href="/fx/common.css" rel="stylesheet">
+    <link href="/fx/style-responsive.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .tips {
+            top: 0px;
+            margin-top: 0px;
+            vertical-aligin: top;
+            position: absolute;
+            z-index: 20000000;
+            text-align: center;
+            display: none;
+            cursor: pointer;
+        }
+
+        .tips {
+            margin-top: 0px;
+            text-align: right;
+        }
+    
+        /*核心css*/
+        .wxtip {
+            background: rgba(0,0,0,0.8);
+            text-align: center;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 998;
+            display: none;
+        }
+
+        .wxtip-icon {
+            width: 52px;
+            height: 67px;
+            background: url(http://img.caibaojian.com/uploads/2016/01/weixin-tip.png) no-repeat;
+            display: block;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+
+        .wxtip-txt {
+            padding-top: 107px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+  
+</head>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="ngame_detail_box">
+                <div class="ngame_detail_info">
+                    <img src="/fx/logo.png" alt="" class="ng_d_i_img" />
+                    <div class="ng_d_info">
+                        <h2>
+                            娱乐平台
+                        </h2>
+                        <div class="g_d_t_sec">
+                            <div class="s_l_c_r_xing">
+                                <p style="width: 82%;">
+                                </p>
+                            </div>
+                            <div class="g_d_t_bq s_l_c_r_thr">
+                                <span class="g_d_t_nobac">8.2&nbsp;分</span>
+                            </div>
+                        </div>
+                        <p class="g_d_t_nums">
+                            游戏类型：彩票游戏&nbsp;&nbsp;
+                        </p>
+                        <div class="s_l_c_r_thr">
+                            <span>安全无毒</span> <span>免费</span> <span class="s_l_c_r_tan">权限：1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ng_d_i_right">
+                <a onclick="checkWeixin(this)" class="ng_downandrio"></a>
+                <br />
+                <a onclick="checkWeixin(this)" style="display: none" href="itms-services:///?action=download-manifest&url=https://pay.hzcgt.top/download/apple.plist"
+                   class="ng_downios"></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="ng_l_left">
+                <!-- begin libao  -->
+                <!-- end libao  -->
+                <div class="ng_lb_box">
+                    <div class="ng_lb_b_details">
+                        <div class="def_menu_line">
+                            <div style="padding: 0px;">
+                                精彩图集
+                            </div>
+                        </div>
+                        <div class="span12 about-carousel">
+                            <div id="myCarousel" class="carousel slide">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="item  active">
+                                        <img src="fx/1.png" alt="">
+                                        <div class="carousel-caption">
+                                            <p>
+                                                娱乐平台
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item ">
+                                        <img src="fx/2.png" alt="">
+                                        <div class="carousel-caption">
+                                            <p>
+                                                娱乐平台
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                                    <i class="icon-angle-left">
+                                    </i>
+                                </a><a class="carousel-control right" href="#myCarousel" data-slide="next">
+                                    <i class="icon-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="def_menu_line">
+                            <div style="padding: 0px;">
+                                游戏详情&nbsp;<!--<a href='http://jingyan.baidu.com/article/b0b63dbfea0bfa4a49307077.html'>Iphone安装教程</a>-->
+                            </div>
+                        </div>
+                        <div class="ng_lb_b_d_conts">
+                            <div class="ng_lb_b_d_c_div" style="font-size: 16px; line-height: 33px;">
+                                <a href="#game-snap" class="first-snap">
+                                    <img class="game-snap-img" src="" alt="游戏截图">
+                                </a>
+                                敬爱的贵宾您好，只要您在游戏中遇到任何问题，线上客服会尽最大的力量替您解决。线上客服是您最好的帮手！能为您服务，是『平台』线上客服莫大的荣幸！在此祝您好运长长久久～天天好运气！
+                            </div>
+                        </div>
+                        <div class="def_menu_line" style="display: none">
+                            <div style="padding: 0px;">
+                                游戏攻略
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="downloadbarpace">
+    </div>
+    <a onclick="checkWeixin(this)" target="_blank">
+        <div class="navbar-fixed-bottom downLoadBar" style="position: fixed; right: 0; left: 0;
+            border-width: 0 0 1px;">
+            立即下载安装
+        </div>
+    </a><a onclick="checkWeixin(this)" style="display: none;">
+        <div class="navbar-fixed-bottom downLoadBar">
+            苹果手机下载
+        </div>
+    </a>
+    <div class="wxtip " id="JweixinTip">
+        <span class="wxtip-icon"></span>
+        <p class="wxtip-txt">点击右上角<br />选择在浏览器中打开</p>
+    </div>
+
+</div>
+<body onresize="bb()" click="closes()">
+    <script>
+        var slider = {
+            //判断设备是否支持touch事件
+            touch: ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch,
+            slider: document.getElementById('slider'),
+
+            //事件
+            events: {
+                index: 0,     //显示元素的索引
+                slider: this.slider,     //this为slider对象
+                icons: document.getElementById('icons'),
+                icon: this.icons.getElementsByTagName('span'),
+                handleEvent: function (event) {
+                    var self = this;     //this指events对象
+                    if (event.type == 'touchstart') {
+                        self.start(event);
+                    } else if (event.type == 'touchmove') {
+                        self.move(event);
+                    } else if (event.type == 'touchend') {
+                        self.end(event);
+                    }
+                },
+                //滑动开始
+                start: function (event) {
+                    var touch = event.targetTouches[0];     //touches数组对象获得屏幕上所有的touch，取第一个touch
+                    startPos = { x: touch.pageX, y: touch.pageY, time: +new Date };    //取第一个touch的坐标值
+                    isScrolling = 0;   //这个参数判断是垂直滚动还是水平滚动
+                    this.slider.addEventListener('touchmove', this, false);
+                    this.slider.addEventListener('touchend', this, false);
+
+                },
+                //移动
+                move: function (event) {
+                    //当屏幕有多个touch或者页面被缩放过，就不执行move操作
+                    if (event.targetTouches.length > 1 || event.scale && event.scale !== 1) return;
+                    var touch = event.targetTouches[0];
+                    endPos = { x: touch.pageX - startPos.x, y: touch.pageY - startPos.y };
+                    isScrolling = Math.abs(endPos.x) < Math.abs(endPos.y) ? 1 : 0;    //isScrolling为1时，表示纵向滑动，0为横向滑动
+                    if (isScrolling === 0) {
+                        event.preventDefault();      //阻止触摸事件的默认行为，即阻止滚屏
+                        this.slider.className = 'cnt';
+                        this.slider.style.left = -this.index * 600 + endPos.x + 'px';
+                    }
+                },
+                //滑动释放
+                end: function (event) {
+                    var duration = +new Date - startPos.time;    //滑动的持续时间
+                    if (isScrolling === 0) {    //当为水平滚动时
+                        this.icon[this.index].className = '';
+                        if (Number(duration) > 10) {
+                            //判断是左移还是右移，当偏移量大于10时执行
+                            if (endPos.x > 10) {
+                                if (this.index !== 0) this.index -= 1;
+                            } else if (endPos.x < -10) {
+                                if (this.index !== this.icon.length - 1) this.index += 1;
+                            }
+                        }
+                        this.icon[this.index].className = 'curr';
+                        this.slider.className = 'cnt f-anim';
+                        this.slider.style.left = -this.index * 600 + 'px';
+                    }
+                    //解绑事件
+                    this.slider.removeEventListener('touchmove', this, false);
+                    this.slider.removeEventListener('touchend', this, false);
+                }
+            },
+
+            //初始化
+            init: function () {
+                var self = this;     //this指slider对象
+                if (!!self.touch) self.slider.addEventListener('touchstart', self.events, false);    //addEventListener第二个参数可以传一个对象，会调用该对象的handleEvent属性
+            }
+        };
+
+        slider.init();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            $(".imgtip").css("width", $(window).width())
+        }
+        function checkWeixin(o) {
+            //        var apple = document.getElementById("apple");src="img/appletips.png"imgtip
+
+            var u = navigator.userAgent;
+
+            if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1 || u.indexOf('Windows') > -1) {//安卓手机
+                o.href = "/fx/ylpt.apk";
+            } else if (u.indexOf('iPhone') > -1) {//
+                //o.href = "itms-services://?action=download-manifest&url=https://pay.hzcgt.top/download/apple.plist";
+                //o.href = "/wap/login.html";
+                o.href = "https://fir.im/1znf?utm_source=fir&utm_medium=qr";
+            }
+
+            if (isWeiXin()) {
+                o.href = "javascript:void()";
+
+                if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+                 //   $(".imgtip").attr("src", "img/androdtips.png");
+                    $(".wxtip").css("display", "block");
+                    showdiv();
+
+
+                }
+                else if (u.indexOf('iPhone') > -1) {//苹果手机
+                   // $(".imgtip").attr("src", "img/appletips.png");
+                    $(".wxtip").css("display", "block");
+                    showdiv();
+                    // o.href = "itms-services://?action=download-manifest&url=https://www.myzc0373.com/download/myzc.plist";
+                }
+            }
+
+        }
+
+        function isWeiXin() {
+           // return true;
+            var ua = window.navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function showdiv() {
+
+            var div_obj = $(".tips");
+            //窗口宽度,高度
+            var winWidth = $(window).width();
+            var winHeight = $(window).height();
+            //弹出的div的宽度,高度
+            var popHeight = 0;
+            var popWidth = 0;
+            //div窗口居中显示加滚动条的位置top(滚动后div的居中高度)(winHeight - popHeight) / 2 + $(document).scrollTop()
+            div_obj.animate({ opacity: "show", left: 0, top: $(document).scrollTop(), width: winWidth, height: winHeight }, 300);
+
+
+
+        }
+
+        function bb() {
+            $(".imgtip").css("width", $(window).width());
+
+        }
+
+        function closes() {
+
+            $(".tips").css("display", "none");
+
+        }
+        window.onscroll = function () {
+
+            $(".tips").css("display", "none");
+
+        }
+    </script>
+    <!--内容部分-->
+    <!--在页面底部加载js可以加快页面的加载速度-->
+    <script src="/fx/jquery.min.js"></script>
+    <script src="/fx/bootstrap.min.js"></script>
+</body>
+</html>

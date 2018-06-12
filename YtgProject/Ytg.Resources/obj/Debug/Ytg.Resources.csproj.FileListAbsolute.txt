@@ -1,0 +1,4 @@
+E:\me\LotteryPal\trunk\Web\YtgProject\Ytg.Resources\bin\Debug\Ytg.Resources.dll
+E:\me\LotteryPal\trunk\Web\YtgProject\Ytg.Resources\bin\Debug\Ytg.Resources.pdb
+E:\me\LotteryPal\trunk\Web\YtgProject\Ytg.Resources\obj\Debug\Ytg.Resources.dll
+E:\me\LotteryPal\trunk\Web\YtgProject\Ytg.Resources\obj\Debug\Ytg.Resources.pdb

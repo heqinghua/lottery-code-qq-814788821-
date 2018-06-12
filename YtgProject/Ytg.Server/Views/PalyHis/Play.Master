@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Play.master.cs" Inherits="Ytg.ServerWeb.Views.PalyHis.Play" MasterPageFile="~/lotterySite.Master" %>
+
+<asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
+    <script src="/Content/Scripts/layout.js" type="text/javascript"></script>
+    <script src="/Content/Scripts/lhgdialog/lhgdialog.js?skin=chrome"></script>
+    <link href="/Content/Css/style.css" rel="stylesheet" />
+    <style type="text/css">
+        .ltable td {
+            font-size: 12px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#gameplay_").addClass("cur");
+            var hg = $(window).height() - 250;
+            $("#content").css("min-height", hg);
+            $(".left_frame,.right_box").css("min-height", (hg - 52));
+            $('body').css("background", "#fff");
+        })
+    </script>
+    <asp:ContentPlaceHolder ID="usersHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="UserInfoBox wrap_footerbg" style="background: #fff; padding-bottom: 50px;">
+        <div class="wrap_bg wrap" >
+            <!--个人信息-->
+            <div id="subContent_bet_re" style="background: transparent; width: 1000px; margin: 0 auto">
+                <div class="mainiframe-left" style="width: 188px; float: left; margin-top: 15px">
+                    <div class="left_content">
+                        <div class="sidebar_menu">
+                            <dl class="ff-tow2">
+                                <dt class="sidebar_on"><div>游戏记录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></dt>
+                                <dd class="on">
+                                    <ul class="con_ul">
+                                        <li><a href="/Views/PalyHis/Betting.aspx">
+                                            <p id="touzhu"><span>投注记录</span></p>
+                                        </a></li>
+                                    </ul>
+                                    <ul class="con_ul">
+                                        <li><a href="/Views/PalyHis/Betting.aspx?type=catch">
+                                            <p id="zhuihao"><span>追号记录</span></p>
+                                        </a></li>
+                                    </ul>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="leftsidebotcon"></div>
+                    <script>
+                        $(".ff-one").click(function () {
+                            $(this).addClass("ff-tow").siblings().removeClass("ff-tow")
+                        });
+                        $(".ff-tow").click(function () {
+                            $(this).slideDown();
+                        });
+                    </script>
+                </div>
+                <div id="con_right">
+                    <div id="mainContent" style="width: 800px; float: left; margin-top: 15px; margin-left: 10px; background: transparent; height: auto">
+                        <%--<div class="panel">
+                            &nbsp;&nbsp;<img src="../../Content/Images/triangle.png" />投注记录
+                        </div>
+                        <br />--%>
+                        <div id="contentBox" style="overflow-y: hidden; width: 100%; height: auto; margin-top: 0">
+                            <asp:ContentPlaceHolder ID="ContentUsers" runat="server"></asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</asp:Content>

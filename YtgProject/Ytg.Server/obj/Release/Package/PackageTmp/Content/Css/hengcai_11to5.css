@@ -1,0 +1,13 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.cai_lf .cai_open .num_open .each{ font-size:20px;}
+.btnList { margin-left:0px;}
+#lotteryDetail .each {}
+#lotteryDetail .each .name {}
+#lotteryDetail .grayContent {}
+#lotteryDetail .each .numList li { margin:0 2px;}
+#lotteryDetail .each .numList .selected {}
+#lotteryDetail .each .selectType { margin:7px 0 0 4px;}
+*{-webkit-user-drag: none;}
+.inputdesc {width: 736px;margin: 0px 5px;}
+.marginb5px { margin-bottom:5px;}
